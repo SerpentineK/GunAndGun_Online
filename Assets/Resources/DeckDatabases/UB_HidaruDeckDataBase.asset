@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767edb8be9346cc47834f5afc29fda1a, type: 3}
+  m_Name: UB_HidaruDeckDataBase
+  m_EditorClassIdentifier: 
+  gunAttached: {fileID: 11400000, guid: 84715c4fbf8956d4892546c17eae9e8a, type: 2}
+  cardDataLists:
+  - {fileID: 11400000, guid: 84c3e318c5643f345b037cb844335f77, type: 2}
+  - {fileID: 11400000, guid: 2fdaaaf159ebfd4459384a475b6e7ade, type: 2}
+  - {fileID: 11400000, guid: a53ed94bf62cb654abce38e9908a58c9, type: 2}
+  - {fileID: 11400000, guid: cb68a1382bf51ac4f9d5efc9c148272e, type: 2}
+  - {fileID: 11400000, guid: 39fd9a7e8ecabc7459ba7e568aba503d, type: 2}
+  - {fileID: 11400000, guid: 1f8d6213a4bfb5c479a823d8bd6de0a7, type: 2}
+  - {fileID: 11400000, guid: 74acd3b5f89662a4aaaf684a011e37bd, type: 2}
+  effectHubDatabaseAttached: {fileID: 11400000, guid: b361dbb7a77250547a56a5c36a53b63e, type: 2}

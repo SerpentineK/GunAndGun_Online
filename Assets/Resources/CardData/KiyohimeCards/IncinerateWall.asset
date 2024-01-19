@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: IncinerateWall
+  m_EditorClassIdentifier: 
+  cardPool: 1
+  cardId: OH-08
+  cardName: "\u713C\u5374\u58C1"
+  cardEffectText: "\u76F8\u624B\u306E\u5C04\u6483\u307E\u305F\u306F\u6280\u80FD\u306B\u3088\u3063\u3066\u4E0E\u3048\u3089\u308C\u308BHIT-5\u3002"
+  cardCost: 1
+  cardType: 1
+  numOfCards: 2
+  attachedGunData: {fileID: 11400000, guid: 8526661b187f07f4e9173db30345cdc6, type: 2}

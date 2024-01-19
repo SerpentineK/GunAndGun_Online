@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: BlueReversal
+  m_EditorClassIdentifier: 
+  cardPool: 3
+  cardId: UB-05
+  cardName: "\u84BC\u306E\u53CD\u8EE2"
+  cardEffectText: "\u30AB\u30FC\u30C9\u30922\u679A\u5F15\u304F\u3002\n\u305D\u306E\u5F8C\u3001\u81EA\u5206\u306E\u30E9\u30A4\u30D5\u304C15\u4EE5\u4E0B\u306E\u5834\u5408\u3001\u81EA\u5206\u306E\u30C7\u30C3\u30AD\u306E\u4E0A\u304B\u30892\u679A\u3092\u30DC\u30EB\u30C6\u30FC\u30B8\u306B\u7F6E\u304F\u3002\n\u3008\u84BC\u306E\u53CD\u8EE2\u3009\u306F1\u30BF\u30FC\u30F3\u306B1\u679A\u3057\u304B\u767A\u52D5\u3067\u304D\u306A\u3044\u3002"
+  cardCost: 0
+  cardType: 0
+  numOfCards: 3
+  isOverclock: 0
+  attachedGunData: {fileID: 11400000, guid: ee6d32c9ce0de20439d7fa99be0716fd, type: 2}
+  attachedEffectHub: {fileID: 0}

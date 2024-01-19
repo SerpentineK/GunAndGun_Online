@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70e2d29eaeab974a8fcea1a4214273f, type: 3}
+  m_Name: HighMetronome_EffectHub
+  m_EditorClassIdentifier: 
+  effectContentText: "\u81EA\u5206\u306E\u30BF\u30FC\u30F3\u958B\u59CB\u6642\u3001\u5168\u3066\u306E\u30D7\u30EC\u30A4\u30E4\u30FC\u306E\u30C7\u30C3\u30AD\u30921\u3064\u305A\u3064\u9078\u3076\u3002\n\u305D\u306E\u5F8C\u5168\u3066\u306E\u30D7\u30EC\u30A4\u30E4\u30FC\u306F\u624B\u672D\u30922\u679A\u6368\u3066\u672D\u306B\u7F6E\u304D\u3001\u9078\u3070\u308C\u305F\u30C7\u30C3\u30AD\u304B\u30892\u679A\u5F15\u304F\u3002"
+  cardType: 2
+  cue: 15
+  priority: 2
+  willOperateOnActivation: 1
+  effects:
+  - {fileID: 11400000, guid: 673c8837d850b7346b46f0ae1c5530f1, type: 2}
+  - {fileID: 11400000, guid: c762f3366acedca4c817519f27192aa4, type: 2}
+  - {fileID: 11400000, guid: 1c74199384955774796472292209d62d, type: 2}
+  - {fileID: 11400000, guid: b1ad29ad44dfd5e439e403110048f023, type: 2}
+  - {fileID: 11400000, guid: c2c17be2b0f24144ba74ed5a3101a136, type: 2}
+  - {fileID: 11400000, guid: 5b8b7b479a07a044683d50e4f265b031, type: 2}
+  - {fileID: 11400000, guid: d59b4896feedc624982f53feb13db70a, type: 2}
+  - {fileID: 11400000, guid: c120a390c097a8947a02150fd7f68699, type: 2}
+  - {fileID: 11400000, guid: 84d28faacff93ac4f9ebaee4030538a7, type: 2}
+  - {fileID: 11400000, guid: f95d7b097ff7d0446a4209fa03ae29cf, type: 2}
+  automaticEffect: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: f8036a5b9e5128e4a91c157ea735a813, type: 2}
+  ExtraEffects: []
+  usageIsOncePerTurn: 0
+  activationIsOncePerTurn: 0
+  isLimitedByHikagiri: 0
+  playerResults: []
+  childrenOperateOnActivation: 1
+  childrenOperateAsAltEffect: 0
+  effectResults: []
+  cardResults01: []
+  cardResults02: []
+  cardResults03: []
+  cardResults04: []
+  cardResults05: []
+  cardResults06: []
+  gunResults01: []
+  gunResults02: []
+  fieldResult01: {fileID: 0}
+  fieldResult02: {fileID: 0}
+  fieldResult03: {fileID: 0}
+  intResult01: 0
+  intResult02: 0
+  projectileResult: {fileID: 0}
+  hubResult01: {fileID: 0}
+  hubResult02: {fileID: 0}
+  dataResult01: {fileID: 0}
+  dataResult02: {fileID: 0}
+  finishedInput: 1

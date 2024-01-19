@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5a06a97db082f40a515ef8fc6a56b3, type: 3}
+  m_Name: Maka
+  m_EditorClassIdentifier: 
+  cardPool: 1
+  gunnerId: OH-02
+  gunnerName: "\u30DE\u30AB"
+  gunnerNameENG: MAKA
+  gunnerAbility: "\u81EA\u5206\u306F\u30E9\u30A4\u30D540\u70B9\u3067\u30B2\u30FC\u30E0\u3092\u958B\u59CB\u3059\u308B\u3002\\n\u81EA\u5206\u306E\u6280\u80FD\u3092\u767A\u52D5\u3059\u308B\u6642\u3001\u81EA\u5206\u306E\u6A5F\u9283\u30921\u3064\u9078\u3076\u3002\u6B8B\u308A\u306E\u30B2\u30FC\u30E0\u306E\u9593\u3001\u81EA\u5206\u306F\u305D\u306E\u6A5F\u9283\u3067\u5C04\u6483\u3067\u304D\u305A\u3001\u305D\u306E\u30C7\u30C3\u30AD\u304B\u3089\u30AB\u30FC\u30C9\u3092\u5F15\u304F\u3053\u3068\u304C\u3067\u304D\u306A\u3044\u3002\\n\uFF08\u3082\u3046\u7247\u65B9\u306E\u30C7\u30C3\u30AD\u304C0\u679A\u306B\u306A\u3063\u305F\u6642\u3001\u30B2\u30FC\u30E0\u306B\u6557\u5317\u3059\u308B\uFF09"
+  gunnerFlavorText: "\u4E0A\u5C64\u306E\u533B\u8005\u306E\u5B50\u5973\u3002\\n\u5E7C\u5C11\u671F\u306E\u6069\u4EBA\u3067\u3042\u308B\u9283\u58EB\u306B\u601D\u3044\u3092\u99B3\u305B\u3001\u305D\u306E\u9762\u5F71\u3092\u5080\u5121\u306B\u6295\u5F71\u3059\u308B\u3002"
+  gunnerAgility: 2
+  gunnerHand: 4
+  gunnerImage: {fileID: 21300000, guid: 4b839c18c10b0594f809784613d7cdfe, type: 3}
+  skillArray:
+  - {fileID: 11400000, guid: e8072d69b29b84e4eb192cf7957a4131, type: 2}
+  - {fileID: 11400000, guid: cce3c00923242ff4d8e9589d116d2153, type: 2}
+  - {fileID: 11400000, guid: b6f3703ae2b8ef74a9072942b1bd33e2, type: 2}
+  iconVector: {x: 165, y: -498, z: 0}
+  iconScale: {x: 150, y: 150, z: 150}
+  iconLabelColor: {r: 1, g: 1, b: 1, a: 1}
+  playerScale: {x: 26.999998, y: 26.999998, z: 26.999998}
+  opponentScale: {x: 16, y: 16, z: 16}
+  effectHub: {fileID: 11400000, guid: aa3370b567b9014468e4899ecf73ebea, type: 2}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c8228d431dedd49bad466041a7b2d6, type: 3}
+  m_Name: Card_HAJIMARUYO
+  m_EditorClassIdentifier: 
+  cardId: UB-SBD-02
+  cardName: "\u30CF\u30B8\u30DE\u30EB\u30E8\uFF01"
+  cardNameENG: HAJIMARUYO!
+  cardEffectTexts:
+  - "\u3088\u308A\u6700\u5927\u88C5\u586B\u6570\u304C\u591A\u3044\u6A5F\u9283\u306B\u3001\u5BFE\u5FDC\u3059\u308B\u6A5F\u9283\u30C7\u30C3\u30AD\u306E\u4E0A\u304B\u30891\u679A\u3092\u88CF\u5411\u304D\u306B\u88C5\u586B\u3059\u308B\u3002"
+  - "\u4E21\u65B9\u306E\u6A5F\u9283\u306B\u3001\u5BFE\u5FDC\u3059\u308B\u6A5F\u9283\u30C7\u30C3\u30AD\u306E\u4E0A\u304B\u3089\u305D\u308C\u305E\u308C1\u679A\u305A\u3064\u88CF\u5411\u304D\u306B\u88C5\u586B\u3059\u308B\u3002"
+  - "\u4E21\u65B9\u306E\u6A5F\u9283\u306B\u3001\u5BFE\u5FDC\u3059\u308B\u6A5F\u9283\u30C7\u30C3\u30AD\u306E\u4E0A\u304B\u3089\u88C5\u586B\u6570\u304C\u6700\u5927\u88C5\u586B\u6570\u306B\u7B49\u3057\u304F\u306A\u308B\u3088\u3046\u306B\u88CF\u5411\u304D\u306B\u88C5\u586B\u3059\u308B\u3002"
+  numOfCards: 4
+  attachedHubs: []

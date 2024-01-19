@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70e2d29eaeab974a8fcea1a4214273f, type: 3}
+  m_Name: Amata_EffectHub
+  m_EditorClassIdentifier: 
+  effectContentText: "\u81EA\u5206\u306E\u30BF\u30FC\u30F3\u7D42\u4E86\u6642\u3001\u81EA\u5206\u306B\u6700\u59272HIT\u4E0E\u3048\u3066\u3082\u3088\u3044\u30021HIT\u4EE5\u4E0A\u4E0E\u3048\u305F\u5834\u5408\u3001\u305D\u306E\u70B9\u6570\u306B\u7B49\u3057\u3044\u679A\u6570\u5206\u30AB\u30FC\u30C9\u3092\u5F15\u304F\u3002"
+  cardType: 4
+  cue: 17
+  priority: 2
+  willOperateOnActivation: 1
+  effects:
+  - {fileID: 11400000, guid: f2ec0d59b9ef1b543b8401a166e2b099, type: 2}
+  - {fileID: 11400000, guid: e811573f652435745904a83b55142adf, type: 2}
+  - {fileID: 11400000, guid: efd172bc3a4ca1b44b71df5c5fb75e32, type: 2}
+  - {fileID: 11400000, guid: 3457739474724814c961b42821928cd8, type: 2}
+  - {fileID: 11400000, guid: 63dada925a150804cb717c9b7b770544, type: 2}
+  automaticEffectHub: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 9faf53601e61b2243a4571a37a820313, type: 2}
+  ExtraEffects: []
+  usageIsOncePerTurn: 0
+  activationIsOncePerTurn: 0
+  isLimitedByHikagiri: 0
+  childrenOperateOnActivation: 1
+  childrenOperateAsAltEffect: 0
+  effectResults: []
+  cardResults01: []
+  cardResults02: []
+  cardResults03: []
+  cardResults04: []
+  cardResults05: []
+  cardResults06: []
+  gunResults01: []
+  gunResults02: []
+  fieldResult01: {fileID: 0}
+  fieldResult02: {fileID: 0}
+  fieldResult03: {fileID: 0}
+  intResult01: 0
+  intResult02: 0
+  projectileResult: {fileID: 0}
+  hubResult01: {fileID: 0}
+  hubResult02: {fileID: 0}
+  dataResult01: {fileID: 0}
+  dataResult02: {fileID: 0}
+  finishedInput: 1

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c79436786d3d2e44acb653fc1de3a7d, type: 3}
+  m_Name: 05_SelectThisCard
+  m_EditorClassIdentifier: 
+  effectContentText: "\u3053\u306E\u30AB\u30FC\u30C9\u3092\u9078\u629E\u3057EffectHub\u306B\u8FD4\u308A\u5024\u3068\u3057\u3066\u6E21\u3059\u3002\uFF08\u3053\u306E\u51E6\u7406\u306FSelectAll\u304CTrue\u306B\u306A\u3063\u3066\u3044\u308B\u305F\u3081\u81EA\u52D5\u7684\u306B\u5168\u3066\u306E\u5019\u88DC\u3001\u3053\u306E\u5834\u5408\u3060\u3068\u300C\u3053\u306E\u30AB\u30FC\u30C9\u300D\u304C\u9078\u629E\u3055\u308C\u308B\uFF09"
+  cardType: 1
+  willOperateOnActivation: 1
+  willOperateAsAlternative: 0
+  altEffect: {fileID: 0}
+  altEffectCondition: 0
+  altActivationRefersToValue: 0
+  targets: 01000000
+  whereToInput: 2
+  selectAll: 1
+  isRandom: 0
+  valueInputIsAdditive: 0
+  purposeOfCards: 3
+  maximumNumberOfSelection: 0
+  isForcedToSelectMax: 1
+  searchCondition: 1
+  numberOfCardsRefersToValue: 0
+  returnNumberOfSelectedToValue: 0

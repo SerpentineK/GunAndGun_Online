@@ -1,0 +1,4 @@
+repository "GunAndGun Online@Hydrophiinae@cloud"
+  path "/"
+    br "/main"
+    co "/main"

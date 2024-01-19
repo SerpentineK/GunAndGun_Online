@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5a06a97db082f40a515ef8fc6a56b3, type: 3}
+  m_Name: Natori
+  m_EditorClassIdentifier: 
+  cardPool: 0
+  gunnerId: 02
+  gunnerName: "\u30CA\u30C8\u30EA"
+  gunnerNameENG: NATORI
+  gunnerAbility: "3HIT\u4EE5\u4E0A\u4E0E\u3048\u3089\u308C\u305F\u6642\u3001\u76F8\u624B\u306B1HIT\u3002"
+  gunnerFlavorText: "\u4E0A\u5C64\u304B\u3089\u8FFD\u653E\u3055\u308C\u305F\u4EE4\u5B22\u3002\\n\u6C5A\u67D3\u533A\u57DF\u306E\u7814\u7A76\u306E\u526F\u7523\u7269\u3068\u3057\u3066\u6BD2\u3092\u64CD\u308B\u3002"
+  gunnerAgility: 1
+  gunnerHand: 5
+  gunnerImage: {fileID: 21300000, guid: 7f94741851e7a5b49a732b1f0d2cf3b5, type: 3}
+  skillArray:
+  - {fileID: 11400000, guid: 185f1868e872d65459d26d3b8d2170a6, type: 2}
+  - {fileID: 11400000, guid: 60ce32cffd47b8042ac88b89a15fe4c7, type: 2}
+  - {fileID: 11400000, guid: 3133f729425b40c448433843abb10175, type: 2}
+  iconVector: {x: 274, y: -710, z: 0}
+  iconScale: {x: 150, y: 150, z: 150}
+  iconLabelColor: {r: 1, g: 1, b: 1, a: 1}
+  playerScale: {x: 26.999998, y: 26.999998, z: 26.999998}
+  opponentScale: {x: 16, y: 16, z: 16}

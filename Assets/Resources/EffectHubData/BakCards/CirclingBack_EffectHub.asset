@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70e2d29eaeab974a8fcea1a4214273f, type: 3}
+  m_Name: CirclingBack_EffectHub
+  m_EditorClassIdentifier: 
+  effectContentText: "\u3008\u56DE\u5E30\u3009\u306F1\u30BF\u30FC\u30F3\u306B1\u679A\u3057\u304B\u767A\u52D5\u3067\u304D\u306A\u3044\u3002\n\u3053\u306E\u30BF\u30FC\u30F3\u7D42\u4E86\u6642\u3001\u81EA\u5206\u306E\u6368\u3066\u672D\u306B\u3042\u308B\u3010\u884C\u52D5\u3011\u30921\u679A\u624B\u672D\u306B\u52A0\u3048\u308B\u3002"
+  cardType: 0
+  cue: 2
+  priority: 3
+  willOperateOnActivation: 1
+  effects:
+  - {fileID: 11400000, guid: d1de08f209690de41ad85646dd0270e0, type: 2}
+  automaticEffectHub: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: e526158404ec75a4ebd424eb62938bfb, type: 2}
+  ExtraEffects:
+  - {fileID: 11400000, guid: 5495d5abff5617246a14204a588f42f3, type: 2}
+  - {fileID: 11400000, guid: c70440f1f453bd747aa20547d062aec4, type: 2}
+  - {fileID: 11400000, guid: 0e48c67c33144c442a95562b34fad792, type: 2}
+  - {fileID: 11400000, guid: dc1e1576f26e25d4d850874f26e0dec3, type: 2}
+  usageIsOncePerTurn: 1
+  activationIsOncePerTurn: 0
+  isLimitedByHikagiri: 0
+  childrenOperateOnActivation: 1
+  childrenOperateAsAltEffect: 0
+  effectResults: []
+  cardResults01: []
+  cardResults02: []
+  cardResults03: []
+  cardResults04: []
+  cardResults05: []
+  cardResults06: []
+  gunResults01: []
+  gunResults02: []
+  fieldResult01: {fileID: 0}
+  fieldResult02: {fileID: 0}
+  fieldResult03: {fileID: 0}
+  intResult01: 0
+  intResult02: 0
+  projectileResult: {fileID: 0}
+  hubResult01: {fileID: 0}
+  hubResult02: {fileID: 0}
+  dataResult01: {fileID: 0}
+  dataResult02: {fileID: 0}
+  finishedInput: 1

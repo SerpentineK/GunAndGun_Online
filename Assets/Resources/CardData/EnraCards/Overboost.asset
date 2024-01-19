@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: Overboost
+  m_EditorClassIdentifier: 
+  cardPool: 0
+  cardId: 02
+  cardName: "\u30AA\u30FC\u30D0\u30FC\u30D6\u30FC\u30B9\u30C8"
+  cardEffectText: "\u30AB\u30FC\u30C9\u30925\u679A\u5F15\u304F\u3002\n\u3008\u30AA\u30FC\u30D0\u30FC\u30D6\u30FC\u30B9\u30C8\u3009\u306F1\u30BF\u30FC\u30F3\u306B1\u679A\u3057\u304B\u767A\u52D5\u3067\u304D\u306A\u3044\u3002"
+  cardCost: 2
+  cardType: 0
+  numOfCards: 2
+  isOverclock: 0
+  attachedGunData: {fileID: 11400000, guid: 44efbb32ed2a70f4a9b2d68570578617, type: 2}
+  attachedEffectHub: {fileID: 0}

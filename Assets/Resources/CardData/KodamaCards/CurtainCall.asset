@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: CurtainCall
+  m_EditorClassIdentifier: 
+  cardPool: 2
+  cardId: WS-043
+  cardName: "\u30AB\u30FC\u30C6\u30F3\u30FB\u30B3\u30FC\u30EB"
+  cardEffectText: "\u3010\u30AA\u30FC\u30D0\u30FC\u30AF\u30ED\u30C3\u30AF\u3011\n\u81EA\u5206\u306E\u3008\u62E1\u97F3\u8F5F\u5668\u30B3\u30C0\u30DE\u3009\u3092\u88CF\u5411\u304D\u306B\u3059\u308B\u3002\u305D\u3046\u3057\u305F\u5834\u5408\u3001\u4EE5\u4E0B\u306E\u52B9\u679C\u3092\u89E3\u6C7A\u3059\u308B\u3002\n-
+    \u76F8\u624B\u306E\u30C7\u30C3\u30AD1\u3064\u3092\u9078\u3073\u3001\u305D\u306E\u4E0A\u304B\u3089\u30AB\u30FC\u30C9\u30925\u679A\u6368\u3066\u672D\u306B\u7F6E\u304F\u3002\u6B21\u306E\u81EA\u5206\u306E\u30BF\u30FC\u30F3\u7D42\u4E86\u6642\u307E\u3067\u81EA\u5206\u306F\u30B2\u30FC\u30E0\u306B\u6557\u5317\u3057\u306A\u3044\u3002"
+  cardCost: 1
+  cardType: 1
+  numOfCards: 2
+  isOverclock: 1
+  attachedGunData: {fileID: 11400000, guid: 8fc389305f4671046b981db2ab9d7854, type: 2}
+  attachedEffectHub: {fileID: 0}

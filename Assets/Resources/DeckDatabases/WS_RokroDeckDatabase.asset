@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767edb8be9346cc47834f5afc29fda1a, type: 3}
+  m_Name: WS_RokroDeckDatabase
+  m_EditorClassIdentifier: 
+  gunAttached: {fileID: 11400000, guid: 7de590b33b03f784e9f4e2563b257308, type: 2}
+  cardDataLists:
+  - {fileID: 11400000, guid: c14141abb7fa06a40b59c380db4c136d, type: 2}
+  - {fileID: 11400000, guid: d80f97333772cd647af0a1f168310f03, type: 2}
+  - {fileID: 11400000, guid: b4e05ec84189d48408ec1492ae3e634f, type: 2}
+  - {fileID: 11400000, guid: d83696c3ddea1964287ffca59b4b4014, type: 2}
+  - {fileID: 11400000, guid: 169c9282104840c4e92b147111494ede, type: 2}
+  - {fileID: 11400000, guid: 708d87d2b7c38da4fbf136707c67f73a, type: 2}
+  effectHubDatabaseAttached: {fileID: 11400000, guid: 29af5fa646ac47044a47bfc4688095c9, type: 2}

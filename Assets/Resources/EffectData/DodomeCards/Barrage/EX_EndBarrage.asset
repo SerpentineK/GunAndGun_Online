@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9478eaf3578c2ba46a140b38b82bb34b, type: 3}
+  m_Name: EX_EndBarrage
+  m_EditorClassIdentifier: 
+  effectContentText: 
+  cardType: 0
+  cue: 25
+  priority: 3
+  willOperateOnActivation: 1
+  continuousEffect: {fileID: 11400000, guid: 0ae3593d4a7ac614a92823d66a83b80b, type: 2}

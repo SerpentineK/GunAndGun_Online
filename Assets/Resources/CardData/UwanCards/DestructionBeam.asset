@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: DestructionBeam
+  m_EditorClassIdentifier: 
+  cardPool: 0
+  cardId: 45
+  cardName: "\u7206\u7815\u5149\u7DDA"
+  cardEffectText: "\u76F8\u624B\u306E\u88C5\u586B\u3001\u3010\u6A5F\u80FD\u3011\u3001\u307E\u305F\u306F\u30BB\u30C3\u30C8\u3055\u308C\u3066\u3044\u308B\u30AB\u30FC\u30C9\u304B\u3089\u5408\u8A082\u679A\u6368\u3066\u672D\u306B\u7F6E\u304F\u3002"
+  cardCost: 2
+  cardType: 0
+  numOfCards: 2
+  attachedGunData: {fileID: 11400000, guid: c05b17eac0aa9b14789a0d1b3f6c252a, type: 2}

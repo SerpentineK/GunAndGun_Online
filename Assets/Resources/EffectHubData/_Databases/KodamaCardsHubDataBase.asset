@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f6f793a2e772949b6816bed26df55f, type: 3}
+  m_Name: KodamaCardsHubDataBase
+  m_EditorClassIdentifier: 
+  effectHubList:
+  - {fileID: 11400000, guid: ff535131a571e5c4db450ceb57ff0e6c, type: 2}
+  - {fileID: 11400000, guid: 3d6f5e60edfe7a643858a842415c17b6, type: 2}
+  - {fileID: 11400000, guid: c0eb055d8239c184bb09d9af9a60b485, type: 2}
+  - {fileID: 11400000, guid: 062421c0013201349b3b9a4759fc6f0b, type: 2}
+  - {fileID: 11400000, guid: 10aedf4554dd1b54cb6a1832ae2921cc, type: 2}
+  - {fileID: 11400000, guid: 7654aeaaa4d05c64192e3ca64a274083, type: 2}
+  - {fileID: 11400000, guid: fe294d8d612f6c349beba95ded940e6a, type: 2}
+  - {fileID: 11400000, guid: b9982de36e30ad84c9ff134d192f71a1, type: 2}

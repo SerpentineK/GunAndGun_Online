@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7226a184d7b6c844b2f2c79ea490eae, type: 3}
+  m_Name: 01_SelectCardByOpp_OpponentVoltOrHand_02
+  m_EditorClassIdentifier: 
+  effectContentText: "\u76F8\u624B\u306E\u624B\u672D\u304B\u30DC\u30EB\u30C6\u30FC\u30B8\u304B\u3089\u30AB\u30FC\u30C9\u3092\u5408\u8A082\u679A\u3001\u76F8\u624B\u304C\u9078\u3076\u3002"
+  cardType: 0
+  willOperateOnActivation: 1
+  willOperateAsAlternative: 0
+  altEffect: {fileID: 0}
+  altEffectCondition: 0
+  altActivationRefersToValue: 0
+  targets: 060000000e000000
+  whereToInput: 1
+  selectAll: 0
+  isRandom: 0
+  valueInputIsAdditive: 0
+  purposeOfCards: 2
+  maximumNumberOfSelection: 2
+  isForcedToSelectMax: 1
+  condition: 1

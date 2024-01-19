@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: AshBullet
+  m_EditorClassIdentifier: 
+  cardPool: 3
+  cardId: UB-02
+  cardName: "\u7070\u68C4\u5F3E"
+  cardEffectText: "\u3053\u306E\u30AB\u30FC\u30C9\u304C\u76F8\u624B\u30BF\u30FC\u30F3\u306E\u9593\u306B\u624B\u672D\u307E\u305F\u306F\u30C7\u30C3\u30AD\u304B\u3089\u6368\u3066\u672D\u306B\u7F6E\u304B\u308C\u305F\u6642\u3001\u30DC\u30EB\u30C6\u30FC\u30B8\u306B\u7F6E\u3044\u3066\u3082\u3088\u3044\u3002"
+  cardCost: 0
+  cardType: 3
+  numOfCards: 6
+  isOverclock: 0
+  attachedGunData: {fileID: 11400000, guid: ee6d32c9ce0de20439d7fa99be0716fd, type: 2}
+  attachedEffectHub: {fileID: 0}

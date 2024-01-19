@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767edb8be9346cc47834f5afc29fda1a, type: 3}
+  m_Name: WS_BakDeckDatabase
+  m_EditorClassIdentifier: 
+  gunAttached: {fileID: 11400000, guid: ac798972dbdf2b74cae021020a9e9b99, type: 2}
+  cardDataLists:
+  - {fileID: 11400000, guid: 33c6425c43300904dae116c5cb752ccb, type: 2}
+  - {fileID: 11400000, guid: e526158404ec75a4ebd424eb62938bfb, type: 2}
+  - {fileID: 11400000, guid: 5b80e2fe19786e64db00cc133f1878be, type: 2}
+  - {fileID: 11400000, guid: 2e636687063d9764aa3229302b28db0d, type: 2}
+  - {fileID: 11400000, guid: a8943c8cb8986284c820fbda488fbc47, type: 2}
+  - {fileID: 11400000, guid: 9487382025999874d9132fb80db3bdfe, type: 2}
+  - {fileID: 11400000, guid: dc15d6a8025f90847b2f9708c79a894d, type: 2}
+  - {fileID: 11400000, guid: 0ff149a1c356b8049b0c1f6df2a4c97d, type: 2}
+  effectHubDatabaseAttached: {fileID: 11400000, guid: 9931837b234cbe541aa0d8b6bbff1670, type: 2}

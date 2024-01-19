@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: WhiteoutDaylight
+  m_EditorClassIdentifier: 
+  cardPool: 3
+  cardId: UB-03
+  cardName: "\u767D\u8679\u8CAB\u65E5"
+  cardEffectText: "\u3010\u30AA\u30FC\u30D0\u30FC\u30AF\u30ED\u30C3\u30AF\u3011\n\u3008\u767D\u8679\u8CAB\u65E5\u3009\u306F\u3001\u81EA\u5206\u306E\u7B2C\u4E00\u30BF\u30FC\u30F3\u306B\u767A\u52D5\u3067\u304D\u306A\u3044\u3002\n\u81EA\u5206\u306E\u3008\u6975\u5F69\u5F0F\u4F1D\u9054\u767A\u5149\u9283\u30DF\u30C4\u30E1\u3009\u3092\u88CF\u5411\u304D\u306B\u3059\u308B\u3002\u305D\u3046\u3057\u305F\u5834\u5408\u3001\u4EE5\u4E0B\u306E\u52B9\u679C\u3092\u89E3\u6C7A\u3059\u308B\u3002\n-
+    \u81EA\u5206\u306E\u3010\u6280\u80FD\u3011\u3092\u8868\u5411\u304D\u306B\u3059\u308B\u3001\u3053\u306E\u969B\u3010\u6280\u80FD\u3011\u306E\u52B9\u679C\u306F\u767A\u52D5\u3057\u306A\u3044\u3002\u305D\u306E\u30B3\u30B9\u30C8\u306B\u7B49\u3057\u304F\u306A\u308B\u3088\u3046\u306B\u81EA\u5206\u306E\u30C7\u30C3\u30AD1\u3064\u306E\u4E0A\u304B\u3089\u30AB\u30FC\u30C9\u3092\u30DC\u30EB\u30C6\u30FC\u30B8\u306B\u7F6E\u304F\u3002\u305D\u306E\u5F8C\u3001\u81EA\u5206\u306E\u3010\u6280\u80FD\u3011\u3092\u88CF\u5411\u304D\u306B\u3059\u308B\u3002"
+  cardCost: 0
+  cardType: 0
+  numOfCards: 2
+  isOverclock: 1
+  attachedGunData: {fileID: 11400000, guid: ee6d32c9ce0de20439d7fa99be0716fd, type: 2}
+  attachedEffectHub: {fileID: 0}

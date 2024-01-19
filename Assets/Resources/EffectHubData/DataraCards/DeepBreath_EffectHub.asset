@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70e2d29eaeab974a8fcea1a4214273f, type: 3}
+  m_Name: DeepBreath_EffectHub
+  m_EditorClassIdentifier: 
+  effectContentText: "\u76F8\u624B\u306E\u5C04\u6483\u307E\u305F\u306F\u6280\u80FD\u306B\u3088\u3063\u30663HIT\u4EE5\u4E0A\u4E0E\u3048\u3089\u308C\u308B\u5834\u5408\u3001\u3053\u306E\u30AB\u30FC\u30C9\u3092\u88C5\u586B\u3057\u30AB\u30FC\u30C9\u30921\u679A\u5F15\u304F\u3002"
+  cardType: 1
+  cue: 2
+  priority: 3
+  willOperateOnActivation: 1
+  effects:
+  - {fileID: 11400000, guid: bc7d06e1001c9004986a5b01f916869f, type: 2}
+  - {fileID: 11400000, guid: 82c75233127c52444b394497c3488069, type: 2}
+  - {fileID: 11400000, guid: 3857ae5140c39db4198f584000c01b83, type: 2}
+  - {fileID: 11400000, guid: d949604624b724341a250e2f4d6b745f, type: 2}
+  - {fileID: 11400000, guid: 9cddd882c08b5c1448fc974a1f24ee9d, type: 2}
+  - {fileID: 11400000, guid: 71545b23b9846cc41b20b68f62033623, type: 2}
+  automaticEffectHub: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 7d10bd48e9929e146867a4f192a7bde6, type: 2}
+  ExtraEffects: []
+  childrenOperateOnActivation: 1
+  childrenOperateAsAltEffect: 0
+  effectResults: []
+  cardResults01: []
+  cardResults02: []
+  cardResults03: []
+  cardResults04: []
+  cardResults05: []
+  cardResults06: []
+  gunResults01: []
+  gunResults02: []
+  fieldResult01: {fileID: 0}
+  fieldResult02: {fileID: 0}
+  fieldResult03: {fileID: 0}
+  intResult01: 0
+  intResult02: 0
+  projectileResult: {fileID: 0}
+  finishedInput: 1

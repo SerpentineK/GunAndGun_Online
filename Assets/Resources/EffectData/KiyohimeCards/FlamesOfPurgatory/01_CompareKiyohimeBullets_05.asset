@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f397c6cc4252e49bece0a1e1e9e949, type: 3}
+  m_Name: 01_CompareKiyohimeBullets_05
+  m_EditorClassIdentifier: 
+  effectContentText: 
+  cardType: 0
+  willOperateOnActivation: 1
+  willOperateAsAlternative: 0
+  altEffect: {fileID: 0}
+  altEffectCondition: 0
+  altActivationRefersToValue: 0
+  target: 31
+  value: 5
+  methodOfCompare: 4
+  returnResultTo: 17
+  resetOperationBoolsOnResolveEnd: 1

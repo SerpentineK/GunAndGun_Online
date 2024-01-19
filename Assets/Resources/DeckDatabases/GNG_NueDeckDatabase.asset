@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767edb8be9346cc47834f5afc29fda1a, type: 3}
+  m_Name: GNG_NueDeckDatabase
+  m_EditorClassIdentifier: 
+  gunAttached: {fileID: 11400000, guid: 2d42bb6069f1c6d48b5763e2c4a4462b, type: 2}
+  cardDataLists:
+  - {fileID: 11400000, guid: e31042b67297bfd40af9aafc4fd3bb89, type: 2}
+  - {fileID: 11400000, guid: 426ddb92b7bdc0746834e8877a93943e, type: 2}
+  - {fileID: 11400000, guid: bd8116a6f7369ba419245b5dc9da96f9, type: 2}
+  - {fileID: 11400000, guid: 7f946bfc1b077cf468ee1f332386eaf0, type: 2}
+  - {fileID: 11400000, guid: 0078e30b9ab549e4c89173ed97cf39c5, type: 2}
+  - {fileID: 11400000, guid: 9a6020d8b64003b4bbef7fcfe39069e3, type: 2}
+  - {fileID: 11400000, guid: 4bfb8c8d39ad7db4cb4ff7e10c297932, type: 2}
+  - {fileID: 11400000, guid: 346739eacb63a7743bd953e95de75b8d, type: 2}
+  effectHubDatabaseAttached: {fileID: 11400000, guid: b8ecaf0fa75c3634bb27323ae833bc0b, type: 2}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: BlackMovement
+  m_EditorClassIdentifier: 
+  cardPool: 3
+  cardId: UB-01
+  cardName: "\u9ED2\u306E\u8E8D\u52D5"
+  cardEffectText: "\u81EA\u5206\u306E\u30C7\u30C3\u30AD\u30921\u3064\u9078\u3076\u3002\u305D\u306E\u30C7\u30C3\u30AD\u306E\u4E0A\u304B\u30892\u679A\u3092\u30DC\u30EB\u30C6\u30FC\u30B8\u306B\u7F6E\u304F\u3002"
+  cardCost: 0
+  cardType: 0
+  numOfCards: 4
+  isOverclock: 0
+  attachedGunData: {fileID: 11400000, guid: ee6d32c9ce0de20439d7fa99be0716fd, type: 2}
+  attachedEffectHub: {fileID: 0}

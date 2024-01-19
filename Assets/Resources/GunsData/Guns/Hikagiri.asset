@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e2798a6f35de64887121917529cd4d, type: 3}
+  m_Name: Hikagiri
+  m_EditorClassIdentifier: 
+  cardPool: 2
+  gunId: WS-01
+  gunImage: {fileID: 21300000, guid: c27020dc2a9b3e24ba708a32214ecb4f, type: 3}
+  gunName: "\u9AD8\u51FA\u529B\u5C0F\u9023\u88C5\u9283 \u30D2\u30AB\u30AE\u30EA"
+  gunAbility: 
+  gunFlavorText: "\u5C0F\u578B\u62F3\u9283\u578B\u306E\u9069\u7528\u5916\u306E\u9283\u3002\\n\u30B5\u30A4\u30BA\u306B\u898B\u5408\u308F\u306C\u9AD8\u5A01\u529B\u3078\u3068\u6539\u9020\u3055\u308C\u3066\u3044\u308B\u4E00\u65B9\u3001\u5236\u7D04\u3082\u591A\u3044\u3002"
+  maximumBulletCapacity: 2
+  maximumReloadPerTurn: 2
+  gunWeight: 1
+  gunType: 0
+  bulletsToFire: 0100000002000000
+  hitOfFire:
+  - 2
+  - 4
+  sideEffectOfFire:
+  - N/A
+  - N/A
+  iconWidth: 600
+  iconHeight: 500
+  iconBoundsWidth: 300
+  gunImageScale: {x: 0, y: 0, z: 0}
+  deckDatabase: {fileID: 11400000, guid: 406470492e1838f4fb3aa38f1f2cf7e5, type: 2}

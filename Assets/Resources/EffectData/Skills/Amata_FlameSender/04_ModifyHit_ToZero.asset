@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e9c00a171e15340bf7c5835aab0f08, type: 3}
+  m_Name: 04_ModifyHit_ToZero
+  m_EditorClassIdentifier: 
+  effectContentText: 
+  cardType: 1
+  willOperateOnActivation: 1
+  willOperateAsAlternative: 0
+  altEffect: {fileID: 0}
+  altEffectCondition: 0
+  altActivationRefersToValue: 0
+  method: 2
+  modifyer: 0

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f6f793a2e772949b6816bed26df55f, type: 3}
+  m_Name: KasaneCardsHubDataBase
+  m_EditorClassIdentifier: 
+  effectHubList:
+  - {fileID: 11400000, guid: c5a04e84862bef140b99df484d4418d6, type: 2}
+  - {fileID: 11400000, guid: 369669ecab190734fb97fde5112cb280, type: 2}
+  - {fileID: 11400000, guid: 5f3130a9e5efdab4e9b432ac1eef7a10, type: 2}
+  - {fileID: 11400000, guid: b2d000b9d756b0f408889cba3ed2e844, type: 2}
+  - {fileID: 11400000, guid: 7939d9b8ed62b4f4181fedd943246620, type: 2}
+  - {fileID: 11400000, guid: 6b347cfaed2a7ec4f949fa6e8ec44609, type: 2}
+  - {fileID: 11400000, guid: 10ba62da2dfb5bf4a90c590f831a20d0, type: 2}
+  - {fileID: 11400000, guid: 4eb6ca2b558765d4da37c7e6d029920a, type: 2}

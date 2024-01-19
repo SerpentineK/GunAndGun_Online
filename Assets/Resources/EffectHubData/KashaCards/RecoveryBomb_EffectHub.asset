@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70e2d29eaeab974a8fcea1a4214273f, type: 3}
+  m_Name: RecoveryBomb_EffectHub
+  m_EditorClassIdentifier: 
+  effectContentText: "\u3053\u306E\u30AB\u30FC\u30C9\u306F\u30AB\u30FC\u30C9\u306E\u52B9\u679C\u3067\u3057\u304B\u8868\u5411\u304D\u306B\u88C5\u586B\u3067\u304D\u306A\u3044\u3002\n\u3053\u306E\u30AB\u30FC\u30C9\u3092\u88C5\u586B\u3057\u305F\u6A5F\u9283\u306E\u5C04\u6483\u6642\u3001\u30AB\u30FC\u30C9\u30921\u679A\u5F15\u304F\u3002\n\u305D\u306E\u5F8C\u3001\u56DE\u5FA93\u3002"
+  cardType: 3
+  cue: 26
+  priority: 3
+  willOperateOnActivation: 1
+  effects:
+  - {fileID: 11400000, guid: 1004fee4e33b9c040b5c9ffc2fd1c5d5, type: 2}
+  - {fileID: 11400000, guid: ff86451f16835b34284271f493c5391c, type: 2}
+  - {fileID: 11400000, guid: c95c1d8aa29881d4cae5ca551401b2b5, type: 2}
+  - {fileID: 11400000, guid: f9cbafd82c8a26b4e92c45f6c723976c, type: 2}
+  automaticEffect: {fileID: 11400000, guid: e7212ee2f20b2a241a6c1dfcd1c70838, type: 2}
+  automaticEndEffect: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 948f3e6ccc7275b4d96df1a1c65ec5f8, type: 2}
+  ExtraEffects:
+  - {fileID: 11400000, guid: e7212ee2f20b2a241a6c1dfcd1c70838, type: 2}
+  usageIsOncePerTurn: 0
+  activationIsOncePerTurn: 0
+  isLimitedByHikagiri: 0
+  effectTriggersFromHand: 0
+  playerResults: []
+  childrenOperateOnActivation: 1
+  childrenOperateAsAltEffect: 0
+  effectResults: []
+  cardResults01: []
+  cardResults02: []
+  cardResults03: []
+  cardResults04: []
+  cardResults05: []
+  cardResults06: []
+  gunResults01: []
+  gunResults02: []
+  fieldResult01: {fileID: 0}
+  fieldResult02: {fileID: 0}
+  fieldResult03: {fileID: 0}
+  intResult01: 0
+  intResult02: 0
+  projectileResult: {fileID: 0}
+  hubResult01: {fileID: 0}
+  hubResult02: {fileID: 0}
+  dataResult01: {fileID: 0}
+  dataResult02: {fileID: 0}
+  finishedInput: 1

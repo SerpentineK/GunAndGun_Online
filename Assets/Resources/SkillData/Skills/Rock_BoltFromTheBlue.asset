@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 562bbf5bb7d60f74db1dfb251d3d54a9, type: 3}
+  m_Name: Rock_BoltFromTheBlue
+  m_EditorClassIdentifier: 
+  cardPool: 3
+  skillId: UB-06
+  skillCost: 5
+  skillName: Bolt from the blue
+  skillEffectText: "\u3010\u7D99\u7D9A\u3011 \n\u76F8\u624B\u304C\u3010\u6A5F\u80FD\u3011\u307E\u305F\u306F\u3010\u5BFE\u5FDC\u3011\u3092\u767A\u52D5\u3057\u305F\u6642\u3001\u305D\u306E\u52B9\u679C\u3092\u89E3\u6C7A\u3059\u308B\u524D\u306B\u76F8\u624B\u306B3HIT\u3002"
+  skillFlavorText: "\u300C\u30DC\u30AF\u306E\u6295\u5F71\u5E55\u304C\u2026\u2026\uFF01\u300D\u300C\u91CE\u653E\u3057\u306B\u3059\u308B\u3068\u5384\u4ECB\u3060\u304B\u3089\u306D\u300D"
+  skillGraphics: {fileID: 21300000, guid: 7a9fec8bc2f4f6f4a9441cc90b82ae58, type: 3}

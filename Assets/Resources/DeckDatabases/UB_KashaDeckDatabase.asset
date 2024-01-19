@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767edb8be9346cc47834f5afc29fda1a, type: 3}
+  m_Name: UB_KashaDeckDatabase
+  m_EditorClassIdentifier: 
+  gunAttached: {fileID: 11400000, guid: 08271ae2880e6b045acbfc1d6982c127, type: 2}
+  cardDataLists:
+  - {fileID: 11400000, guid: a26825f51fbcee14da33ed2e262e0c2b, type: 2}
+  - {fileID: 11400000, guid: 6f9e048742f854a4784c5389c9be349e, type: 2}
+  - {fileID: 11400000, guid: 0e431e4ce908f85439969cb79272aab3, type: 2}
+  - {fileID: 11400000, guid: 6e823c69d88d1644f9db7e31aa388e66, type: 2}
+  - {fileID: 11400000, guid: 928cbada7eb29df4387bc42b0b6c7322, type: 2}
+  - {fileID: 11400000, guid: 948f3e6ccc7275b4d96df1a1c65ec5f8, type: 2}
+  - {fileID: 11400000, guid: 21e44f9e2459ed846ac936db26a1f988, type: 2}
+  effectHubDatabaseAttached: {fileID: 11400000, guid: 6e707caead1916f4bad34d4d9972a5b1, type: 2}

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70e2d29eaeab974a8fcea1a4214273f, type: 3}
+  m_Name: ConcussionBullet_EffectHub
+  m_EditorClassIdentifier: 
+  effectContentText: "\u3053\u306E\u9283\u5F3E\u304C\u88C5\u586B\u3055\u308C\u3066\u3044\u308B\u6A5F\u9283\u3067\u5C04\u6483\u3057\u305F\u5834\u5408\u3001\u76F8\u624B\u306F\u6B21\u306E\u30BF\u30FC\u30F3\u3001\u30AB\u30FC\u30C9\u306E\u52B9\u679C\u3067\u88C5\u586B\u304C\u3067\u304D\u306A\u3044\u3002"
+  cardType: 3
+  cue: 26
+  priority: 7
+  willOperateOnActivation: 1
+  effects:
+  - {fileID: 11400000, guid: 87d456ab27d00dd478503826a8b41c5d, type: 2}
+  - {fileID: 11400000, guid: 53531a8c73bc42848a06ca44a378f6ab, type: 2}
+  automaticEffectHub: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 5b80e2fe19786e64db00cc133f1878be, type: 2}
+  ExtraEffects:
+  - {fileID: 11400000, guid: a7bb493a9ae480645a779643698c619d, type: 2}
+  - {fileID: 11400000, guid: 2d1e223c99b646840a74f9c16f079a70, type: 2}
+  childrenOperateOnActivation: 1
+  childrenOperateAsAltEffect: 0
+  effectResults: []
+  cardResults01: []
+  cardResults02: []
+  cardResults03: []
+  cardResults04: []
+  cardResults05: []
+  cardResults06: []
+  gunResults01: []
+  gunResults02: []
+  fieldResult01: {fileID: 0}
+  fieldResult02: {fileID: 0}
+  fieldResult03: {fileID: 0}
+  intResult01: 0
+  intResult02: 0
+  projectileResult: {fileID: 0}
+  finishedInput: 1

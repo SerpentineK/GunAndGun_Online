@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767edb8be9346cc47834f5afc29fda1a, type: 3}
+  m_Name: WS_KodamaDeckDatabase
+  m_EditorClassIdentifier: 
+  gunAttached: {fileID: 11400000, guid: 8fc389305f4671046b981db2ab9d7854, type: 2}
+  cardDataLists:
+  - {fileID: 11400000, guid: 28a9930718ccc1248803d7b1bf66119b, type: 2}
+  - {fileID: 11400000, guid: abbdb7cd1f0def649a1772731bbb8edf, type: 2}
+  - {fileID: 11400000, guid: 272087896bd1eb9468632cae0b2cb992, type: 2}
+  - {fileID: 11400000, guid: 7bb5ca97da1fa624286c3c7549b52581, type: 2}
+  - {fileID: 11400000, guid: 62686f4ea6f779b4da04a77078009d15, type: 2}
+  - {fileID: 11400000, guid: f8036a5b9e5128e4a91c157ea735a813, type: 2}
+  - {fileID: 11400000, guid: e85fcfb7fdd6419488d6c3823a56e40e, type: 2}
+  - {fileID: 11400000, guid: 700c3ab21b09ea94c8b63e6405d28036, type: 2}
+  effectHubDatabaseAttached: {fileID: 11400000, guid: 88cc9a99e6ba9e245a28cd18268239b2, type: 2}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f026717e51a75b54aa993145ce0cc5d9, type: 3}
+  m_Name: 02_ActivateParalyze
+  m_EditorClassIdentifier: 
+  effectContentText: 
+  cardType: 3
+  willOperateOnActivation: 1
+  willOperateAsAlternative: 0
+  altEffect: {fileID: 0}
+  altEffectCondition: 0
+  altActivationRefersToValue: 0
+  giveValueToContinuous: 1
+  valueToGive: 1
+  continuousStartCue: 13
+  continuous: {fileID: 11400000, guid: aca21609954fb204a8f77b987c0132b7, type: 2}
+  endContinuous: {fileID: 11400000, guid: c1fa57ad06e449f4aa021ca6413dc600, type: 2}

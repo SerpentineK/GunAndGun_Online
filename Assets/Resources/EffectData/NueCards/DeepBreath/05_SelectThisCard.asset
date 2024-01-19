@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c79436786d3d2e44acb653fc1de3a7d, type: 3}
+  m_Name: 05_SelectThisCard
+  m_EditorClassIdentifier: 
+  effectContentText: 
+  cardType: 1
+  willOperateOnActivation: 1
+  willOperateAsAlternative: 0
+  altEffect: {fileID: 0}
+  altEffectCondition: 0
+  altActivationRefersToValue: 0
+  targets: 01000000
+  whereToInput: 2
+  selectAll: 1
+  isRandom: 0
+  valueInputIsAdditive: 0
+  methodToDealWithExceptions: 0
+  purposeOfCards: 8
+  maximumNumberOfSelection: 0
+  isForcedToSelectMax: 0
+  quitIfZeroIsSelected: 0
+  searchCondition: 1
+  selectionCondition: 1
+  numberOfCardsRefersToValue: 0
+  returnNumberOfSelectedToValue: 0

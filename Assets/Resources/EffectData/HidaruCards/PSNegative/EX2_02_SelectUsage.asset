@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9928428ea1c039e4b87a6ad7493e9932, type: 3}
+  m_Name: EX2_02_SelectUsage
+  m_EditorClassIdentifier: 
+  effectContentText: 
+  cardType: 2
+  willOperateOnActivation: 1
+  willOperateAsAlternative: 0
+  altEffect: {fileID: 0}
+  altEffectCondition: 0
+  altActivationRefersToValue: 0
+  targets: 
+  whereToInput: 0
+  selectAll: 0
+  isRandom: 0
+  valueInputIsAdditive: 0
+  methodOfSelect: 1
+  textToDisplay: 
+  effects:
+  - {fileID: 11400000, guid: fda8754be0841b5438bfe88b299429fb, type: 2}
+  - {fileID: 11400000, guid: 6ec452c39d674814cb76fbc9475ff500, type: 2}
+  - {fileID: 11400000, guid: 9dc6f6cb77f1ec3439f0eb5fdfb13beb, type: 2}
+  resolveEffectAfterSelection: 1

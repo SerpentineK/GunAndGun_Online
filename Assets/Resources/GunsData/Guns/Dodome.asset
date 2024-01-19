@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e2798a6f35de64887121917529cd4d, type: 3}
+  m_Name: Dodome
+  m_EditorClassIdentifier: 
+  cardPool: 1
+  gunId: OH-01
+  gunImage: {fileID: 21300000, guid: 56be0eeb5c09c544b80613a007b06d3f, type: 3}
+  gunName: "\u9AD8\u5727\u5F0F\u643A\u884C\u99C6\u52D5\u9283 \u30C9\u30C9\u30E1"
+  gunAbility: "\u3053\u306E\u6A5F\u9283\u306B\u3010\u9283\u5F3E\u3011\u3092\u8868\u5411\u304D\u306B\u88C5\u586B\u3067\u304D\u306A\u3044\u3002"
+  gunFlavorText: "\u77ED\u6A5F\u95A2\u9283\u578B\u306E\u9069\u7528\u5916\u306E\u9283\u3002\\n\u9593\u65AD\u306A\u304F\u8F5F\u304F\u9283\u58F0\u306F\u3001\u65AD\u672B\u9B54\u306E\u53EB\u3073\u3055\u3048\u3082\u304B\u304D\u6D88\u3059\u3002"
+  maximumBulletCapacity: 4
+  maximumReloadPerTurn: 4
+  gunWeight: 4
+  gunType: 0
+  bulletsToFire: 01000000020000000300000004000000
+  hitOfFire:
+  - 1
+  - 3
+  - 5
+  - 7
+  sideEffectOfFire:
+  - N/A
+  - N/A
+  - N/A
+  - N/A
+  iconWidth: 700
+  iconHeight: 500
+  iconBoundsWidth: 400
+  gunImageScale: {x: 25, y: 25, z: 25}
+  deckDatabase: {fileID: 11400000, guid: 9990f664dbca16e42a863bf579c42f78, type: 2}

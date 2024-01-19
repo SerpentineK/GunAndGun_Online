@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: ConcussionBullet
+  m_EditorClassIdentifier: 
+  cardPool: 2
+  cardId: WS-034
+  cardName: "\u660F\u5012\u5F3E"
+  cardEffectText: "\u3053\u306E\u9283\u5F3E\u304C\u88C5\u586B\u3055\u308C\u3066\u3044\u308B\u6A5F\u9283\u3067\u5C04\u6483\u3057\u305F\u5834\u5408\u3001\u76F8\u624B\u306F\u6B21\u306E\u30BF\u30FC\u30F3\u3001\u30AB\u30FC\u30C9\u306E\u52B9\u679C\u3067\u88C5\u586B\u304C\u3067\u304D\u306A\u3044\u3002"
+  cardCost: 0
+  cardType: 3
+  numOfCards: 3
+  isOverclock: 0
+  attachedGunData: {fileID: 11400000, guid: ac798972dbdf2b74cae021020a9e9b99, type: 2}
+  attachedEffectHub: {fileID: 0}

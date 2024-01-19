@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: ShutDown
+  m_EditorClassIdentifier: 
+  cardPool: 3
+  cardId: UB-20
+  cardName: "\u30B7\u30E3\u30C3\u30C8\u30FB\u30C0\u30A6\u30F3"
+  cardEffectText: "\u3010\u30AA\u30FC\u30D0\u30FC\u30AF\u30ED\u30C3\u30AF\u3011\n\u81EA\u5206\u306E\u3008\u9AD8\u81F4\u6B7B\u6027\u76F4\u6D41\u8377\u96FB\u9283\u30D2\u30C0\u30EB\u3009\u3092\u88CF\u5411\u304D\u306B\u3059\u308B\u3002\u305D\u3046\u3057\u305F\u5834\u5408\u3001\u4EE5\u4E0B\u306E\u52B9\u679C\u3092\u89E3\u6C7A\u3059\u308B\u3002\n-
+    \u76F8\u624B\u306E\u30B7\u30E7\u30C3\u30AF\u30AB\u30A6\u30F3\u30BF\u30FC\u30923\u500B\u53D6\u308A\u9664\u304F\u3002\u305D\u3046\u3057\u305F\u5834\u5408\u3001\u76F8\u624B\u306E\u6A5F\u92831\u3064\u3092\u88CF\u5411\u304D\u306B\u3059\u308B\u3002\u3008\u30B7\u30E3\u30C3\u30C8\u30FB\u30C0\u30A6\u30F3\u3009\u306F\u76F8\u624B\u306E\u6A5F\u9283\u304C2\u3064\u3068\u3082\u8868\u5411\u304D\u306E\u5834\u5408\u3057\u304B\u767A\u52D5\u3067\u304D\u306A\u3044\u3002"
+  cardCost: 0
+  cardType: 0
+  numOfCards: 2
+  isOverclock: 1
+  attachedGunData: {fileID: 11400000, guid: 84715c4fbf8956d4892546c17eae9e8a, type: 2}
+  attachedEffectHub: {fileID: 0}

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5a06a97db082f40a515ef8fc6a56b3, type: 3}
+  m_Name: Nanane
+  m_EditorClassIdentifier: 
+  cardPool: 2
+  gunnerId: WS-01
+  gunnerName: "\u30CA\u30CA\u30CD"
+  gunnerNameENG: NANANE
+  gunnerAbility: "\u81EA\u5206\u306E\u6A5F\u9283\u3067\u5C04\u6483\u6642\u3001\u30AB\u30FC\u30C9\u30921\u679A\u5F15\u304F\u3002\u3053\u306E\u52B9\u679C\u306F\u5404\u6A5F\u9283\u3054\u3068\u306B1\u30BF\u30FC\u30F3\u306B1\u5EA6\u307E\u3067\u767A\u52D5\u3059\u308B\u3002"
+  gunnerFlavorText: "\u4E0A\u5C64\u306E\u4F5C\u66F2\u5BB6\u3002\\n\"\u9069\u7528\u5916\u306E\u9283\"\u304C\u594F\u3067\u308B\u97F3\u306B\u60F3\u3044\u3092\u99B3\u305B\u308B\u3002"
+  gunnerAgility: 4
+  gunnerHand: 3
+  gunnerImage: {fileID: 21300000, guid: 423bb3e912f98ac40800966bb91a1b24, type: 3}
+  skillArray:
+  - {fileID: 11400000, guid: ab10c23d97148e244a3f8434966f48ef, type: 2}
+  - {fileID: 11400000, guid: 8576eaa762b9ea54d9118fbc6455f811, type: 2}
+  - {fileID: 11400000, guid: 695d0d9c344cd2b40832f17454cbf978, type: 2}
+  iconVector: {x: 0, y: -900, z: 0}
+  iconScale: {x: 175, y: 175, z: 175}
+  iconLabelColor: {r: 1, g: 1, b: 1, a: 1}
+  playerScale: {x: 30, y: 30, z: 30}
+  opponentScale: {x: 20, y: 20, z: 20}
+  effectHub: {fileID: 11400000, guid: 77913049d4d55a74f97311b249d50b14, type: 2}

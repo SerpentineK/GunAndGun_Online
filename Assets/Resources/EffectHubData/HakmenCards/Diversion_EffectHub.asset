@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70e2d29eaeab974a8fcea1a4214273f, type: 3}
+  m_Name: Diversion_EffectHub
+  m_EditorClassIdentifier: 
+  effectContentText: "\u30AB\u30FC\u30C9\u3092\u81EA\u5206\u306E\u3010\u6A5F\u80FD\u3011\u306E\u6570+1\u679A\u5F15\u304F\u3002\n\u3008\u30C7\u30A3\u30D0\u30FC\u30B8\u30E7\u30F3\u3009\u306F1\u30BF\u30FC\u30F3\u306B1\u679A\u3057\u304B\u767A\u52D5\u3067\u304D\u306A\u3044\u3002"
+  cardType: 0
+  cue: 2
+  priority: 3
+  willOperateOnActivation: 1
+  effects:
+  - {fileID: 11400000, guid: 3f8300acb4cc5334289f773e3f6b6225, type: 2}
+  - {fileID: 11400000, guid: 954beddf77d745c47aec5cbdd8477c82, type: 2}
+  - {fileID: 11400000, guid: 606d30b1aa6f47f4eb51a5b30f0648b0, type: 2}
+  - {fileID: 11400000, guid: 504f68f4a145db54ca782e6026f0ee0f, type: 2}
+  automaticEffectHub: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 6c803e41f98245a4d92615db99bf6768, type: 2}
+  ExtraEffects: []
+  usageIsOncePerTurn: 1
+  activationIsOncePerTurn: 0
+  isLimitedByHikagiri: 0
+  childrenOperateOnActivation: 1
+  childrenOperateAsAltEffect: 0
+  effectResults: []
+  cardResults01: []
+  cardResults02: []
+  cardResults03: []
+  cardResults04: []
+  cardResults05: []
+  cardResults06: []
+  gunResults01: []
+  gunResults02: []
+  fieldResult01: {fileID: 0}
+  fieldResult02: {fileID: 0}
+  fieldResult03: {fileID: 0}
+  intResult01: 0
+  intResult02: 0
+  projectileResult: {fileID: 0}
+  hubResult01: {fileID: 0}
+  hubResult02: {fileID: 0}
+  dataResult01: {fileID: 0}
+  dataResult02: {fileID: 0}
+  finishedInput: 1

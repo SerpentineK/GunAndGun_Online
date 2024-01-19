@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70e2d29eaeab974a8fcea1a4214273f, type: 3}
+  m_Name: SwiftRecharge_EffectHub
+  m_EditorClassIdentifier: 
+  effectContentText: "\u30C7\u30C3\u30AD\u306E\u4E0A\u304B\u30891\u679A\u88C5\u586B\u3059\u308B\u3002\n\u30AB\u30FC\u30C9\u30921\u679A\u5F15\u304F\u3002"
+  cardType: 0
+  cue: 2
+  priority: 3
+  willOperateOnActivation: 1
+  effects:
+  - {fileID: 11400000, guid: 724d0db551d7b7f4285cf7c9ac2f4037, type: 2}
+  - {fileID: 11400000, guid: 4cd801d17a2c2eb44bb22610b92d21b4, type: 2}
+  - {fileID: 11400000, guid: a3b4620079805844dab7ae699296488e, type: 2}
+  - {fileID: 11400000, guid: 955536c57f116774d85374d5d1de5dd9, type: 2}
+  - {fileID: 11400000, guid: ff28e23070d06744caec4c679ead0f55, type: 2}
+  - {fileID: 11400000, guid: 7ffaef93e8f490c43a7e2d9cae7faad6, type: 2}
+  automaticEffect: {fileID: 0}
+  automaticEndEffect: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 4bfb8c8d39ad7db4cb4ff7e10c297932, type: 2}
+  ExtraEffects: []
+  usageIsOncePerTurn: 0
+  activationIsOncePerTurn: 0
+  isLimitedByHikagiri: 0
+  effectTriggersFromHand: 0
+  playerResults: []
+  childrenOperateOnActivation: 1
+  childrenOperateAsAltEffect: 0
+  effectResults: []
+  cardResults01: []
+  cardResults02: []
+  cardResults03: []
+  cardResults04: []
+  cardResults05: []
+  cardResults06: []
+  gunResults01: []
+  gunResults02: []
+  fieldResult01: {fileID: 0}
+  fieldResult02: {fileID: 0}
+  fieldResult03: {fileID: 0}
+  fieldSetResult01: []
+  fieldSetResult02: []
+  fieldSetResult03: []
+  intResult01: 0
+  intResult02: 0
+  projectileResult: {fileID: 0}
+  hubResult01: {fileID: 0}
+  hubResult02: {fileID: 0}
+  dataResult01: {fileID: 0}
+  dataResult02: {fileID: 0}
+  skillResult: {fileID: 0}
+  finishedInput: 1

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5a06a97db082f40a515ef8fc6a56b3, type: 3}
+  m_Name: Ran
+  m_EditorClassIdentifier: 
+  cardPool: 0
+  gunnerId: 03
+  gunnerName: "\u30E9\u30F3"
+  gunnerNameENG: RAN
+  gunnerAbility: "\u81EA\u5206\u306E\u30BF\u30FC\u30F3\u7D42\u4E86\u6642\u3001\u81EA\u5206\u306E\u6A5F\u9283\u305D\u308C\u305E\u308C\u306B\u3001\u30C7\u30C3\u30AD\u306E\u4E0A\u304B\u30891\u679A\u307E\u3067\u88C5\u586B\u3059\u308B\u3002"
+  gunnerFlavorText: "\u6700\u4E0B\u5C64\u306E\u81EA\u79F0\u30A2\u30A4\u30C9\u30EB\u3002\\n\u9AD8\u51FA\u529B\u5668\u3092\u5099\u3048\u305F\u6A5F\u68B0\u8155\u3092\u7528\u3044\u3001\u6700\u9AD8\u306E\u7206\u767A\u3092\u76EE\u6307\u3059\u3002"
+  gunnerAgility: 2
+  gunnerHand: 3
+  gunnerImage: {fileID: 21300000, guid: ed4f6a3140b826540bd912b8fc7ae585, type: 3}
+  skillArray:
+  - {fileID: 11400000, guid: da6fe3630f4180e43b6cd4464bb59d11, type: 2}
+  - {fileID: 11400000, guid: f979f88fc1f42aa4a8e351419519d505, type: 2}
+  - {fileID: 11400000, guid: f554339c615f6024eb4d339b5fc777c8, type: 2}
+  iconVector: {x: -230, y: -736, z: 0}
+  iconScale: {x: 150, y: 150, z: 150}
+  iconLabelColor: {r: 1, g: 1, b: 1, a: 1}
+  playerScale: {x: 26.999998, y: 26.999998, z: 26.999998}
+  opponentScale: {x: 16, y: 16, z: 16}
+  effectHub: {fileID: 11400000, guid: 5ef1cfe472432ee4f89c15ca210095b1, type: 2}

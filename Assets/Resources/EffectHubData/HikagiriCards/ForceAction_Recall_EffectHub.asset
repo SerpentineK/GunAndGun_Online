@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70e2d29eaeab974a8fcea1a4214273f, type: 3}
+  m_Name: ForceAction_Recall_EffectHub
+  m_EditorClassIdentifier: 
+  effectContentText: "\u3010\u30EA\u30DF\u30C3\u30C8\uFF1A\u884C\u52D5\u3011\n( 1\u30BF\u30FC\u30F3\u306B1\u5EA6\u3057\u304B\u3010\u30EA\u30DF\u30C3\u30C8\u3011\u3092\u6301\u3064\u3010\u884C\u52D5\u3011\u3092\u767A\u52D5\u3067\u304D\u306A\u3044
+    )\n\u81EA\u5206\u306E\u6368\u3066\u672D\u304B\u3089\u3008\u5F37\u884C\uFF1A\u518D\u3009\u4EE5\u5916\u306E\u540D\u524D\u306E\u7570\u306A\u308B\u30AB\u30FC\u30C9\u30924\u679A\u307E\u3067\u9078\u3073\u3001\u5BFE\u5FDC\u3059\u308B\u30C7\u30C3\u30AD\u306E\u4E0B\u306B\u30E9\u30F3\u30C0\u30E0\u306A\u9806\u756A\u3067\u7F6E\u304D\u3001\u30AB\u30FC\u30C9\u30921\u679A\u5F15\u304F\u3002"
+  cardType: 0
+  cue: 2
+  priority: 3
+  willOperateOnActivation: 1
+  effects:
+  - {fileID: 11400000, guid: 1181d78441b039c4c98f780a0899b21e, type: 2}
+  - {fileID: 11400000, guid: 3c4d114b6f7dd9c48bd0dbe06366b04d, type: 2}
+  - {fileID: 11400000, guid: a6051a09c0100c140a5bbe6fae64b36c, type: 2}
+  - {fileID: 11400000, guid: e6ec58851675f9143b0872f9b14f682c, type: 2}
+  - {fileID: 11400000, guid: 9316b0b7c815ccd44b05279219a6ed77, type: 2}
+  automaticEffectHub: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: cafd6fa0bc836cf46bdc20bd2076710f, type: 2}
+  ExtraEffects: []
+  usageIsOncePerTurn: 0
+  activationIsOncePerTurn: 0
+  isLimitedByHikagiri: 1
+  childrenOperateOnActivation: 1
+  childrenOperateAsAltEffect: 0
+  effectResults: []
+  cardResults01: []
+  cardResults02: []
+  cardResults03: []
+  cardResults04: []
+  cardResults05: []
+  cardResults06: []
+  gunResults01: []
+  gunResults02: []
+  fieldResult01: {fileID: 0}
+  fieldResult02: {fileID: 0}
+  fieldResult03: {fileID: 0}
+  intResult01: 0
+  intResult02: 0
+  projectileResult: {fileID: 0}
+  hubResult01: {fileID: 0}
+  hubResult02: {fileID: 0}
+  dataResult01: {fileID: 0}
+  dataResult02: {fileID: 0}
+  finishedInput: 1

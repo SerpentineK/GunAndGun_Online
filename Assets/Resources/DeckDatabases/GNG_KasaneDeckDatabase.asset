@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767edb8be9346cc47834f5afc29fda1a, type: 3}
+  m_Name: GNG_KasaneDeckDatabase
+  m_EditorClassIdentifier: 
+  gunAttached: {fileID: 11400000, guid: 9fefa3be7b62bd14d8eff692c8bda155, type: 2}
+  cardDataLists:
+  - {fileID: 11400000, guid: 4673171a177a2564e87cc4fbe4aeaaf5, type: 2}
+  - {fileID: 11400000, guid: baca7a1a8f923e14c83d14060ace58af, type: 2}
+  - {fileID: 11400000, guid: 4bda37007b23cee4c8df7b8cbf0ce269, type: 2}
+  - {fileID: 11400000, guid: 2fcdc9ed2cfb07e4180601eb9a567f5a, type: 2}
+  - {fileID: 11400000, guid: bbcb50a724508394facf2bf496675c20, type: 2}
+  - {fileID: 11400000, guid: f038d73c3ab05e14e9757ce823db653e, type: 2}
+  - {fileID: 11400000, guid: b7e03ea945fa1c446b1d39b4cf02ca5d, type: 2}
+  - {fileID: 11400000, guid: 5835062872e4833409fc443db77d601a, type: 2}
+  effectHubDatabaseAttached: {fileID: 11400000, guid: b1116ec4cd5b9a245be6d19826e91046, type: 2}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: EvilBullet_Silence
+  m_EditorClassIdentifier: 
+  cardPool: 0
+  cardId: WS-003
+  cardName: "\u51F6\u5F3E\uFF1A\u9759"
+  cardEffectText: "\u3010\u30EA\u30DF\u30C3\u30C8\uFF1A\u9283\u5F3E\u3011\n( 1\u30BF\u30FC\u30F3\u306B1\u5EA6\u3057\u304B\u3010\u30EA\u30DF\u30C3\u30C8\u3011\u3092\u6301\u3064\u3010\u9283\u5F3E\u3011\u3092\u8868\u5411\u304D\u306B\u88C5\u586B\u3067\u304D\u306A\u3044
+    )\n\u3053\u306E\u30AB\u30FC\u30C9\u3092\u88C5\u586B\u3057\u305F\u6A5F\u9283\u3067\u5C04\u6483\u3057\u305F\u5834\u5408\u3001\u76F8\u624B\u306F\u6B21\u306E\u30BF\u30FC\u30F3\u3010\u884C\u52D5\u3011\u3092\u767A\u52D5\u3067\u304D\u306A\u3044\u3002"
+  cardCost: 0
+  cardType: 3
+  numOfCards: 3
+  isOverclock: 0
+  attachedGunData: {fileID: 11400000, guid: eadfce55e8f2e8e4aabc6d6c48051f7b, type: 2}
+  attachedEffectHub: {fileID: 0}

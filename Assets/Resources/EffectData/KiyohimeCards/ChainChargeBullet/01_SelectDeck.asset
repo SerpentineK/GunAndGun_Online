@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa42409fe13b32a41b82419926576ecf, type: 3}
+  m_Name: 01_SelectDeck
+  m_EditorClassIdentifier: 
+  effectContentText: 
+  cardType: 3
+  willOperateOnActivation: 1
+  willOperateAsAlternative: 0
+  altEffect: {fileID: 0}
+  altEffectCondition: 0
+  altActivationRefersToValue: 0
+  targets: 09000000
+  whereToInput: 12
+  selectAll: 0
+  isRandom: 0
+  valueInputIsAdditive: 0
+  methodToDealWithExceptions: 0
+  purposeOfField: 4
+  numberOfFields: 1
+  condition: 2

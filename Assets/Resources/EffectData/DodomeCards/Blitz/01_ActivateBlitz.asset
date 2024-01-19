@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f026717e51a75b54aa993145ce0cc5d9, type: 3}
+  m_Name: 01_ActivateBlitz
+  m_EditorClassIdentifier: 
+  effectContentText: "\u300A\u30D6\u30EA\u30C3\u30C4\u300B\u306E\u52B9\u679C\u3092\u6709\u52B9\u5316\u3059\u308B\u3002"
+  cardType: 0
+  willOperateOnActivation: 1
+  willOperateAsAlternative: 0
+  altEffect: {fileID: 0}
+  altEffectCondition: 0
+  altActivationRefersToValue: 0
+  giveValueToContinuous: 0
+  valueToGive: 0
+  continuousStartCue: 2
+  continuous: {fileID: 11400000, guid: d73428717645c3445b532241a54a8508, type: 2}
+  endContinuous: {fileID: 11400000, guid: 3de508ebdadcc0d428509c091d365ed5, type: 2}

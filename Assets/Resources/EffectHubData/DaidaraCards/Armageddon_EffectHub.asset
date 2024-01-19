@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70e2d29eaeab974a8fcea1a4214273f, type: 3}
+  m_Name: Armageddon_EffectHub
+  m_EditorClassIdentifier: 
+  effectContentText: "\u3010\u30AA\u30FC\u30D0\u30FC\u30AF\u30ED\u30C3\u30AF\u3011\n\u81EA\u5206\u306E\u3008\u591A\u9023\u51F6\u88C5\u30C0\u30A4\u30C0\u30E9\u3009\u3092\u88CF\u5411\u304D\u306B\u3059\u308B\u3002\u305D\u3046\u3057\u305F\u5834\u5408\u3001\u4EE5\u4E0B\u306E\u52B9\u679C\u3092\u89E3\u6C7A\u3059\u308B\u3002\n-
+    \u76F8\u624B\u306F\u6B21\u306E\u30BF\u30FC\u30F3\u5C04\u6483\u3067\u304D\u306A\u3044\u3002\u305D\u306E\u5F8C\u3001\u81EA\u5206\u306E\u30DC\u30EB\u30C6\u30FC\u30B8\u3092\u78BA\u8A8D\u3059\u308B\u3002\u305D\u306E\u4E2D\u306B\u3042\u308B\u3010\u9283\u5F3E\u3011\u3092\u4EFB\u610F\u306E\u679A\u6570\u6368\u3066\u672D\u306B\u7F6E\u304F\u3002\u305D\u306E\u679A\u6570\xD72HIT\u3002"
+  cardType: 0
+  cue: 2
+  priority: 3
+  willOperateOnActivation: 1
+  effects:
+  - {fileID: 11400000, guid: 847142202b9748f4fae2f138bbaf50b5, type: 2}
+  - {fileID: 11400000, guid: 5d8ec10157583a74d91df23354b6f473, type: 2}
+  - {fileID: 11400000, guid: 1a99ea0493ceea74bad9e727d9497228, type: 2}
+  - {fileID: 11400000, guid: 7b0c6d8bbf0620749811be3b01c2edc7, type: 2}
+  - {fileID: 11400000, guid: 18fe53aa96cfd414981567438f8cee88, type: 2}
+  - {fileID: 11400000, guid: 086394116f9d1cf4ca868c7018084a7c, type: 2}
+  - {fileID: 11400000, guid: bd0359cbc772a9d47925edc282e8740b, type: 2}
+  - {fileID: 11400000, guid: 62c000b0ad7706b48b6b1a1f5f36b7fa, type: 2}
+  - {fileID: 11400000, guid: 7e70e394def9f1b44ab0002f928ff701, type: 2}
+  automaticEffect: {fileID: 0}
+  automaticEndEffect: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 06810d4de0ee58e428c99eb2beaf53c1, type: 2}
+  ExtraEffects:
+  - {fileID: 11400000, guid: 6f132a69018d0f646abab914b43ecb03, type: 2}
+  - {fileID: 11400000, guid: b6d0f17ba8d7d9f4c82bc8130013e98a, type: 2}
+  - {fileID: 11400000, guid: c4704d56e4764ae4db7f7b97a0c300f1, type: 2}
+  usageIsOncePerTurn: 0
+  activationIsOncePerTurn: 0
+  isLimitedByHikagiri: 0
+  effectTriggersFromHand: 0
+  isOverclock: 1
+  playerResults: []
+  childrenOperateOnActivation: 1
+  childrenOperateAsAltEffect: 0
+  effectResults: []
+  cardResults01: []
+  cardResults02: []
+  cardResults03: []
+  cardResults04: []
+  cardResults05: []
+  cardResults06: []
+  gunResults01: []
+  gunResults02: []
+  fieldResult01: {fileID: 0}
+  fieldResult02: {fileID: 0}
+  fieldResult03: {fileID: 0}
+  fieldSetResult01: []
+  fieldSetResult02: []
+  fieldSetResult03: []
+  intResult01: 0
+  intResult02: 0
+  projectileResult: {fileID: 0}
+  hubResult01: {fileID: 0}
+  hubResult02: {fileID: 0}
+  dataResult01: {fileID: 0}
+  dataResult02: {fileID: 0}
+  skillResult: {fileID: 0}
+  finishedInput: 1

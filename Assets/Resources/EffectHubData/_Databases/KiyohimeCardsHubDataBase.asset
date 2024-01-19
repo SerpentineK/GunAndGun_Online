@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f6f793a2e772949b6816bed26df55f, type: 3}
+  m_Name: KiyohimeCardsHubDataBase
+  m_EditorClassIdentifier: 
+  effectHubList:
+  - {fileID: 11400000, guid: a3d8cec48508d4c438ffe3d91d17b8dc, type: 2}
+  - {fileID: 11400000, guid: b3fbde8e9cb32ae4d90b8fb6edad870b, type: 2}
+  - {fileID: 11400000, guid: be552f279e4e51c41b0080ee616e6fea, type: 2}
+  - {fileID: 11400000, guid: 64c4ccebd3587d349a7a28c322a6f58e, type: 2}
+  - {fileID: 11400000, guid: d807f7a5a914fa1428475f9e65eb4bf4, type: 2}
+  - {fileID: 11400000, guid: 5aab8ce77f9147c4d851e6ec3df2ea60, type: 2}
+  - {fileID: 11400000, guid: 6392d50d930e40048bf53fa97ff425df, type: 2}

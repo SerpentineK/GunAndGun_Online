@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5a06a97db082f40a515ef8fc6a56b3, type: 3}
+  m_Name: Hibana
+  m_EditorClassIdentifier: 
+  cardPool: 0
+  gunnerId: 01
+  gunnerName: "\u30D2\u30D0\u30CA"
+  gunnerNameENG: HIBANA
+  gunnerAbility: "1\u30BF\u30FC\u30F3\u306B1\u5EA6\u3001\u30C7\u30C3\u30AD\u306E\u4E0A\u307E\u305F\u306F\u6368\u3066\u672D\u304B\u3089\u30AB\u30FC\u30C9\u30922\u679A\u307E\u3067\u30DC\u30EB\u30C6\u30FC\u30B8\u306B\u7F6E\u304F\u3002"
+  gunnerFlavorText: "\u8A18\u61B6\u55AA\u5931\u306E\u5C11\u5973\u3002\\n\u81EA\u5206\u306E\u8A18\u61B6\u306E\u624B\u639B\u304B\u308A\u3068\u306A\u308B\u30CA\u30AC\u30F3\u3092\u96C6\u3081\u308B\u3002"
+  gunnerAgility: 5
+  gunnerHand: 3
+  gunnerImage: {fileID: 21300000, guid: eaa6bbc29c3eebe42bfe9e9a219c263c, type: 3}
+  skillArray:
+  - {fileID: 11400000, guid: d67aaa88f15a839488a47eab178609c7, type: 2}
+  - {fileID: 11400000, guid: 6a6ddd9030710c640903db9789727fb7, type: 2}
+  - {fileID: 11400000, guid: b41fb17b31c45644b9a0144b924924d4, type: 2}
+  iconVector: {x: 0, y: -730, z: 0}
+  iconScale: {x: 150, y: 150, z: 150}
+  iconLabelColor: {r: 0, g: 0, b: 0, a: 1}
+  playerScale: {x: 27, y: 27, z: 27}
+  opponentScale: {x: 16, y: 16, z: 16}
+  effectHub: {fileID: 11400000, guid: 54489f588f0e71241bdbce45fcc26253, type: 2}

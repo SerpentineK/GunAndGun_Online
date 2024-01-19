@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e2798a6f35de64887121917529cd4d, type: 3}
+  m_Name: Enra
+  m_EditorClassIdentifier: 
+  cardPool: 0
+  gunId: 01
+  gunImage: {fileID: 21300000, guid: a2ecd3d77c570a541b6028753d8118f8, type: 3}
+  gunName: "\u5909\u8CEA\u5F0F\u9023\u767A\u9283 \u30A8\u30F3\u30E9"
+  gunAbility: 
+  gunFlavorText: "\u30EA\u30DC\u30EB\u30D0\u30FC\u578B\u306E\u9069\u7528\u5916\u306E\u9283\u3002\\n\u591A\u69D8\u306A\u9283\u5F3E\u306F\u5B9A\u578B\u306E\u6226\u8853\u3092\u6301\u305F\u305A\u3001\u3042\u3089\u3086\u308B\u5C40\u9762\u306B\u9069\u5408\u3059\u308B\u3002"
+  maximumBulletCapacity: 3
+  maximumReloadPerTurn: 2
+  gunWeight: 3
+  gunType: 0
+  bulletsToFire: 010000000200000003000000
+  hitOfFire:
+  - 1
+  - 3
+  - 5
+  sideEffectOfFire:
+  - N/A
+  - N/A
+  - N/A
+  iconWidth: 700
+  iconHeight: 500
+  iconBoundsWidth: 300
+  gunImageScale: {x: 25, y: 25, z: 25}
+  deckDatabase: {fileID: 11400000, guid: d125240a12147a440bd17f7425be79d0, type: 2}

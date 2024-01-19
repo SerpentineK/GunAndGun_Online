@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d353549368f8f2c4b8d0f00533adfcb6, type: 3}
+  m_Name: Boss_RanStageDatabase
+  m_EditorClassIdentifier: 
+  bossAttached: {fileID: 0}
+  stageDataLists:
+  - {fileID: 11400000, guid: 91eb7a5ff18a9b642ba0ad3cbc6bd3ee, type: 2}
+  - {fileID: 11400000, guid: 70c967aae20ca2744acfb6dd2c3d5d99, type: 2}
+  - {fileID: 11400000, guid: b0e5aba767d1ff44ab24ac8e7dd1bb4b, type: 2}

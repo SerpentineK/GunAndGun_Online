@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c79436786d3d2e44acb653fc1de3a7d, type: 3}
+  m_Name: 04_SelectCardsFromDiscard_01
+  m_EditorClassIdentifier: 
+  effectContentText: 
+  cardType: 0
+  willOperateOnActivation: 1
+  willOperateAsAlternative: 0
+  altEffect: {fileID: 0}
+  altEffectCondition: 0
+  altActivationRefersToValue: 0
+  targets: 0b000000
+  whereToInput: 2
+  selectAll: 0
+  isRandom: 0
+  valueInputIsAdditive: 0
+  purposeOfCards: 3
+  maximumNumberOfSelection: 1
+  isForcedToSelectMax: 1
+  searchCondition: 1
+  searchCondition2: 1
+  numberOfCardsRefersToValue: 0
+  returnNumberOfSelectedToValue: 0

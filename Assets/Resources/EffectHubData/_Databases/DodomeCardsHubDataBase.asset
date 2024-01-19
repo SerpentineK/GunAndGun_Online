@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f6f793a2e772949b6816bed26df55f, type: 3}
+  m_Name: DodomeCardsHubDataBase
+  m_EditorClassIdentifier: 
+  effectHubList:
+  - {fileID: 11400000, guid: a1ea4e4f7fd7e794cb6bd2c9efa749d0, type: 2}
+  - {fileID: 11400000, guid: 2b4b2f74a63a1fe4eb616f236b9436e2, type: 2}
+  - {fileID: 11400000, guid: e12710ea15fa87e4b87338f5b810da32, type: 2}
+  - {fileID: 11400000, guid: 8ae420292892c7e40874c1a6fff0fe96, type: 2}
+  - {fileID: 11400000, guid: cae3c5d83ce025d4fb0bfadeabbb7e3a, type: 2}
+  - {fileID: 11400000, guid: d761cb6caa0f45f46a82dc7165276d67, type: 2}

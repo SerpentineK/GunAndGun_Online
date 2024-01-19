@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f6f793a2e772949b6816bed26df55f, type: 3}
+  m_Name: DaidaraCardsHubDataBase
+  m_EditorClassIdentifier: 
+  effectHubList:
+  - {fileID: 11400000, guid: 39e5ab80171ab294589f593b887cf8c3, type: 2}
+  - {fileID: 11400000, guid: 5d462ab8512766e44af019b0fe94ab8b, type: 2}
+  - {fileID: 11400000, guid: ed028b08489831f46bb7b64614d7de30, type: 2}
+  - {fileID: 11400000, guid: 2097531002f9731468fa7b0dda8ee618, type: 2}
+  - {fileID: 11400000, guid: b4ddd8fc924f34d47b9e414d4d1c6120, type: 2}
+  - {fileID: 11400000, guid: 4f1363d73a212ae4b9c8c171eca08580, type: 2}
+  - {fileID: 11400000, guid: 4fa9a7b238cd0254993dbb472390a4ed, type: 2}

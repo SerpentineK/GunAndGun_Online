@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e2798a6f35de64887121917529cd4d, type: 3}
+  m_Name: Mouryou
+  m_EditorClassIdentifier: 
+  cardPool: 2
+  gunId: WS-04
+  gunImage: {fileID: 21300000, guid: 5d5697ea8e1014a4bbfa6cc6733437af, type: 3}
+  gunName: "\u7D99\u578B\u6A5F\u95A2\u9023\u9283 \u30E2\u30A6\u30EA\u30E7\u30A6"
+  gunAbility: "[ CHAINFIRE ]\\n\u3053\u306E\u6A5F\u9283\u306E\u5C04\u6483\u5F8C\u3001\u81EA\u5206\u306E\u30C7\u30C3\u30AD\u30921\u3064\u9078\u3073\u3001\u305D\u306E\u4E0A\u304B\u30896\u679A\u307E\u3067\u3053\u306E\u6A5F\u9283\u306B\u88CF\u5411\u304D\u3067\u88C5\u586B\u3059\u308B\u3002"
+  gunFlavorText: "\u8EFD\u91CF\u6A5F\u95A2\u9283\u578B\u306E\u9069\u7528\u5916\u306E\u9283\u3002\\n\u6483\u3061\u59CB\u3081\u305F\u304C\u6700\u5F8C\u3001\u6575\u306E\u59FF\u3092\u6D88\u3057\u98DB\u3070\u3059\u307E\u3067\u56DE\u8EE2\u97F3\u306F\u9CF4\u308A\u3084\u307E\u306A\u3044\u3002"
+  maximumBulletCapacity: 6
+  maximumReloadPerTurn: 2
+  gunWeight: 8
+  gunType: 1
+  bulletsToFire: 06000000
+  hitOfFire:
+  - 10
+  sideEffectOfFire:
+  - CHAINFIRE
+  iconWidth: 1300
+  iconHeight: 800
+  iconBoundsWidth: 500
+  gunImageScale: {x: 0, y: 0, z: 0}
+  deckDatabase: {fileID: 11400000, guid: 1ff71dcad25230944b23b4c52130213b, type: 2}

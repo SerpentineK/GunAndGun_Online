@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 562bbf5bb7d60f74db1dfb251d3d54a9, type: 3}
+  m_Name: Nanane_SouNdCrack
+  m_EditorClassIdentifier: 
+  cardPool: 2
+  skillId: WS-02
+  skillCost: 16
+  skillName: Sou[N]d Crack
+  skillEffectText: "\u30AB\u30FC\u30C9\u30924\u679A\u5F15\u304F\u3002\n\u3053\u306E\u30BF\u30FC\u30F3\u3001\u81EA\u5206\u306E\u6A5F\u9283\u306F
+    [\u88C5\u586B\u4E0A\u9650] \u304C\u7121\u9650\u306B\u306A\u308A\u3001\u4F55\u5EA6\u3067\u3082\u5C04\u6483\u3092\u3059\u308B\u3053\u3068\u304C\u3067\u304D\u308B\u3002"
+  skillFlavorText: "\u300C\u30A2\u30F3\u30B3\u30FC\u30EB\u3001\u3044\u3063\u3068\u304F\uFF1F\u300D"
+  skillGraphics: {fileID: 21300000, guid: 7942b579d0d90724bbdf98368f7f15e0, type: 3}

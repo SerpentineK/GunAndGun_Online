@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5a06a97db082f40a515ef8fc6a56b3, type: 3}
+  m_Name: Rock
+  m_EditorClassIdentifier: 
+  cardPool: 3
+  gunnerId: UB-02
+  gunnerName: "\u30ED\u30C3\u30AF"
+  gunnerNameENG: ROCK
+  gunnerAbility: "\u76F8\u624B\u306E\u30BF\u30FC\u30F3\u306B\u3001\u76F8\u624B\u304C\u3008\u30ED\u30C3\u30AF\u3009\u306E\u52B9\u679C\u4EE5\u5916\u3067\u30AB\u30FC\u30C9\u30921\u679A\u4EE5\u4E0A\u5F15\u304F\u6642\u3001\u540C\u3058\u679A\u6570\u306E\u30AB\u30FC\u30C9\u3092\u5F15\u304F\u3002\n\u3053\u306E\u52B9\u679C\u306B\u3088\u308A\u3042\u306A\u305F\u306E\u624B\u672D\u306F7\u679A\u4EE5\u4E0A\u306B\u306A\u3089\u306A\u3044\u3002\n(
+    \u3042\u306A\u305F\u306E\u624B\u672D\u304C5\u679A\u306E\u6642\u306B\u3001\u76F8\u624B\u304C\u30AB\u30FC\u30C9\u30922\u679A\u5F15\u3044\u305F\u3068\u304D\u30016\u679A\u306B\u306A\u308B\u3088\u3046\u306B1\u679A\u306E\u30AB\u30FC\u30C9\u3092\u5F15\u304F\u3002
+    )"
+  gunnerFlavorText: "\u751F\u4F53\u4FE1\u4EF0\u7D44\u7E54\u3010asis\u3011\u6240\u5C5E\u306E\u5973\u6027\u3002\n\u7279\u6B8A\u306A\u624B\u888B\u306F\u3001\u7834\u88C2\u97F3\u306B\u3088\u308A\u5BFE\u8C61\u306E\u884C\u52D5\u3092\u6253\u3061\u6D88\u3059\u3002"
+  gunnerAgility: 1
+  gunnerHand: 2
+  gunnerImage: {fileID: 21300000, guid: 03e0e211570faff479279178f44c7272, type: 3}
+  skillArray:
+  - {fileID: 11400000, guid: 85ed010cc979b344e8b6191d0b8194ac, type: 2}
+  - {fileID: 11400000, guid: 612556ed60c2c034780337025b3f477c, type: 2}
+  - {fileID: 11400000, guid: ba4e7346b636d1a40b4d2ecb99bf631c, type: 2}
+  iconVector: {x: -200, y: -550, z: 0}
+  iconScale: {x: 250, y: 250, z: 250}
+  iconLabelColor: {r: 1, g: 1, b: 1, a: 1}
+  playerScale: {x: 60.000004, y: 60.000004, z: 60.000004}
+  opponentScale: {x: 32, y: 32, z: 32}
+  effectHub: {fileID: 11400000, guid: 926fb71f9af3bbe46b42cb024961fc94, type: 2}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767edb8be9346cc47834f5afc29fda1a, type: 3}
+  m_Name: UB_MitsumeDeckDatabase
+  m_EditorClassIdentifier: 
+  gunAttached: {fileID: 11400000, guid: ee6d32c9ce0de20439d7fa99be0716fd, type: 2}
+  cardDataLists:
+  - {fileID: 11400000, guid: eaf160bf1fcc52447a79d438de48eff8, type: 2}
+  - {fileID: 11400000, guid: e5b93eef198236f4e9a6d4eb28a9923c, type: 2}
+  - {fileID: 11400000, guid: 4009c0ed0f4bda6439bc2b765fe3e10d, type: 2}
+  - {fileID: 11400000, guid: 612cc0f9f357f4d4f985764aa6ce5854, type: 2}
+  - {fileID: 11400000, guid: 786948b99789d5e418ff80566a368428, type: 2}
+  - {fileID: 11400000, guid: d61c124a628d53947b3ae7af24fa457c, type: 2}
+  effectHubDatabaseAttached: {fileID: 11400000, guid: c5e06cd1bf5a8b34d8844d942cf9523c, type: 2}

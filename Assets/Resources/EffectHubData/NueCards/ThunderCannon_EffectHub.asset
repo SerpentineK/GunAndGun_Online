@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70e2d29eaeab974a8fcea1a4214273f, type: 3}
+  m_Name: ThunderCannon_EffectHub
+  m_EditorClassIdentifier: 
+  effectContentText: "\uFF08\u8FFD\u52A0\u30B3\u30B9\u30C8\uFF1A\u3008\u8377\u96FB\u5F0F\u96FB\u78C1\u6295\u5C04\u7832
+    \u30CC\u30A8\u3009\u306E\u88C5\u586B6\u3092\u6368\u3066\u672D\u306B\u7F6E\u304F\uFF09\n\u76F8\u624B\u306E\u624B\u672D\u3001\u88C5\u586B\u3001\u3010\u6A5F\u80FD\u3011\u3001\u305D\u3057\u3066\u30BB\u30C3\u30C8\u3055\u308C\u3066\u3044\u308B\u30AB\u30FC\u30C9\u3092\u5168\u3066\u6368\u3066\u672D\u306B\u7F6E\u304F\u3002"
+  cardType: 0
+  cue: 2
+  priority: 3
+  willOperateOnActivation: 1
+  effects:
+  - {fileID: 11400000, guid: b4cdbb5656d4e8247af574f36e2d9f96, type: 2}
+  - {fileID: 11400000, guid: d1100a8665f93cd41ab021078818dae8, type: 2}
+  - {fileID: 11400000, guid: 8511deb4733796f4fb5b5ceb5dc3da51, type: 2}
+  - {fileID: 11400000, guid: 3354cbc4bc903de45ac5bdf080247a7b, type: 2}
+  - {fileID: 11400000, guid: cdfed89cc425ef64ab2a4d935f1918f7, type: 2}
+  automaticEffect: {fileID: 0}
+  automaticEndEffect: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 346739eacb63a7743bd953e95de75b8d, type: 2}
+  ExtraEffects: []
+  usageIsOncePerTurn: 0
+  activationIsOncePerTurn: 0
+  isLimitedByHikagiri: 0
+  effectTriggersFromHand: 0
+  playerResults: []
+  childrenOperateOnActivation: 1
+  childrenOperateAsAltEffect: 0
+  effectResults: []
+  cardResults01: []
+  cardResults02: []
+  cardResults03: []
+  cardResults04: []
+  cardResults05: []
+  cardResults06: []
+  gunResults01: []
+  gunResults02: []
+  fieldResult01: {fileID: 0}
+  fieldResult02: {fileID: 0}
+  fieldResult03: {fileID: 0}
+  fieldSetResult01: []
+  fieldSetResult02: []
+  fieldSetResult03: []
+  intResult01: 0
+  intResult02: 0
+  projectileResult: {fileID: 0}
+  hubResult01: {fileID: 0}
+  hubResult02: {fileID: 0}
+  dataResult01: {fileID: 0}
+  dataResult02: {fileID: 0}
+  skillResult: {fileID: 0}
+  finishedInput: 1

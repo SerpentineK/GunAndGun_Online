@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767edb8be9346cc47834f5afc29fda1a, type: 3}
+  m_Name: GNG_HakmenDeckDatabase
+  m_EditorClassIdentifier: 
+  gunAttached: {fileID: 11400000, guid: 478d699b4b20d55439c179960cd2a477, type: 2}
+  cardDataLists:
+  - {fileID: 11400000, guid: 9d9a175a744e742438edacea5e56f950, type: 2}
+  - {fileID: 11400000, guid: 6c803e41f98245a4d92615db99bf6768, type: 2}
+  - {fileID: 11400000, guid: ead3eb946b34c644fb42930e12aa47d5, type: 2}
+  - {fileID: 11400000, guid: cc88ba8788e38f343bf4ae670ae47fad, type: 2}
+  - {fileID: 11400000, guid: 528644e0b44823446bf1d923de70f764, type: 2}
+  - {fileID: 11400000, guid: bf51338fc169ae34b8836704a17c6dcf, type: 2}
+  - {fileID: 11400000, guid: 59a6b34fe0fd17c4aabbe356299c5dc9, type: 2}
+  - {fileID: 11400000, guid: e045ca5d9991c7d40a2dc4d96f10834b, type: 2}
+  effectHubDatabaseAttached: {fileID: 11400000, guid: 456f363e757c86c47a4d6908187b5111, type: 2}

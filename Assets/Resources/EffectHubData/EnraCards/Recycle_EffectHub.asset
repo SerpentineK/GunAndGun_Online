@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70e2d29eaeab974a8fcea1a4214273f, type: 3}
+  m_Name: Recycle_EffectHub
+  m_EditorClassIdentifier: 
+  effectContentText: "\u81EA\u5206\u306E\u6368\u3066\u672D\u304B\u3089\u30AB\u30FC\u30C9\u30921\u679A\u30C7\u30C3\u30AD\u306E\u4E0A\u306B\u623B\u3059\u3002\u305D\u308C\u304C\u3010\u9283\u5F3E\u3011\u306E\u5834\u5408\u3001\u4EE3\u308F\u308A\u306B\u624B\u672D\u306B\u52A0\u3048\u308B\u3002"
+  cardType: 0
+  cue: 2
+  priority: 3
+  willOperateOnActivation: 1
+  effects:
+  - {fileID: 11400000, guid: 2f488c44704608644ae234213858e027, type: 2}
+  - {fileID: 11400000, guid: a53e97c9d0e6ee546ad527831a9ac49d, type: 2}
+  automaticEffectHub: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 93a12475e80d58944a14d33edca4084a, type: 2}
+  ExtraEffects:
+  - {fileID: 11400000, guid: b6cb71c916cb69947b4b6d723398d7dc, type: 2}
+  childrenOperateOnActivation: 1
+  childrenOperateAsAltEffect: 0
+  effectResults: []
+  cardResults01: []
+  cardResults02: []
+  cardResults03: []
+  cardResults04: []
+  cardResults05: []
+  cardResults06: []
+  gunResults01: []
+  gunResults02: []
+  fieldResult01: {fileID: 0}
+  fieldResult02: {fileID: 0}
+  fieldResult03: {fileID: 0}
+  intResult01: 0
+  intResult02: 0
+  projectileResult: {fileID: 0}
+  finishedInput: 1

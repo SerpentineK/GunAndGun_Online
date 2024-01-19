@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: BulletBreak
+  m_EditorClassIdentifier: 
+  cardPool: 0
+  cardId: 22
+  cardName: "\u30D0\u30EC\u30C3\u30C8\u30D6\u30EC\u30A4\u30AF"
+  cardEffectText: "\u76F8\u624B\u306E\u88C5\u586B\u30921\u679A\u6368\u3066\u672D\u306B\u7F6E\u304F\u3002"
+  cardCost: 0
+  cardType: 0
+  numOfCards: 3
+  attachedGunData: {fileID: 11400000, guid: 3b41f38a69edf354b87f693fe8697acc, type: 2}
+  attachedEffectHub: {fileID: 0}

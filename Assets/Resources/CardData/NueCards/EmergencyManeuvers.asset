@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: EmergencyManeuvers
+  m_EditorClassIdentifier: 
+  cardPool: 0
+  cardId: 09
+  cardName: "\u7DCA\u6025\u56DE\u907F"
+  cardEffectText: "\u76F8\u624B\u306E\u5C04\u6483\u307E\u305F\u306F\u6280\u80FD\u306B\u3088\u3063\u3066\u4E0E\u3048\u3089\u308C\u308BHIT-3\u3002"
+  cardCost: 0
+  cardType: 1
+  numOfCards: 4
+  attachedGunData: {fileID: 11400000, guid: 2d42bb6069f1c6d48b5763e2c4a4462b, type: 2}

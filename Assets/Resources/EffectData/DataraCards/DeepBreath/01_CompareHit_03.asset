@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f397c6cc4252e49bece0a1e1e9e949, type: 3}
+  m_Name: 01_CompareHit_03
+  m_EditorClassIdentifier: 
+  effectContentText: "\u73FE\u5728\u306E\u5C04\u6483\u30673HIT\u4EE5\u4E0A\u4E0E\u3048\u308B\u3053\u3068\u306B\u306A\u3063\u3066\u3044\u305F\u3089True\u3001\u306A\u3063\u3066\u3044\u306A\u304B\u3063\u305F\u3089False\u3092\u8FD4\u3059\u3002"
+  cardType: 1
+  willOperateOnActivation: 1
+  willOperateAsAlternative: 0
+  altEffect: {fileID: 0}
+  altEffectCondition: 0
+  altActivationRefersToValue: 0
+  target: 28
+  value: 3
+  methodOfCompare: 4
+  returnResultTo: 17

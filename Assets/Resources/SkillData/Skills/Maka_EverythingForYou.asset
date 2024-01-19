@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 562bbf5bb7d60f74db1dfb251d3d54a9, type: 3}
+  m_Name: Maka_EverythingForYou
+  m_EditorClassIdentifier: 
+  cardPool: 1
+  skillId: OH-06
+  skillCost: 0
+  skillName: "\u3059\u3079\u3066\u3092\u30AD\u30DF\u306B"
+  skillEffectText: "\u3010\u7D99\u7D9A\u3011\n\u81EA\u5206\u306E\u30BF\u30FC\u30F3\u7D42\u4E86\u6642\u3001\u81EA\u5206\u306E\u30DC\u30EB\u30C6\u30FC\u30B8\u3092\u81EA\u5206\u306E\u6A5F\u9283\u4E00\u3064\u306B2\u679A\u307E\u3067\u88C5\u586B\u3059\u308B\u3002\n\u81EA\u5206\u306E\u6A5F\u9283\u306E\u5C04\u6483\u3067\u88C5\u586B\u3055\u308C\u3066\u3044\u305F\u30AB\u30FC\u30C9\u304C\u30DC\u30EB\u30C6\u30FC\u30B8\u306B\u7F6E\u304B\u308C\u308B\u6642\u3001\u4EE3\u308F\u308A\u306B\u6368\u3066\u672D\u306B\u7F6E\u304F\u3002\n[
+    BURST ] \n\u4EE3\u308F\u308A\u306B3\u679A\u307E\u3067\u88C5\u586B\u3059\u308B\u3002"
+  skillFlavorText: "\u300C\u6367\u3052\u306A\u3055\u3044\u3001\u8CB4\u65B9\u306E\u5168\u3066\u3092\u2026\u2026\u30DE\u30AB\u306E\u70BA\u306B\u2026\u2026\uFF01\u300D"
+  skillGraphics: {fileID: 21300000, guid: 3f760cb9c30edf249929ccb10cbe22d5, type: 3}

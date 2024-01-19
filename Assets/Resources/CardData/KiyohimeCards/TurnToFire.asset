@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: TurnToFire
+  m_EditorClassIdentifier: 
+  cardPool: 1
+  cardId: OH-12
+  cardName: "\u708E\u8EE2\u5316"
+  cardEffectText: "\u81EA\u5206\u306E\u6A5F\u9283\u30921\u3064\u9078\u3076\u3002\n\u30C7\u30C3\u30AD\u306E\u4E0A\u304B\u30892\u679A\u305D\u306E\u6A5F\u9283\u306B\u88C5\u586B\u3059\u308B\u3002\n\u76F8\u624B\u306E\u5C04\u6483\u307E\u305F\u306F\u6280\u80FD\u306B\u3088\u3063\u3066\u4E0E\u3048\u3089\u308C\u308BHIT\u3092\u534A\u5206\u306B\u3059\u308B\u3002\uFF08\u7AEF\u6570\u5207\u6368\u3066\uFF09"
+  cardCost: 2
+  cardType: 1
+  numOfCards: 2
+  isOverclock: 0
+  attachedGunData: {fileID: 11400000, guid: 8526661b187f07f4e9173db30345cdc6, type: 2}
+  attachedEffectHub: {fileID: 0}

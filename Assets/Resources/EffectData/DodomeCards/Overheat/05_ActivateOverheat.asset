@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f026717e51a75b54aa993145ce0cc5d9, type: 3}
+  m_Name: 05_ActivateOverheat
+  m_EditorClassIdentifier: 
+  effectContentText: "\u300C\u30AB\u30FC\u30C9\u52B9\u679C\u306B\u3088\u308B\u30C9\u30ED\u30FC\u306E\u7121\u52B9\u5316\u300D\u3092\u6709\u52B9\u5316\u3059\u308B\u3002"
+  cardType: 0
+  willOperateOnActivation: 1
+  willOperateAsAlternative: 0
+  altEffect: {fileID: 0}
+  altEffectCondition: 0
+  altActivationRefersToValue: 0
+  giveValueToContinuous: 1
+  valueToGive: 7
+  continuousStartCue: 2
+  continuous: {fileID: 11400000, guid: c8f0ee8666e118f4d8eb123bc00993ea, type: 2}
+  endContinuous: {fileID: 11400000, guid: 7dbcad38cee617a46923e1f000538f47, type: 2}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767edb8be9346cc47834f5afc29fda1a, type: 3}
+  m_Name: WS_DaidaraDeckDatabase
+  m_EditorClassIdentifier: 
+  gunAttached: {fileID: 11400000, guid: 3bd6934525d9b714085fbdad4926716b, type: 2}
+  cardDataLists:
+  - {fileID: 11400000, guid: 06810d4de0ee58e428c99eb2beaf53c1, type: 2}
+  - {fileID: 11400000, guid: b3c69796c91c0e1498cd3cf62f82f3c8, type: 2}
+  - {fileID: 11400000, guid: 14291c05d67a345468919b7fd67e1253, type: 2}
+  - {fileID: 11400000, guid: 79a11422a7c331845b4e872751f98500, type: 2}
+  - {fileID: 11400000, guid: a38e80a215d32f748b8e6fc3d1a69439, type: 2}
+  - {fileID: 11400000, guid: 752e421b1a262f4458a695b2ae905c3c, type: 2}
+  - {fileID: 11400000, guid: ffd9a6dc2c380294b9f4a9f8a7050e93, type: 2}
+  effectHubDatabaseAttached: {fileID: 11400000, guid: 5fd56758632ab0b4fb507b5d5e0fd0c3, type: 2}

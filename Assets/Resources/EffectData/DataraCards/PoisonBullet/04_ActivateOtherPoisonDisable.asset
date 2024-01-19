@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f026717e51a75b54aa993145ce0cc5d9, type: 3}
+  m_Name: 04_ActivateOtherPoisonDisable
+  m_EditorClassIdentifier: 
+  effectContentText: "\u307B\u304B\u306E\u300A\u30DD\u30A4\u30BA\u30F3\u30D0\u30EC\u30C3\u30C8\u300B\u306E\u52B9\u679C\u3092\u7121\u52B9\u5316\u3059\u308B(WilOperateOnActivation\u3092false\u306B\u3059\u308B)\u3002"
+  cardType: 3
+  willOperateOnActivation: 1
+  willOperateAsAlternative: 0
+  altEffect: {fileID: 0}
+  altEffectCondition: 0
+  altActivationRefersToValue: 0
+  giveValueToContinuous: 1
+  valueToGive: 7
+  continuousStartCue: 2
+  continuous: {fileID: 11400000, guid: 6805912dc7fcb4b4a9693f0134a6c06b, type: 2}
+  endContinuous: {fileID: 11400000, guid: 1e67868740a94a84d8194c2b9e2a5675, type: 2}

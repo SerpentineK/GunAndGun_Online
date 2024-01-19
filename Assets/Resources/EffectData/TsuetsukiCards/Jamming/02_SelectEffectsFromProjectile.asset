@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6970b0ecbf571d4494777d7ce298f4c, type: 3}
+  m_Name: 02_SelectEffectsFromProjectile
+  m_EditorClassIdentifier: 
+  effectContentText: 
+  cardType: 1
+  willOperateOnActivation: 1
+  willOperateAsAlternative: 0
+  altEffect: {fileID: 11400000, guid: eaed0eb9cb8ac0a4eb3247ea455accb5, type: 2}
+  altEffectCondition: 6
+  altActivationRefersToValue: 18
+  targets: 3e000000
+  whereToInput: 7
+  selectAll: 1
+  isRandom: 0
+  valueInputIsAdditive: 0
+  methodToDealWithExceptions: 1
+  condition: 12

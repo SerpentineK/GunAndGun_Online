@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f6f793a2e772949b6816bed26df55f, type: 3}
+  m_Name: HidaruCardsHubDataBase
+  m_EditorClassIdentifier: 
+  effectHubList:
+  - {fileID: 11400000, guid: aca4dc305792e0048bb5f8770dd7d8b1, type: 2}
+  - {fileID: 11400000, guid: 849775e07de5a5b449540d043e6644a9, type: 2}
+  - {fileID: 11400000, guid: d2dbd61a823d3704e826e2178b394d26, type: 2}
+  - {fileID: 11400000, guid: 0af60ebe9d17ef1428b2e7969a5adcf2, type: 2}
+  - {fileID: 11400000, guid: 565ea60e1b4b41a44b8b0e445c59ba06, type: 2}
+  - {fileID: 11400000, guid: a75968dadba1f1e4a975240dffcf0efc, type: 2}
+  - {fileID: 11400000, guid: 99a6ce358b21fa64ea7dbd628e9ed246, type: 2}

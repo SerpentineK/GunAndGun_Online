@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f6f793a2e772949b6816bed26df55f, type: 3}
+  m_Name: MouryouHubDataBase
+  m_EditorClassIdentifier: 
+  effectHubList:
+  - {fileID: 11400000, guid: 3e5016ed0aa8eb44fa4a242361f3fca4, type: 2}
+  - {fileID: 11400000, guid: c98e3b905da64604ea700bd6adcf5096, type: 2}
+  - {fileID: 11400000, guid: de1333d021ce08d41ac6b4d2a1399e5f, type: 2}
+  - {fileID: 11400000, guid: 47f92a5aacd1e3345a11a78ae433a63a, type: 2}
+  - {fileID: 11400000, guid: 04c035f3992dcce48a3aff39393283df, type: 2}
+  - {fileID: 11400000, guid: 60726671f1ef4fd45aa2866a802ea70b, type: 2}
+  - {fileID: 11400000, guid: 30abfda711813424aa5b26cf519e98ac, type: 2}

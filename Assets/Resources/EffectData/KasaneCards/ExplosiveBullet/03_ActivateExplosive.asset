@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f026717e51a75b54aa993145ce0cc5d9, type: 3}
+  m_Name: 03_ActivateExplosive
+  m_EditorClassIdentifier: 
+  effectContentText: 
+  cardType: 3
+  willOperateOnActivation: 1
+  willOperateAsAlternative: 0
+  altEffect: {fileID: 0}
+  altEffectCondition: 0
+  altActivationRefersToValue: 0
+  giveValueToContinuous: 1
+  valueToGive: 10
+  continuousStartCue: 2
+  continuous: {fileID: 11400000, guid: 658da7702c90fa548b9323c856de2a2b, type: 2}
+  endContinuous: {fileID: 0}

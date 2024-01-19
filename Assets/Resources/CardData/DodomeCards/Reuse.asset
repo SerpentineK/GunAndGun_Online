@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: Reuse
+  m_EditorClassIdentifier: 
+  cardPool: 1
+  cardId: OH-01
+  cardName: "\u30EA\u30E6\u30FC\u30B9"
+  cardEffectText: "\u81EA\u5206\u306E\u6368\u3066\u672D\u304B\u3089\u3008\u30EA\u30E6\u30FC\u30B9\u3009\u4EE5\u5916\u306E\u30AB\u30FC\u30C9\u30925\u679A\u30C7\u30C3\u30AD\u306B\u623B\u3057\u3066\u30B7\u30E3\u30C3\u30D5\u30EB\u3059\u308B\u3002"
+  cardCost: 0
+  cardType: 0
+  numOfCards: 4
+  attachedGunData: {fileID: 11400000, guid: 6adb0ad596e5300438566de2a5894a08, type: 2}

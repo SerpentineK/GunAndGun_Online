@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f6f793a2e772949b6816bed26df55f, type: 3}
+  m_Name: MitsumeHubDataBase
+  m_EditorClassIdentifier: 
+  effectHubList:
+  - {fileID: 11400000, guid: a0705f41ef3d40f4caca1ce44fc852c8, type: 2}
+  - {fileID: 11400000, guid: 6ca16853e73f25746a5fa668f1e363c2, type: 2}
+  - {fileID: 11400000, guid: 1fa1e14d905591f4395ca3afe77e1a57, type: 2}
+  - {fileID: 11400000, guid: ef68f197fe7a350438ebee518e486bdf, type: 2}
+  - {fileID: 11400000, guid: 35535aa49b00a0046906056af09f0116, type: 2}
+  - {fileID: 11400000, guid: dd072f589cd8d2a4daa4e32fb282f78d, type: 2}

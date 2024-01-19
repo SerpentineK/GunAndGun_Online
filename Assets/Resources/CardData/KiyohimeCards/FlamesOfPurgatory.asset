@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: FlamesOfPurgatory
+  m_EditorClassIdentifier: 
+  cardPool: 1
+  cardId: OH-13
+  cardName: "\u904E\u7114\u5730\u7344"
+  cardEffectText: "( \u8FFD\u52A0\u30B3\u30B9\u30C8\uFF1A\u3008\u4E0D\u6D88\u7114\u5668
+    \u30AD\u30E8\u30D2\u30E1\u3009\u306E\u88C5\u586B5\u3092\u6368\u3066\u672D\u306B\u7F6E\u304F
+    )\n\u76F8\u624B\u306E\u9283\u58EB\u306B\u30D0\u30FC\u30F3\u30AB\u30A6\u30F3\u30BF\u30FC\u30924\u500B\u4E0E\u3048\u308B\u3002"
+  cardCost: 2
+  cardType: 0
+  numOfCards: 1
+  isOverclock: 0
+  attachedGunData: {fileID: 11400000, guid: 8526661b187f07f4e9173db30345cdc6, type: 2}
+  attachedEffectHub: {fileID: 0}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: LuckySet
+  m_EditorClassIdentifier: 
+  cardPool: 3
+  cardId: UB-07
+  cardName: "\u30E9\u30C3\u30AD\u30FC\u30BB\u30C3\u30C8"
+  cardEffectText: "\u81EA\u5206\u306E\u30BF\u30FC\u30F3\u7D42\u4E86\u6642\u3001\u81EA\u5206\u306E\u30C7\u30C3\u30AD\u306E\u4E0A\u304B\u30891\u679A\u307E\u3067\u8868\u304B\u88CF\u5411\u304D\u3067\u81EA\u5206\u306E\u6A5F\u92831\u3064\u306B\u88C5\u586B\u3059\u308B\u3002"
+  cardCost: 0
+  cardType: 2
+  numOfCards: 3
+  isOverclock: 0
+  attachedGunData: {fileID: 11400000, guid: 08271ae2880e6b045acbfc1d6982c127, type: 2}
+  attachedEffectHub: {fileID: 0}

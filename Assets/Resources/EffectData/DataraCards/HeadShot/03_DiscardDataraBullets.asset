@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a58bd05b93699b4e8b4b1b5046875a6, type: 3}
+  m_Name: 03_DiscardDataraBullets
+  m_EditorClassIdentifier: 
+  effectContentText: "\u9078\u629E\u3055\u308C\u305F\u30C0\u30BF\u30E9\u306E\u88C5\u586B4\u3092\u6368\u3066\u672D\u306B\u7F6E\u304F\u3002"
+  cardType: 0
+  willOperateOnActivation: 1
+  willOperateAsAlternative: 0
+  altEffect: {fileID: 0}
+  altEffectCondition: 0
+  altActivationRefersToValue: 0
+  transferIsForOpponent: 0
+  cardsToTransfer:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  cardsToReferTo: 1

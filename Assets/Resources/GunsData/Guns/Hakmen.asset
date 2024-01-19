@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e2798a6f35de64887121917529cd4d, type: 3}
+  m_Name: Hakmen
+  m_EditorClassIdentifier: 
+  cardPool: 0
+  gunId: 05
+  gunImage: {fileID: 21300000, guid: 418b03d69affc51418c51c4de1abadaf, type: 3}
+  gunName: "\u5F29\u5F13 \u30CF\u30AF\u30E1\u30F3"
+  gunAbility: "[ RECOVER ]\\n\u3053\u306E\u6A5F\u9283\u306E\u5C04\u6483\u306B\u3088\u308AHIT\u3092\u4E0E\u3048\u305F\u6642\u3001\u540C\u3058\u70B9\u6570\u5206\u56DE\u5FA9\u3059\u308B\u3002"
+  gunFlavorText: "\u30DC\u30A6\u30AC\u30F3\u578B\u306E\u9069\u7528\u5916\u306E\u9283\u3002\\n\u5C04\u51FA\u3055\u308C\u305F\u9283\u5F3E\u3068\u9283\u672C\u4F53\u3092\u7E4B\u3050\u7BA1\u3092\u4ECB\u3057\u88AB\u5F3E\u8005\u306E\u4F53\u529B\u3092\u596A\u3046\u3002"
+  maximumBulletCapacity: 4
+  maximumReloadPerTurn: 1
+  gunWeight: 6
+  gunType: 2
+  bulletsToFire: 020000000300000004000000
+  hitOfFire:
+  - 2
+  - 3
+  - 5
+  sideEffectOfFire:
+  - RECOVER
+  - RECOVER
+  - RECOVER
+  iconWidth: 1000
+  iconHeight: 500
+  iconBoundsWidth: 600
+  gunImageScale: {x: 25, y: 25, z: 25}
+  deckDatabase: {fileID: 11400000, guid: 881c7a4e3c935694ea4a43b39a2e3d3c, type: 2}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c389f1b616090543897dd3047c206cf, type: 3}
+  m_Name: GunnerDataBase - GunAndGun
+  m_EditorClassIdentifier: 
+  gunnerDataList:
+  - {fileID: 11400000, guid: 111a9f454979fee4cb1ed706c9e1c659, type: 2}
+  - {fileID: 11400000, guid: d40e9001c8eeaa549a0b223d3234c568, type: 2}
+  - {fileID: 11400000, guid: 665a7d0b4f2f2944da7c66e503fc8bcd, type: 2}
+  - {fileID: 11400000, guid: c5ccd60bf6efee14fbf4db04534168d3, type: 2}

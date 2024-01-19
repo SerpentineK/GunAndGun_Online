@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70e2d29eaeab974a8fcea1a4214273f, type: 3}
+  m_Name: CurtainCall_EffectHub
+  m_EditorClassIdentifier: 
+  effectContentText: "\u3010\u30AA\u30FC\u30D0\u30FC\u30AF\u30ED\u30C3\u30AF\u3011\n\u81EA\u5206\u306E\u3008\u62E1\u97F3\u8F5F\u5668\u30B3\u30C0\u30DE\u3009\u3092\u88CF\u5411\u304D\u306B\u3059\u308B\u3002\u305D\u3046\u3057\u305F\u5834\u5408\u3001\u4EE5\u4E0B\u306E\u52B9\u679C\u3092\u89E3\u6C7A\u3059\u308B\u3002\n-
+    \u76F8\u624B\u306E\u30C7\u30C3\u30AD1\u3064\u3092\u9078\u3073\u3001\u305D\u306E\u4E0A\u304B\u3089\u30AB\u30FC\u30C9\u30925\u679A\u6368\u3066\u672D\u306B\u7F6E\u304F\u3002\u6B21\u306E\u81EA\u5206\u306E\u30BF\u30FC\u30F3\u7D42\u4E86\u6642\u307E\u3067\u81EA\u5206\u306F\u30B2\u30FC\u30E0\u306B\u6557\u5317\u3057\u306A\u3044\u3002"
+  cardType: 1
+  cue: 2
+  priority: 3
+  willOperateOnActivation: 1
+  effects:
+  - {fileID: 11400000, guid: 58b2d36c3358714418fb63c967b858e2, type: 2}
+  - {fileID: 11400000, guid: d86e51fcc72f15e41a95d4998a571e0c, type: 2}
+  - {fileID: 11400000, guid: 7c7449fc810e66e4398f14596da1ca38, type: 2}
+  - {fileID: 11400000, guid: 3e401a2be6889a545b7685abae2ad612, type: 2}
+  - {fileID: 11400000, guid: d4bbf7aebe615e3489043fbd2d0fe473, type: 2}
+  - {fileID: 11400000, guid: 44b8cd30b9030a841b7964ab9b78f604, type: 2}
+  automaticEffect: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 700c3ab21b09ea94c8b63e6405d28036, type: 2}
+  ExtraEffects:
+  - {fileID: 11400000, guid: 4aa3e6d1dd6bcf0458ed0388a1c7c213, type: 2}
+  - {fileID: 11400000, guid: 88b71d98f8212d942bf33624bff9b817, type: 2}
+  - {fileID: 11400000, guid: 927ba98123c543840992d4d9d2b14080, type: 2}
+  usageIsOncePerTurn: 0
+  activationIsOncePerTurn: 0
+  isLimitedByHikagiri: 0
+  childrenOperateOnActivation: 1
+  childrenOperateAsAltEffect: 0
+  effectResults: []
+  cardResults01: []
+  cardResults02: []
+  cardResults03: []
+  cardResults04: []
+  cardResults05: []
+  cardResults06: []
+  gunResults01: []
+  gunResults02: []
+  fieldResult01: {fileID: 0}
+  fieldResult02: {fileID: 0}
+  fieldResult03: {fileID: 0}
+  intResult01: 0
+  intResult02: 0
+  projectileResult: {fileID: 0}
+  hubResult01: {fileID: 0}
+  hubResult02: {fileID: 0}
+  dataResult01: {fileID: 0}
+  dataResult02: {fileID: 0}
+  finishedInput: 1

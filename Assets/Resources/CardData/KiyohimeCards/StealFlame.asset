@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: StealFlame
+  m_EditorClassIdentifier: 
+  cardPool: 1
+  cardId: OH-07
+  cardName: "\u596A\u706B"
+  cardEffectText: "\u76F8\u624B\u306E\u5C04\u6483\u307E\u305F\u306F\u6280\u80FD\u306B\u3088\u3063\u3066\u4E0E\u3048\u3089\u308C\u308BHIT-2\u3002\u3053\u306E\u30AB\u30FC\u30C9\u3092\u88C5\u586B\u3059\u308B\u3002"
+  cardCost: 0
+  cardType: 1
+  numOfCards: 4
+  attachedGunData: {fileID: 11400000, guid: 8526661b187f07f4e9173db30345cdc6, type: 2}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f6f793a2e772949b6816bed26df55f, type: 3}
+  m_Name: BakCardsHubDataBase
+  m_EditorClassIdentifier: 
+  effectHubList:
+  - {fileID: 11400000, guid: 9993216fa1e46554b903d24e6688befb, type: 2}
+  - {fileID: 11400000, guid: cc759ff75425c794da1aaf189d0ab8bf, type: 2}
+  - {fileID: 11400000, guid: fad1e353c9263694b8f16bea1426a41e, type: 2}
+  - {fileID: 11400000, guid: c3eb84c980c92904091ff634d246375d, type: 2}
+  - {fileID: 11400000, guid: f96a6fdb9e476a24288fbbcfc8a2cae7, type: 2}
+  - {fileID: 11400000, guid: e3e8495c7b31cca4aa5cd4e278fca040, type: 2}
+  - {fileID: 11400000, guid: 0c341a8debb6a604fac3904404962cb6, type: 2}
+  - {fileID: 11400000, guid: 28a09982f570dcf4c9d91887eebbb9f9, type: 2}

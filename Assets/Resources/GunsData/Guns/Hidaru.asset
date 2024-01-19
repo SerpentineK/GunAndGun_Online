@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e2798a6f35de64887121917529cd4d, type: 3}
+  m_Name: Hidaru
+  m_EditorClassIdentifier: 
+  cardPool: 0
+  gunId: UB-03
+  gunImage: {fileID: 21300000, guid: 269f7ca053f29f244bcb416bf0a28da8, type: 3}
+  gunName: "\u9AD8\u81F4\u6B7B\u6027\u76F4\u6D41\u8377\u96FB\u9283 \u30D2\u30C0\u30EB"
+  gunAbility: "[ SHOCK:X ]\\n\u76F8\u624B\u306B1HIT\u4EE5\u4E0A\u4E0E\u3048\u305F\u5834\u5408\u3001\u30B7\u30E7\u30C3\u30AF\u30AB\u30A6\u30F3\u30BF\u30FC\u3092X\u500B\u4E0E\u3048\u308B\u3002\\n(
+    \u30B7\u30E7\u30C3\u30AF\u30AB\u30A6\u30F3\u30BF\u30FC\u30925\u3064\u4EE5\u4E0A\u6301\u3063\u3066\u3044\u308B\u30D7\u30EC\u30A4\u30E4\u30FC\u306F\u3001\u81EA\u5206\u306E\u30BF\u30FC\u30F3\u7D42\u4E86\u6642\u306B\u30B2\u30FC\u30E0\u306B\u6557\u5317\u3059\u308B\u3002
+    )"
+  gunFlavorText: "\u30B7\u30E7\u30C3\u30AF\u30AC\u30F3\u578B\u306E\u9069\u7528\u5916\u306E\u9283\u3002\\n\u300C\u30CF\u30FC\u30C8\u306E\u30D3\u30EA\u30D3\u30EA\u306B\u8981\u6CE8\u610F\u306A\u3093\u3060\u304B\u3089\uFF01\u300D"
+  maximumBulletCapacity: 5
+  maximumReloadPerTurn: 2
+  gunWeight: 6
+  gunType: 2
+  bulletsToFire: 0300000005000000
+  hitOfFire:
+  - 3
+  - 3
+  sideEffectOfFire:
+  - SHOCK:1
+  - SHOCK:2
+  iconWidth: 1000
+  iconHeight: 650
+  iconBoundsWidth: 400
+  gunImageScale: {x: 0, y: 0, z: 0}
+  deckDatabase: {fileID: 11400000, guid: 43700a3536ca4a144a10b331a9460810, type: 2}

@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 3007086125
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Selectables
+    uniqueID: 2923134165
+    locked: 0
+  - name: Guns
+    uniqueID: 3685473101
+    locked: 0
+  - name: UI
+    uniqueID: 507064053
+    locked: 0
+  - name: Cards
+    uniqueID: 3615703475
+    locked: 0

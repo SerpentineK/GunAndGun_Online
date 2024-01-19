@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f6f793a2e772949b6816bed26df55f, type: 3}
+  m_Name: KashaCardsHubDataBase
+  m_EditorClassIdentifier: 
+  effectHubList:
+  - {fileID: 11400000, guid: e12e6a22bb2303145b96dad696fd5c90, type: 2}
+  - {fileID: 11400000, guid: 1ee699bcf42ddb542a06e40dac246dee, type: 2}
+  - {fileID: 11400000, guid: ffb28ad7abda58e4e90517a88b7f0c7c, type: 2}
+  - {fileID: 11400000, guid: c74ead3653d9e674e94fbf0db8b5343f, type: 2}
+  - {fileID: 11400000, guid: 156e2de6ee747e34bacc4afa6bfd93c0, type: 2}
+  - {fileID: 11400000, guid: e3943b365b76310409421b86057a9d4e, type: 2}
+  - {fileID: 11400000, guid: 60865b4281b3555409bc82e429cfd3d7, type: 2}

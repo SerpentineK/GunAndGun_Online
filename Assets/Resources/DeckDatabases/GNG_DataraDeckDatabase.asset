@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767edb8be9346cc47834f5afc29fda1a, type: 3}
+  m_Name: GNG_DataraDeckDatabase
+  m_EditorClassIdentifier: 
+  gunAttached: {fileID: 11400000, guid: 3b41f38a69edf354b87f693fe8697acc, type: 2}
+  cardDataLists:
+  - {fileID: 11400000, guid: eb7110878bb1c734cbb33180a856653e, type: 2}
+  - {fileID: 11400000, guid: e7e12e2d4f50a2f42be3f18ceb368a73, type: 2}
+  - {fileID: 11400000, guid: 7d10bd48e9929e146867a4f192a7bde6, type: 2}
+  - {fileID: 11400000, guid: 8250b3133926395498c88e4f82f0b029, type: 2}
+  - {fileID: 11400000, guid: c784496d9206e084787880c7f1915884, type: 2}
+  - {fileID: 11400000, guid: 218bf4df86b34f743a15e7aeb073fdc6, type: 2}
+  - {fileID: 11400000, guid: 7d4662917ae7b4e4fa38557e8d1287a6, type: 2}
+  - {fileID: 11400000, guid: 48fc85e45e2e37a4fa4d3a809e0b3f0c, type: 2}
+  - {fileID: 11400000, guid: bc4d9fb6b60b2fd4fa04af6dac28c453, type: 2}
+  - {fileID: 11400000, guid: 20436f5aebbd6d5499cd36912b65d1fc, type: 2}
+  effectHubDatabaseAttached: {fileID: 11400000, guid: c370e55593ca0204a8774caf4063525b, type: 2}

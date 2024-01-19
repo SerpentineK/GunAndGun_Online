@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: Blitz
+  m_EditorClassIdentifier: 
+  cardPool: 1
+  cardId: OH-04
+  cardName: "\u30D6\u30EA\u30C3\u30C4"
+  cardEffectText: "\u3053\u306E\u30BF\u30FC\u30F3\u306E\u5F8C\u306B\u81EA\u5206\u306E\u30BF\u30FC\u30F3\u3092\u3082\u30461\u5EA6\u884C\u3046\u3002\n\u30B2\u30FC\u30E0\u4E2D\u3001\u81EA\u5206\u306F1\u5EA6\u3057\u304B\u3008\u30D6\u30EA\u30C3\u30C4\u3009\u3092\u767A\u52D5\u3067\u304D\u306A\u3044\u3002"
+  cardCost: 3
+  cardType: 0
+  numOfCards: 1
+  isOverclock: 0
+  attachedGunData: {fileID: 11400000, guid: 6adb0ad596e5300438566de2a5894a08, type: 2}
+  attachedEffectHub: {fileID: 0}

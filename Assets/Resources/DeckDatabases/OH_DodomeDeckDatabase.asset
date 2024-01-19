@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767edb8be9346cc47834f5afc29fda1a, type: 3}
+  m_Name: OH_DodomeDeckDatabase
+  m_EditorClassIdentifier: 
+  gunAttached: {fileID: 11400000, guid: 6adb0ad596e5300438566de2a5894a08, type: 2}
+  cardDataLists:
+  - {fileID: 11400000, guid: f053c8b45976df54f8afb16a4f6d7009, type: 2}
+  - {fileID: 11400000, guid: 08f8621733e7c034481cf306ed516547, type: 2}
+  - {fileID: 11400000, guid: b344dd3e73a7ab7418fb856030a0c943, type: 2}
+  - {fileID: 11400000, guid: 572aee17ff0f70143a0e5be5d3228f06, type: 2}
+  - {fileID: 11400000, guid: a5334c517a11d2246bc6e19964b7d007, type: 2}
+  - {fileID: 11400000, guid: a47ac71e239f3534a8c064d9499dcf2c, type: 2}
+  effectHubDatabaseAttached: {fileID: 11400000, guid: 35a2f550b85cdf94d9e1fd24f16bd5b2, type: 2}

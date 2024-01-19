@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b80eb1a8490a8f340b02d793ae1d30d1, type: 3}
+  m_Name: 02_ActivateOverclock_Kodama
+  m_EditorClassIdentifier: 
+  effectContentText: 
+  cardType: 1
+  willOperateOnActivation: 1
+  willOperateAsAlternative: 0
+  altEffect: {fileID: 0}
+  altEffectCondition: 0
+  altActivationRefersToValue: 0
+  gunToApplyOverclock: 10
+  returnResultTo: 17
+  overclockEffect: {fileID: 11400000, guid: 927ba98123c543840992d4d9d2b14080, type: 2}

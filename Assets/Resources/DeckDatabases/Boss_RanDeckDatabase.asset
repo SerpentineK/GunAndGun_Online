@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667cdf79931b2624cb38249490f4f11f, type: 3}
+  m_Name: Boss_RanDeckDatabase
+  m_EditorClassIdentifier: 
+  bossAttached: {fileID: 0}
+  cardBackground: {fileID: 0}
+  cardDataLists:
+  - {fileID: 11400000, guid: e48a6b50ca81fa6478a81304ba76324c, type: 2}
+  - {fileID: 11400000, guid: 345dc28933a11004e998d9506b96b66b, type: 2}
+  - {fileID: 11400000, guid: 93c090f5ebf59374aadc520654ae5b9e, type: 2}
+  - {fileID: 11400000, guid: 167792c84ba82914991b06c844306c7f, type: 2}
+  - {fileID: 11400000, guid: 7e862d25375e73a41ae7219185f334b9, type: 2}
+  - {fileID: 11400000, guid: 443d0751751f8544586714851a383bfa, type: 2}
+  - {fileID: 11400000, guid: 5a2a2f81756538d4798813a8cabbf31b, type: 2}
+  - {fileID: 11400000, guid: 9d81194466421814b82e676656913722, type: 2}

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70e2d29eaeab974a8fcea1a4214273f, type: 3}
+  m_Name: Kiruko_EffectHub
+  m_EditorClassIdentifier: 
+  effectContentText: "\u30B2\u30FC\u30E0\u958B\u59CB\u6642\u3001\u624B\u672D\u3092\u4EFB\u610F\u306E\u679A\u6570\u8107\u306B\u7F6E\u3044\u3066\u3082\u3088\u3044\u3002\u305D\u306E\u5834\u5408\u3001\u305D\u306E\u679A\u6570\u5206\u30AB\u30FC\u30C9\u3092\u5F15\u304D\u3001\u8107\u306B\u7F6E\u3044\u305F\u30AB\u30FC\u30C9\u3092\u30C7\u30C3\u30AD\u306B\u623B\u3057\u30B7\u30E3\u30C3\u30D5\u30EB\u3059\u308B\u3002"
+  cardType: 4
+  cue: 23
+  priority: 2
+  willOperateOnActivation: 1
+  effects:
+  - {fileID: 11400000, guid: ed21a753df585b74b915bd511e0c2f57, type: 2}
+  - {fileID: 11400000, guid: f21434f335ad9974ca6ecda2f83b9205, type: 2}
+  - {fileID: 11400000, guid: 791c37d892c866149a951f79f74dbd2a, type: 2}
+  - {fileID: 11400000, guid: b62daf0f96e959e40aa5e362c96e3f1e, type: 2}
+  - {fileID: 11400000, guid: 168364549c3a3e345926b8b1997006ea, type: 2}
+  - {fileID: 11400000, guid: 8ff517cad453a2b41ae2b38f4c8bc191, type: 2}
+  automaticEffectHub: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 665a7d0b4f2f2944da7c66e503fc8bcd, type: 2}
+  ExtraEffects: []
+  childrenOperateOnActivation: 1
+  childrenOperateAsAltEffect: 0
+  effectResults: []
+  cardResults01: []
+  cardResults02: []
+  cardResults03: []
+  cardResults04: []
+  cardResults05: []
+  cardResults06: []
+  gunResults01: []
+  gunResults02: []
+  fieldResult01: {fileID: 0}
+  fieldResult02: {fileID: 0}
+  fieldResult03: {fileID: 0}
+  intResult01: 0
+  intResult02: 0
+  projectileResult: {fileID: 0}
+  finishedInput: 1

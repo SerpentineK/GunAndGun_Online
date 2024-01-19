@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5a06a97db082f40a515ef8fc6a56b3, type: 3}
+  m_Name: Tetra
+  m_EditorClassIdentifier: 
+  cardPool: 2
+  gunnerId: WS-02
+  gunnerName: "\u30C6\u30C8\u30E9"
+  gunnerNameENG: TETRA
+  gunnerAbility: "\u81EA\u5206\u306E\u30BF\u30FC\u30F3\u306B1\u5EA6\u3001\u624B\u672D\u30922\u679A\u307E\u3067\u6368\u3066\u3001\u6368\u3066\u305F\u679A\u6570\u5206\u30AB\u30FC\u30C9\u3092\u5F15\u304F\u3002"
+  gunnerFlavorText: "\u6CBB\u5B89\u7DAD\u6301\u90E8\u968A\u3010\u8056\u6B4C\u968A\u3011\u306E\u54E8\u6212\u62C5\u5F53\u306E\u5973\u6027\u3002\\n\u6539\u9020\u3057\u305F\u88DC\u52A9\u526F\u8155\u304A\u3088\u3073\u4E21\u8155\u306F\u91CD\u529B\u64CD\u4F5C\u306B\u512A\u308C\u308B\u3002"
+  gunnerAgility: 3
+  gunnerHand: 4
+  gunnerImage: {fileID: 21300000, guid: 1266047ee3fae4b4d833844da4a51648, type: 3}
+  skillArray:
+  - {fileID: 11400000, guid: d6cf760536885dd4ca164678d8ebc38c, type: 2}
+  - {fileID: 11400000, guid: 7a491b3f5dc3cf64d9d32f3a92991744, type: 2}
+  - {fileID: 11400000, guid: 2740519cbc1f56d45aff8f1149d5efa4, type: 2}
+  iconVector: {x: 300, y: -200, z: 0}
+  iconScale: {x: 150, y: 150, z: 150}
+  iconLabelColor: {r: 1, g: 1, b: 1, a: 1}
+  playerScale: {x: 30, y: 30, z: 30}
+  opponentScale: {x: 20, y: 20, z: 20}
+  effectHub: {fileID: 11400000, guid: 17654bd7fa5f0fe4c8cad703bc95468f, type: 2}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 626a9d0ab016d52479e5f896548f88b1, type: 3}
+  m_Name: HardBash
+  m_EditorClassIdentifier: 
+  cardPool: 0
+  cardId: 31
+  cardName: "\u53E9\u304D\u4ED8\u3051"
+  cardEffectText: "\u81EA\u5206\u306B1HIT\u3002\n\u305D\u306E\u5F8C\u3001\u76F8\u624B\u306E\u9283\u30921\u3064\u9078\u3076\u3002\n\u76F8\u624B\u306F\u6B21\u306E\u30BF\u30FC\u30F3\u3001\u305D\u306E\u9283\u3067\u5C04\u6483\u3067\u304D\u306A\u3044\u3002\n\u3008\u53E9\u304D\u4ED8\u3051\u3009\u306F1\u30BF\u30FC\u30F3\u306B1\u679A\u3057\u304B\u767A\u52D5\u3067\u304D\u306A\u3044\u3002"
+  cardCost: 0
+  cardType: 0
+  numOfCards: 2
+  isOverclock: 0
+  attachedGunData: {fileID: 11400000, guid: 9fefa3be7b62bd14d8eff692c8bda155, type: 2}
+  attachedEffectHub: {fileID: 0}

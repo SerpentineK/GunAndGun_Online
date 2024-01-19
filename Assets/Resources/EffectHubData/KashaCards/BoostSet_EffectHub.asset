@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70e2d29eaeab974a8fcea1a4214273f, type: 3}
+  m_Name: BoostSet_EffectHub
+  m_EditorClassIdentifier: 
+  effectContentText: "\u81EA\u5206\u306E\u30BF\u30FC\u30F3\u7D42\u4E86\u6642\u3001\u81EA\u5206\u306E\u30C7\u30C3\u30AD\u306E\u4E0A\u304B\u30893\u679A\u307E\u3067\u3092\u3001\u305D\u308C\u305E\u308C\u8868\u304B\u88CF\u5411\u304D\u3067\u81EA\u5206\u306E\u6A5F\u92831\u3064\u306B\u88C5\u586B\u3059\u308B\u3002"
+  cardType: 2
+  cue: 17
+  priority: 2
+  willOperateOnActivation: 1
+  effects:
+  - {fileID: 11400000, guid: 3182bdc485c05eb479e767338a03e639, type: 2}
+  - {fileID: 11400000, guid: 1cd68fa6802fb2240bf1d8d7e5aa2bce, type: 2}
+  - {fileID: 11400000, guid: 433782767e4aa4a4c8c88714ff1db66f, type: 2}
+  - {fileID: 11400000, guid: ad377e8acfd98fe4eb7ebbb8f45a34dd, type: 2}
+  - {fileID: 11400000, guid: ecb3ada4151a3dd44b9b02230b605cfc, type: 2}
+  - {fileID: 11400000, guid: 70e1152e8513f0c4491b0adb25b4cd90, type: 2}
+  - {fileID: 11400000, guid: e35340ffab60b9347aae60064cfb6af4, type: 2}
+  automaticEffectHub: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 6f9e048742f854a4784c5389c9be349e, type: 2}
+  ExtraEffects: []
+  usageIsOncePerTurn: 0
+  activationIsOncePerTurn: 0
+  isLimitedByHikagiri: 0
+  childrenOperateOnActivation: 1
+  childrenOperateAsAltEffect: 0
+  effectResults: []
+  cardResults01: []
+  cardResults02: []
+  cardResults03: []
+  cardResults04: []
+  cardResults05: []
+  cardResults06: []
+  gunResults01: []
+  gunResults02: []
+  fieldResult01: {fileID: 0}
+  fieldResult02: {fileID: 0}
+  fieldResult03: {fileID: 0}
+  intResult01: 0
+  intResult02: 0
+  projectileResult: {fileID: 0}
+  hubResult01: {fileID: 0}
+  hubResult02: {fileID: 0}
+  dataResult01: {fileID: 0}
+  dataResult02: {fileID: 0}
+  finishedInput: 1
