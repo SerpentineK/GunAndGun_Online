@@ -12,6 +12,7 @@ public class StartSceneManager : MonoBehaviour
     BasicControls controls;
 
     public GameManager.GAME_MODE gameMode;
+    public GameManager.SELECTION_TURN selectionTurn;
     public GameManager.CARD_SETS cardSetNumber;
     public GameManager.CARD_POOL[] cardPools;
     public GameManager.CARD_BLOCK cardBlock;
@@ -235,7 +236,7 @@ public class StartSceneManager : MonoBehaviour
 
     public void ClickInGunnerSelection(InputAction.CallbackContext context)
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = Camera.main.ScreenPointToRay((Vector3)Mouse.current.position.ReadValue());
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
 
         //マウスクリックした場所からRayを飛ばし、オブジェクトがあればそれを代入
@@ -277,7 +278,7 @@ public class StartSceneManager : MonoBehaviour
 
     public void ClickInFirstGunSelection(InputAction.CallbackContext context)
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = Camera.main.ScreenPointToRay((Vector3)Mouse.current.position.ReadValue());
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
 
         if (hit)
@@ -307,7 +308,7 @@ public class StartSceneManager : MonoBehaviour
 
     public void ClickInSecondGunSelection(InputAction.CallbackContext context)
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = Camera.main.ScreenPointToRay((Vector3)Mouse.current.position.ReadValue());
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
 
         if (hit)
@@ -337,7 +338,7 @@ public class StartSceneManager : MonoBehaviour
 
     public void ClickInSkillSelection(InputAction.CallbackContext context)
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = Camera.main.ScreenPointToRay((Vector3)Mouse.current.position.ReadValue());
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
 
         if (hit)

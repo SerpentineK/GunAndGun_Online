@@ -34,7 +34,52 @@ public partial class @BasicControls: IInputActionCollection2, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""RightClick"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""863795bd-d84b-48c3-ba2f-d7ed765173a6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MiddleClick"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""891f9202-e827-4227-8e21-6eb8112c266c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ScrollWheel"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""00aa5048-80e9-415e-b1ae-14224039ad57"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Click"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""5ee77a4f-8853-46e6-a24a-e028893bd872"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Point"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""238ea9bc-423c-41d5-ab36-c2a7fce8dc90"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -46,6 +91,116 @@ public partial class @BasicControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""selectCandidate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8056afcb-1b24-432e-81a5-723cbf238f39"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Point"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2a3324c1-52d6-4937-a264-1e0199883d5e"",
+                    ""path"": ""<Pen>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Point"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7b3a390d-9c25-4fe3-ab1d-49b3f49ee51a"",
+                    ""path"": ""<Touchscreen>/touch*/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Point"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9872c28f-3362-4f6d-bc3d-130ae9db3b57"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""90ba5372-fa62-40dc-b34c-597a6dbe8947"",
+                    ""path"": ""<Pen>/tip"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""61dbc4e0-d275-4eb4-9200-a9eb0cedaf17"",
+                    ""path"": ""<Touchscreen>/touch*/press"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c4b55f77-bd80-4f14-98d9-ec6537ea9743"",
+                    ""path"": ""<XRController>/trigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Click"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4ea7a718-637f-4f8c-a499-96ad284d1d41"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ScrollWheel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f2b2d2f4-57ad-4477-81f4-d9777332b880"",
+                    ""path"": ""<Mouse>/middleButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MiddleClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1a84ace3-37ac-41cc-9aeb-52947ced1836"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RightClick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -296,6 +451,11 @@ public partial class @BasicControls: IInputActionCollection2, IDisposable
         // startup
         m_startup = asset.FindActionMap("startup", throwIfNotFound: true);
         m_startup_selectCandidate = m_startup.FindAction("selectCandidate", throwIfNotFound: true);
+        m_startup_RightClick = m_startup.FindAction("RightClick", throwIfNotFound: true);
+        m_startup_MiddleClick = m_startup.FindAction("MiddleClick", throwIfNotFound: true);
+        m_startup_ScrollWheel = m_startup.FindAction("ScrollWheel", throwIfNotFound: true);
+        m_startup_Click = m_startup.FindAction("Click", throwIfNotFound: true);
+        m_startup_Point = m_startup.FindAction("Point", throwIfNotFound: true);
         // battle
         m_battle = asset.FindActionMap("battle", throwIfNotFound: true);
         m_battle_Hover = m_battle.FindAction("Hover", throwIfNotFound: true);
@@ -372,11 +532,21 @@ public partial class @BasicControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_startup;
     private List<IStartupActions> m_StartupActionsCallbackInterfaces = new List<IStartupActions>();
     private readonly InputAction m_startup_selectCandidate;
+    private readonly InputAction m_startup_RightClick;
+    private readonly InputAction m_startup_MiddleClick;
+    private readonly InputAction m_startup_ScrollWheel;
+    private readonly InputAction m_startup_Click;
+    private readonly InputAction m_startup_Point;
     public struct StartupActions
     {
         private @BasicControls m_Wrapper;
         public StartupActions(@BasicControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @selectCandidate => m_Wrapper.m_startup_selectCandidate;
+        public InputAction @RightClick => m_Wrapper.m_startup_RightClick;
+        public InputAction @MiddleClick => m_Wrapper.m_startup_MiddleClick;
+        public InputAction @ScrollWheel => m_Wrapper.m_startup_ScrollWheel;
+        public InputAction @Click => m_Wrapper.m_startup_Click;
+        public InputAction @Point => m_Wrapper.m_startup_Point;
         public InputActionMap Get() { return m_Wrapper.m_startup; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -389,6 +559,21 @@ public partial class @BasicControls: IInputActionCollection2, IDisposable
             @selectCandidate.started += instance.OnSelectCandidate;
             @selectCandidate.performed += instance.OnSelectCandidate;
             @selectCandidate.canceled += instance.OnSelectCandidate;
+            @RightClick.started += instance.OnRightClick;
+            @RightClick.performed += instance.OnRightClick;
+            @RightClick.canceled += instance.OnRightClick;
+            @MiddleClick.started += instance.OnMiddleClick;
+            @MiddleClick.performed += instance.OnMiddleClick;
+            @MiddleClick.canceled += instance.OnMiddleClick;
+            @ScrollWheel.started += instance.OnScrollWheel;
+            @ScrollWheel.performed += instance.OnScrollWheel;
+            @ScrollWheel.canceled += instance.OnScrollWheel;
+            @Click.started += instance.OnClick;
+            @Click.performed += instance.OnClick;
+            @Click.canceled += instance.OnClick;
+            @Point.started += instance.OnPoint;
+            @Point.performed += instance.OnPoint;
+            @Point.canceled += instance.OnPoint;
         }
 
         private void UnregisterCallbacks(IStartupActions instance)
@@ -396,6 +581,21 @@ public partial class @BasicControls: IInputActionCollection2, IDisposable
             @selectCandidate.started -= instance.OnSelectCandidate;
             @selectCandidate.performed -= instance.OnSelectCandidate;
             @selectCandidate.canceled -= instance.OnSelectCandidate;
+            @RightClick.started -= instance.OnRightClick;
+            @RightClick.performed -= instance.OnRightClick;
+            @RightClick.canceled -= instance.OnRightClick;
+            @MiddleClick.started -= instance.OnMiddleClick;
+            @MiddleClick.performed -= instance.OnMiddleClick;
+            @MiddleClick.canceled -= instance.OnMiddleClick;
+            @ScrollWheel.started -= instance.OnScrollWheel;
+            @ScrollWheel.performed -= instance.OnScrollWheel;
+            @ScrollWheel.canceled -= instance.OnScrollWheel;
+            @Click.started -= instance.OnClick;
+            @Click.performed -= instance.OnClick;
+            @Click.canceled -= instance.OnClick;
+            @Point.started -= instance.OnPoint;
+            @Point.performed -= instance.OnPoint;
+            @Point.canceled -= instance.OnPoint;
         }
 
         public void RemoveCallbacks(IStartupActions instance)
@@ -594,6 +794,11 @@ public partial class @BasicControls: IInputActionCollection2, IDisposable
     public interface IStartupActions
     {
         void OnSelectCandidate(InputAction.CallbackContext context);
+        void OnRightClick(InputAction.CallbackContext context);
+        void OnMiddleClick(InputAction.CallbackContext context);
+        void OnScrollWheel(InputAction.CallbackContext context);
+        void OnClick(InputAction.CallbackContext context);
+        void OnPoint(InputAction.CallbackContext context);
     }
     public interface IBattleActions
     {

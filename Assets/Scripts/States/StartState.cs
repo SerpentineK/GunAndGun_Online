@@ -19,17 +19,43 @@ public class StartState : MonoBehaviour, IState
     // 4: 技能の決定
     // 5: 戦闘画面への移行
 
-    public int phase { get; private set; }
+    private int phase;
 
     // カードセットの数によって銃士・機銃の選択順が異なるため、
     // 以下の変数によってカードセットの数と先手後手を判定する。
-    private GameManager.CARD_SETS cardSetNum;
-    private GameManager.SELECTION_TURN turnOfSelection;
+    public enum SelectionPattern
+    {
+        SINGLE_FIRST,
+        SINGLE_SECOND,
+        DOUBLE
+    }
+
+    private SelectionPattern selectionPattern;
+
+    public void DetermineSelectionPattern()
+    {
+        if (SSM.cardSetNumber == GameManager.CARD_SETS.SINGLE)
+        {
+            if (SSM.selectionTurn == GameManager.SELECTION_TURN.FIRST)
+            {
+                selectionPattern = SelectionPattern.SINGLE_FIRST;
+            }
+            else if (SSM.selectionTurn == GameManager.SELECTION_TURN.SECOND)
+            {
+                selectionPattern = SelectionPattern.SINGLE_SECOND;
+            }
+        }
+        else if (SSM.cardSetNumber == GameManager.CARD_SETS.DOUBLE)
+        {
+            selectionPattern = SelectionPattern.DOUBLE;
+        }
+    }
 
     public void EnterState()
     {
         // ローディング画面をいずれ作るので、それを表示するフェーズ
         phase = 0;
+        DetermineSelectionPattern();
     }
     public void ExitState()
     {
