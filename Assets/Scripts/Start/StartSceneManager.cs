@@ -38,6 +38,7 @@ public class StartSceneManager : MonoBehaviour
 
     [SerializeField] private GameObject viewParent;
     [SerializeField] private GameObject[] viewArray;
+    [SerializeField] private StandbyView standbyView;
     [SerializeField] private SelectionInfoUI infoUI;
     [SerializeField] private TMP_Text progressText;
     [SerializeField] private GunnerSelector gunnerSelector;
@@ -78,7 +79,7 @@ public class StartSceneManager : MonoBehaviour
         controls.startup.Disable();
         controls.Dispose();
     }
-
+    
     public void InputCardBlock()
     {
         if (Enumerable.SequenceEqual(cardPools, block01))
@@ -153,7 +154,10 @@ public class StartSceneManager : MonoBehaviour
         if (phaseNum == 1)
         {
             SetGunnerPool();
-            gunnerSelector.opponentSelectionData = opponentGunner;
+            if (cardSetNumber == GameManager.CARD_SETS.SINGLE) 
+            { 
+                gunnerSelector.opponentSelectionData = opponentGunner; 
+            }
             gunnerSelector.OrganizeGunners();
         }
         else if (phaseNum == 2)
@@ -208,6 +212,17 @@ public class StartSceneManager : MonoBehaviour
             controls.startup.selectCandidate.performed -= ClickInSecondGunSelection;
             controls.startup.selectCandidate.performed += ClickInSkillSelection;
         }
+    }
+
+    public void UpdateStandbyView()
+    {
+        standbyView.playerGunner = playerGunner;
+        standbyView.playerGun01 = playerGun01;
+        standbyView.playerGun02 = playerGun02;
+        standbyView.opponentGunner = opponentGunner;
+        standbyView.opponentGun01 = opponentGun01;
+        standbyView.opponentGun02 = opponentGun02;
+        standbyView.UpdateStandbyInfo();
     }
 
     public void ChangeToView(int nextPhaseNum)

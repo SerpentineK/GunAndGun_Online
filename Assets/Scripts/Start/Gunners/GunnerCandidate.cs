@@ -17,7 +17,6 @@ public class GunnerCandidate : MonoBehaviour
         iconSpriteRenderer.sprite = data.GetGunnerImage();
         iconSpriteRenderer.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
         iconSpriteRenderer.transform.localPosition = data.GetIconVector();
-        iconSpriteRenderer.transform.localScale = data.GetIconScale();
         iconLabel.color = data.GetIconLabelColor();
         iconLabel.SetText(data.GetGunnerName());
     }

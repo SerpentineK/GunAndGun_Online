@@ -30,6 +30,15 @@ public class StartState : MonoBehaviour, IState
         DOUBLE
     }
 
+    public enum SUB_STATE
+    {
+        WAITING,
+        GUNNER_SELECTION,
+        GUN01_SELECTION,
+        GUN02_SELECTION,
+        SKILL_SELECTION
+    }
+
     private SelectionPattern selectionPattern;
 
     public void DetermineSelectionPattern()
