@@ -20,7 +20,7 @@ MonoBehaviour:
   gunnerFlavorText: "\u4E2D\u5C64\u306E\u6B66\u5668\u5C4B\u306B\u3057\u3066\u88CF\u306E\u60C5\u5831\u5C4B\u3002\\n\u6A5F\u68B0\u5316\u3057\u305F\u4E21\u811A\u3092\u5DE7\u307F\u306B\u7528\u3044\u3001\u3042\u3089\u3086\u308B\u653B\u6483\u3092\u53D7\u3051\u6D41\u3059\u3002"
   gunnerAgility: 4
   gunnerHand: 4
-  gunnerImage: {fileID: 21300000, guid: 0aee248e984e7f748a1e4058348b48e3, type: 3}
+  gunnerImage: {fileID: 21300000, guid: 2c66c56e5868b254480397e7cd01323c, type: 3}
   skillArray:
   - {fileID: 11400000, guid: cd737142f73dce44782d28d0867b47a1, type: 2}
   - {fileID: 11400000, guid: 68276d62cf817244bb6ade4186264dea, type: 2}
