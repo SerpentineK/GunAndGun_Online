@@ -114,12 +114,27 @@ public class FieldManager : MonoBehaviour
     public void CreateFullDeck(GunsData gunData)
     {
         List<CardData> cardDataList = gunData.GetDeckDatabase().GetCardDataLists();
-        cardDataList.ForEach(CreateCardForDeck);
+        // 現状、EffectHub側に対応するカードのデータは存在するがカードからEffectHubを検索することはできない。
+        // そこで、一度この機銃のEffectHubをすべて読み込んでからそれを対応させる方法をとる。
+        List<EffectHub> hubDataList = gunData.GetDeckDatabase().GetEffectHubDatabase().GetEffectHubList();
+        // cardDataList.ForEach(CreateCardForDeck);
+        foreach (var cardData in cardDataList)
+        {
+            EffectHub effectHub = null;
+            foreach (var hubCandidate in hubDataList) 
+            {
+                if (hubCandidate.attachedData == cardData) 
+                { 
+                    effectHub = hubCandidate;
+                }
+            }
+            CreateCardForDeck(cardData, effectHub);
+        }
     }
 
     // 上のCreateCardsメソッドに組み込むための1変数メソッド。
     // 特定のCardDataからデッキに入っている枚数分だけカードを生成する。
-    public void CreateCardForDeck(CardData cardData)
+    public void CreateCardForDeck(CardData cardData, EffectHub effectHub)
     {
         // CardDataオブジェクトから情報を入手する。
         string cardName = cardData.GetCardName();
@@ -135,8 +150,6 @@ public class FieldManager : MonoBehaviour
         {
             parentDeck = rightDeck.GetComponent<DeckField>();
         }
-
-        EffectHub attachedEffectHub = cardData.GetEffectHub();
 
         // デッキに重複して入っている枚数分カードを生成する。
         for (int i = 1; i <= numberOfCards; i++)
@@ -154,8 +167,8 @@ public class FieldManager : MonoBehaviour
             metaCard.cost = cardCost;
             metaCard.gunSprite = gunImage;
             metaCard.cardType = cardType;
-            metaCard.isOverclock = attachedEffectHub.isOverclock;
-            metaCard.cardEffectHub = attachedEffectHub;
+            metaCard.cardEffectHub = effectHub;
+            metaCard.isOverclock = effectHub.isOverclock;
 
             createdCard.name = metaCard.cardAbsId;
 

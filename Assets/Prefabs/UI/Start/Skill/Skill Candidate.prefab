@@ -170,8 +170,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sou[N]d Crack
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fe34977656468eb4789019afdd003d2b, type: 2}
-  m_sharedMaterial: {fileID: 2510544757156976054, guid: fe34977656468eb4789019afdd003d2b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4baf9aed2eaf29c4c92f54f858710e28, type: 2}
+  m_sharedMaterial: {fileID: -657169539540549188, guid: 4baf9aed2eaf29c4c92f54f858710e28, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

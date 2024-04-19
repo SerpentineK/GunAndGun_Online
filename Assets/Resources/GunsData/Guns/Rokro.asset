@@ -35,5 +35,6 @@ MonoBehaviour:
   iconWidth: 1100
   iconHeight: 800
   iconBoundsWidth: 400
-  gunImageScale: {x: 0, y: 0, z: 0}
+  gunImageScale: {x: 35, y: 35, z: 35}
   deckDatabase: {fileID: 11400000, guid: 9b4ddfcc5e84325439630f954b0cf3b4, type: 2}
+  effectHub: {fileID: 0}

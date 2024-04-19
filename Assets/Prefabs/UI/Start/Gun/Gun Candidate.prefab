@@ -108,8 +108,8 @@ RectTransform:
   - {fileID: 4160326676889642187}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -128,6 +128,7 @@ MonoBehaviour:
   data: {fileID: 0}
   target: {fileID: 0}
   gunIcon: {fileID: 8935727978314876663}
+  myCollider: {fileID: 0}
 --- !u!61 &5044884381107542466
 BoxCollider2D:
   m_ObjectHideFlags: 0
