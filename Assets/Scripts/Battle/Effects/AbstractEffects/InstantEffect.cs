@@ -25,4 +25,5 @@ public class InstantEffect : Effect
 
     // ğŒ”»’è‚ÌÛ‚ÉQÆ‚·‚é’l
     public ValuesToReferTo altActivationRefersToValue;
+
 }

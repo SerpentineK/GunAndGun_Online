@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class FieldManager : MonoBehaviour
 {
     // プレイヤーの手札
-    public Field hand;
+    public HandField hand;
 
     // プレイヤーのセットされたカード
     public Field set;
@@ -18,7 +18,7 @@ public class FieldManager : MonoBehaviour
     public Field mechanism;
 
     // プレイヤーの捨て札
-    public Field discard;
+    public DiscardField discard;
 
     // プレイヤーのボルテージ
     public Field voltage;
@@ -28,8 +28,8 @@ public class FieldManager : MonoBehaviour
     public Gun leftGun;
 
     // プレイヤーの左右の機銃デッキオブジェクト（カウンターとか）
-    public Field rightDeck;
-    public Field leftDeck;
+    public DeckField rightDeck;
+    public DeckField leftDeck;
 
     // プレイヤーの左右の機銃への装填
     public Field rightMagazine;
@@ -37,9 +37,6 @@ public class FieldManager : MonoBehaviour
 
     // デッキカードのプレハブ
     [SerializeField] private GameObject mergedPrefab;
-
-    // デッキカードプレハブの配列
-    private GameObject[] cardPrefabs;
 
 
     public Field GetFieldComponent(GameObject fieldObject)
@@ -132,7 +129,7 @@ public class FieldManager : MonoBehaviour
         }
     }
 
-    // 上のCreateCardsメソッドに組み込むための1変数メソッド。
+    // 上のCreateCardsメソッドに組み込むためのメソッド。
     // 特定のCardDataからデッキに入っている枚数分だけカードを生成する。
     public void CreateCardForDeck(CardData cardData, EffectHub effectHub)
     {
@@ -140,15 +137,18 @@ public class FieldManager : MonoBehaviour
         string cardName = cardData.GetCardName();
         string cardEffectText = cardData.GetCardEffectText();
         int cardCost = cardData.GetCardCost();
+        int additionalCost = cardData.GetAdditionalCost();
         CardData.CardType cardType = cardData.GetCardType();
         int numberOfCards = cardData.GetNumberOfCards();
         GunsData attachedGunData = cardData.GetAttachedGunData();
         Sprite gunImage = attachedGunData.GetGunImage();
 
         Field parentDeck = leftDeck.GetComponent<DeckField>();
+        Gun parentGun = leftGun;
         if (cardData.GetAttachedGunData() == rightGun.data)
         {
             parentDeck = rightDeck.GetComponent<DeckField>();
+            parentGun = rightGun;
         }
 
         // デッキに重複して入っている枚数分カードを生成する。
@@ -158,17 +158,21 @@ public class FieldManager : MonoBehaviour
 
             createdCard.SetActive(false);
 
-            VisibleCard visibleCard = createdCard.GetComponent<VisibleCard>().InitiateMetaCard();
+            VisibleCard visibleCard = createdCard.GetComponent<VisibleCard>();
+            visibleCard.InitiateMetaCard();
             Card metaCard = visibleCard.attachedCard;
             
             metaCard.cardAbsId= "GD_" + cardData.GetCardId() + "_" + string.Format("{0:00}", i);
             metaCard.cardName = cardName;
             metaCard.effectText = cardEffectText;
             metaCard.cost = cardCost;
+            metaCard.additionalCost = additionalCost;
             metaCard.gunSprite = gunImage;
+            metaCard.attachedGun = parentGun;
             metaCard.cardType = cardType;
             metaCard.cardEffectHub = effectHub;
             metaCard.isOverclock = effectHub.isOverclock;
+            metaCard.handField = hand;
 
             createdCard.name = metaCard.cardAbsId;
 

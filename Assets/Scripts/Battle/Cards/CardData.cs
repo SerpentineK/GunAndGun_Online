@@ -36,7 +36,9 @@ public class CardData : ScriptableObject
     [SerializeField] private string cardEffectText;
     
     [SerializeField] private int cardCost;
-    
+
+    [SerializeField] private int additionalCost;
+
     [SerializeField] private CardType cardType;
     
     [SerializeField] private int numOfCards;
@@ -52,6 +54,7 @@ public class CardData : ScriptableObject
     public string GetCardName() {  return cardName; }
     public string GetCardEffectText() {  return cardEffectText.Replace("\\n","\n"); }
     public int GetCardCost() { return cardCost; }
+    public int GetAdditionalCost() {  return additionalCost; }
     public CardType GetCardType() {  return cardType; }
     public int GetNumberOfCards() {  return numOfCards; }
     public bool IsOverclock() {  return isOverclock; }

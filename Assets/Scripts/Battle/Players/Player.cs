@@ -59,4 +59,6 @@ public class Player : MonoBehaviour
             FM.DrawFromDeck(numToDraw,FM.leftDeck);
         }
     }
+
+
 }

@@ -21,10 +21,10 @@ public class VisibleCard : MonoBehaviour
     [SerializeField] private SpriteRenderer whitePanelRenderer;
     [SerializeField] private Canvas canvas;
 
-    public VisibleCard InitiateMetaCard() 
+    public void InitiateMetaCard() 
     {
-        attachedCard = new(this);
-        return this;
+        attachedCard = this.gameObject.AddComponent<Card>();
+        attachedCard.visibleCard = this;
     }
 
     // 生成されたカードObjectにプロパティを用いて入力された値を反映するメソッド

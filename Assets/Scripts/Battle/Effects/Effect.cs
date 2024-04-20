@@ -353,13 +353,7 @@ public class Effect : ScriptableObject
     // (ダタラの【対応】無効化とか、《バラージ》の【対応】以外無効化とかあるので)
     public CardData.CardType cardType = CardData.CardType.Other;
 
-
-    public virtual void ActivateEffect()
-    {
-        return;
-    }
-
-    
-
+    // 効果発動時の実際の処理(オーバーライド用)
+    public virtual void WhenCalled() { }
 }
 

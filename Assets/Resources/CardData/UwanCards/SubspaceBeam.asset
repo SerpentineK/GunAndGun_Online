@@ -19,8 +19,9 @@ MonoBehaviour:
     \u30A6\u30EF\u30F3\u3009\u306E\u88C5\u586B3\u3092\u6368\u3066\u672D\u306B\u7F6E\u304F
     )\n\u76F8\u624B\u306E\u30C7\u30C3\u30AD\u30921\u3064\u9078\u3073\u3001\u305D\u306E\u4E0A\u304B\u30895\u679A\u6368\u3066\u672D\u306B\u7F6E\u304F\u3002\n\u30AB\u30FC\u30C9\u30925\u679A\u5F15\u304F\u3002"
   cardCost: 2
+  additionalCost: 3
   cardType: 0
   numOfCards: 1
   isOverclock: 0
   attachedGunData: {fileID: 11400000, guid: c05b17eac0aa9b14789a0d1b3f6c252a, type: 2}
-  attachedEffectHub: {fileID: 0}
+  effectHub: {fileID: 0}

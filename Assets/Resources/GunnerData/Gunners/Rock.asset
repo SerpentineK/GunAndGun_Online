@@ -30,6 +30,6 @@ MonoBehaviour:
   iconVector: {x: -200, y: -500, z: 0}
   iconScale: {x: 250, y: 250, z: 250}
   iconLabelColor: {r: 1, g: 1, b: 1, a: 1}
-  playerScale: {x: 60.000004, y: 60.000004, z: 60.000004}
-  opponentScale: {x: 32, y: 32, z: 32}
+  playerScale: {x: 30, y: 30, z: 30}
+  opponentScale: {x: 23, y: 23, z: 23}
   effectHub: {fileID: 11400000, guid: 926fb71f9af3bbe46b42cb024961fc94, type: 2}

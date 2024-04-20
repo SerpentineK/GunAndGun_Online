@@ -18,7 +18,7 @@ public class Gun : MonoBehaviour
     [SerializeField] private TMP_Text bulletCounterObj;
     [SerializeField] private TMP_Text reloadCounterObj;
     [SerializeField] private Transform bulletArea;
-    
+
     // 銃弾アイコンの情報
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Sprite emptyBulletSprite;
@@ -33,10 +33,10 @@ public class Gun : MonoBehaviour
     public Field magazineField;
 
     // 機銃のパラメーター(戦闘UIにて参照/更新するもの)
-    private int maxBulletCapacity = 0;
-    private int maxReloadPerTurn = 0;
-    private int currentBullets = 0;
-    private int currentReload = 0;
+    public int maxBulletCapacity = 0;
+    public int maxReloadPerTurn = 0;
+    public int currentBullets = 0;
+    public int currentReload = 0;
 
     // 銃弾アイコンオブジェクトの配列
     private GameObject[] bulletIconArray;

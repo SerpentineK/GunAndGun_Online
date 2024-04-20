@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class EffectManager : MonoBehaviour
 {
+    public static EffectManager instance;
+
     public FieldManager FM;
     
     /// <summary>
@@ -13,7 +16,8 @@ public class EffectManager : MonoBehaviour
     public List<InstantEffect> ongoingEffects;
 
     /// <summary>
-    /// Active‚É‚È‚Á‚Ä‚¢‚éŒø‰Ê‚Ìˆê——i‚¢‚Ü‚±‚ÌuŠÔ‚ÍŒø‰Ê‚ğˆ—‚µ‚Ä‚¢‚È‚¢‚à‚Ì‚àŠÜ‚Şj
+    /// Active‚É‚È‚Á‚Ä‚¢‚éŒø‰Ê‚Ìˆê——i‚¢‚Ü‚±‚ÌuŠÔ‚ÍŒø‰Ê‚ğˆ—‚µ‚Ä‚¢‚È‚¢‚à‚Ì‚àŠÜ‚ŞjB
+    /// —LŒø‰»‚³‚ê‚½y‹@”\z‚âemŒø‰Ê‚È‚Ç‚Í‚±‚±‚É“ü‚éB
     /// </summary>
     public List<ContinuousEffect> activeEffects;
 
@@ -26,6 +30,11 @@ public class EffectManager : MonoBehaviour
 
     public List<EffectHub> specialBulletsLoadedToRightGun;
     public List<EffectHub> specialBulletsLoadedToLeftGun;
+
+    public void Awake()
+    {
+        instance = this;
+    }
 
     public void UnpackEffectHub(EffectHub currentHub)
     {
@@ -42,8 +51,7 @@ public class EffectManager : MonoBehaviour
 
     public void RecieveCue(Effect.EventCue currentCue)
     {
-        activeEffects.FindAll(item => item.cue == currentCue); 
-       
+        triggeredEffects.AddRange(activeEffects.FindAll(item => item.cue == currentCue));
     }
 
     public void RecieveCue(Effect.EventCue currentCue, FiredProjectile firedProjectile) 
@@ -57,5 +65,27 @@ public class EffectManager : MonoBehaviour
     public void PlayerGunFireSequence(FiredProjectile firedProjectile) 
     {
         
+    }
+   
+    public void InitiateEffectSequence(EffectHub effectHub)
+    {
+
+    }
+
+    public void UseCard(Card card)
+    {
+        Card.CardStatus status = card.ExamineBeforePlay();
+        if (status == Card.CardStatus.PLAYABLE)
+        {
+            if (card.cardType == CardData.CardType.Action)
+            {
+
+            }
+        }
+    }
+
+    public void SetReaction(Card card)
+    {
+
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class BattleState : MonoBehaviour, IState
@@ -45,7 +46,7 @@ public class BattleState : MonoBehaviour, IState
         }
     }
 
-    public void InInitialWait()
+    private void InInitialWait()
     {
         if (phase == 0)
         {
@@ -59,12 +60,22 @@ public class BattleState : MonoBehaviour, IState
         }
     }
 
-    public void InStartBattle()
+    private void InStartBattle()
     {
         if (phase == 0)
         {
             BSM.StartGame();
             phase++;
         }
+    }
+
+    private void InIdle()
+    {
+
+    }
+
+    private void InUseDeckCard()
+    {
+
     }
 }
