@@ -22,9 +22,11 @@ MonoBehaviour:
   targets: 
   whereToInput: 0
   selectAll: 0
-  isRandom: 0
+  isRandom: 1
   valueInputIsAdditive: 0
+  methodToDealWithExceptions: 0
   methodOfSelect: 2
+  textToDisplay: 
   effects:
   - {fileID: 11400000, guid: 9eb0443b34126ab4e8f1ecc76c1de03a, type: 2}
   - {fileID: 11400000, guid: 5f4d629508ad90f429a9792ceafc059e, type: 2}

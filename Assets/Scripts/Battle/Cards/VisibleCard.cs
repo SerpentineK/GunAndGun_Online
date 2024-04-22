@@ -72,14 +72,6 @@ public class VisibleCard : MonoBehaviour
         coloredPanelRenderer.color = color;
         coloredPanelRenderer.sortingLayerName = "Cards";
         coloredPanelRenderer.sortingOrder = 2;
-        if (attachedCard.cardEffectHub.isOverclock)
-        {
-            whitePanelRenderer.color = Color.black;
-        }
-        else
-        {
-            whitePanelRenderer.color = Color.white;
-        }
         gunSpriteRenderer.sprite = attachedCard.gunSprite;
     }
 

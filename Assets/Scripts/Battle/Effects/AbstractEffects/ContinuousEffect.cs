@@ -8,6 +8,7 @@ using UnityEngine;
 public class ContinuousEffect : Effect
 {
     // 効果が発生するタイミングを記録するためのEventCue型の変数
+    // これは導入条件ではなく発動条件。
     public EventCue cue = EventCue.Immediate;
 
     /// <summary>

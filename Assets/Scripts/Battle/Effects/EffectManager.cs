@@ -16,10 +16,16 @@ public class EffectManager : MonoBehaviour
     public List<InstantEffect> ongoingEffects;
 
     /// <summary>
-    /// Activeになっている効果の一覧（いまこの瞬間は効果を処理していないものも含む）。
+    /// Activeになっている継続効果の一覧（いまこの瞬間は効果を処理していないものも含む）。
     /// 有効化された【機能】や銃士効果などはここに入る。
     /// </summary>
     public List<ContinuousEffect> activeEffects;
+
+    /// <summary>
+    /// 有効化されていない、つまり発動を宣言されたもののまだ実行段階に至っていない継続効果の一覧。
+    /// 例えば「ポイズンバレット」のドロー不可効果は相手ターン開始時に有効になるため、「ポイズンバレット」の効果発動段階では有効化されずここに入る。
+    /// </summary>
+    public List<DormantContinuous> dormantEffects; 
 
     /// <summary>
     /// 現在発動待機中の効果一覧（別カードの発動中に誘発したカードを放り込む用）
@@ -32,6 +38,8 @@ public class EffectManager : MonoBehaviour
     public List<EffectHub> specialBulletsLoadedToRightGun;
     public List<EffectHub> specialBulletsLoadedToLeftGun;
 
+    public EffectHub resolvingHub;
+
     public void Awake()
     {
         instance = this;
@@ -39,6 +47,7 @@ public class EffectManager : MonoBehaviour
 
     public void UnpackEffectHub(EffectHub currentHub)
     {
+        resolvingHub = currentHub;
         foreach (Effect effect in currentHub.effects) 
         {
             effect.Resolve();
