@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
     // プレイヤーに帰属するマネージャー
     public FieldManager FM;
     public EffectManager EM;
@@ -60,5 +61,30 @@ public class Player : MonoBehaviour
         }
     }
 
-
+    public void PlayCardFromHand(Card card)
+    {
+        if (card.currentField != FM.hand)
+        {
+            return;
+        }
+        Card.CardStatus status = card.ExamineBeforePlay();
+        if (status == Card.CardStatus.PLAYABLE)
+        {
+            if (card.cardType == CardData.CardType.Action)
+            {
+                EM.UseAction(card);
+                FM.TransferCard(card.currentField, FM.discard, card);
+            }
+            else if (card.cardType == CardData.CardType.Reaction)
+            {
+                EM.SetReaction(card);
+                FM.TransferCard(card.currentField, FM.set, card);
+            }
+            else if (card.cardType == CardData.CardType.Mechanism)
+            {
+                EM.ActivateMechanism(card);
+                FM.TransferCard(card.currentField, FM.mechanism, card);
+            }
+        }
+    }
 }

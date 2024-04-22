@@ -354,6 +354,6 @@ public class Effect : ScriptableObject
     public CardData.CardType cardType = CardData.CardType.Other;
 
     // 効果発動時の実際の処理(オーバーライド用)
-    public virtual void WhenCalled() { }
+    public virtual void Resolve() { }
 }
 

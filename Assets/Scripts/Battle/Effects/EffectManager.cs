@@ -27,6 +27,7 @@ public class EffectManager : MonoBehaviour
     public List<Effect> triggeredEffects;
 
     public List<EffectHub> reactionsSet;
+    public List<EffectHub> mechanismsActivated;
 
     public List<EffectHub> specialBulletsLoadedToRightGun;
     public List<EffectHub> specialBulletsLoadedToLeftGun;
@@ -39,14 +40,9 @@ public class EffectManager : MonoBehaviour
     public void UnpackEffectHub(EffectHub currentHub)
     {
         foreach (Effect effect in currentHub.effects) 
-        { 
-
+        {
+            effect.Resolve();
         }
-    }
-
-    public void ResolveEffects(Effect.EventCue currentCue)
-    {
-
     }
 
     public void RecieveCue(Effect.EventCue currentCue)
@@ -66,26 +62,21 @@ public class EffectManager : MonoBehaviour
     {
         
     }
-   
-    public void InitiateEffectSequence(EffectHub effectHub)
+
+
+    public void UseAction(Card card)
     {
-
-    }
-
-    public void UseCard(Card card)
-    {
-        Card.CardStatus status = card.ExamineBeforePlay();
-        if (status == Card.CardStatus.PLAYABLE)
-        {
-            if (card.cardType == CardData.CardType.Action)
-            {
-
-            }
-        }
+        UnpackEffectHub(card.cardEffectHub);
     }
 
     public void SetReaction(Card card)
     {
+        reactionsSet.Add(card.cardEffectHub);
+    }
 
+    public void ActivateMechanism(Card card)
+    {
+        mechanismsActivated.Add(card.cardEffectHub);
+        activeEffects.Add(card.cardEffectHub);
     }
 }

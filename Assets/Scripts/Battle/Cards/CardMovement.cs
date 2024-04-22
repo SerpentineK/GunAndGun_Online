@@ -39,15 +39,10 @@ public class CardMovement : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
         if (transform.position.y > 0) 
         {
             Card myCard = this.GetComponent<Card>();
-            if (myCard.cardType == CardData.CardType.Action | myCard.cardType == CardData.CardType.Mechanism)
+            if (myCard.cardType != CardData.CardType.SpecialBullet)
             {
-                EffectManager.instance.UseCard(myCard);
-                status = CardStatus.NULL;
-            }
-            else if (myCard.cardType == CardData.CardType.Reaction)
-            {
-                EffectManager.instance.SetReaction(myCard);
-                status = CardStatus.NULL;
+                
+                this.status = CardStatus.NULL;
             }
             else
             {

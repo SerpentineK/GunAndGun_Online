@@ -24,9 +24,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8b911f080e15e1649be052fa76697e3e, type: 2}
   - {fileID: 11400000, guid: c9211b15311272d49855cc501c0b868d, type: 2}
   - {fileID: 11400000, guid: 96f9a447c67e9a148995c98a818f22b9, type: 2}
-  automaticEffectHub: {fileID: 0}
+  automaticEffect: {fileID: 0}
+  automaticEndEffect: {fileID: 0}
   attachedData: {fileID: 11400000, guid: 33c6425c43300904dae116c5cb752ccb, type: 2}
   ExtraEffects: []
+  usageIsOncePerTurn: 0
+  activationIsOncePerTurn: 0
+  isLimitedByHikagiri: 0
+  effectTriggersFromHand: 0
+  isOverclock: 0
+  playerResults: []
   childrenOperateOnActivation: 1
   childrenOperateAsAltEffect: 0
   effectResults: []
@@ -41,7 +48,15 @@ MonoBehaviour:
   fieldResult01: {fileID: 0}
   fieldResult02: {fileID: 0}
   fieldResult03: {fileID: 0}
+  fieldSetResult01: []
+  fieldSetResult02: []
+  fieldSetResult03: []
   intResult01: 0
   intResult02: 0
   projectileResult: {fileID: 0}
+  hubResult01: {fileID: 0}
+  hubResult02: {fileID: 0}
+  dataResult01: {fileID: 0}
+  dataResult02: {fileID: 0}
+  skillResult: {fileID: 0}
   finishedInput: 1
