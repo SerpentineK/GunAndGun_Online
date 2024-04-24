@@ -15,11 +15,11 @@ MonoBehaviour:
   cardPool: 0
   cardId: WS-004
   cardName: "\u5F37\u884C\uFF1A\u6253"
-  cardEffectText: "\u3010\u30EA\u30DF\u30C3\u30C8\uFF1A\u884C\u52D5\u3011\n( 1\u30BF\u30FC\u30F3\u306B1\u5EA6\u3057\u304B\u3010\u30EA\u30DF\u30C3\u30C8\u3011\u3092\u6301\u3064\u3010\u884C\u52D5\u3011\u3092\u767A\u52D5\u3067\u304D\u306A\u3044
-    )\n\u76F8\u624B\u306B3HIT\u3002"
+  cardEffectText: "\u3010\u30EA\u30DF\u30C3\u30C8\uFF1A\u884C\u52D5\u3011\n\u76F8\u624B\u306B3HIT\u3002"
   cardCost: 0
+  additionalCost: 0
   cardType: 0
   numOfCards: 2
   isOverclock: 0
   attachedGunData: {fileID: 11400000, guid: eadfce55e8f2e8e4aabc6d6c48051f7b, type: 2}
-  attachedEffectHub: {fileID: 0}
+  effectHub: {fileID: 0}

@@ -14,7 +14,7 @@ public class Gunner : MonoBehaviour
     [SerializeField] private SpriteRenderer gunnerImageArea;
 
     // Ú×î•ñ
-    public int speed;
+    public int agility;
     public int hand;
     public EffectHub passiveEffect;
     public string passiveEffectText;
@@ -27,7 +27,7 @@ public class Gunner : MonoBehaviour
         gunnerImageArea.sprite = data.GetGunnerImage();
         if (isPlayer) { gunnerImageArea.transform.localScale = data.GetPlayerScale(); }
         else { gunnerImageArea.transform.localScale = data.GetOpponentScale(); }
-        speed = data.GetGunnerAgility();
+        agility = data.GetGunnerAgility();
         hand = data.GetGunnerHand();
         passiveEffectText = data.GetGunnerAbility();
         flavorText = data.GetGunnerFlavorText();

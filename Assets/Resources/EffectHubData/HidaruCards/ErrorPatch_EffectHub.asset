@@ -14,18 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectContentText: "\u76F8\u624B\u304C\u30AB\u30FC\u30C9\u306E\u52B9\u679C\u3067\u88C5\u586B\u3057\u305F\u6642\u3001\u305D\u306E\u30BF\u30FC\u30F3\u306E\u9593\u76F8\u624B\u306F\u5C04\u6483\u3067\u304D\u306A\u3044\u3002"
   cardType: 2
-  cue: 5
+  cue: 38
   priority: 2
   willOperateOnActivation: 1
+  thisCard: {fileID: 0}
+  thisGun: {fileID: 0}
+  thisGunner: {fileID: 0}
+  thisSkill: {fileID: 0}
   effects:
-  - {fileID: 11400000, guid: dec25c7b73d199a4b84bff61b9788b3c, type: 2}
   - {fileID: 11400000, guid: 909dcb4947ee8564e885568607b715ed, type: 2}
   - {fileID: 11400000, guid: 16dc47386a9f4504393f8d848e27a77f, type: 2}
-  automaticEffectHub: {fileID: 0}
+  automaticEffect: {fileID: 0}
+  automaticEndEffect: {fileID: 0}
   attachedData: {fileID: 11400000, guid: 84c3e318c5643f345b037cb844335f77, type: 2}
   ExtraEffects:
   - {fileID: 11400000, guid: 4b8948df3a6ec1b43a30f189a68c492a, type: 2}
   - {fileID: 11400000, guid: 3c51042ea2af9a84eba048c54fd5d4f5, type: 2}
+  usageIsOncePerTurn: 0
+  activationIsOncePerTurn: 0
+  isLimitedByHikagiri: 0
+  effectTriggersFromHand: 0
+  isOverclock: 0
+  playerResults: []
   childrenOperateOnActivation: 1
   childrenOperateAsAltEffect: 0
   effectResults: []
@@ -40,11 +50,15 @@ MonoBehaviour:
   fieldResult01: {fileID: 0}
   fieldResult02: {fileID: 0}
   fieldResult03: {fileID: 0}
-  intResult01: 0
-  intResult02: 0
+  fieldSetResult01: []
+  fieldSetResult02: []
+  fieldSetResult03: []
+  intResult01: {fileID: 0}
+  intResult02: {fileID: 0}
   projectileResult: {fileID: 0}
   hubResult01: {fileID: 0}
   hubResult02: {fileID: 0}
   dataResult01: {fileID: 0}
   dataResult02: {fileID: 0}
+  skillResult: {fileID: 0}
   finishedInput: 1

@@ -28,7 +28,6 @@ MonoBehaviour:
   automaticEndEffect: {fileID: 0}
   attachedData: {fileID: 11400000, guid: f78c51ab85ba5be47bf45b8165cf98ba, type: 2}
   ExtraEffects:
-  - {fileID: 11400000, guid: 72f510b33319797488995e55494d3d53, type: 2}
   - {fileID: 11400000, guid: ec1e3a8931d2cb64cbfeb6cb6b1c18ef, type: 2}
   - {fileID: 11400000, guid: 6ca71c5a0cb0dfb43b64c6f319096921, type: 2}
   - {fileID: 11400000, guid: b8ae20bcea6a9ef48867776d12ae7408, type: 2}
@@ -58,8 +57,8 @@ MonoBehaviour:
   fieldSetResult01: []
   fieldSetResult02: []
   fieldSetResult03: []
-  intResult01: 0
-  intResult02: 0
+  intResult01: {fileID: 0}
+  intResult02: {fileID: 0}
   projectileResult: {fileID: 0}
   hubResult01: {fileID: 0}
   hubResult02: {fileID: 0}

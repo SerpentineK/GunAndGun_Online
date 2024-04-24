@@ -165,7 +165,6 @@ MonoBehaviour:
   cardList: []
   cardCount: 0
   cardCounterObj: {fileID: 1984884825109228048}
-  cardIconTransform: {fileID: 0}
 --- !u!1 &1741862003880128553
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9028191938231599983}
   - component: {fileID: 3485968275079457389}
-  - component: {fileID: 1667165743681426329}
+  - component: {fileID: 6211443846749514489}
   m_Layer: 0
   m_Name: DiscardField
   m_TagString: Untagged
@@ -784,7 +783,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8167413899609942943}
   m_CullTransparentMesh: 1
---- !u!114 &1667165743681426329
+--- !u!114 &6211443846749514489
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -793,14 +792,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8167413899609942943}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 528de120e2e1a794089996a3b19d4545, type: 3}
+  m_Script: {fileID: 11500000, guid: 8de3946010b36124aa7967339458b0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 1
   cardList: []
   cardCount: 0
   cardCounterObj: {fileID: 276226168883888386}
-  cardIconTransform: {fileID: 0}
 --- !u!1 &9016919752354608931
 GameObject:
   m_ObjectHideFlags: 0

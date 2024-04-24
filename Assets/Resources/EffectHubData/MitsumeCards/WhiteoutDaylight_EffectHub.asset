@@ -33,7 +33,6 @@ MonoBehaviour:
   ExtraEffects:
   - {fileID: 11400000, guid: 1a551a9612a38bc47a66b1be7bca8451, type: 2}
   - {fileID: 11400000, guid: e8f4e57c7343ec7498b44a75529f9997, type: 2}
-  - {fileID: 11400000, guid: 625a2051f87a7f844897942f43e8c67e, type: 2}
   usageIsOncePerTurn: 0
   activationIsOncePerTurn: 0
   isLimitedByHikagiri: 0
@@ -57,8 +56,8 @@ MonoBehaviour:
   fieldSetResult01: []
   fieldSetResult02: []
   fieldSetResult03: []
-  intResult01: 0
-  intResult02: 0
+  intResult01: {fileID: 0}
+  intResult02: {fileID: 0}
   projectileResult: {fileID: 0}
   hubResult01: {fileID: 0}
   hubResult02: {fileID: 0}

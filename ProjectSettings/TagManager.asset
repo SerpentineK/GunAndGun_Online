@@ -56,3 +56,6 @@ TagManager:
   - name: Cards
     uniqueID: 3615703475
     locked: 0
+  - name: Interactable
+    uniqueID: 1402142321
+    locked: 0

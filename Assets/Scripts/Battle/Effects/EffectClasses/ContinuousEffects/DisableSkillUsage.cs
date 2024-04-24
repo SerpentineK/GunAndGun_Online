@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class DisableSkillUsage : AbstractEffect_Disable
 {
-    
+    public Skill disabledSkill;
 }

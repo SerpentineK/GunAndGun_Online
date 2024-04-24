@@ -25,6 +25,9 @@ public class Card : MonoBehaviour
     // 現在どこにあるかを示すプロパティ
     public Field currentField;
 
+    // Field間の移動に際し、以前までどこにいたのかを記録するプロパティ
+    public Field previousField;
+
     public bool isOverclock = false;
 
     // データ受け渡し用のプロパティ
@@ -130,10 +133,10 @@ public class Card : MonoBehaviour
         {
             overclockToken = true;
         }
-        // オーバークロックでも機銃がAvailable、つまり表向きなら通ってよし。
-        else if (attachedGun.isAvailable)
+        // オーバークロックでも機銃が表向きなら通ってよし。
+        else if (!attachedGun.isOverclocked)
         {
-            overclockToken = true;
+            overclockToken = false;
         }
         // 裏向き機銃のオーバークロックなので使用不可。
         else

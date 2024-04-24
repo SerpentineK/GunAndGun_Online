@@ -26,14 +26,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d4bbf7aebe615e3489043fbd2d0fe473, type: 2}
   - {fileID: 11400000, guid: 44b8cd30b9030a841b7964ab9b78f604, type: 2}
   automaticEffect: {fileID: 0}
+  automaticEndEffect: {fileID: 0}
   attachedData: {fileID: 11400000, guid: 700c3ab21b09ea94c8b63e6405d28036, type: 2}
   ExtraEffects:
   - {fileID: 11400000, guid: 4aa3e6d1dd6bcf0458ed0388a1c7c213, type: 2}
   - {fileID: 11400000, guid: 88b71d98f8212d942bf33624bff9b817, type: 2}
-  - {fileID: 11400000, guid: 927ba98123c543840992d4d9d2b14080, type: 2}
   usageIsOncePerTurn: 0
   activationIsOncePerTurn: 0
   isLimitedByHikagiri: 0
+  effectTriggersFromHand: 0
+  isOverclock: 0
+  playerResults: []
   childrenOperateOnActivation: 1
   childrenOperateAsAltEffect: 0
   effectResults: []
@@ -48,11 +51,15 @@ MonoBehaviour:
   fieldResult01: {fileID: 0}
   fieldResult02: {fileID: 0}
   fieldResult03: {fileID: 0}
-  intResult01: 0
-  intResult02: 0
+  fieldSetResult01: []
+  fieldSetResult02: []
+  fieldSetResult03: []
+  intResult01: {fileID: 0}
+  intResult02: {fileID: 0}
   projectileResult: {fileID: 0}
   hubResult01: {fileID: 0}
   hubResult02: {fileID: 0}
   dataResult01: {fileID: 0}
   dataResult02: {fileID: 0}
+  skillResult: {fileID: 0}
   finishedInput: 1

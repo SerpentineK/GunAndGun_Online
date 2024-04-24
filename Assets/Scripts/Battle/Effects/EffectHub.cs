@@ -22,6 +22,22 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EffectHub", menuName = "CreateEffectHub")]
 public class EffectHub : ContinuousEffect
 {
+    [HideInInspector]
+    // Hubが結び付いているカード本体
+    public Card thisCard;
+
+    [HideInInspector]
+    // 同じく機銃本体
+    public Gun thisGun;
+
+    [HideInInspector]
+    // 銃士本体
+    public Gunner thisGunner;
+
+    [HideInInspector]
+    // 技能本体
+    public Skill thisSkill;
+
     // 格納しているEffectのリスト
     public List<Effect> effects;
 
@@ -112,9 +128,9 @@ public class EffectHub : ContinuousEffect
 
     // 数値編
     [HideInInspector]
-    public int intResult01;
+    public NumeralValue intResult01;
     [HideInInspector]
-    public int intResult02;
+    public NumeralValue intResult02;
 
     // projectile編
     [HideInInspector]

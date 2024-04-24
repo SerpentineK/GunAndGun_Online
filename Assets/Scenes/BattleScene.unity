@@ -182,8 +182,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u73FE\u5728\u6709\u52B9\u306A\u52B9\u679C"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 087898887d3e3d441bf397ef45c4c6ac, type: 2}
+  m_sharedMaterial: {fileID: -7786892333198751292, guid: 087898887d3e3d441bf397ef45c4c6ac, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -818,6 +818,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FM: {fileID: 99736389}
+  myself: {fileID: 275170365}
+  opponent: {fileID: 428567024}
   ongoingEffects: []
   activeEffects: []
   dormantEffects: []
@@ -827,6 +829,7 @@ MonoBehaviour:
   specialBulletsLoadedToRightGun: []
   specialBulletsLoadedToLeftGun: []
   resolvingHub: {fileID: 0}
+  firedGun: {fileID: 0}
 --- !u!114 &99736389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,9 +851,9 @@ MonoBehaviour:
   leftGun: {fileID: 987404052}
   rightDeck: {fileID: 2058680476}
   leftDeck: {fileID: 1067570725}
-  rightMagazine: {fileID: 1334183987}
-  leftMagazine: {fileID: 1771477049}
-  mergedPrefab: {fileID: 7065023043101966022, guid: 39b123db3b2ae91468f7d209d9e1f384, type: 3}
+  rightMagazine: {fileID: 0}
+  leftMagazine: {fileID: 0}
+  mergedPrefab: {fileID: 7218792570757303720, guid: 8973471f449a0ad498be3330a405fd51, type: 3}
 --- !u!224 &113295711 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4677574225792444331, guid: d1fb69222c0610044ad3dd66684a1a4a, type: 3}
@@ -982,7 +985,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 665a7d0b4f2f2944da7c66e503fc8bcd, type: 2}
   gunnerNameArea: {fileID: 134675156}
   gunnerImageArea: {fileID: 1766934158}
-  speed: 0
+  agility: 0
   hand: 0
   passiveEffect: {fileID: 0}
   passiveEffectText: 
@@ -1047,8 +1050,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30D2\u30D0\u30CA"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 087898887d3e3d441bf397ef45c4c6ac, type: 2}
+  m_sharedMaterial: {fileID: -7786892333198751292, guid: 087898887d3e3d441bf397ef45c4c6ac, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1564,8 +1567,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u5F71\u6F5C\u307F"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 087898887d3e3d441bf397ef45c4c6ac, type: 2}
+  m_sharedMaterial: {fileID: -7786892333198751292, guid: 087898887d3e3d441bf397ef45c4c6ac, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1589,7 +1592,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.8
+  m_fontSize: 24.5
   m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1930,6 +1933,54 @@ MonoBehaviour:
   isTurn: 0
   HP: 30
   HP_Counter: {fileID: 1193684731}
+  burnCounters: 0
+  shockCounters: 0
+  stabilizers: 0
+  snipers: 0
+  spiralShooters: 0
+  autoCannons: 0
+  healingTubes: 0
+  reloadSupporters: 0
+  psNegatives: 0
+  boostSets: 0
+  luckySets: 0
+  maintenanceCores: 0
+  endorthermicStructures: 0
+  dreadAmps: 0
+  highMetronomes: 0
+  redLightSystems: 0
+  chainReloaders: 0
+  spinShields: 0
+  accumulationDevices: 0
+  reactorSystems: 0
+  highGravitySpheres: 0
+  overPressuredSpheres: 0
+  burst: 0
+  unconsicious: 0
+  staggered: 0
+  echoing: 0
+  detonated: 0
+  frozen: 0
+  poisoned: 0
+  intercept: 0
+  smoke: 0
+  overheat: 0
+  barrage: 0
+  limited_Action: 0
+  limited_Bullet: 0
+  disturbedByNoise: 0
+  blitz: 0
+  paralyzed: 0
+  minorError: 0
+  fatalError: 0
+  silenced: 0
+  released: 0
+  bashed: 0
+  immortal: 0
+  curtainCall: 0
+  modePhalanx: 0
+  jamming: 0
+  recharging: 0
   handNum: 0
   gunner: {fileID: 127437714}
   rightGun: {fileID: 1850665403}
@@ -1979,6 +2030,7 @@ MonoBehaviour:
   playerGun01: {fileID: 11400000, guid: 478d699b4b20d55439c179960cd2a477, type: 2}
   playerGun02: {fileID: 11400000, guid: eadfce55e8f2e8e4aabc6d6c48051f7b, type: 2}
   playerSkill: {fileID: 11400000, guid: 185f1868e872d65459d26d3b8d2170a6, type: 2}
+  experimentalHub: {fileID: 11400000, guid: 74fcdee43f0412a4da6ee78637554e00, type: 2}
 --- !u!4 &290967818
 Transform:
   m_ObjectHideFlags: 0
@@ -2582,6 +2634,54 @@ MonoBehaviour:
   isTurn: 0
   HP: 30
   HP_Counter: {fileID: 1108151471}
+  burnCounters: 0
+  shockCounters: 0
+  stabilizers: 0
+  snipers: 0
+  spiralShooters: 0
+  autoCannons: 0
+  healingTubes: 0
+  reloadSupporters: 0
+  psNegatives: 0
+  boostSets: 0
+  luckySets: 0
+  maintenanceCores: 0
+  endorthermicStructures: 0
+  dreadAmps: 0
+  highMetronomes: 0
+  redLightSystems: 0
+  chainReloaders: 0
+  spinShields: 0
+  accumulationDevices: 0
+  reactorSystems: 0
+  highGravitySpheres: 0
+  overPressuredSpheres: 0
+  burst: 0
+  unconsicious: 0
+  staggered: 0
+  echoing: 0
+  detonated: 0
+  frozen: 0
+  poisoned: 0
+  intercept: 0
+  smoke: 0
+  overheat: 0
+  barrage: 0
+  limited_Action: 0
+  limited_Bullet: 0
+  disturbedByNoise: 0
+  blitz: 0
+  paralyzed: 0
+  minorError: 0
+  fatalError: 0
+  silenced: 0
+  released: 0
+  bashed: 0
+  immortal: 0
+  curtainCall: 0
+  modePhalanx: 0
+  jamming: 0
+  recharging: 0
   handNum: 0
   gunner: {fileID: 1661007843}
   rightGun: {fileID: 911212050}
@@ -5496,8 +5596,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u73FE\u5728\u6709\u52B9\u306A\u52B9\u679C"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 087898887d3e3d441bf397ef45c4c6ac, type: 2}
+  m_sharedMaterial: {fileID: -7786892333198751292, guid: 087898887d3e3d441bf397ef45c4c6ac, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7405,8 +7505,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u3071\u30FC\u3093\u3061!!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 087898887d3e3d441bf397ef45c4c6ac, type: 2}
+  m_sharedMaterial: {fileID: -7786892333198751292, guid: 087898887d3e3d441bf397ef45c4c6ac, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7430,7 +7530,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.8
+  m_fontSize: 27.6
   m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7480,17 +7580,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266585867}
   m_CullTransparentMesh: 1
---- !u!114 &1334183987 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1248332000198735096, guid: c15bc0c725b654e4f8e84692e795c933, type: 3}
-  m_PrefabInstance: {fileID: 1656570313}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 528de120e2e1a794089996a3b19d4545, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1334664200
 GameObject:
   m_ObjectHideFlags: 0
@@ -8111,6 +8200,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 966588693}
   voltage: {fileID: 0}
   fieldManager: {fileID: 0}
+  cost: 0
+  effectHub: {fileID: 0}
 --- !u!224 &1408012745 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4677574225792444331, guid: d1fb69222c0610044ad3dd66684a1a4a, type: 3}
@@ -9098,15 +9189,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8423224210744544384, guid: 59f9ef3d6d37ca84387798dcaf8a31cb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.55
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 8423224210744544384, guid: 59f9ef3d6d37ca84387798dcaf8a31cb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.55
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 8423224210744544384, guid: 59f9ef3d6d37ca84387798dcaf8a31cb, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.55
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 8423224210744544384, guid: 59f9ef3d6d37ca84387798dcaf8a31cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9155,6 +9246,10 @@ PrefabInstance:
     - target: {fileID: 8423224210744544384, guid: 59f9ef3d6d37ca84387798dcaf8a31cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423224210744544384, guid: 59f9ef3d6d37ca84387798dcaf8a31cb, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2785140165389949317, guid: 59f9ef3d6d37ca84387798dcaf8a31cb, type: 3}
@@ -9420,6 +9515,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 269f7ca053f29f244bcb416bf0a28da8, type: 3}
+    - target: {fileID: 7825982650741039714, guid: c15bc0c725b654e4f8e84692e795c933, type: 3}
+      propertyPath: magazineField
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9754,7 +9853,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 9faf53601e61b2243a4571a37a820313, type: 2}
   gunnerNameArea: {fileID: 1940606637}
   gunnerImageArea: {fileID: 1960030871}
-  speed: 0
+  agility: 0
   hand: 0
   passiveEffect: {fileID: 0}
   passiveEffectText: 
@@ -9821,6 +9920,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 434988092}
   voltage: {fileID: 0}
   fieldManager: {fileID: 0}
+  cost: 0
+  effectHub: {fileID: 0}
 --- !u!1 &1692718228
 GameObject:
   m_ObjectHideFlags: 0
@@ -10372,17 +10473,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1771477049 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5663148872858409558, guid: 718bb212f3fdc3348806060887dde372, type: 3}
-  m_PrefabInstance: {fileID: 524479150}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 528de120e2e1a794089996a3b19d4545, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1775345186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11199,8 +11289,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30E9\u30F3"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 087898887d3e3d441bf397ef45c4c6ac, type: 2}
+  m_sharedMaterial: {fileID: -7786892333198751292, guid: 087898887d3e3d441bf397ef45c4c6ac, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

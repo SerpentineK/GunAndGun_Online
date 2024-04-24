@@ -17,6 +17,10 @@ MonoBehaviour:
   cue: 2
   priority: 3
   willOperateOnActivation: 1
+  thisCard: {fileID: 0}
+  thisGun: {fileID: 0}
+  thisGunner: {fileID: 0}
+  thisSkill: {fileID: 0}
   effects:
   - {fileID: 11400000, guid: 4320d42d3c2ff6444b7b74b781150116, type: 2}
   - {fileID: 11400000, guid: 55dd54d6d0c0a2549991ec14c3df9eb2, type: 2}
@@ -25,7 +29,6 @@ MonoBehaviour:
   attachedData: {fileID: 11400000, guid: a53ed94bf62cb654abce38e9908a58c9, type: 2}
   ExtraEffects:
   - {fileID: 11400000, guid: f8318e73ad21ecf4e90e3568c1b1054e, type: 2}
-  - {fileID: 11400000, guid: 4abe7668d2495664c8676ccbbff67a80, type: 2}
   - {fileID: 11400000, guid: 84232e0648c79194baabb2dcd81087dc, type: 2}
   - {fileID: 11400000, guid: 211b1e554b160684ea0bdc59a7077aa5, type: 2}
   - {fileID: 11400000, guid: d5ef28579e1cbea4ab3f5d932093d61c, type: 2}
@@ -40,6 +43,7 @@ MonoBehaviour:
   activationIsOncePerTurn: 0
   isLimitedByHikagiri: 0
   effectTriggersFromHand: 0
+  isOverclock: 0
   playerResults: []
   childrenOperateOnActivation: 1
   childrenOperateAsAltEffect: 0
@@ -58,8 +62,8 @@ MonoBehaviour:
   fieldSetResult01: []
   fieldSetResult02: []
   fieldSetResult03: []
-  intResult01: 0
-  intResult02: 0
+  intResult01: {fileID: 0}
+  intResult02: {fileID: 0}
   projectileResult: {fileID: 0}
   hubResult01: {fileID: 0}
   hubResult02: {fileID: 0}

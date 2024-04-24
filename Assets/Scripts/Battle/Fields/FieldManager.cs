@@ -34,8 +34,8 @@ public class FieldManager : MonoBehaviour
     public DeckField leftDeck;
 
     // プレイヤーの左右の機銃への装填
-    public Field rightMagazine;
-    public Field leftMagazine;
+    public MagazineField rightMagazine;
+    public MagazineField leftMagazine;
 
     // デッキカードのプレハブ
     [SerializeField] private GameObject mergedPrefab;
@@ -183,6 +183,8 @@ public class FieldManager : MonoBehaviour
             createdCard.name = metaCard.cardAbsId;
 
             visibleCard.InputCardData();
+
+            effectHub.thisCard = metaCard;
 
             parentDeck.RegisterCard(metaCard);
         }

@@ -20,27 +20,24 @@ public class Skill : MonoBehaviour
     // ボルテージから捨て札へカードを移動させるためのFieldManager参照
     [SerializeField] private FieldManager fieldManager;
 
+    // コスト
+    public int cost;
+
+    // 効果
+    public EffectHub effectHub;
+
     public void InputSkillData()
     {
-        skillCostArea?.SetText(string.Format("{0:00}",data.GetSkillCost()));
-        skillNameArea?.SetText(data.GetSkillName());
+        cost = data.GetSkillCost();
+        skillCostArea.SetText(string.Format("{0:00}",cost));
+        skillNameArea.SetText(data.GetSkillName());
         spriteRenderer.sprite = data.GetSkillGraphics();
+        effectHub = data.effectHub;
     }
 
     public bool IsEnoughVolt()
     {
-        if (data.GetSkillCost()<=voltage.cardCount) { return true; }
+        if (cost<=voltage.cardCount) { return true; }
         else { return false; }
-    }
-
-
-    public void Start()
-    {
-
-    }
-
-    public void Update()
-    {
-        
     }
 }

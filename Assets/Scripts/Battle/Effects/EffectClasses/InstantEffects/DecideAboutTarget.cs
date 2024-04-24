@@ -18,4 +18,17 @@ public class DecideAboutTarget : InstantEffect
     public TopicToDecideOn topicToDecideOn;
     public ValuesToReferTo returnValuesTo = ValuesToReferTo.OperateOnActivationBool;
     public bool resetOperationBoolsOnResolveEnd = true;
+
+    public override void Resolve()
+    {
+        var actualTarget = EffectManager.instance.TargetDictionary[target];
+        switch (topicToDecideOn)
+        {
+            case TopicToDecideOn.None:
+                break;
+            case TopicToDecideOn.IsCurrentSequenceGunFire:
+                
+                break;
+        }
+    }
 }

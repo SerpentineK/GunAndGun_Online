@@ -17,6 +17,7 @@ MonoBehaviour:
   cue: 24
   priority: 0
   willOperateOnActivation: 1
+  thisCard: {fileID: 0}
   effects: []
   automaticEffect: {fileID: 11400000, guid: b641594599bf3a346bc6e090f85b2cf5, type: 2}
   automaticEndEffect: {fileID: 0}
@@ -37,6 +38,7 @@ MonoBehaviour:
   activationIsOncePerTurn: 0
   isLimitedByHikagiri: 0
   effectTriggersFromHand: 0
+  isOverclock: 0
   playerResults: []
   childrenOperateOnActivation: 1
   childrenOperateAsAltEffect: 0
@@ -55,11 +57,12 @@ MonoBehaviour:
   fieldSetResult01: []
   fieldSetResult02: []
   fieldSetResult03: []
-  intResult01: 0
-  intResult02: 0
+  intResult01: {fileID: 0}
+  intResult02: {fileID: 0}
   projectileResult: {fileID: 0}
   hubResult01: {fileID: 0}
   hubResult02: {fileID: 0}
   dataResult01: {fileID: 0}
   dataResult02: {fileID: 0}
+  skillResult: {fileID: 0}
   finishedInput: 1

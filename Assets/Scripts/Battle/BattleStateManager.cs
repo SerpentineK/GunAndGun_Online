@@ -16,6 +16,8 @@ public class BattleStateManager : MonoBehaviour
     [SerializeField] private GunsData playerGun02 = null;
     [SerializeField] private SkillData playerSkill = null;
 
+    [SerializeField] private EffectHub experimentalHub;
+
     public void InitializePlayers()
     {
         player.gunnerData = playerGunner;
@@ -39,5 +41,11 @@ public class BattleStateManager : MonoBehaviour
     public void StartGame()
     {
         player.DrawCardsAsRule();
+    }
+
+    public void TestExperimentalHub()
+    {
+        player.EM.UnpackEffectHub(experimentalHub);
+        Debug.Log(player.HP);
     }
 }

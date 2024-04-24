@@ -1310,14 +1310,15 @@ MonoBehaviour:
   specialBulletSprite: {fileID: 21300000, guid: a28267493df0af240b98db5485f596cf, type: 3}
   FM: {fileID: 0}
   EM: {fileID: 0}
-  magazineField: {fileID: 1248332000198735096}
+  magazineField: {fileID: 8630212814956341383}
+  deckField: {fileID: 3875411686241746121}
   maxBulletCapacity: 0
   maxReloadPerTurn: 0
   currentBullets: 0
   currentReload: 0
   isPlayer: 0
-  isEquippedToRight: 0
-  isAvailable: 1
+  isEquippedToRight: 1
+  isOverclocked: 0
 --- !u!1 &5065624725478159836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,7 +1935,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8483015197065235913}
-  - component: {fileID: 1248332000198735096}
+  - component: {fileID: 8630212814956341383}
   m_Layer: 0
   m_Name: Magazine
   m_TagString: Untagged
@@ -1961,7 +1962,7 @@ RectTransform:
   m_AnchoredPosition: {x: 280, y: 0}
   m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1248332000198735096
+--- !u!114 &8630212814956341383
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1970,13 +1971,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 5761619488803072535}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 528de120e2e1a794089996a3b19d4545, type: 3}
+  m_Script: {fileID: 11500000, guid: dc1f816f42ed95d41a97efda10802f21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 1
   cardList: []
   cardCount: 0
   cardCounterObj: {fileID: 0}
+  masterGun: {fileID: 7825982650741039714}
+  maxBullets: 0
 --- !u!1 &6162320073438071578
 GameObject:
   m_ObjectHideFlags: 0

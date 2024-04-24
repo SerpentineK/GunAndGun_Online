@@ -131,6 +131,15 @@ public class Effect : ScriptableObject
 
         // プレイヤー（自分）の回復
         PlayerHeal,
+
+        // 相手がカードの効果で装填を行ったとき
+        OpponentReloadByEffect,
+
+        // 相手が銃士効果以外で回復を行ったとき
+        OpponentHealByEffect,
+
+        // 相手が銃士効果以外でカードを引いたとき
+        OpponentDrawByEffect,
     }
 
     // 効果対象の選択肢enum
@@ -274,7 +283,10 @@ public class Effect : ScriptableObject
 
         // 対応を発動した対象である射撃または技能
         ReactedProjectile,
-        ReactedSkill
+        ReactedSkill,
+
+        // このカードが属するField
+        ThisCardsField
     }
 
     // カードを検索して結果の一覧を表示するとき、どのような条件で検索するかenum
@@ -313,8 +325,8 @@ public class Effect : ScriptableObject
         Field01,
         Field02,
         Field03,
-        Int01,
-        Int02,
+        NumeralValue01,
+        NumeralValue02,
         OperateOnActivationBool,
         OperateAsAltEffectBool,
         Projectile,
@@ -355,5 +367,11 @@ public class Effect : ScriptableObject
 
     // 効果発動時の実際の処理(オーバーライド用)
     public virtual void Resolve() { }
+
+    // 自分のクラス名を返す関数
+    public string GetEffectClassName()
+    {
+        return this.GetType().Name;
+    }
 }
 

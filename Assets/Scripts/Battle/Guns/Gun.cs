@@ -30,7 +30,10 @@ public class Gun : MonoBehaviour
     public EffectManager EM;
 
     // MagazineのField(機銃に装填されたカードの行先となる領域)
-    public Field magazineField;
+    public MagazineField magazineField;
+
+    // 機銃に結び付いた山札のField
+    public DeckField deckField;
 
     // 機銃のパラメーター(戦闘UIにて参照/更新するもの)
     public int maxBulletCapacity = 0;
@@ -70,7 +73,7 @@ public class Gun : MonoBehaviour
 
     // オーバークロック用のプロパティ
     // trueであれば射撃/装填ができず、効果が無効になる(グラフィック弄ってもいいかも)
-    public bool isAvailable = true;
+    public bool isOverclocked = false;
 
     public void InputGunData()
     {

@@ -17,9 +17,19 @@ public class VisibleCard : MonoBehaviour
     [SerializeField] private TMP_Text costInputArea;
     [SerializeField] private TMP_Text typeInputArea;
     [SerializeField] private SpriteRenderer gunSpriteRenderer;
-    [SerializeField] private SpriteRenderer coloredPanelRenderer;
-    [SerializeField] private SpriteRenderer whitePanelRenderer;
+    [SerializeField] private SpriteRenderer backgroundRenderer;
     [SerializeField] private Canvas canvas;
+
+    // îwåiÇÃâÊëú
+    [SerializeField] private Sprite actionSprite;
+    [SerializeField] private Sprite reactionSprite;
+    [SerializeField] private Sprite mechanismSprite;
+    [SerializeField] private Sprite specialBulletSprite;
+    [SerializeField] private Sprite actionOverclockSprite;
+    [SerializeField] private Sprite reactionOverclockSprite;
+    [SerializeField] private Sprite mechanismOverclockSprite;
+    [SerializeField] private Sprite specialBulletOverclockSprite;
+
 
     public void InitiateMetaCard() 
     {
@@ -35,43 +45,55 @@ public class VisibleCard : MonoBehaviour
         effectInputArea.SetText(attachedCard.effectText);
         costInputArea.SetText("COST\n" + string.Format("{0:00}", attachedCard.cost));
         string typeText = null;
-        Color color = new();
         if (attachedCard.cardType == CardData.CardType.Action) 
         { 
             typeText = "çsìÆ";
-            color.a = 1f;
-            color.r = 0f;
-            color.g = 230f;
-            color.b = 230f;
+            if (attachedCard.isOverclock)
+            {
+                backgroundRenderer.sprite = actionOverclockSprite;
+            }
+            else
+            {
+                backgroundRenderer.sprite = actionSprite;
+            }
         }
         else if (attachedCard.cardType == CardData.CardType.Reaction) 
         { 
             typeText = "ëŒâû";
-            color.a = 1f;
-            color.r = 200f;
-            color.g = 0f;
-            color.b = 200f;
+            if (attachedCard.isOverclock)
+            {
+                backgroundRenderer.sprite = reactionOverclockSprite;
+            }
+            else
+            {
+                backgroundRenderer.sprite = reactionSprite;
+            }
         }
         else if (attachedCard.cardType == CardData.CardType.Mechanism)
         {
             typeText = "ã@î\";
-            color.a= 1f;
-            color.r = 0f;
-            color.g = 200f;
-            color.b = 0f;
+            if (attachedCard.isOverclock)
+            {
+                backgroundRenderer.sprite = mechanismOverclockSprite;
+            }
+            else
+            {
+                backgroundRenderer.sprite = mechanismSprite;
+            }
         }
         else if (attachedCard.cardType == CardData.CardType.SpecialBullet)
         {
             typeText = "èeíe";
-            color.a = 1f;
-            color.r = 230f;
-            color.g = 230f;
-            color.b = 0f;
+            if (attachedCard.isOverclock)
+            {
+                backgroundRenderer.sprite = specialBulletOverclockSprite;
+            }
+            else
+            {
+                backgroundRenderer.sprite = specialBulletSprite;
+            }
         }
         typeInputArea.SetText(typeText);
-        coloredPanelRenderer.color = color;
-        coloredPanelRenderer.sortingLayerName = "Cards";
-        coloredPanelRenderer.sortingOrder = 2;
         gunSpriteRenderer.sprite = attachedCard.gunSprite;
     }
 
