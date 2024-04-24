@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70e2d29eaeab974a8fcea1a4214273f, type: 3}
+  m_Name: HAJIMARUYO!_LV3
+  m_EditorClassIdentifier: 
+  effectContentText: "\u4E21\u65B9\u306E\u6A5F\u9283\u306B\u3001\u5BFE\u5FDC\u3059\u308B\u6A5F\u9283\u30C7\u30C3\u30AD\u306E\u4E0A\u304B\u3089\u88C5\u586B\u6570\u304C\u6700\u5927\u88C5\u586B\u6570\u306B\u7B49\u3057\u304F\u306A\u308B\u3088\u3046\u306B\u88CF\u5411\u304D\u306B\u88C5\u586B\u3059\u308B\u3002"
+  cardType: 4
+  cue: 2
+  priority: 3
+  willOperateOnActivation: 1
+  thisCard: {fileID: 0}
+  thisGun: {fileID: 0}
+  thisGunner: {fileID: 0}
+  thisSkill: {fileID: 0}
+  effects: []
+  automaticEffect: {fileID: 0}
+  automaticEndEffect: {fileID: 0}
+  attachedData: {fileID: 0}
+  ExtraEffects: []
+  usageIsOncePerTurn: 0
+  activationIsOncePerTurn: 0
+  isLimitedByHikagiri: 0
+  effectTriggersFromHand: 0
+  isOverclock: 0
+  playerResults: []
+  childrenOperateOnActivation: 1
+  childrenOperateAsAltEffect: 0
+  effectResults: []
+  cardResults01: []
+  cardResults02: []
+  cardResults03: []
+  cardResults04: []
+  cardResults05: []
+  cardResults06: []
+  gunResults01: []
+  gunResults02: []
+  fieldResult01: {fileID: 0}
+  fieldResult02: {fileID: 0}
+  fieldResult03: {fileID: 0}
+  fieldSetResult01: []
+  fieldSetResult02: []
+  fieldSetResult03: []
+  intResult01: {fileID: 0}
+  intResult02: {fileID: 0}
+  projectileResult: {fileID: 0}
+  hubResult01: {fileID: 0}
+  hubResult02: {fileID: 0}
+  dataResult01: {fileID: 0}
+  dataResult02: {fileID: 0}
+  skillResult: {fileID: 0}
+  finishedInput: 0

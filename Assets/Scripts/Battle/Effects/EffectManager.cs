@@ -92,6 +92,7 @@ public class EffectManager : MonoBehaviour
             { Effect.ValuesToReferTo.FieldSet02, targetHub.fieldSetResult02 },
             { Effect.ValuesToReferTo.FieldSet03, targetHub.fieldSetResult03 },
             { Effect.ValuesToReferTo.Skill, targetHub.skillResult },
+            { Effect.ValuesToReferTo.CardType, targetHub.cardTypeResult },
         };
         HubDictionary = myDict;
         return;
@@ -194,7 +195,7 @@ public class EffectManager : MonoBehaviour
         {
             InstantEffect instantEffect = effect as InstantEffect;
             RefreshHubDictionary(currentHub);
-            RefreshTargetDictionary();
+            // RefreshTargetDictionary();
             if (currentHub.childrenOperateOnActivation && !currentHub.childrenOperateAsAltEffect)
             {
                 instantEffect.Resolve();

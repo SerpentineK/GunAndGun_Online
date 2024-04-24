@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1c8228d431dedd49bad466041a7b2d6, type: 3}
-  m_Name: Card_ULTRA_HYPER_KICK
+  m_Name: ULTRA_HYPER_KICK
   m_EditorClassIdentifier: 
   cardId: UB-SBD-03
   cardName: "\u30A6\u30EB\u30C8\u30E9\u30CF\u30A4\u30D1\u30FC\u30AD\u30C3\u30AF"
@@ -26,4 +26,7 @@ MonoBehaviour:
     \u3053\u306E\u969B\u30010\u679A\u306E\u6A5F\u9283\u30C7\u30C3\u30AD\u306F\u9078\u3079\u306A\u3044
     )"
   numOfCards: 2
-  attachedHubs: []
+  attachedHubs:
+  - {fileID: 11400000, guid: 45f2eeae749135746b240e4006464062, type: 2}
+  - {fileID: 11400000, guid: f39c8336904a75d408c07c394168ba41, type: 2}
+  - {fileID: 11400000, guid: dfee0566eb8a78241ab537ee5e2db2db, type: 2}

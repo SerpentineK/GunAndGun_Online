@@ -152,6 +152,9 @@ public class EffectHub : ContinuousEffect
     [HideInInspector]
     public Skill skillResult;
 
+    // カード種類編
+    [HideInInspector]
+    public CardData.CardType cardTypeResult = CardData.CardType.Other;
 
     // (開発用)記入済みか否か
     public bool finishedInput;

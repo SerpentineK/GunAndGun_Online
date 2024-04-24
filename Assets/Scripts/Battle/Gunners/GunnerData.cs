@@ -4,8 +4,7 @@ using UnityEngine;
 using System;
 
 
-[Serializable]
-[CreateAssetMenu(fileName = "Gunner", menuName = "CreateGunner")]
+
 public class GunnerData : ScriptableObject
 {
     [SerializeField] private GameManager.CARD_POOL cardPool;

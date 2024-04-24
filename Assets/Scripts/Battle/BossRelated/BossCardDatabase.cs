@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[Serializable]
-[CreateAssetMenu(fileName = "BossCardDatabase", menuName = "CreateBossCard_Database", order = 2)]
+
 public class BossCardDatabase : ScriptableObject
 {
     [SerializeField] private BossData bossAttached;

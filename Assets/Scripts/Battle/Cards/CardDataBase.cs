@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "CardDataBase", menuName = "CreateCardDataBase")]
+
 public class CardDataBase : ScriptableObject
 {
     [SerializeField] private GunsData gunAttached;

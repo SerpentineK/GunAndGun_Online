@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1c8228d431dedd49bad466041a7b2d6, type: 3}
-  m_Name: Card_HAJIMARUYO
+  m_Name: HAJIMARUYO
   m_EditorClassIdentifier: 
   cardId: UB-SBD-02
   cardName: "\u30CF\u30B8\u30DE\u30EB\u30E8\uFF01"
@@ -20,4 +20,7 @@ MonoBehaviour:
   - "\u4E21\u65B9\u306E\u6A5F\u9283\u306B\u3001\u5BFE\u5FDC\u3059\u308B\u6A5F\u9283\u30C7\u30C3\u30AD\u306E\u4E0A\u304B\u3089\u305D\u308C\u305E\u308C1\u679A\u305A\u3064\u88CF\u5411\u304D\u306B\u88C5\u586B\u3059\u308B\u3002"
   - "\u4E21\u65B9\u306E\u6A5F\u9283\u306B\u3001\u5BFE\u5FDC\u3059\u308B\u6A5F\u9283\u30C7\u30C3\u30AD\u306E\u4E0A\u304B\u3089\u88C5\u586B\u6570\u304C\u6700\u5927\u88C5\u586B\u6570\u306B\u7B49\u3057\u304F\u306A\u308B\u3088\u3046\u306B\u88CF\u5411\u304D\u306B\u88C5\u586B\u3059\u308B\u3002"
   numOfCards: 4
-  attachedHubs: []
+  attachedHubs:
+  - {fileID: 11400000, guid: cf40cd680c3761d45815c8838c3a636f, type: 2}
+  - {fileID: 11400000, guid: e34a8fd7094632f4d8809eb044863315, type: 2}
+  - {fileID: 11400000, guid: 7b36aaa9480c80d4e9ed7343db8a8ed1, type: 2}

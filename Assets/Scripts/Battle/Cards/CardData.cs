@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[Serializable]
-[CreateAssetMenu(fileName = "Card", menuName ="CreateCard")]
+
 public class CardData : ScriptableObject
 {
     public enum CardType

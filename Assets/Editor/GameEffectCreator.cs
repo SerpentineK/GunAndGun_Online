@@ -24,6 +24,7 @@ public class GameEffectCreator : EditorWindow
     private static string inputPath_Gunner = "Assets/Resources/GunnerData";
     private static string inputPath_Gun = "Assets/Resources/GunsData";
     private static string inputPath_Skill = "Assets/Resources/SkillData";
+    private static string inputPath_Boss = "Assets/Resources/BossCardData/SuperIdol_Ran";
 
     // Effectアセットの出力パス
     private static string outputPath = "Assets/Resources/EffectData";
@@ -97,12 +98,13 @@ public class GameEffectCreator : EditorWindow
             SetPartialNameArray_ForHub(inputPath_Card),
             SetPartialNameArray_ForHub(inputPath_Gunner),
             SetPartialNameArray_ForHub(inputPath_Gun),
-            SetPartialNameArray_ForHub(inputPath_Skill)
+            SetPartialNameArray_ForHub(inputPath_Skill),
+            SetPartialNameArray_ForHub(inputPath_Boss)
         };
-        int len = array[0].Length + array[1].Length + array[2].Length + array[3].Length;
+        int len = array[0].Length + array[1].Length + array[2].Length + array[3].Length + array[4].Length;
         string[] fullArray = new string[len];
         int childCounter = 0;
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 5; i++)
         {
             for (int index = 0; index < array[i].Length; index++)
             {

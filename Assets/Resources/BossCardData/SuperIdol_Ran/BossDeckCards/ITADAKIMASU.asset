@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1c8228d431dedd49bad466041a7b2d6, type: 3}
-  m_Name: Card_ITADAKIMASU
+  m_Name: ITADAKIMASU
   m_EditorClassIdentifier: 
   cardId: UB-SBD-06
   cardName: "\u30A4\u30BF\u30C0\u30AD\u30DE\u30B9\uFF01"
@@ -20,4 +20,7 @@ MonoBehaviour:
   - "\u30D7\u30EC\u30A4\u30E4\u30FC\u306F\u624B\u672D\u304B\u3089\u30AB\u30FC\u30C9\u30922\u679A\u9078\u3093\u3067\u6368\u3066\u672D\u306B\u7F6E\u304F\u3002"
   - "\u30D7\u30EC\u30A4\u30E4\u30FC\u306F\u624B\u672D\u304B\u3089\u30AB\u30FC\u30C9\u30923\u679A\u9078\u3093\u3067\u6368\u3066\u672D\u306B\u7F6E\u304F\u3002"
   numOfCards: 1
-  attachedHubs: []
+  attachedHubs:
+  - {fileID: 11400000, guid: f485b917d240b174a8fa2e2a5f832c3b, type: 2}
+  - {fileID: 11400000, guid: 059cb0ad1ea25b14da5000c2b91ef65d, type: 2}
+  - {fileID: 11400000, guid: ba92c6ab30a3dc848a130c1b95c8f3bd, type: 2}

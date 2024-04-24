@@ -4,8 +4,6 @@ using UnityEngine;
 using System;
 
 
-[Serializable]
-[CreateAssetMenu(fileName = "Gun", menuName = "CreateGun")]
 public class GunsData : ScriptableObject
 {
     public enum GunType

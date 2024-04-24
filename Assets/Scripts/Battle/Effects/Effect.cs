@@ -339,7 +339,8 @@ public class Effect : ScriptableObject
         FieldSet01,
         FieldSet02,
         FieldSet03,
-        Skill
+        Skill,
+        CardType
     }
 
     // AltEffect‚É•ªŠò‚·‚éğŒenum

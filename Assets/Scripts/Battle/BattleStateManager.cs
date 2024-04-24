@@ -46,6 +46,5 @@ public class BattleStateManager : MonoBehaviour
     public void TestExperimentalHub()
     {
         player.EM.UnpackEffectHub(experimentalHub);
-        Debug.Log(player.HP);
     }
 }

@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-[CreateAssetMenu(fileName = "BossStageDatabase", menuName = "CreateBossStage_Database", order = 2)]
+
 public class BossStageDatabase : ScriptableObject
 {
     [SerializeField] private BossData bossAttached;

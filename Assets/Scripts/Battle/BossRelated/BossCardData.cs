@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-[CreateAssetMenu(fileName = "BossCard", menuName = "CreateBossCard", order = 2)]
+
 public class BossCardData : ScriptableObject
 {
     [SerializeField] private string cardId;

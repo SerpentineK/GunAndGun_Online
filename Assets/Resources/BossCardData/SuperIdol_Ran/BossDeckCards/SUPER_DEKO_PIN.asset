@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1c8228d431dedd49bad466041a7b2d6, type: 3}
-  m_Name: Card_SUPER_DEKO_PIN
+  m_Name: SUPER_DEKO_PIN
   m_EditorClassIdentifier: 
   cardId: UB-SBD-04
   cardName: "\u30B9\u30FC\u30D1\u30FC\u30C7\u30B3\u30D4\u30F3\uFF01"
@@ -20,4 +20,7 @@ MonoBehaviour:
   - "\u30D7\u30EC\u30A4\u30E4\u30FC\u306B7HIT\u3002"
   - "\u30D7\u30EC\u30A4\u30E4\u30FC\u306B10HIT\u3002"
   numOfCards: 2
-  attachedHubs: []
+  attachedHubs:
+  - {fileID: 11400000, guid: 1c104ee9f5ae5e54aaa40115b2ee20c4, type: 2}
+  - {fileID: 11400000, guid: 32e3ffcb8758a9e4ba1f71c519a98f81, type: 2}
+  - {fileID: 11400000, guid: 0e9d3279ca8e29c4d8b45244b41735ab, type: 2}

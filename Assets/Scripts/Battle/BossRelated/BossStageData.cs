@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-[CreateAssetMenu(fileName = "BossStage", menuName = "CreateBossStage", order = 2)]
+
 public class BossStageData : ScriptableObject
 {
     [SerializeField] private string stageId;

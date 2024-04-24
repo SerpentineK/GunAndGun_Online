@@ -4,8 +4,6 @@ using UnityEngine;
 using System;
 
 
-[Serializable]
-[CreateAssetMenu(fileName = "GunnerDataBase", menuName = "CreateGunnerDataBase")]
 public class GunnerDataBase : ScriptableObject
 {
     [SerializeField] private List<GunnerData> gunnerDataList = new List<GunnerData>();
