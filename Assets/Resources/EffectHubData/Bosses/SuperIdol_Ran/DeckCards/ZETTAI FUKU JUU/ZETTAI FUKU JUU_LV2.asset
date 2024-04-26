@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ZETTAI FUKU JUU_LV2
   m_EditorClassIdentifier: 
   effectContentText: "\u30D7\u30EC\u30A4\u30E4\u30FC\u306F\u81EA\u5206\u306E\u6A5F\u9283\u3092\u7121\u4F5C\u70BA\u306B1\u3064\u9078\u3076\u3002\n\u6B21\u306E\u30BF\u30FC\u30F3\u306E\u9593\u305D\u306E\u6A5F\u9283\u3067\u5C04\u6483\u3067\u304D\u305A\u3001\u305D\u306E\u6A5F\u9283\u306E\u30C7\u30C3\u30AD\u304B\u3089\u30AB\u30FC\u30C9\u3092\u5F15\u304F\u3053\u3068\u304C\u3067\u304D\u306A\u3044\u3002"
-  cardType: 4
+  cardType: 0
   cue: 2
   priority: 3
   willOperateOnActivation: 1
@@ -21,11 +21,19 @@ MonoBehaviour:
   thisGun: {fileID: 0}
   thisGunner: {fileID: 0}
   thisSkill: {fileID: 0}
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: 57628cd24c656ed4bb7b79f86bcc9c64, type: 2}
+  - {fileID: 11400000, guid: cf7cc6bc64a323c42b3fc181ac61a50f, type: 2}
+  - {fileID: 11400000, guid: cecc9520d5268da4484fce75825b3d11, type: 2}
+  - {fileID: 11400000, guid: 67218ff34bfe6044fa76bce353649760, type: 2}
   automaticEffect: {fileID: 0}
   automaticEndEffect: {fileID: 0}
-  attachedData: {fileID: 0}
-  ExtraEffects: []
+  attachedData: {fileID: 11400000, guid: 9d81194466421814b82e676656913722, type: 2}
+  ExtraEffects:
+  - {fileID: 11400000, guid: a42c9933167d03649b863abb5732135a, type: 2}
+  - {fileID: 11400000, guid: a420db64872c00c46a9b5c20cf40424f, type: 2}
+  - {fileID: 11400000, guid: 781436b567d1131429fdae80cea43765, type: 2}
+  - {fileID: 11400000, guid: ef8b8673539282644b42959878795384, type: 2}
   usageIsOncePerTurn: 0
   activationIsOncePerTurn: 0
   isLimitedByHikagiri: 0
@@ -57,4 +65,5 @@ MonoBehaviour:
   dataResult01: {fileID: 0}
   dataResult02: {fileID: 0}
   skillResult: {fileID: 0}
-  finishedInput: 0
+  cardTypeResult: 4
+  finishedInput: 1

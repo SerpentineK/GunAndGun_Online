@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SUPER DEKO PIN!_LV1
   m_EditorClassIdentifier: 
   effectContentText: "\u30D7\u30EC\u30A4\u30E4\u30FC\u306B4HIT\u3002"
-  cardType: 4
+  cardType: 0
   cue: 2
   priority: 3
   willOperateOnActivation: 1
@@ -21,10 +21,11 @@ MonoBehaviour:
   thisGun: {fileID: 0}
   thisGunner: {fileID: 0}
   thisSkill: {fileID: 0}
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: e6f5f617dd7b18b4ab89898c9df324a5, type: 2}
   automaticEffect: {fileID: 0}
   automaticEndEffect: {fileID: 0}
-  attachedData: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 7e862d25375e73a41ae7219185f334b9, type: 2}
   ExtraEffects: []
   usageIsOncePerTurn: 0
   activationIsOncePerTurn: 0
@@ -57,4 +58,5 @@ MonoBehaviour:
   dataResult01: {fileID: 0}
   dataResult02: {fileID: 0}
   skillResult: {fileID: 0}
-  finishedInput: 0
+  cardTypeResult: 4
+  finishedInput: 1

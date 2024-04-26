@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SEKAI ICHI KAWAII_LV1
   m_EditorClassIdentifier: 
   effectContentText: "\u56DE\u5FA95\u3002"
-  cardType: 4
+  cardType: 0
   cue: 2
   priority: 3
   willOperateOnActivation: 1
@@ -21,10 +21,11 @@ MonoBehaviour:
   thisGun: {fileID: 0}
   thisGunner: {fileID: 0}
   thisSkill: {fileID: 0}
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: 0727544c6febc1943b13942e86ed3d2b, type: 2}
   automaticEffect: {fileID: 0}
   automaticEndEffect: {fileID: 0}
-  attachedData: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 167792c84ba82914991b06c844306c7f, type: 2}
   ExtraEffects: []
   usageIsOncePerTurn: 0
   activationIsOncePerTurn: 0
@@ -57,4 +58,5 @@ MonoBehaviour:
   dataResult01: {fileID: 0}
   dataResult02: {fileID: 0}
   skillResult: {fileID: 0}
-  finishedInput: 0
+  cardTypeResult: 4
+  finishedInput: 1

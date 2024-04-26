@@ -12,10 +12,12 @@ public class BossStageData : ScriptableObject
     [SerializeField] private string stageAbility;
     [SerializeField] private Sprite stageLogo;
     [SerializeField] private Sprite stageGraphics;
+    [SerializeField] private RuleData[] stageRules;
 
     public string GetStageId() { return stageId; }
     public string GetStageName() {  return stageName; }
     public string GetStageAbility() {  return stageAbility; }
     public Sprite GetStageLogo() {  return stageLogo; }
     public Sprite GetStageGraphics() {  return stageGraphics; }
+    public RuleData[] GetStageRules() {  return stageRules; }
 }

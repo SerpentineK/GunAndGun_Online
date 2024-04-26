@@ -15,7 +15,7 @@ MonoBehaviour:
   effectContentText: "\u30D7\u30EC\u30A4\u30E4\u30FC\u306F\u81EA\u5206\u306E\u6A5F\u9283\u306B\u88C5\u586B\u3055\u308C\u3066\u3044\u308B\u30AB\u30FC\u30C9\u30925\u679A\u9078\u3073\u3001\u6368\u3066\u672D\u306B\u3059\u308B\u3002\u6368\u3066\u672D\u306B\u3057\u305F\u679A\u6570\u304C1\u679A\u4EE5\u4E0B\u306E\u5834\u5408\u3001\u81EA\u5206\u306E\u6A5F\u9283\u30C7\u30C3\u30AD\u30921\u3064\u9078\u3073\u3001\u305D\u306E\u4E0A\u304B\u3089\u30AB\u30FC\u30C9\u30924\u679A\u6368\u3066\u672D\u306B\u7F6E\u304F\u3002(
     \u3053\u306E\u969B\u30010\u679A\u306E\u6A5F\u9283\u30C7\u30C3\u30AD\u306F\u9078\u3079\u306A\u3044
     )"
-  cardType: 4
+  cardType: 0
   cue: 2
   priority: 3
   willOperateOnActivation: 1
@@ -23,10 +23,16 @@ MonoBehaviour:
   thisGun: {fileID: 0}
   thisGunner: {fileID: 0}
   thisSkill: {fileID: 0}
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: 09334b8c9ff180140acdba181e7c5ccd, type: 2}
+  - {fileID: 11400000, guid: f610664ff4adfab49b9c46a68c2c3bf8, type: 2}
+  - {fileID: 11400000, guid: d009a452e7c7cee48b498879aabecb5b, type: 2}
+  - {fileID: 11400000, guid: d727907e380b30b40bad8795af454180, type: 2}
+  - {fileID: 11400000, guid: 75c5347180123454eb9a97038e13f609, type: 2}
+  - {fileID: 11400000, guid: eff1ab1e3b9d1ea40b6cf4e90c2506aa, type: 2}
   automaticEffect: {fileID: 0}
   automaticEndEffect: {fileID: 0}
-  attachedData: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 5a2a2f81756538d4798813a8cabbf31b, type: 2}
   ExtraEffects: []
   usageIsOncePerTurn: 0
   activationIsOncePerTurn: 0
@@ -59,4 +65,5 @@ MonoBehaviour:
   dataResult01: {fileID: 0}
   dataResult02: {fileID: 0}
   skillResult: {fileID: 0}
-  finishedInput: 0
+  cardTypeResult: 4
+  finishedInput: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ZETTAI FUKU JUU_LV3
   m_EditorClassIdentifier: 
   effectContentText: "\u30D7\u30EC\u30A4\u30E4\u30FC\u306F\u81EA\u5206\u306E\u6A5F\u9283\u3092\u7121\u4F5C\u70BA\u306B1\u3064\u9078\u3076\u3002\n\u305D\u306E\u6A5F\u9283\u304C\u8868\u5411\u304D\u306E\u5834\u5408\u3001\u88CF\u5411\u304D\u306B\u3059\u308B\u3002"
-  cardType: 4
+  cardType: 0
   cue: 2
   priority: 3
   willOperateOnActivation: 1
@@ -21,10 +21,12 @@ MonoBehaviour:
   thisGun: {fileID: 0}
   thisGunner: {fileID: 0}
   thisSkill: {fileID: 0}
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: 57628cd24c656ed4bb7b79f86bcc9c64, type: 2}
+  - {fileID: 11400000, guid: 0737fbed2c02b0340813f4b41cf02920, type: 2}
   automaticEffect: {fileID: 0}
   automaticEndEffect: {fileID: 0}
-  attachedData: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 9d81194466421814b82e676656913722, type: 2}
   ExtraEffects: []
   usageIsOncePerTurn: 0
   activationIsOncePerTurn: 0
@@ -57,4 +59,5 @@ MonoBehaviour:
   dataResult01: {fileID: 0}
   dataResult02: {fileID: 0}
   skillResult: {fileID: 0}
-  finishedInput: 0
+  cardTypeResult: 4
+  finishedInput: 1
