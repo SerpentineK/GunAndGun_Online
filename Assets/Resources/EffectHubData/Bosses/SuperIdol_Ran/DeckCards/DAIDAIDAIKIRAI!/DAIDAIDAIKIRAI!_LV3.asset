@@ -21,11 +21,17 @@ MonoBehaviour:
   thisGun: {fileID: 0}
   thisGunner: {fileID: 0}
   thisSkill: {fileID: 0}
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: 3e99008374e81d04ebd343d023406dca, type: 2}
+  - {fileID: 11400000, guid: b6812f837ff73f14ab220069f0cd5dbf, type: 2}
+  - {fileID: 11400000, guid: fc303586cf36f03499440a79e6609748, type: 2}
+  - {fileID: 11400000, guid: 8fd0ecb2f93eb124c861012b71d1e9cb, type: 2}
   automaticEffect: {fileID: 0}
   automaticEndEffect: {fileID: 0}
-  attachedData: {fileID: 0}
-  ExtraEffects: []
+  attachedData: {fileID: 11400000, guid: e48a6b50ca81fa6478a81304ba76324c, type: 2}
+  ExtraEffects:
+  - {fileID: 11400000, guid: 1e70f9db027a716469bccb1c9cdcdb37, type: 2}
+  - {fileID: 11400000, guid: c9e4dc470a93c5341889686fd0dd12a1, type: 2}
   usageIsOncePerTurn: 0
   activationIsOncePerTurn: 0
   isLimitedByHikagiri: 0
@@ -57,4 +63,5 @@ MonoBehaviour:
   dataResult01: {fileID: 0}
   dataResult02: {fileID: 0}
   skillResult: {fileID: 0}
-  finishedInput: 0
+  cardTypeResult: 4
+  finishedInput: 1

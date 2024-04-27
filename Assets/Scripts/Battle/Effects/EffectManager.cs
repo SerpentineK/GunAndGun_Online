@@ -42,7 +42,7 @@ public class EffectManager : MonoBehaviour
     public List<EffectHub> specialBulletsLoadedToRightGun;
     public List<EffectHub> specialBulletsLoadedToLeftGun;
 
-    public EffectHub resolvingHub;
+    public EffectHub resolvingHub = null;
     public Gun firedGun;
 
     /// <summary>
@@ -61,7 +61,7 @@ public class EffectManager : MonoBehaviour
         instance = this;
     }
 
-    public void RefreshHubDictionary(EffectHub targetHub) 
+    public void RefreshHubValueDictionary(EffectHub targetHub) 
     {
         Dictionary<Effect.ValuesToReferTo, object> myDict = new()
         {
@@ -98,6 +98,129 @@ public class EffectManager : MonoBehaviour
         return;
     }
 
+    // resolvingHubの変数に値を代入するためのメソッド
+    // オーバーロードでいろいろ対応できるようにしたい
+    public void InputValueToHub(Effect.ValuesToReferTo referenceToInput, Object[] arrayToInput)
+    {
+        switch (referenceToInput)
+        {
+            case Effect.ValuesToReferTo.CardSet01:
+                resolvingHub.cardResults01 = arrayToInput as Card[];
+                break;
+            case Effect.ValuesToReferTo.CardSet02:
+                resolvingHub.cardResults02 = arrayToInput as Card[];
+                break;
+            case Effect.ValuesToReferTo.CardSet03:
+                resolvingHub.cardResults03 = arrayToInput as Card[];
+                break;
+            case Effect.ValuesToReferTo.CardSet04:
+                resolvingHub.cardResults04 = arrayToInput as Card[];
+                break;
+            case Effect.ValuesToReferTo.CardSet05:
+                resolvingHub.cardResults05 = arrayToInput as Card[];
+                break;
+            case Effect.ValuesToReferTo.CardSet06:
+                resolvingHub.cardResults06 = arrayToInput as Card[];
+                break;
+            case Effect.ValuesToReferTo.EffectSet01:
+                resolvingHub.effectResults = arrayToInput as Effect[];
+                break;
+            case Effect.ValuesToReferTo.GunSet01:
+                resolvingHub.gunResults01 = arrayToInput as Gun[];
+                break;
+            case Effect.ValuesToReferTo.GunSet02:
+                resolvingHub.gunResults02 = arrayToInput as Gun[];
+                break;
+            case Effect.ValuesToReferTo.PlayerSet:
+                resolvingHub.playerResults = arrayToInput as Player[];
+                break;
+            case Effect.ValuesToReferTo.FieldSet01:
+                resolvingHub.fieldSetResult01 = arrayToInput as Field[];
+                break;
+            case Effect.ValuesToReferTo.FieldSet02:
+                resolvingHub.fieldSetResult02 = arrayToInput as Field[];
+                break;
+            case Effect.ValuesToReferTo.FieldSet03:
+                resolvingHub.fieldSetResult03 = arrayToInput as Field[];
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void InputValueToHub(Effect.ValuesToReferTo referenceToInput, bool booleanToInput)
+    {
+        switch (referenceToInput)
+        {
+            case Effect.ValuesToReferTo.OperateOnActivationBool:
+                resolvingHub.childrenOperateOnActivation = booleanToInput; 
+                break;
+            case Effect.ValuesToReferTo.OperateAsAltEffectBool:
+                resolvingHub.childrenOperateAsAltEffect = booleanToInput;
+                break; 
+            default:
+                break;
+        }
+    }
+
+    public void InputValueToHub(Effect.ValuesToReferTo referenceToInput, CardData.CardType cardTypeToInput)
+    {
+        switch (referenceToInput)
+        {
+            case Effect.ValuesToReferTo.CardType:
+                resolvingHub.cardTypeResult = cardTypeToInput;
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void InputValueToHub(Effect.ValuesToReferTo referenceToInput, Object objectToInput)
+    {
+        switch (referenceToInput)
+        {
+            case Effect.ValuesToReferTo.Field01:
+                resolvingHub.fieldResult01 = objectToInput as Field;
+                break;
+            case Effect.ValuesToReferTo.Field02:
+                resolvingHub.fieldResult02 = objectToInput as Field;
+                break;
+            case Effect.ValuesToReferTo.Field03:
+                resolvingHub.fieldResult03 = objectToInput as Field;
+                break;
+            case Effect.ValuesToReferTo.NumeralValue01:
+                resolvingHub.intResult01 = objectToInput as NumeralValue;
+                break;
+            case Effect.ValuesToReferTo.NumeralValue02:
+                resolvingHub.intResult02 = objectToInput as NumeralValue;
+                break;
+            case Effect.ValuesToReferTo.OperateOnActivationBool:
+                break;
+            case Effect.ValuesToReferTo.OperateAsAltEffectBool:
+                break;
+            case Effect.ValuesToReferTo.Projectile:
+                resolvingHub.projectileResult = objectToInput as FiredProjectile;
+                break;
+            case Effect.ValuesToReferTo.EffectHub01:
+                resolvingHub.hubResult01 = objectToInput as EffectHub;
+                break;
+            case Effect.ValuesToReferTo.EffectHub02:
+                resolvingHub.hubResult02 = objectToInput as EffectHub;
+                break;
+            case Effect.ValuesToReferTo.Data01:
+                resolvingHub.dataResult01 = objectToInput as ScriptableObject;
+                break;
+            case Effect.ValuesToReferTo.Data02:
+                resolvingHub.dataResult02 = objectToInput as ScriptableObject;
+                break;
+            case Effect.ValuesToReferTo.Skill:
+                resolvingHub.skillResult = objectToInput as Skill;
+                break;
+            default:
+                break;
+        }
+    }
+
     public void RefreshTargetDictionary()
     {
         List<Field> playerBullets = new()
@@ -105,20 +228,10 @@ public class EffectManager : MonoBehaviour
             myself.FM.leftMagazine,
             myself.FM.rightMagazine
         };
-        List<Field> opponentBullets = new()
-        {
-            opponent.FM.leftMagazine,
-            opponent.FM.rightMagazine
-        }; 
         List<Field> playerDecks = new()
         {
             myself.FM.leftDeck,
             myself.FM.rightDeck
-        };
-        List<Field> opponentDecks = new()
-        {
-            opponent.FM.leftDeck,
-            opponent.FM.rightDeck
         };
         List<Field> playerAllFields = new()
         {
@@ -131,18 +244,6 @@ public class EffectManager : MonoBehaviour
             myself.FM.mechanism,
             myself.FM.discard,
             myself.FM.voltage
-        };
-        List<Field> opponentAllFields = new()
-        {
-            opponent.FM.hand,
-            opponent.FM.rightDeck,
-            opponent.FM.leftDeck,
-            opponent.FM.rightMagazine,
-            opponent.FM.leftMagazine,
-            opponent.FM.set,
-            opponent.FM.mechanism,
-            opponent.FM.discard,
-            opponent.FM.voltage
         };
 
         MagazineField loadedMagazine = resolvingHub.thisCard.currentField as MagazineField;
@@ -176,11 +277,7 @@ public class EffectManager : MonoBehaviour
             { Effect.EffectTarget.PlayerRightGunsBullets, myself.FM.rightMagazine },
             { Effect.EffectTarget.PlayerLeftGunsBullets, myself.FM.leftMagazine },
             { Effect.EffectTarget.PlayerSkillCost, myself.skill.cost },
-            { Effect.EffectTarget.OpponentHP, opponent.HP },
-            { Effect.EffectTarget.OpponentHand, opponent.FM.hand },
-            { Effect.EffectTarget.OpponentBullets, opponentBullets },
-            { Effect.EffectTarget.OpponentDecks, opponentDecks },
-
+            { Effect.EffectTarget.OpponentHP, opponent.HP }
         };
 
         TargetDictionary = myDict;
@@ -194,8 +291,8 @@ public class EffectManager : MonoBehaviour
         foreach (Effect effect in currentHub.effects) 
         {
             InstantEffect instantEffect = effect as InstantEffect;
-            RefreshHubDictionary(currentHub);
-            // RefreshTargetDictionary();
+            RefreshHubValueDictionary(currentHub);
+            RefreshTargetDictionary();
             if (currentHub.childrenOperateOnActivation && !currentHub.childrenOperateAsAltEffect)
             {
                 instantEffect.Resolve();

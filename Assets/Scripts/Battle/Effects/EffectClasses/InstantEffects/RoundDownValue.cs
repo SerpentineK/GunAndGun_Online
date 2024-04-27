@@ -19,7 +19,9 @@ public class RoundDownValue : InstantEffect
     }
     public MethodOfCalculation methodOfCalculation;
     public MethodOfResolve methodOfResolve;
+    public bool maxValueFollowsTarget = false;
     public int maxValue;
+    public EffectTarget target;
     public ValuesToReferTo value01;
     public ValuesToReferTo value02;
     public bool quitIfEitherValueEqualsOrIsUnderZero = true;

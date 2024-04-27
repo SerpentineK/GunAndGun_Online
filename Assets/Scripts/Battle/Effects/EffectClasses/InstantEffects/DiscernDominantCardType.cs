@@ -6,12 +6,12 @@ using UnityEngine;
 public class DiscernDominantCardType : InstantEffect
 {
     public ValuesToReferTo enterResultTo;
-    // public EffectTarget targetField;
+    public ValuesToReferTo enterNumOfCardsTo;
+    public EffectTarget targetField;
 
     public override void Resolve()
     {
-        // Field field = EffectManager.instance.TargetDictionary[targetField] as Field;
-        Field field = EffectManager.instance.myself.FM.hand;
+        Field field = EffectManager.instance.TargetDictionary[targetField] as Field;
 
         Dictionary<CardData.CardType, int> dict = new()
         {
@@ -38,14 +38,10 @@ public class DiscernDominantCardType : InstantEffect
             }
         }
 
-        Debug.Log("result: " + result.ToString());
+        NumeralValue numeral = new();
+        numeral.value = maxNum;
 
-        Debug.Log("HubDictionary[enterResultTo]: " + EffectManager.instance.HubDictionary[enterResultTo].ToString());
-
-        EffectManager.instance.HubDictionary[enterResultTo] = result;
-
-        Debug.Log("HubDictionary[enterResultTo]: " + EffectManager.instance.HubDictionary[enterResultTo].ToString());
-
-        Debug.Log("Hub's value: " + EffectManager.instance.resolvingHub.cardTypeResult.ToString());
+        EffectManager.instance.InputValueToHub(enterResultTo, result);
+        EffectManager.instance.InputValueToHub(enterNumOfCardsTo, numeral);
     }
 }

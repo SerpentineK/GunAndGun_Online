@@ -18,7 +18,7 @@ public class ActivateOverclock : InstantEffect
         }
         else
         {
-            EffectManager.instance.resolvingHub.childrenOperateOnActivation = false;
+            EffectManager.instance.InputValueToHub(ValuesToReferTo.OperateOnActivationBool, false);
         }
     }
 }

@@ -23,34 +23,34 @@ public class CompareTargetToHubValue : InstantEffect
     {
         var actualTarget = EffectManager.instance.TargetDictionary[target];
         var actualValue = EffectManager.instance.HubDictionary[value];
-        Card[] actualValue_asArray;
+        object[] actualValue_asArray;
         int index;
         NumeralValue actualTarget_asNumeral;
         NumeralValue actualValue_asNumeral;
         switch (methodOfCompare)
         {
             case MethodOfCompare.ValueContainsTarget:
-                actualValue_asArray = actualValue as Card[];
+                actualValue_asArray = actualValue as object[];
                 index = Array.IndexOf(actualValue_asArray, actualTarget);
                 if (index >= 0)
                 {
-                    EffectManager.instance.HubDictionary[returnResultTo] = true;
+                    EffectManager.instance.InputValueToHub(returnResultTo, true);
                 }
                 else
                 {
-                    EffectManager.instance.HubDictionary[returnResultTo] = false;
+                    EffectManager.instance.InputValueToHub(returnResultTo, false);
                 }
                 break;
             case MethodOfCompare.ValueDoesNotContainTarget:
-                actualValue_asArray = actualValue as Card[];
+                actualValue_asArray = actualValue as object[];
                 index = Array.IndexOf(actualValue_asArray, actualTarget);
                 if (index < 0)
                 {
-                    EffectManager.instance.HubDictionary[returnResultTo] = true;
+                    EffectManager.instance.InputValueToHub(returnResultTo, true);
                 }
                 else
                 {
-                    EffectManager.instance.HubDictionary[returnResultTo] = false;
+                    EffectManager.instance.InputValueToHub(returnResultTo, false);
                 }
                 break;
             case MethodOfCompare.ValueEqualsOrIsBiggerThanTarget:
@@ -58,11 +58,11 @@ public class CompareTargetToHubValue : InstantEffect
                 actualValue_asNumeral = actualValue as NumeralValue;
                 if (actualValue_asNumeral.value >= actualTarget_asNumeral.value)
                 {
-                    EffectManager.instance.HubDictionary[returnResultTo] = true;
+                    EffectManager.instance.InputValueToHub(returnResultTo, true);
                 }
                 else
                 {
-                    EffectManager.instance.HubDictionary[returnResultTo] = false;
+                    EffectManager.instance.InputValueToHub(returnResultTo, false);
                 }
                 break;
             case MethodOfCompare.ValueEqualsOrIsSmallerThanTarget:
@@ -70,11 +70,11 @@ public class CompareTargetToHubValue : InstantEffect
                 actualValue_asNumeral = actualValue as NumeralValue;
                 if (actualValue_asNumeral.value <= actualTarget_asNumeral.value)
                 {
-                    EffectManager.instance.HubDictionary[returnResultTo] = true;
+                    EffectManager.instance.InputValueToHub(returnResultTo, true);
                 }
                 else
                 {
-                    EffectManager.instance.HubDictionary[returnResultTo] = false;
+                    EffectManager.instance.InputValueToHub(returnResultTo, false);
                 }
                 break;
         }

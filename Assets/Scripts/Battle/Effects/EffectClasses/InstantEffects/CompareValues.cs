@@ -33,51 +33,51 @@ public class CompareValues : InstantEffect
             case MethodOfCompare.FirstEqualsOrIsSmallerThanSecond:
                 if (value01_asNumeral.value <= value02_asNumeral.value)
                 {
-                    EffectManager.instance.HubDictionary[returnResultToValue] = true;
+                    EffectManager.instance.InputValueToHub(returnResultToValue, true);
                 }
                 else
                 {
-                    EffectManager.instance.HubDictionary[returnResultToValue] = false;
+                    EffectManager.instance.InputValueToHub(returnResultToValue, false);
                 }
                 break;
             case MethodOfCompare.FirstIsSmallerThanSecond:
                 if (value01_asNumeral.value < value02_asNumeral.value)
                 {
-                    EffectManager.instance.HubDictionary[returnResultToValue] = true;
+                    EffectManager.instance.InputValueToHub(returnResultToValue, true);
                 }
                 else
                 {
-                    EffectManager.instance.HubDictionary[returnResultToValue] = false;
+                    EffectManager.instance.InputValueToHub(returnResultToValue, false);
                 }
                 break;
             case MethodOfCompare.FirstContainsSecond:
                 if (Array.IndexOf(value01_asArray, value02_asCard) >= 0)
                 {
-                    EffectManager.instance.HubDictionary[returnResultToValue] = true;
+                    EffectManager.instance.InputValueToHub(returnResultToValue, true);
                 }
                 else
                 {
-                    EffectManager.instance.HubDictionary[returnResultToValue] = false;
+                    EffectManager.instance.InputValueToHub(returnResultToValue, false);
                 }
                 break;
             case MethodOfCompare.FirstIsSameObjectAsSecond:
-                if (actualValue01 == actualValue02)
+                if (ReferenceEquals(actualValue01, actualValue02))
                 {
-                    EffectManager.instance.HubDictionary[returnResultToValue] = true;
+                    EffectManager.instance.InputValueToHub(returnResultToValue, true);
                 }
                 else
                 {
-                    EffectManager.instance.HubDictionary[returnResultToValue] = false;
+                    EffectManager.instance.InputValueToHub(returnResultToValue, false);
                 }
                 break;
             case MethodOfCompare.FirstIsDifferentObjectFromSecond:
-                if (actualValue01 != actualValue02)
+                if (!ReferenceEquals(actualValue01, actualValue02))
                 {
-                    EffectManager.instance.HubDictionary[returnResultToValue] = true;
+                    EffectManager.instance.InputValueToHub(returnResultToValue, true);
                 }
                 else
                 {
-                    EffectManager.instance.HubDictionary[returnResultToValue] = false;
+                    EffectManager.instance.InputValueToHub(returnResultToValue, false);
                 }
                 break;
 

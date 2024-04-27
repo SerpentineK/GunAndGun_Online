@@ -9,7 +9,8 @@ public class DisableCardUsage : AbstractEffect_Disable
         None,
         LoadedByEffect,
         FirstUsageInTurn,
-        BothOpponentGunsAvailable
+        BothOpponentGunsAvailable,
+        IsNotDominantInHand
     }
     public BypassCondition bypassCondition;
     public bool disableIsAboutSameNameCards;

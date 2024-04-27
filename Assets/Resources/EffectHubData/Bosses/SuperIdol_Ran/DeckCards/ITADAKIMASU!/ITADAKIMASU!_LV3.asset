@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ITADAKIMASU!_LV3
   m_EditorClassIdentifier: 
   effectContentText: "\u30D7\u30EC\u30A4\u30E4\u30FC\u306F\u624B\u672D\u304B\u3089\u30AB\u30FC\u30C9\u30923\u679A\u9078\u3093\u3067\u6368\u3066\u672D\u306B\u7F6E\u304F\u3002"
-  cardType: 4
+  cardType: 0
   cue: 2
   priority: 3
   willOperateOnActivation: 1
@@ -21,10 +21,12 @@ MonoBehaviour:
   thisGun: {fileID: 0}
   thisGunner: {fileID: 0}
   thisSkill: {fileID: 0}
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: c690080fcf4f2cc47917a038c46a5505, type: 2}
+  - {fileID: 11400000, guid: 78c0013a9af124f40bf8ac1f76fb1235, type: 2}
   automaticEffect: {fileID: 0}
   automaticEndEffect: {fileID: 0}
-  attachedData: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 93c090f5ebf59374aadc520654ae5b9e, type: 2}
   ExtraEffects: []
   usageIsOncePerTurn: 0
   activationIsOncePerTurn: 0
@@ -57,4 +59,5 @@ MonoBehaviour:
   dataResult01: {fileID: 0}
   dataResult02: {fileID: 0}
   skillResult: {fileID: 0}
-  finishedInput: 0
+  cardTypeResult: 4
+  finishedInput: 1

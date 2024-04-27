@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 444ebd6c024b74443a75f955c36c80a7, type: 3}
   m_Name: 01_DiscernDominantCardType_Hand
   m_EditorClassIdentifier: 
-  effectContentText: 
-  cardType: 4
+  effectContentText: "\u76F8\u624B\u306E\u624B\u672D\u306B\u3042\u308B\u30AB\u30FC\u30C9\u306E\u3046\u3061\u6700\u3082\u591A\u3044\u7A2E\u985E\u3068\u305D\u306E\u679A\u6570\u3092EffectHub\u306B\u8A18\u9332\u3059\u308B\u3002"
+  cardType: 0
   willOperateOnActivation: 1
   willOperateAsAlternative: 0
   altEffect: {fileID: 0}
   altEffectCondition: 0
   altActivationRefersToValue: 0
   enterResultTo: 30
+  enterNumOfCardsTo: 15
+  targetField: 5

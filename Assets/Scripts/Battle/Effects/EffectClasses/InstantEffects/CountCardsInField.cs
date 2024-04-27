@@ -31,7 +31,9 @@ public class CountCardsInField : InstantEffect
                 break;
         }
 
-        var numeral = EffectManager.instance.HubDictionary[returnResultTo] as NumeralValue;
-        numeral.value = result;
+        NumeralValue numeralValue = new();
+        numeralValue.value = result;
+
+        EffectManager.instance.InputValueToHub(returnResultTo, numeralValue);
     }
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HAJIMARUYO!_LV2
   m_EditorClassIdentifier: 
   effectContentText: "\u4E21\u65B9\u306E\u6A5F\u9283\u306B\u3001\u5BFE\u5FDC\u3059\u308B\u6A5F\u9283\u30C7\u30C3\u30AD\u306E\u4E0A\u304B\u3089\u305D\u308C\u305E\u308C1\u679A\u305A\u3064\u88CF\u5411\u304D\u306B\u88C5\u586B\u3059\u308B\u3002"
-  cardType: 4
+  cardType: 0
   cue: 2
   priority: 3
   willOperateOnActivation: 1
@@ -21,10 +21,18 @@ MonoBehaviour:
   thisGun: {fileID: 0}
   thisGunner: {fileID: 0}
   thisSkill: {fileID: 0}
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: d9f0416db9ea993418b773a5c0a8d4da, type: 2}
+  - {fileID: 11400000, guid: 99fb1ea882bd9c848851a52f13569fdd, type: 2}
+  - {fileID: 11400000, guid: 4b4fdb0ecaf3e304ebaeccef861a0ab5, type: 2}
+  - {fileID: 11400000, guid: af5dbfb57d1674740ad1bdd35e6aec57, type: 2}
+  - {fileID: 11400000, guid: 2bdddc48c5c3b554c83690a37edcf48d, type: 2}
+  - {fileID: 11400000, guid: 21df6249b45f4ac4a9fee41ed3bc24bc, type: 2}
+  - {fileID: 11400000, guid: bf1e1acf8d087f2439d9e7f4c4339d10, type: 2}
+  - {fileID: 11400000, guid: d30893aec37c1434bac3afad7020fa4d, type: 2}
   automaticEffect: {fileID: 0}
   automaticEndEffect: {fileID: 0}
-  attachedData: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 345dc28933a11004e998d9506b96b66b, type: 2}
   ExtraEffects: []
   usageIsOncePerTurn: 0
   activationIsOncePerTurn: 0
@@ -57,4 +65,5 @@ MonoBehaviour:
   dataResult01: {fileID: 0}
   dataResult02: {fileID: 0}
   skillResult: {fileID: 0}
-  finishedInput: 0
+  cardTypeResult: 4
+  finishedInput: 1

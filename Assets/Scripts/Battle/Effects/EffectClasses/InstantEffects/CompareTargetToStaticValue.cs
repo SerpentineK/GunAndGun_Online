@@ -21,22 +21,22 @@ public class CompareTargetToStaticValue : InstantEffect
                 actualTarget_asNumeral = actualTarget as NumeralValue;
                 if (value >= actualTarget_asNumeral.value)
                 {
-                    EffectManager.instance.HubDictionary[returnResultTo] = true;
+                    EffectManager.instance.InputValueToHub(returnResultTo, true);
                 }
                 else
                 {
-                    EffectManager.instance.HubDictionary[returnResultTo] = false;
+                    EffectManager.instance.InputValueToHub(returnResultTo, false);
                 }
                 break;
             case CompareTargetToHubValue.MethodOfCompare.ValueEqualsOrIsSmallerThanTarget:
                 actualTarget_asNumeral = actualTarget as NumeralValue;
                 if (value <= actualTarget_asNumeral.value)
                 {
-                    EffectManager.instance.HubDictionary[returnResultTo] = true;
+                    EffectManager.instance.InputValueToHub(returnResultTo, true);
                 }
                 else
                 {
-                    EffectManager.instance.HubDictionary[returnResultTo] = false;
+                    EffectManager.instance.InputValueToHub(returnResultTo, false);
                 }
                 break;
         }

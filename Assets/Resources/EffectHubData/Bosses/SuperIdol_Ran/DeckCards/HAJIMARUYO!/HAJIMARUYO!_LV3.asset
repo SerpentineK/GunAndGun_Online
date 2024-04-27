@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HAJIMARUYO!_LV3
   m_EditorClassIdentifier: 
   effectContentText: "\u4E21\u65B9\u306E\u6A5F\u9283\u306B\u3001\u5BFE\u5FDC\u3059\u308B\u6A5F\u9283\u30C7\u30C3\u30AD\u306E\u4E0A\u304B\u3089\u88C5\u586B\u6570\u304C\u6700\u5927\u88C5\u586B\u6570\u306B\u7B49\u3057\u304F\u306A\u308B\u3088\u3046\u306B\u88CF\u5411\u304D\u306B\u88C5\u586B\u3059\u308B\u3002"
-  cardType: 4
+  cardType: 0
   cue: 2
   priority: 3
   willOperateOnActivation: 1
@@ -21,10 +21,24 @@ MonoBehaviour:
   thisGun: {fileID: 0}
   thisGunner: {fileID: 0}
   thisSkill: {fileID: 0}
-  effects: []
+  effects:
+  - {fileID: 11400000, guid: 7ca4ae19499563049a88f02b4b548984, type: 2}
+  - {fileID: 11400000, guid: ea0ff1351270c4e42b3323bc8bda3f42, type: 2}
+  - {fileID: 11400000, guid: e4df8f475dc6bc647bb751075ae61e56, type: 2}
+  - {fileID: 11400000, guid: 0950beed50f1a2b42a382fe27665d179, type: 2}
+  - {fileID: 11400000, guid: 22418146935286440b9d39cc4cd1b132, type: 2}
+  - {fileID: 11400000, guid: 7045bcb4d98c5384ca81aeb4720531c1, type: 2}
+  - {fileID: 11400000, guid: 4bcc938320efa2c4a8a6250a57dd2f05, type: 2}
+  - {fileID: 11400000, guid: 8d98c126226d1f24c96efed8be3114b9, type: 2}
+  - {fileID: 11400000, guid: 1c1bd89b5e8dcf54da0c25bd79f3818b, type: 2}
+  - {fileID: 11400000, guid: 1fdb08c6138d0a4469410bd33737e7b1, type: 2}
+  - {fileID: 11400000, guid: f52e0b4cad3de43499ccff1700d297a4, type: 2}
+  - {fileID: 11400000, guid: 3ad7aeb0206079e4293683ae688a1f2f, type: 2}
+  - {fileID: 11400000, guid: 7045bcb4d98c5384ca81aeb4720531c1, type: 2}
+  - {fileID: 11400000, guid: 4bcc938320efa2c4a8a6250a57dd2f05, type: 2}
   automaticEffect: {fileID: 0}
   automaticEndEffect: {fileID: 0}
-  attachedData: {fileID: 0}
+  attachedData: {fileID: 11400000, guid: 345dc28933a11004e998d9506b96b66b, type: 2}
   ExtraEffects: []
   usageIsOncePerTurn: 0
   activationIsOncePerTurn: 0
@@ -57,4 +71,5 @@ MonoBehaviour:
   dataResult01: {fileID: 0}
   dataResult02: {fileID: 0}
   skillResult: {fileID: 0}
-  finishedInput: 0
+  cardTypeResult: 4
+  finishedInput: 1

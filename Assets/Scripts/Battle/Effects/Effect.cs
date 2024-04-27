@@ -286,7 +286,13 @@ public class Effect : ScriptableObject
         ReactedSkill,
 
         // このカードが属するField
-        ThisCardsField
+        ThisCardsField,
+
+        // 左右の機銃の最大装填数
+        PlayerRightGunCapacity,
+        PlayerLeftGunCapacity,
+        OpponentRightGunCapacity,
+        OpponentLeftGunCapacity,
     }
 
     // カードを検索して結果の一覧を表示するとき、どのような条件で検索するかenum
