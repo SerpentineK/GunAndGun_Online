@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 
-public class BattleState : MonoBehaviour, IState
+public class SoloBattleState : MonoBehaviour
 {
-    public BattleStateManager BSM;
+    public SoloStateManager SSM;
 
     public enum SUB_STATE
     {
@@ -18,7 +17,7 @@ public class BattleState : MonoBehaviour, IState
         RELOAD_GUN,
         FIRE_GUN,
         END_TURN,
-        ENEMY_TURN,
+        BOSS_TURN,
         END_BATTLE
     }
 
@@ -29,10 +28,10 @@ public class BattleState : MonoBehaviour, IState
     {
         subState = SUB_STATE.INITIAL_WAIT;
         phase = 0;
-    } 
-    public void ExitState() 
+    }
+    public void ExitState()
     {
-        
+
     }
 
     public void InState()
@@ -41,7 +40,7 @@ public class BattleState : MonoBehaviour, IState
         {
             InInitialWait();
         }
-        else if(subState == SUB_STATE.START_BATTLE)
+        else if (subState == SUB_STATE.START_BATTLE)
         {
             InStartBattle();
         }
@@ -51,7 +50,7 @@ public class BattleState : MonoBehaviour, IState
     {
         if (phase == 0)
         {
-            BSM.InitializePlayers();
+            
             phase++;
         }
         else if (phase == 1)
@@ -65,8 +64,7 @@ public class BattleState : MonoBehaviour, IState
     {
         if (phase == 0)
         {
-            BSM.StartGame();
-            BSM.TestExperimentalHub();
+            
             phase++;
         }
     }

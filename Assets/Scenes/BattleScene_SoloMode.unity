@@ -1057,8 +1057,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30D2\u30D0\u30CA"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 087898887d3e3d441bf397ef45c4c6ac, type: 2}
+  m_sharedMaterial: {fileID: -7786892333198751292, guid: 087898887d3e3d441bf397ef45c4c6ac, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1892,19 +1892,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c4f148ffbf60a459eb7d8170115b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FM: {fileID: 99736389}
-  EM: {fileID: 99736388}
-  SM: {fileID: 99736386}
-  gunnerData: {fileID: 11400000, guid: 1eb1336842b8ce548a03f31ee2fd299e, type: 2}
-  rightGunsData: {fileID: 11400000, guid: 3bd6934525d9b714085fbdad4926716b, type: 2}
-  leftGunsData: {fileID: 11400000, guid: 021374b10e48fcd4894ef5285823b36e, type: 2}
-  skillData: {fileID: 11400000, guid: 28c12342db904b44aa8546b27fdf9128, type: 2}
-  isProtagonist: 1
-  isTurn: 0
   HP: 30
   HP_Counter: {fileID: 1193684731}
   burnCounters: 0
   shockCounters: 0
+  handNum: 0
   stabilizers: 0
   snipers: 0
   spiralShooters: 0
@@ -1951,7 +1943,15 @@ MonoBehaviour:
   modePhalanx: 0
   jamming: 0
   recharging: 0
-  handNum: 0
+  FM: {fileID: 99736389}
+  EM: {fileID: 99736388}
+  SM: {fileID: 99736386}
+  gunnerData: {fileID: 11400000, guid: 1eb1336842b8ce548a03f31ee2fd299e, type: 2}
+  rightGunsData: {fileID: 11400000, guid: 3bd6934525d9b714085fbdad4926716b, type: 2}
+  leftGunsData: {fileID: 11400000, guid: 021374b10e48fcd4894ef5285823b36e, type: 2}
+  skillData: {fileID: 11400000, guid: 28c12342db904b44aa8546b27fdf9128, type: 2}
+  isProtagonist: 1
+  isTurn: 0
   gunner: {fileID: 127437714}
   rightGun: {fileID: 1850665403}
   leftGun: {fileID: 987404052}
@@ -2592,19 +2592,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c4f148ffbf60a459eb7d8170115b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FM: {fileID: 0}
-  EM: {fileID: 0}
-  SM: {fileID: 0}
-  gunnerData: {fileID: 11400000, guid: 9faf53601e61b2243a4571a37a820313, type: 2}
-  rightGunsData: {fileID: 11400000, guid: 3b41f38a69edf354b87f693fe8697acc, type: 2}
-  leftGunsData: {fileID: 11400000, guid: 9fefa3be7b62bd14d8eff692c8bda155, type: 2}
-  skillData: {fileID: 11400000, guid: cd737142f73dce44782d28d0867b47a1, type: 2}
-  isProtagonist: 0
-  isTurn: 0
   HP: 30
   HP_Counter: {fileID: 1108151471}
   burnCounters: 0
   shockCounters: 0
+  handNum: 0
   stabilizers: 0
   snipers: 0
   spiralShooters: 0
@@ -2651,7 +2643,15 @@ MonoBehaviour:
   modePhalanx: 0
   jamming: 0
   recharging: 0
-  handNum: 0
+  FM: {fileID: 0}
+  EM: {fileID: 0}
+  SM: {fileID: 0}
+  gunnerData: {fileID: 11400000, guid: 9faf53601e61b2243a4571a37a820313, type: 2}
+  rightGunsData: {fileID: 11400000, guid: 3b41f38a69edf354b87f693fe8697acc, type: 2}
+  leftGunsData: {fileID: 11400000, guid: 9fefa3be7b62bd14d8eff692c8bda155, type: 2}
+  skillData: {fileID: 11400000, guid: cd737142f73dce44782d28d0867b47a1, type: 2}
+  isProtagonist: 0
+  isTurn: 0
   gunner: {fileID: 1661007843}
   rightGun: {fileID: 911212050}
   leftGun: {fileID: 1026479713}
@@ -10621,8 +10621,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30E9\u30F3"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 087898887d3e3d441bf397ef45c4c6ac, type: 2}
+  m_sharedMaterial: {fileID: -7786892333198751292, guid: 087898887d3e3d441bf397ef45c4c6ac, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
