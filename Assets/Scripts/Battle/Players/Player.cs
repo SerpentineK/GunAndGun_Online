@@ -46,13 +46,13 @@ public class Player : Entity
     }
  
     
-    public void DrawCardsAsRule()
+    public void DrawCardsAsRule(Field deck)
     {
         int currentHandNum = FM.hand.cardCount;
         int numToDraw = handNum - currentHandNum;
         if (numToDraw > 0)
         {
-            FM.DrawFromDeck(numToDraw,FM.leftDeck);
+            FM.DrawFromDeck(numToDraw, deck);
         }
     }
 

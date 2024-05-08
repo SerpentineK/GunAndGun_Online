@@ -10,7 +10,7 @@ public class StateManager : MonoBehaviour
     
     [Header("States")]
     public StartState startS_class;
-    public BattleState playS_class;
+    public SoloBattleState playS_class;
 
     [HideInInspector] public IState startS, playS;
 

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfa06e98669348b48944d55e1e48122e, type: 3}
-  m_Name: BossRanStage_ImNumberOne_RuleData04
+  m_Name: BossRanStage_ImNumberOne_GoalData01
   m_EditorClassIdentifier: 
-  ruleEffect: 1
+  ruleEffect: 2
   checkTrigger: 1
-  validCondition: 5
+  validCondition: 4
   modifyTarget: 0
   modifyMethod: 0
   modifyer: 0

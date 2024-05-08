@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoloBattleState : MonoBehaviour
+public class SoloBattleState : MonoBehaviour, IState
 {
     public SoloStateManager SSM;
 
@@ -17,7 +17,12 @@ public class SoloBattleState : MonoBehaviour
         RELOAD_GUN,
         FIRE_GUN,
         END_TURN,
-        BOSS_TURN,
+        BOSS_START_TURN,
+        BOSS_RELOAD,
+        BOSS_USE_CARD,
+        BOSS_FIRE,
+        BOSS_DRAW,
+        BOSS_END_TURN,
         END_BATTLE
     }
 
@@ -50,7 +55,7 @@ public class SoloBattleState : MonoBehaviour
     {
         if (phase == 0)
         {
-            
+
             phase++;
         }
         else if (phase == 1)
@@ -62,10 +67,26 @@ public class SoloBattleState : MonoBehaviour
 
     private void InStartBattle()
     {
+        Entity first = null;
         if (phase == 0)
         {
-            
+            SSM.InitializeEntities();
+            SSM.DealCards();
             phase++;
+        }
+        else if(phase == 1)
+        {
+            first = SSM.DecideFirstEntity();
+            if (first == SSM.player)
+            {
+                subState = SUB_STATE.START_TURN;
+                phase = 0;
+            }
+            else if (first == SSM.boss)
+            {
+                subState = SUB_STATE.BOSS_START_TURN;
+                phase = 0;
+            }
         }
     }
 

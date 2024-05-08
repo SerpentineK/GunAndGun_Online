@@ -115,7 +115,6 @@ public class FieldManager : MonoBehaviour
         // 現状、EffectHub側に対応するカードのデータは存在するがカードからEffectHubを検索することはできない。
         // そこで、一度この機銃のEffectHubをすべて読み込んでからそれを対応させる方法をとる。
         List<EffectHub> hubDataList = gunData.GetDeckDatabase().GetEffectHubDatabase().GetEffectHubList();
-        // cardDataList.ForEach(CreateCardForDeck);
         foreach (var cardData in cardDataList)
         {
             EffectHub effectHub = null;
@@ -163,7 +162,7 @@ public class FieldManager : MonoBehaviour
             visibleCard.InitiateMetaCard();
             Card metaCard = visibleCard.attachedCard;
             
-            metaCard.cardAbsId= "GD_" + cardData.GetCardId() + "_" + string.Format("{0:00}", i);
+            metaCard.cardAbsId = "GD_" + cardData.GetCardId() + "_" + string.Format("{0:00}", i);
             metaCard.cardName = cardName;
             metaCard.effectText = cardEffectText;
             metaCard.cost = cardCost;

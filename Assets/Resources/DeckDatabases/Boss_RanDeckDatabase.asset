@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667cdf79931b2624cb38249490f4f11f, type: 3}
   m_Name: Boss_RanDeckDatabase
   m_EditorClassIdentifier: 
-  bossAttached: {fileID: 0}
+  bossAttached: {fileID: 11400000, guid: f1a250f55e6feda45af8b2506e10cf25, type: 2}
   cardBackground: {fileID: 0}
   cardDataLists:
   - {fileID: 11400000, guid: e48a6b50ca81fa6478a81304ba76324c, type: 2}

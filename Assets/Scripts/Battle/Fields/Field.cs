@@ -17,9 +17,16 @@ using Unity.VisualScripting;
 public class Field : MonoBehaviour
 {
     public bool isPlayer;
-    public List<Card> cardList = new();
-    public int cardCount = 0;
+    public List<Card> cardList;
+    public int cardCount;
     public TMP_Text cardCounterObj;
+
+    public void Awake()
+    {
+        cardList = new();
+        cardCount = 0;
+        UpdateCounter();
+    }
 
     public void UpdateCounter()
     {

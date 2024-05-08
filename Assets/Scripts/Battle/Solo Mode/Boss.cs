@@ -39,6 +39,11 @@ public class Boss : Entity
     // ターンが渡っているか否か
     public bool isTurn;
 
+    // ターン終了時に起こる手札補充の際、追加ドローの権利を有しているか
+    // (そのターン中にボスカードを使うと権利は消滅する)
+    // (ゲーム開始時のドローは追加ドローなしなので初期値はfalse)
+    public bool hasAdditionalDraw = false;
+
     public void InputBossData()
     {
         bossPortraitImage.sprite = data.GetBossGraphics();
@@ -56,6 +61,7 @@ public class Boss : Entity
         }
         bossLevelLegend.SetText(descriptions);
         HP = data.GetBossHP();
+        bossDeck = data.GetBossDeck();
 
         bossStage.stageData = stageData;
         bossStage.InputStageData();
@@ -63,12 +69,18 @@ public class Boss : Entity
         rightGun.InputGunData();
         leftGun.data = leftGunsData;
         leftGun.InputGunData();
-        bossDeck = data.GetBossDeck();
     }
 
     public void UpdateBossStatus()
     {
         bossLevelDisplay.SetText(string.Format("Lv. {0:00}", bossLevel));
         HP_Counter.SetText(string.Format("{0:00}", HP));
+    }
+
+    public void DrawCardsAsRule()
+    {
+        if (!hasAdditionalDraw) { FM.DrawFromDeck(bossHand, FM.bossDeckField); }
+        else { FM.DrawFromDeck(bossHand + 1, FM.bossDeckField); }
+        hasAdditionalDraw = true;
     }
 }

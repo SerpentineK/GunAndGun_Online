@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfa06e98669348b48944d55e1e48122e, type: 3}
-  m_Name: BossRanStage_ImNumberOne_RuleData03
+  m_Name: BossRanStage_BOMMYGIRL_GoalData
   m_EditorClassIdentifier: 
-  ruleEffect: 1
-  checkTrigger: 1
-  validCondition: 2
-  modifyTarget: 0
-  modifyMethod: 0
+  ruleEffect: 5
+  checkTrigger: 4
+  validCondition: 7
+  modifyTarget: 1
+  modifyMethod: 2
   modifyer: 0
   bossIsExcluded: 0
   soloPlayerIsExcluded: 1

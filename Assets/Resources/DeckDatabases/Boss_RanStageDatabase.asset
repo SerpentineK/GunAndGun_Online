@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d353549368f8f2c4b8d0f00533adfcb6, type: 3}
   m_Name: Boss_RanStageDatabase
   m_EditorClassIdentifier: 
-  bossAttached: {fileID: 0}
+  bossAttached: {fileID: 11400000, guid: f1a250f55e6feda45af8b2506e10cf25, type: 2}
   stageDataLists:
   - {fileID: 11400000, guid: 91eb7a5ff18a9b642ba0ad3cbc6bd3ee, type: 2}
   - {fileID: 11400000, guid: 70c967aae20ca2744acfb6dd2c3d5d99, type: 2}

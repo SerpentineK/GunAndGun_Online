@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Active Selectable Objects
   - 
   - 
   - 
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: Cards
     uniqueID: 3615703475
+    locked: 0
+  - name: Overlay
+    uniqueID: 1315103399
     locked: 0
   - name: Interactable
     uniqueID: 1402142321

@@ -41,6 +41,9 @@ public class Gun : MonoBehaviour
     public int currentBullets = 0;
     public int currentReload = 0;
 
+    // 機銃の重さ
+    public int gunWeight;
+
     // 銃弾アイコンオブジェクトの配列
     private GameObject[] bulletIconArray;
     
@@ -53,7 +56,6 @@ public class Gun : MonoBehaviour
     private string gunId;
     private string gunAbility;
     private string gunFlavorText;
-    private int gunWeight;
     private Dictionary<int, string[]> bulletsToEffects;
 
     // 機銃イメージのScale
@@ -80,6 +82,7 @@ public class Gun : MonoBehaviour
         // 機銃データを変数へ格納
         gunName = data.GetGunName();
         gunId = data.GetGunId();
+        gunWeight = data.GetGunWeight();
         gunImage = data.GetGunImage();
         gunAbility = data.GetGunAbility();
         gunFlavorText = data.GetGunFlavorText();

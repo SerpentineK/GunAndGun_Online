@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfa06e98669348b48944d55e1e48122e, type: 3}
-  m_Name: BossRanStage_GrenadeLauncherOfLove_RuleData
+  m_Name: BossRanStage_ImNumberOne_GoalData02
   m_EditorClassIdentifier: 
-  ruleEffect: 3
+  ruleEffect: 2
   checkTrigger: 1
-  validCondition: 6
+  validCondition: 5
   modifyTarget: 0
   modifyMethod: 0
   modifyer: 0
-  bossIsExcluded: 1
+  bossIsExcluded: 0
+  soloPlayerIsExcluded: 1
