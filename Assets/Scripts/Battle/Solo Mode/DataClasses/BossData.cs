@@ -10,13 +10,14 @@ public class BossData : ScriptableObject
     [SerializeField] private string bossName;
     [SerializeField] private string bossTitle;
     [SerializeField] private Sprite bossGraphics;
-    [SerializeField] private int bossLife;
+    [SerializeField] private int bossHP;
     [SerializeField] private int bossReload;
     [TextArea(2,10)]
     [SerializeField] private string[] bossAbilities;
     [SerializeField] private int bossAgility;
     [SerializeField] private int bossHand;
     [SerializeField] private string[] bossLevels;
+    [SerializeField] private int[] bossLevelBorders;
     [SerializeField] private BossCardDatabase bossDeck;
     [SerializeField] private BossStageDatabase bossStages;
     
@@ -24,12 +25,13 @@ public class BossData : ScriptableObject
     public string GetBossName() {  return bossName; }
     public string GetBossTitle() {  return bossTitle; }
     public Sprite GetBossGraphics() {  return bossGraphics; }
-    public int GetBossLife() {  return bossLife; }
+    public int GetBossHP() {  return bossHP; }
     public int GetBossReload() {  return bossReload; }
     public string[] GetBossAbilities() {  return bossAbilities; }
     public int GetBossAgility() {  return bossAgility; }
     public int GetBossHand() { return bossHand; }
     public string[] GetBossLevels() { return bossLevels; }
+    public int[] GetBossLevelBorders() { return bossLevelBorders; }
     public BossCardDatabase GetBossDeck() {  return bossDeck; }
     public BossStageDatabase GetBossStages() {  return bossStages; }
 }

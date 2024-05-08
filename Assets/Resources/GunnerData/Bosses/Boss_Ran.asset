@@ -16,7 +16,7 @@ MonoBehaviour:
   bossName: "\u30E9\u30F3"
   bossTitle: "\u30B9\u30FC\u30D1\u30FC\u30A2\u30A4\u30C9\u30EB"
   bossGraphics: {fileID: 21300000, guid: 7db3668e5ccdb8f44adfc25008c1c1b7, type: 3}
-  bossLife: 40
+  bossHP: 40
   bossReload: 2
   bossAbilities:
   - "\u30E9\u30F3\u306ELV\u306F\u30DC\u30EB\u30C6\u30FC\u30B88\u679A\u306B\u3064\u304D1\u4E0A\u304C\u308B(
@@ -30,5 +30,6 @@ MonoBehaviour:
   - 'LV1: Volt.0-7'
   - 'LV2: Volt.8-15'
   - 'LV3: Volt.16-'
+  bossLevelBorders: 000000000800000010000000
   bossDeck: {fileID: 11400000, guid: e120138e6cc63a9429acc24e18bbb178, type: 2}
   bossStages: {fileID: 11400000, guid: aef77c41e1dde89498068c56a4e76af1, type: 2}

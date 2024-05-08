@@ -7,7 +7,7 @@ public class Player : Entity
 {
 
     // プレイヤーに帰属するマネージャー
-    public FieldManager FM;
+    public PlayerFieldManager FM;
     public EffectManager EM;
     public SkillManager SM;
 
