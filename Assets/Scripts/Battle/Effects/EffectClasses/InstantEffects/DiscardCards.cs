@@ -9,9 +9,16 @@ public class DiscardCards : AbstractEffect_Transfer
     public override void Resolve()
     {
         Card[] targetCards = EffectManager.instance.HubDictionary[cardsToReferTo] as Card[];
-        foreach (Card card in targetCards)
+        if (transferIsForOpponent)
         {
-            FieldManager.instance.TransferCard(card.currentField, FieldManager.instance.discard, card);
+
+        }
+        else
+        {
+            foreach (Card card in targetCards)
+            {
+                PlayerFieldManager.instance.TransferCard(card.currentField, PlayerFieldManager.instance.discard, card);
+            }
         }
     }
 }

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 // 領域は6種8個、VoltageとDiscardはトップカードとカウンター、Deckはカウンターのみの表示。
 public class FieldManager : MonoBehaviour
 {
-    public static FieldManager instance;
+    // public static FieldManager instance;
 
     // プレイヤーの手札
     public HandField hand;
@@ -39,11 +39,6 @@ public class FieldManager : MonoBehaviour
 
     // デッキカードのプレハブ
     [SerializeField] private GameObject mergedPrefab;
-
-    public void Awake()
-    {
-        instance = this;
-    }
 
     public Field GetFieldComponent(GameObject fieldObject)
     {
