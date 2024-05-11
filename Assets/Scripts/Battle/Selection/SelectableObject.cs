@@ -13,7 +13,6 @@ public class SelectableObject : MonoBehaviour
     {
         isActive = false;
         selectionCollider.enabled = false;
-        candidateObject = this.gameObject;
     }
 
     public void ActivateSelectable()

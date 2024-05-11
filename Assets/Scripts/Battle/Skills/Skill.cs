@@ -13,6 +13,7 @@ public class Skill : MonoBehaviour
     [SerializeField] private TMP_Text skillCostArea;
     [SerializeField] private TMP_Text skillNameArea;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private SelectableObject selectable;
 
     // コストを確認するためのボルテージ参照
     [SerializeField] private Field voltage;
@@ -33,6 +34,7 @@ public class Skill : MonoBehaviour
         skillNameArea.SetText(data.GetSkillName());
         spriteRenderer.sprite = data.GetSkillGraphics();
         effectHub = data.effectHub;
+        selectable.mask.sprite = data.GetSkillGraphics();
     }
 
     public bool IsEnoughVolt()

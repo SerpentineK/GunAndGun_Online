@@ -21,6 +21,8 @@ public class Field : MonoBehaviour
     public int cardCount;
     public TMP_Text cardCounterObj;
 
+    [SerializeField] private SelectableObject selectable;
+
     public void Awake()
     {
         cardList = new();

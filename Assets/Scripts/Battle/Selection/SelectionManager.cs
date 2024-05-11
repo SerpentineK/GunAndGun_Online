@@ -23,5 +23,12 @@ public class SelectionManager : MonoBehaviour
         Manual
     }
 
+    [SerializeField] private SelectableObject[] cards;
+    [SerializeField] private SelectableObject[] fields;
+    [SerializeField] private SelectableObject[] guns;
+    [SerializeField] private SelectableObject[] entities;
+
     public int selectionNumber;
+
+
 }

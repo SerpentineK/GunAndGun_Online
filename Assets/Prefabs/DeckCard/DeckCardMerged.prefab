@@ -102,6 +102,7 @@ MonoBehaviour:
   gunSpriteRenderer: {fileID: 861436853846825932}
   backgroundRenderer: {fileID: 2870802662423709895}
   canvas: {fileID: 8615607337812607745}
+  selectable: {fileID: 8576484343484919046}
   actionSprite: {fileID: 21300000, guid: 6f026e5cb1ee60549b946ff8d361dca1, type: 3}
   reactionSprite: {fileID: 21300000, guid: da8107b8ea0993b4c953ed8d81681c7c, type: 3}
   mechanismSprite: {fileID: 21300000, guid: 21fd77b2bb4883045baf356ccdac4279, type: 3}
@@ -110,7 +111,6 @@ MonoBehaviour:
   reactionOverclockSprite: {fileID: 21300000, guid: ef4795d7d4ef4d440ad6cb5c3ae823a0, type: 3}
   mechanismOverclockSprite: {fileID: 21300000, guid: 1e488c8bace3db74bbc0adb9349d9cfb, type: 3}
   specialBulletOverclockSprite: {fileID: 21300000, guid: a7193dd0037f3ac4bb55f031a64ad96e, type: 3}
-  selectable: {fileID: 8576484343484919046}
 --- !u!114 &4737886751150375354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2338,7 +2338,7 @@ SpriteMask:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7274324043862001501}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
