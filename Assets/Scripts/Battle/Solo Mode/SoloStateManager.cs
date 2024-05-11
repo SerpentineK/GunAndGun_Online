@@ -37,12 +37,12 @@ public class SoloStateManager : MonoBehaviour
         boss.stageData = bossStage;
         boss.InputBossData();
 
-        // boss.FM.CreateFullDeck(boss.leftGun.data);
-        // boss.FM.CreateFullDeck(boss.rightGun.data);
-        // boss.FM.ShuffleDeck(boss.FM.leftDeck);
-        // boss.FM.ShuffleDeck(boss.FM.rightDeck);
+        boss.FM.CreateFullDeck(boss.leftGun.data);
+        boss.FM.CreateFullDeck(boss.rightGun.data);
+        boss.FM.ShuffleDeck(boss.FM.leftDeck);
+        boss.FM.ShuffleDeck(boss.FM.rightDeck);
 
-        // boss.FM.CreateBossDeck(boss.bossDeck);
+        boss.FM.CreateBossDeck(boss.bossDeck);
     }
 
     public Entity DecideFirstEntity()
@@ -87,6 +87,6 @@ public class SoloStateManager : MonoBehaviour
     public void DealCards()
     {
         player.DrawCardsAsRule(player.FM.rightDeck);
-        // boss.DrawCardsAsRule();
+        boss.DrawCardsAsRule();
     }
 }

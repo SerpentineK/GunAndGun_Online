@@ -6,15 +6,15 @@ public class HandField : Field
 {
     public override void RegisterCard(Card card)
     {
-        card.visibleCard.transform.SetParent(transform, false);
-        card.visibleCard.gameObject.SetActive(true);
+        card.transform.SetParent(transform, false);
+        card.gameObject.SetActive(true);
         card.ToggleInHand();
         base.RegisterCard(card);
     }
 
     public override void RemoveCard(Card card)
     {
-        card.visibleCard.gameObject.SetActive(false);
+        card.gameObject.SetActive(false);
         card.ToggleInHand();
         base.RemoveCard(card);
     }

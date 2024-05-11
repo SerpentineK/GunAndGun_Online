@@ -6,9 +6,6 @@ public class SelectionManager : MonoBehaviour
 {
     public static SelectionManager instance;
 
-    // 半透明の灰色オーバーレイを描画するRenderer
-    [SerializeField] private SpriteRenderer overlayRenderer;
-
     public enum SelectionClassification
     {
         None,
@@ -28,9 +25,4 @@ public class SelectionManager : MonoBehaviour
 
     public int selectionNumber;
     private int selectedNumber;
-
-    public void PrepareForSelection(SelectionClassification classification)
-    {
-
-    }
 }
