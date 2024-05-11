@@ -20,6 +20,9 @@ public class VisibleCard : MonoBehaviour
     [SerializeField] private SpriteRenderer backgroundRenderer;
     [SerializeField] private Canvas canvas;
 
+    // カードの選択を可能にするコンポーネント
+    [SerializeField] private SelectableObject selectable;
+
     // 背景の画像
     [SerializeField] private Sprite actionSprite;
     [SerializeField] private Sprite reactionSprite;
@@ -29,7 +32,6 @@ public class VisibleCard : MonoBehaviour
     [SerializeField] private Sprite reactionOverclockSprite;
     [SerializeField] private Sprite mechanismOverclockSprite;
     [SerializeField] private Sprite specialBulletOverclockSprite;
-
 
     public void InitiateMetaCard() 
     {
@@ -95,6 +97,7 @@ public class VisibleCard : MonoBehaviour
         }
         typeInputArea.SetText(typeText);
         gunSpriteRenderer.sprite = attachedCard.gunSprite;
+        selectable.mask.sprite = backgroundRenderer.sprite;
     }
 
 }

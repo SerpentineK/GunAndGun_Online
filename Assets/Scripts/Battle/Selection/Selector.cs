@@ -8,5 +8,6 @@ public class Selector : MonoBehaviour
     [SerializeField] private GameObject greyCurtain;
 
     public int numberOfSelection;
-    
+    public SelectableObject[] selectables;
+    public List<SelectableObject> selected;
 }

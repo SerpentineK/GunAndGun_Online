@@ -12,6 +12,7 @@ public class Gunner : MonoBehaviour
     // データ入力用の領域
     [SerializeField] private TMP_Text gunnerNameArea;
     [SerializeField] private SpriteRenderer gunnerImageArea;
+    [SerializeField] private SelectableObject selectable;
 
     // 詳細情報
     public int agility;
@@ -31,6 +32,7 @@ public class Gunner : MonoBehaviour
         hand = data.GetGunnerHand();
         passiveEffectText = data.GetGunnerAbility();
         flavorText = data.GetGunnerFlavorText();
+        selectable.mask.sprite = data.GetGunnerImage();
     }
 
     // Start is called before the first frame update

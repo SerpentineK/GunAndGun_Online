@@ -18,6 +18,7 @@ public class Gun : MonoBehaviour
     [SerializeField] private TMP_Text bulletCounterObj;
     [SerializeField] private TMP_Text reloadCounterObj;
     [SerializeField] private Transform bulletArea;
+    [SerializeField] private SelectableObject selectable;
 
     // èeíeÉAÉCÉRÉìÇÃèÓïÒ
     [SerializeField] private GameObject bulletPrefab;
@@ -97,6 +98,7 @@ public class Gun : MonoBehaviour
         gameObject.name = "Gun_" + gunId;
         gunNameObj.SetText(gunName);
         gunImageObj.sprite = gunImage;
+        selectable.mask.sprite = gunImage;
         gunImageObj.transform.localScale = gunImageScale;
         bulletCounterObj.SetText(string.Format("{0:00}/{1:00}", currentBullets, maxBulletCapacity));
         reloadCounterObj.SetText(string.Format("{0:00}", maxReloadPerTurn));

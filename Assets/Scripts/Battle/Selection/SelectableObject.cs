@@ -6,12 +6,20 @@ public class SelectableObject : MonoBehaviour
 {
     public bool isActive;
     public GameObject candidateObject;
-    public BoxCollider2D myCollider;
+    public BoxCollider2D selectionCollider;
+    public SpriteMask mask;
 
     public void Awake()
     {
         isActive = false;
+        selectionCollider.enabled = false;
         candidateObject = this.gameObject;
-        myCollider = GetComponent<BoxCollider2D>();
+    }
+
+    public void ActivateSelectable()
+    {
+        mask.enabled = true;
+        selectionCollider.enabled = true;
+        isActive = true;
     }
 }

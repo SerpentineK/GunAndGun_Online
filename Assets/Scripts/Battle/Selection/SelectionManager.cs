@@ -24,5 +24,4 @@ public class SelectionManager : MonoBehaviour
     }
 
     public int selectionNumber;
-    private int selectedNumber;
 }
