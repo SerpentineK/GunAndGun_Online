@@ -469,7 +469,7 @@ SpriteRenderer:
   m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0e71066ccba20e041ad93bf15aa27927, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.49019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1216,8 +1216,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
+  isSelected: 0
   candidateObject: {fileID: 127437712}
   selectionCollider: {fileID: 1766934160}
+  reciever: {fileID: 0}
   mask: {fileID: 1766934159}
 --- !u!1 &134675154
 GameObject:
@@ -8776,8 +8778,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
+  isSelected: 0
   candidateObject: {fileID: 389161958}
   selectionCollider: {fileID: 1318564750}
+  reciever: {fileID: 0}
   mask: {fileID: 1318564749}
 --- !u!331 &1318564749
 SpriteMask:
@@ -9891,8 +9895,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
+  isSelected: 0
   candidateObject: {fileID: 77209466}
   selectionCollider: {fileID: 1477811876}
+  reciever: {fileID: 0}
   mask: {fileID: 1477811875}
 --- !u!331 &1477811875
 SpriteMask:
@@ -11516,8 +11522,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
+  isSelected: 0
   candidateObject: {fileID: 1682484014}
   selectionCollider: {fileID: 434988094}
+  reciever: {fileID: 0}
   mask: {fileID: 434988093}
 --- !u!1 &1692718228
 GameObject:
@@ -13378,8 +13386,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
+  isSelected: 0
   candidateObject: {fileID: 868025556}
   selectionCollider: {fileID: 1929079836}
+  reciever: {fileID: 0}
   mask: {fileID: 1929079835}
 --- !u!1 &1932804473
 GameObject:

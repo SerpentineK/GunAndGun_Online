@@ -28,7 +28,7 @@ public class SelectionManager : MonoBehaviour
     [SerializeField] private SelectableObject[] guns;
     [SerializeField] private SelectableObject[] entities;
 
-    public int selectionNumber;
+    [SerializeField] private GameObject selectorPrefab;
 
 
 }
