@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
 
-public class SoloStateManager : MonoBehaviour
+public class SinglePlayerManager : MonoBehaviour
 {
     public Player player;
     public Boss boss;

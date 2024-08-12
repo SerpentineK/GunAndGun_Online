@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Fusion;
 
-// このクラスはカードの領域間の移動を管轄する。
-// 領域は6種8個、VoltageとDiscardはトップカードとカウンター、Deckはカウンターのみの表示。
+// このクラスはカードに相当するGameObjectの領域間の移動を管轄する。
+// 領域は7種9個、VoltageとDiscardはトップカードとカウンター、Deckはカウンターのみの表示。
 public class FieldManager : MonoBehaviour
 {
     // public static FieldManager instance;
@@ -14,7 +15,7 @@ public class FieldManager : MonoBehaviour
     public HandField hand;
 
     // プレイヤーのセットされたカード
-    public Field set;
+    public Field reaction;
 
     // プレイヤーの【機能】
     public Field mechanism;

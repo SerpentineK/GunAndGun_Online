@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class SkillManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static SkillManager instance;
 
-    // Update is called once per frame
-    void Update()
+    public Skill playerSkill;
+    public Skill opponentSkill;
+
+    public void Awake()
     {
-        
+        instance = this;
     }
 }

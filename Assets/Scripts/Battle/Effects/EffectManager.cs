@@ -45,6 +45,16 @@ public class EffectManager : MonoBehaviour
     public EffectHub resolvingHub = null;
     public Gun firedGun;
 
+    // 【対応】カードに存在する、対応対象が機銃射撃か技能使用かによって挙動を変えるカードのためのenum。
+    public enum Sequences
+    {
+        Neutral,
+        GunFire,
+        SkillUsage
+    }
+
+    public Sequences currentSequence;
+
     /// <summary>
     /// Effect.ValuesToReferToというenumを用いてEffectHubが持っている情報のうちほしいものを入力すると値が帰ってくる魔法の辞書型リスト。
     /// </summary>
@@ -240,7 +250,7 @@ public class EffectManager : MonoBehaviour
             myself.FM.leftDeck,
             myself.FM.rightMagazine,
             myself.FM.leftMagazine,
-            myself.FM.set,
+            myself.FM.reaction,
             myself.FM.mechanism,
             myself.FM.discard,
             myself.FM.voltage
@@ -267,7 +277,7 @@ public class EffectManager : MonoBehaviour
             { Effect.EffectTarget.PlayerDiscard, myself.FM.discard },
             { Effect.EffectTarget.PlayerVolt, myself.FM.voltage },
             { Effect.EffectTarget.PlayerMech, myself.FM.mechanism },
-            { Effect.EffectTarget.PlayerSet, myself.FM.set },
+            { Effect.EffectTarget.PlayerSet, myself.FM.reaction },
             { Effect.EffectTarget.PlayerRightGun, myself.rightGun },
             { Effect.EffectTarget.PlayerLeftGun, myself.leftGun },
             { Effect.EffectTarget.PlayerSkill, myself.skill },

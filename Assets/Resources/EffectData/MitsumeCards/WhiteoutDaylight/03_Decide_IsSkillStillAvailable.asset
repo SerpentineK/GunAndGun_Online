@@ -20,6 +20,6 @@ MonoBehaviour:
   altEffectCondition: 0
   altActivationRefersToValue: 0
   target: 23
-  topicToDecideOn: 4
+  topicToDecideOn: 2
   returnValuesTo: 17
   resetOperationBoolsOnResolveEnd: 1

@@ -2329,7 +2329,7 @@ GameObject:
   - component: {fileID: 290967818}
   - component: {fileID: 290967819}
   m_Layer: 0
-  m_Name: SoloStateManager
+  m_Name: SinglePlayerManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2365,7 +2365,7 @@ MonoBehaviour:
   player: {fileID: 275170365}
   boss: {fileID: 428567024}
   playerGunner: {fileID: 11400000, guid: 2107f9e5f3b037e4ba87d48e1f9046ca, type: 2}
-  playerGun01: {fileID: 11400000, guid: eadfce55e8f2e8e4aabc6d6c48051f7b, type: 2}
+  playerGun01: {fileID: 11400000, guid: 9fefa3be7b62bd14d8eff692c8bda155, type: 2}
   playerGun02: {fileID: 11400000, guid: 7de590b33b03f784e9f4e2563b257308, type: 2}
   playerSkill: {fileID: 11400000, guid: 695d0d9c344cd2b40832f17454cbf978, type: 2}
   bossCharacter: {fileID: 11400000, guid: f1a250f55e6feda45af8b2506e10cf25, type: 2}
@@ -4799,7 +4799,7 @@ GameObject:
   - component: {fileID: 708555208}
   - component: {fileID: 708555209}
   m_Layer: 0
-  m_Name: SoloBattleState
+  m_Name: SinglePlayerState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4832,7 +4832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 208bf08db25100845aee130d25882dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SSM: {fileID: 290967819}
+  SPM: {fileID: 290967819}
 --- !u!1 &723320573
 GameObject:
   m_ObjectHideFlags: 0

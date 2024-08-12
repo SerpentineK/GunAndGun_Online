@@ -32,7 +32,7 @@ public class Gunner : MonoBehaviour
         hand = data.GetGunnerHand();
         passiveEffectText = data.GetGunnerAbility();
         flavorText = data.GetGunnerFlavorText();
-        selectable.mask.sprite = data.GetGunnerImage();
+        // selectable.mask.sprite = data.GetGunnerImage();
     }
 
     // Start is called before the first frame update

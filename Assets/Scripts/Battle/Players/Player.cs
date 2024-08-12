@@ -7,7 +7,7 @@ public class Player : Entity
 {
 
     // プレイヤーに帰属するマネージャー
-    public PlayerFieldManager FM;
+    public FieldManager FM;
     public EffectManager EM;
     public SkillManager SM;
 
@@ -17,12 +17,11 @@ public class Player : Entity
     public GunsData leftGunsData;
     public SkillData skillData;
 
-    // 視点のプレイヤーか否か
-    public bool isProtagonist;
-
     // ターンプレイヤーか否か
     public bool isTurn;
 
+    // プレイヤー名
+    public string nickName = "";
 
     // このプレイヤーの銃士、機銃、技能オブジェクト
     public Gunner gunner;
@@ -73,7 +72,7 @@ public class Player : Entity
             else if (card.cardType == CardData.CardType.Reaction)
             {
                 EM.SetReaction(card);
-                FM.TransferCard(card.currentField, FM.set, card);
+                FM.TransferCard(card.currentField, FM.reaction, card);
             }
             else if (card.cardType == CardData.CardType.Mechanism)
             {

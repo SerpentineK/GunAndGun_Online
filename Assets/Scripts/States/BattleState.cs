@@ -66,7 +66,7 @@ public class BattleState : MonoBehaviour, IState
         if (phase == 0)
         {
             BSM.StartGame();
-            BSM.TestExperimentalHub();
+            // BSM.TestExperimentalHub();
             phase++;
         }
     }

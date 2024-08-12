@@ -27,6 +27,9 @@ public class Skill : MonoBehaviour
     // 効果
     public EffectHub effectHub;
 
+    // 使用できる（表向きになっていないか）否か
+    public bool isAvailable = true;
+
     public void InputSkillData()
     {
         cost = data.GetSkillCost();
@@ -34,7 +37,7 @@ public class Skill : MonoBehaviour
         skillNameArea.SetText(data.GetSkillName());
         spriteRenderer.sprite = data.GetSkillGraphics();
         effectHub = data.effectHub;
-        selectable.mask.sprite = data.GetSkillGraphics();
+        // selectable.mask.sprite = data.GetSkillGraphics();
     }
 
     public bool IsEnoughVolt()

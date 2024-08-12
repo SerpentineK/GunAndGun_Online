@@ -6,6 +6,7 @@ public class SelectionManager : MonoBehaviour
 {
     public static SelectionManager instance;
 
+    // 何を選択するのか
     public enum SelectionClassification
     {
         None,
@@ -15,12 +16,13 @@ public class SelectionManager : MonoBehaviour
         Entity
     }
 
+    // どのように選択するのか
     public enum SelectionMethod
     {
         None,
-        Automatic_Random,
-        Automatic_All,
-        Manual
+        Automatic_Random, // 自動かつランダム
+        Automatic_All, // 自動かつ全選択
+        Manual // 手動
     }
 
     [SerializeField] private SelectableObject[] cards;
@@ -30,5 +32,10 @@ public class SelectionManager : MonoBehaviour
 
     [SerializeField] private GameObject selectorPrefab;
 
-
+    public int selectionNumber;
+    
+    public void InitiateSelector()
+    {
+        GameObject selector = Instantiate(selectorPrefab);
+    }
 }

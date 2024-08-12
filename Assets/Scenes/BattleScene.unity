@@ -643,6 +643,7 @@ MonoBehaviour:
   cardList: []
   cardCount: 0
   cardCounterObj: {fileID: 0}
+  selectable: {fileID: 0}
 --- !u!224 &77635524 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8423224210744544384, guid: 59f9ef3d6d37ca84387798dcaf8a31cb, type: 3}
@@ -790,6 +791,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220a93b017a3c4241a89ad3190f51216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSkill: {fileID: 0}
+  opponentSkill: {fileID: 0}
 --- !u!4 &99736387
 Transform:
   m_ObjectHideFlags: 0
@@ -830,6 +833,7 @@ MonoBehaviour:
   specialBulletsLoadedToLeftGun: []
   resolvingHub: {fileID: 0}
   firedGun: {fileID: 0}
+  currentSequence: 0
 --- !u!114 &99736389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -843,7 +847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 389161961}
-  set: {fileID: 77209470}
+  reaction: {fileID: 0}
   mechanism: {fileID: 868025558}
   discard: {fileID: 2109629940}
   voltage: {fileID: 7910117161186165688}
@@ -853,7 +857,7 @@ MonoBehaviour:
   leftDeck: {fileID: 1067570725}
   rightMagazine: {fileID: 963832237}
   leftMagazine: {fileID: 744327408}
-  mergedPrefab: {fileID: 7218792570757303720, guid: 8973471f449a0ad498be3330a405fd51, type: 3}
+  mergedPrefab: {fileID: 1918241507366221209, guid: 8973471f449a0ad498be3330a405fd51, type: 3}
 --- !u!224 &113295711 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4677574225792444331, guid: d1fb69222c0610044ad3dd66684a1a4a, type: 3}
@@ -985,6 +989,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 665a7d0b4f2f2944da7c66e503fc8bcd, type: 2}
   gunnerNameArea: {fileID: 134675156}
   gunnerImageArea: {fileID: 1766934158}
+  selectable: {fileID: 0}
   agility: 0
   hand: 0
   passiveEffect: {fileID: 0}
@@ -1026,7 +1031,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -94.197, y: -218.6566}
-  m_SizeDelta: {x: 145.7228, y: 47.3132}
+  m_SizeDelta: {x: 145.72, y: 47.3132}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &134675156
 MonoBehaviour:
@@ -1111,7 +1116,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 5, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1877,6 +1882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 275170364}
   - component: {fileID: 275170365}
+  - component: {fileID: 275170366}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1922,6 +1928,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c4f148ffbf60a459eb7d8170115b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 30
+  HP_Counter: {fileID: 1193684731}
+  burnCounters: 0
+  shockCounters: 0
+  handNum: 0
+  statusList: 
   FM: {fileID: 99736389}
   EM: {fileID: 99736388}
   SM: {fileID: 99736386}
@@ -1929,63 +1941,30 @@ MonoBehaviour:
   rightGunsData: {fileID: 11400000, guid: 3bd6934525d9b714085fbdad4926716b, type: 2}
   leftGunsData: {fileID: 11400000, guid: 021374b10e48fcd4894ef5285823b36e, type: 2}
   skillData: {fileID: 11400000, guid: 28c12342db904b44aa8546b27fdf9128, type: 2}
-  isProtagonist: 1
   isTurn: 0
-  HP: 30
-  HP_Counter: {fileID: 1193684731}
-  burnCounters: 0
-  shockCounters: 0
-  stabilizers: 0
-  snipers: 0
-  spiralShooters: 0
-  autoCannons: 0
-  healingTubes: 0
-  reloadSupporters: 0
-  psNegatives: 0
-  boostSets: 0
-  luckySets: 0
-  maintenanceCores: 0
-  endorthermicStructures: 0
-  dreadAmps: 0
-  highMetronomes: 0
-  redLightSystems: 0
-  chainReloaders: 0
-  spinShields: 0
-  accumulationDevices: 0
-  reactorSystems: 0
-  highGravitySpheres: 0
-  overPressuredSpheres: 0
-  burst: 0
-  unconsicious: 0
-  staggered: 0
-  echoing: 0
-  detonated: 0
-  frozen: 0
-  poisoned: 0
-  intercept: 0
-  smoke: 0
-  overheat: 0
-  barrage: 0
-  limited_Action: 0
-  limited_Bullet: 0
-  disturbedByNoise: 0
-  blitz: 0
-  paralyzed: 0
-  minorError: 0
-  fatalError: 0
-  silenced: 0
-  released: 0
-  bashed: 0
-  immortal: 0
-  curtainCall: 0
-  modePhalanx: 0
-  jamming: 0
-  recharging: 0
-  handNum: 0
+  nickName: 
   gunner: {fileID: 127437714}
   rightGun: {fileID: 1850665403}
   leftGun: {fileID: 987404052}
   skill: {fileID: 1682484017}
+--- !u!114 &275170366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275170363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SortKey: 1128331276
+  ObjectInterest: 1
+  Flags: 262145
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: 275170365}
 --- !u!224 &277869336 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4677574225792444331, guid: d1fb69222c0610044ad3dd66684a1a4a, type: 3}
@@ -2020,6 +1999,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9eec2f04949dd64ab2d2453f2e3cd8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myGameboard: {fileID: 0}
+  opponentsGameboard: {fileID: 0}
   player: {fileID: 275170365}
   opponent: {fileID: 428567024}
   opponentGunner: {fileID: 11400000, guid: 47ce99f2c3fec454abfdd9534dae57d9, type: 2}
@@ -2386,6 +2367,7 @@ MonoBehaviour:
   cardList: []
   cardCount: 0
   cardCounterObj: {fileID: 0}
+  selectable: {fileID: 0}
 --- !u!1 &411866617
 GameObject:
   m_ObjectHideFlags: 0
@@ -2623,6 +2605,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c4f148ffbf60a459eb7d8170115b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 30
+  HP_Counter: {fileID: 1108151471}
+  burnCounters: 0
+  shockCounters: 0
+  handNum: 0
+  statusList: 
   FM: {fileID: 0}
   EM: {fileID: 0}
   SM: {fileID: 0}
@@ -2630,59 +2618,8 @@ MonoBehaviour:
   rightGunsData: {fileID: 11400000, guid: 3b41f38a69edf354b87f693fe8697acc, type: 2}
   leftGunsData: {fileID: 11400000, guid: 9fefa3be7b62bd14d8eff692c8bda155, type: 2}
   skillData: {fileID: 11400000, guid: cd737142f73dce44782d28d0867b47a1, type: 2}
-  isProtagonist: 0
   isTurn: 0
-  HP: 30
-  HP_Counter: {fileID: 1108151471}
-  burnCounters: 0
-  shockCounters: 0
-  stabilizers: 0
-  snipers: 0
-  spiralShooters: 0
-  autoCannons: 0
-  healingTubes: 0
-  reloadSupporters: 0
-  psNegatives: 0
-  boostSets: 0
-  luckySets: 0
-  maintenanceCores: 0
-  endorthermicStructures: 0
-  dreadAmps: 0
-  highMetronomes: 0
-  redLightSystems: 0
-  chainReloaders: 0
-  spinShields: 0
-  accumulationDevices: 0
-  reactorSystems: 0
-  highGravitySpheres: 0
-  overPressuredSpheres: 0
-  burst: 0
-  unconsicious: 0
-  staggered: 0
-  echoing: 0
-  detonated: 0
-  frozen: 0
-  poisoned: 0
-  intercept: 0
-  smoke: 0
-  overheat: 0
-  barrage: 0
-  limited_Action: 0
-  limited_Bullet: 0
-  disturbedByNoise: 0
-  blitz: 0
-  paralyzed: 0
-  minorError: 0
-  fatalError: 0
-  silenced: 0
-  released: 0
-  bashed: 0
-  immortal: 0
-  curtainCall: 0
-  modePhalanx: 0
-  jamming: 0
-  recharging: 0
-  handNum: 0
+  nickName: 
   gunner: {fileID: 1661007843}
   rightGun: {fileID: 911212050}
   leftGun: {fileID: 1026479713}
@@ -4850,6 +4787,7 @@ MonoBehaviour:
   cardList: []
   cardCount: 0
   cardCounterObj: {fileID: 1958241206}
+  selectable: {fileID: 0}
 --- !u!224 &907476529 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4677574225792444331, guid: d1fb69222c0610044ad3dd66684a1a4a, type: 3}
@@ -6566,6 +6504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1142804294}
   - component: {fileID: 1142804295}
+  - component: {fileID: 1142804296}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6605,6 +6544,24 @@ MonoBehaviour:
   gameMode: 0
   cardSets: 0
   cardPools: 
+--- !u!114 &1142804296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142804293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SortKey: 4190111594
+  ObjectInterest: 1
+  Flags: 262145
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: 1142804295}
 --- !u!1 &1161985728
 GameObject:
   m_ObjectHideFlags: 0
@@ -6999,6 +6956,7 @@ GameObject:
   - component: {fileID: 1236102888}
   - component: {fileID: 1236102891}
   - component: {fileID: 1236102892}
+  - component: {fileID: 1236102893}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7140,6 +7098,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
+--- !u!114 &1236102893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236102887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73b0a95be81246699cf0d9ecdc01863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreferredRunner: 0
+  Components:
+  - {fileID: 1236102888}
+  _guid: 8a9cb452-f092-4c0e-
 --- !u!1 &1252478326
 GameObject:
   m_ObjectHideFlags: 0
@@ -7602,6 +7576,133 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266585867}
   m_CullTransparentMesh: 1
+--- !u!1 &1289068629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1289068633}
+  - component: {fileID: 1289068632}
+  - component: {fileID: 1289068631}
+  - component: {fileID: 1289068630}
+  m_Layer: 0
+  m_Name: Prototype Runner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1289068630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289068629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8edbe7108d8a43ab838cf8b8d9453df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1289068631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289068629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -232609262, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInput:
+    m_PersistentCalls:
+      m_Calls: []
+  OnInputMissing:
+    m_PersistentCalls:
+      m_Calls: []
+  OnConnectedToServer:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDisconnectedFromServer:
+    m_PersistentCalls:
+      m_Calls: []
+  OnConnectRequest:
+    m_PersistentCalls:
+      m_Calls: []
+  OnConnectFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  PlayerJoined:
+    m_PersistentCalls:
+      m_Calls: []
+  PlayerLeft:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSimulationMessage:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShutdown:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSessionListUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCustomAuthenticationResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHostMigration:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSceneLoadDone:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSceneLoadStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnReliableData:
+    m_PersistentCalls:
+      m_Calls: []
+  OnReliableProgress:
+    m_PersistentCalls:
+      m_Calls: []
+  OnObjectEnterAOI:
+    m_PersistentCalls:
+      m_Calls: []
+  OnObjectExitAOI:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1289068632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289068629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1199893898, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1289068633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289068629}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1334664200
 GameObject:
   m_ObjectHideFlags: 0
@@ -7639,6 +7740,76 @@ RectTransform:
   m_AnchoredPosition: {x: 120, y: -340}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1354405818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1354405821}
+  - component: {fileID: 1354405820}
+  - component: {fileID: 1354405819}
+  m_Layer: 0
+  m_Name: Prototype Network Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1354405819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354405818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba5764f4714bd64ab9efab127938e77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnableHotkeys: 0
+  BaseSkin: {fileID: 11400000, guid: e59b35dfeb4b6f54e9b2791b2a40a510, type: 2}
+--- !u!114 &1354405820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354405818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88230848386761045af440d808ee3efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RunnerPrefab: {fileID: 1289068632}
+  StartMode: 0
+  AutoStartAs: 2
+  AutoHideGUI: 1
+  AutoClients: 1
+  ClientStartDelay: 0.1
+  ServerPort: 0
+  DefaultRoomName: 
+  AlwaysShowStats: 0
+  InitialScenePath: 
+  _currentStage: 0
+--- !u!4 &1354405821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354405818}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1371482811 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4677574225792444331, guid: d1fb69222c0610044ad3dd66684a1a4a, type: 3}
@@ -8220,10 +8391,12 @@ MonoBehaviour:
   skillCostArea: {fileID: 2076557691}
   skillNameArea: {fileID: 1266585869}
   spriteRenderer: {fileID: 966588693}
+  selectable: {fileID: 0}
   voltage: {fileID: 0}
   fieldManager: {fileID: 0}
   cost: 0
   effectHub: {fileID: 0}
+  isAvailable: 1
 --- !u!224 &1408012745 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4677574225792444331, guid: d1fb69222c0610044ad3dd66684a1a4a, type: 3}
@@ -8694,6 +8867,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565722159}
   m_CullTransparentMesh: 1
+--- !u!1 &1569790645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1569790648}
+  - component: {fileID: 1569790647}
+  - component: {fileID: 1569790646}
+  m_Layer: 0
+  m_Name: VirtualGameboard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1569790646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569790645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SortKey: 26622956
+  ObjectInterest: 1
+  Flags: 262145
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: 1569790647}
+--- !u!114 &1569790647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569790645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d60ac44af7ef9474581125a2718ffd53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NickName:
+    _length: 0
+    _data:
+      Data: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  _MyPlayer: {fileID: 0}
+  _RightDeckCards: {fileID: 0}
+  _LeftDeckCards: {fileID: 0}
+  _RightMagazineCards: {fileID: 0}
+  _LeftMagazineCards: {fileID: 0}
+  _HandCards: {fileID: 0}
+  _DiscardCards: {fileID: 0}
+  _VoltageCards: {fileID: 0}
+  _MechanismCards: {fileID: 0}
+  _ReactionCards: {fileID: 0}
+--- !u!4 &1569790648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569790645}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1582122126
 GameObject:
   m_ObjectHideFlags: 0
@@ -9481,6 +9731,7 @@ MonoBehaviour:
   cardList: []
   cardCount: 0
   cardCounterObj: {fileID: 449271846}
+  selectable: {fileID: 0}
 --- !u!1001 &1656570313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9875,6 +10126,7 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 9faf53601e61b2243a4571a37a820313, type: 2}
   gunnerNameArea: {fileID: 1940606637}
   gunnerImageArea: {fileID: 1960030871}
+  selectable: {fileID: 0}
   agility: 0
   hand: 0
   passiveEffect: {fileID: 0}
@@ -9940,10 +10192,12 @@ MonoBehaviour:
   skillCostArea: {fileID: 1136412050}
   skillNameArea: {fileID: 226744090}
   spriteRenderer: {fileID: 434988092}
+  selectable: {fileID: 0}
   voltage: {fileID: 0}
   fieldManager: {fileID: 0}
   cost: 0
   effectHub: {fileID: 0}
+  isAvailable: 1
 --- !u!1 &1692718228
 GameObject:
   m_ObjectHideFlags: 0
@@ -10064,7 +10318,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 5, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -11372,7 +11626,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 5, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -12633,3 +12887,6 @@ SceneRoots:
   - {fileID: 708555208}
   - {fileID: 275170364}
   - {fileID: 428567023}
+  - {fileID: 1569790648}
+  - {fileID: 1354405821}
+  - {fileID: 1289068633}

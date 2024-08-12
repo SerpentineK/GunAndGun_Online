@@ -18,6 +18,9 @@ MonoBehaviour:
   priority: 3
   willOperateOnActivation: 1
   thisCard: {fileID: 0}
+  thisGun: {fileID: 0}
+  thisGunner: {fileID: 0}
+  thisSkill: {fileID: 0}
   effects:
   - {fileID: 11400000, guid: 5541480d6b8ea6d488678f14ee80770c, type: 2}
   automaticEffect: {fileID: 0}
@@ -55,4 +58,5 @@ MonoBehaviour:
   dataResult01: {fileID: 0}
   dataResult02: {fileID: 0}
   skillResult: {fileID: 0}
+  cardTypeResult: 4
   finishedInput: 0

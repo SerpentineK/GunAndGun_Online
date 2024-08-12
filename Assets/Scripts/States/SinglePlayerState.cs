@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoloBattleState : MonoBehaviour, IState
+public class SinglePlayerState : MonoBehaviour, IState
 {
-    public SoloStateManager SSM;
+    public SinglePlayerManager SPM;
 
     public enum SUB_STATE
     {
@@ -70,19 +70,19 @@ public class SoloBattleState : MonoBehaviour, IState
         Entity first = null;
         if (phase == 0)
         {
-            SSM.InitializeEntities();
-            SSM.DealCards();
+            SPM.InitializeEntities();
+            SPM.DealCards();
             phase++;
         }
         else if(phase == 1)
         {
-            first = SSM.DecideFirstEntity();
-            if (first == SSM.player)
+            first = SPM.DecideFirstEntity();
+            if (first == SPM.player)
             {
                 subState = SUB_STATE.START_TURN;
                 phase = 0;
             }
-            else if (first == SSM.boss)
+            else if (first == SPM.boss)
             {
                 subState = SUB_STATE.BOSS_START_TURN;
                 phase = 0;

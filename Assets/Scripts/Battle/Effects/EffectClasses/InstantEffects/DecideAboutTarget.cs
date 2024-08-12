@@ -8,10 +8,7 @@ public class DecideAboutTarget : InstantEffect
     {
         None,
         IsCurrentSequenceGunFire,
-        IsCurrentReloadByEffect,
-        IsCurrentEffectNotByGunner,
         IsSkillStillAvailableToUse,
-        IsTargetedCardSubjectOfTransfer,
     }
 
     public EffectTarget target;
@@ -27,7 +24,24 @@ public class DecideAboutTarget : InstantEffect
             case TopicToDecideOn.None:
                 break;
             case TopicToDecideOn.IsCurrentSequenceGunFire:
-                
+                if (EffectManager.instance.currentSequence == EffectManager.Sequences.GunFire)
+                {
+                    EffectManager.instance.InputValueToHub(returnValuesTo, true);
+                } 
+                else
+                {
+                    EffectManager.instance.InputValueToHub(returnValuesTo, false);
+                }
+                break;
+            case TopicToDecideOn.IsSkillStillAvailableToUse:
+                if (SkillManager.instance.playerSkill.isAvailable)
+                {
+                    EffectManager.instance.InputValueToHub(returnValuesTo, true);
+                }
+                else
+                {
+                    EffectManager.instance.InputValueToHub(returnValuesTo, false);
+                }
                 break;
         }
     }

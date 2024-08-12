@@ -2,8 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// 戦闘画面を管理するBattleState、そこに行く指令をまとめたクラス。
 public class BattleStateManager : MonoBehaviour
 {
+    public static BattleStateManager instance;
+
+    public VirtualGameboard myGameboard;
+    public VirtualGameboard opponentsGameboard;
+
     [SerializeField] private Player player;
     [SerializeField] private Player opponent;
 
