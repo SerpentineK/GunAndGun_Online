@@ -46,7 +46,7 @@ public class BattleStateManager : MonoBehaviour
 
     public void StartGame()
     {
-        player.DrawCardsAsRule(player.FM.leftDeck);
+        // player.DrawCardsAsRule(player.FM.leftDeck);
     }
 
     public void TestExperimentalHub()

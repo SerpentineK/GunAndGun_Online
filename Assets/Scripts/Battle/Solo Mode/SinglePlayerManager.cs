@@ -86,7 +86,7 @@ public class SinglePlayerManager : MonoBehaviour
 
     public void DealCards()
     {
-        player.DrawCardsAsRule(player.FM.rightDeck);
-        boss.DrawCardsAsRule();
+        // player.DrawCardsAsRule(player.FM.rightDeck);
+        // boss.DrawCardsAsRule();
     }
 }

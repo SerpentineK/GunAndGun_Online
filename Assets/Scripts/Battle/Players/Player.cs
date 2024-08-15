@@ -45,6 +45,7 @@ public class Player : Entity
     }
  
     
+    /* 
     public void DrawCardsAsRule(Field deck)
     {
         int currentHandNum = FM.hand.cardCount;
@@ -81,4 +82,5 @@ public class Player : Entity
             }
         }
     }
+    */
 }
