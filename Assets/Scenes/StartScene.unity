@@ -16065,14 +16065,6 @@ MonoBehaviour:
   gunsDataBase02: {fileID: 11400000, guid: 6fbd80670532e9746a2b25312b4e74c0, type: 2}
   gunsDataBase03: {fileID: 11400000, guid: 0708f9a0e8321bf478f13712e8685f00, type: 2}
   gunsDataBase04: {fileID: 11400000, guid: 729064fd6f24a3e4d970d6a80edd2f69, type: 2}
-  opponentGunner: {fileID: 0}
-  opponentGun01: {fileID: 0}
-  opponentGun02: {fileID: 0}
-  opponentSkill: {fileID: 0}
-  playerGunner: {fileID: 0}
-  playerGun01: {fileID: 0}
-  playerGun02: {fileID: 0}
-  playerSkill: {fileID: 0}
   viewParent: {fileID: 2138488517}
   viewArray:
   - {fileID: 1461229077}

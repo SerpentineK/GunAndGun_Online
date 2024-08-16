@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+// 仮想盤面上のプレイヤー。
+// NetworkBehaviorであるEntityから継承。
 public class Player : Entity
 {
 

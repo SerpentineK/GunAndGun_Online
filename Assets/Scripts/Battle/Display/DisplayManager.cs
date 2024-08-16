@@ -7,12 +7,12 @@ using UnityEngine.Analytics;
 // é©ëºÇÃî’ñ èÓïÒÇÕBSMì‡ÇÃVirtualGameboardÇ÷ÇÃéQè∆Ç©ÇÁéÊÇ¡ÇƒÇ≠ÇÈÅB
 public class DisplayManager : MonoBehaviour
 {
-    private BattleStateManager BSM = BattleStateManager.instance;
+    private readonly BattleStateManager BSM = BattleStateManager.instance;
 
     [SerializeField] private PlayerDisplay MyDisplay;
     [SerializeField] private PlayerDisplay OpponentDisplay;
     
-    public void InputPlayerData()
+    public void InitializeDisplays()
     {
         MyDisplay.gunner.data = BSM.myGameboard.MyPlayer.gunnerData;
         MyDisplay.gunner.InputGunnerData();
@@ -22,7 +22,16 @@ public class DisplayManager : MonoBehaviour
         MyDisplay.leftGun.InputGunData();
         MyDisplay.skill.data = BSM.myGameboard.MyPlayer.skillData;
         MyDisplay.skill.InputSkillData();
-
         MyDisplay.HP_Display.SetText(string.Format("{0:00}", BSM.myGameboard.MyPlayer.HP));
+
+        OpponentDisplay.gunner.data = BSM.opponentGameboard.MyPlayer.gunnerData;
+        OpponentDisplay.gunner.InputGunnerData();
+        OpponentDisplay.rightGun.data = BSM.opponentGameboard.MyPlayer.rightGunsData;
+        OpponentDisplay.rightGun.InputGunData();
+        OpponentDisplay.leftGun.data = BSM.opponentGameboard.MyPlayer.leftGunsData;
+        OpponentDisplay.leftGun.InputGunData();
+        OpponentDisplay.skill.data = BSM.opponentGameboard.MyPlayer.skillData;
+        OpponentDisplay.skill.InputSkillData();
+        OpponentDisplay.HP_Display.SetText(string.Format("{0:00}", BSM.opponentGameboard.MyPlayer.HP));
     }
 }

@@ -8,7 +8,7 @@ public class BattleStateManager : MonoBehaviour
     public static BattleStateManager instance;
 
     public VirtualGameboard myGameboard;
-    public VirtualGameboard opponentsGameboard;
+    public VirtualGameboard opponentGameboard;
 
     [SerializeField] private Player player;
     [SerializeField] private Player opponent;
@@ -23,6 +23,11 @@ public class BattleStateManager : MonoBehaviour
     [SerializeField] private SkillData playerSkill = null;
 
     [SerializeField] private EffectHub experimentalHub;
+
+    public void Awake()
+    {
+        instance = this;
+    }
 
     public void InitializePlayers()
     {
@@ -44,6 +49,7 @@ public class BattleStateManager : MonoBehaviour
         player.FM.ShuffleDeck(player.FM.rightDeck);
     }
 
+    
     public void StartGame()
     {
         // player.DrawCardsAsRule(player.FM.leftDeck);

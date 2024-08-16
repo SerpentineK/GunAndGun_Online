@@ -27,14 +27,14 @@ public class StartSceneManager : MonoBehaviour
     [SerializeField] private GunsDataBase gunsDataBase03;
     [SerializeField] private GunsDataBase gunsDataBase04;
 
-    public GunnerData opponentGunner = null;
-    public GunsData opponentGun01 = null;
-    public GunsData opponentGun02 = null;
-    public SkillData opponentSkill = null;
-    public GunnerData playerGunner = null;
-    public GunsData playerGun01 = null;
-    public GunsData playerGun02 = null;
-    public SkillData playerSkill = null;
+    public static GunnerData opponentGunner = null;
+    public static GunsData opponentGun01 = null;
+    public static GunsData opponentGun02 = null;
+    public static SkillData opponentSkill = null;
+    public static GunnerData playerGunner = null;
+    public static GunsData playerGun01 = null;
+    public static GunsData playerGun02 = null;
+    public static SkillData playerSkill = null;
 
     [SerializeField] private GameObject viewParent;
     [SerializeField] private GameObject[] viewArray;
@@ -79,7 +79,7 @@ public class StartSceneManager : MonoBehaviour
         controls.startup.Disable();
         controls.Dispose();
     }
-    
+
     public void InputCardBlock()
     {
         if (Enumerable.SequenceEqual(cardPools, block01))
@@ -138,6 +138,10 @@ public class StartSceneManager : MonoBehaviour
 
     public void UpdateInfoText(int phaseNum)
     {
+
+        playerGunner = LocalPlayerData.GunnerData;
+
+
         string nextText = string.Format("PHASE-{0:00} {1}", phaseNum, phaseNames[phaseNum]);
         progressText.SetText(nextText);
         if (opponentGunner != null) { infoUI.opponentGunnerName = opponentGunner.GetGunnerName(); }
@@ -262,7 +266,7 @@ public class StartSceneManager : MonoBehaviour
             // TryGetComponent‚ÅGunnerConfirmButton‚©GunnerSelectable‚©‚ð”»’è‚·‚é
             if (clickedObject.TryGetComponent(out GunnerConfirmButton clickedButton))
             {
-                playerGunner = clickedButton.confirmedData;
+                LocalPlayerData.GunnerData = clickedButton.confirmedData;
                 GunnerToken = true;
             }
             else if (clickedObject.TryGetComponent(out GunnerSelectable clickedGunner))
@@ -302,7 +306,7 @@ public class StartSceneManager : MonoBehaviour
 
             if (clickedObject.TryGetComponent(out GunConfirmButton clickedButton))
             {
-                playerGun01 = clickedButton.confirmedData;
+                LocalPlayerData.RightGunsData = clickedButton.confirmedData;
                 FirstGunToken = true;
             }
             else if (clickedObject.TryGetComponent(out GunCandidate clickedGun))
@@ -332,7 +336,7 @@ public class StartSceneManager : MonoBehaviour
 
             if (clickedObject.TryGetComponent(out GunConfirmButton clickedButton))
             {
-                playerGun02 = clickedButton.confirmedData;
+                LocalPlayerData.LeftGunsData = clickedButton.confirmedData;
                 SecondGunToken = true;
             }
             else if (clickedObject.TryGetComponent(out GunCandidate clickedGun))
@@ -363,7 +367,7 @@ public class StartSceneManager : MonoBehaviour
             // TryGetComponent‚ÅSkillConfirmButton‚©SkillCandidate‚©‚ð”»’è‚·‚é
             if (clickedObject.TryGetComponent(out SkillConfirmButton clickedButton))
             {
-                playerSkill = clickedButton.data;
+                LocalPlayerData.SkillData = clickedButton.data;
                 SkillToken = true;
             }
             else if (clickedObject.TryGetComponent(out SpriteRenderer clickedSprite))

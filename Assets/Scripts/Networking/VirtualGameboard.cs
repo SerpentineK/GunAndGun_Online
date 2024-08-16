@@ -41,7 +41,7 @@ public class VirtualGameboard : NetworkBehaviour
         {
             BattleStateManager BSM = FindAnyObjectByType<BattleStateManager>();
             // StateAuthority‚ğ‚Á‚Ä‚¢‚È‚¯‚ê‚Î‘Šè‚Ì‚à‚ÌB
-            BSM.opponentsGameboard = this;
+            BSM.opponentGameboard = this;
         }
     }
 
