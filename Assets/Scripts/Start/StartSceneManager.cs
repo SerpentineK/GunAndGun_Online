@@ -139,9 +139,6 @@ public class StartSceneManager : MonoBehaviour
     public void UpdateInfoText(int phaseNum)
     {
 
-        playerGunner = LocalPlayerData.GunnerData;
-
-
         string nextText = string.Format("PHASE-{0:00} {1}", phaseNum, phaseNames[phaseNum]);
         progressText.SetText(nextText);
         if (opponentGunner != null) { infoUI.opponentGunnerName = opponentGunner.GetGunnerName(); }
@@ -266,7 +263,7 @@ public class StartSceneManager : MonoBehaviour
             // TryGetComponent‚ÅGunnerConfirmButton‚©GunnerSelectable‚©‚ð”»’è‚·‚é
             if (clickedObject.TryGetComponent(out GunnerConfirmButton clickedButton))
             {
-                LocalPlayerData.GunnerData = clickedButton.confirmedData;
+                playerGunner = clickedButton.confirmedData;
                 GunnerToken = true;
             }
             else if (clickedObject.TryGetComponent(out GunnerSelectable clickedGunner))
@@ -306,7 +303,7 @@ public class StartSceneManager : MonoBehaviour
 
             if (clickedObject.TryGetComponent(out GunConfirmButton clickedButton))
             {
-                LocalPlayerData.RightGunsData = clickedButton.confirmedData;
+                playerGun01 = clickedButton.confirmedData;
                 FirstGunToken = true;
             }
             else if (clickedObject.TryGetComponent(out GunCandidate clickedGun))
@@ -336,7 +333,7 @@ public class StartSceneManager : MonoBehaviour
 
             if (clickedObject.TryGetComponent(out GunConfirmButton clickedButton))
             {
-                LocalPlayerData.LeftGunsData = clickedButton.confirmedData;
+                playerGun02 = clickedButton.confirmedData;
                 SecondGunToken = true;
             }
             else if (clickedObject.TryGetComponent(out GunCandidate clickedGun))
@@ -367,7 +364,7 @@ public class StartSceneManager : MonoBehaviour
             // TryGetComponent‚ÅSkillConfirmButton‚©SkillCandidate‚©‚ð”»’è‚·‚é
             if (clickedObject.TryGetComponent(out SkillConfirmButton clickedButton))
             {
-                LocalPlayerData.SkillData = clickedButton.data;
+                playerSkill = clickedButton.data;
                 SkillToken = true;
             }
             else if (clickedObject.TryGetComponent(out SpriteRenderer clickedSprite))
