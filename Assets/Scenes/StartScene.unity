@@ -1315,7 +1315,7 @@ PrefabInstance:
     - target: {fileID: 4379044167333899234, guid: e0931e28ad34f6844a2f594094938752, type: 3}
       propertyPath: SSM
       value: 
-      objectReference: {fileID: 1975104675}
+      objectReference: {fileID: 0}
     - target: {fileID: 8097763609059589590, guid: e0931e28ad34f6844a2f594094938752, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1768,8 +1768,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 285138184}
+  - component: {fileID: 285138186}
+  - component: {fileID: 285138185}
   m_Layer: 0
-  m_Name: Player Object
+  m_Name: Player Selection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1790,6 +1792,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &285138185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285138181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SortKey: 2759668388
+  ObjectInterest: 1
+  Flags: 262145
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: 285138186}
+--- !u!114 &285138186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285138181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833ebb15d739b7849b134f8317c09d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _GunnerID: 
+  _Gun01ID: 
+  _Gun02ID: 
+  _SkillID: 
+  IsSelectionTurn: 0
 --- !u!1 &304907116
 GameObject:
   m_ObjectHideFlags: 0
@@ -4030,7 +4067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &568368751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4234,7 +4271,7 @@ PrefabInstance:
     - target: {fileID: 4379044167333899234, guid: e0931e28ad34f6844a2f594094938752, type: 3}
       propertyPath: SSM
       value: 
-      objectReference: {fileID: 1975104675}
+      objectReference: {fileID: 0}
     - target: {fileID: 8097763609059589590, guid: e0931e28ad34f6844a2f594094938752, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -8218,7 +8255,7 @@ PrefabInstance:
     - target: {fileID: 4379044167333899234, guid: e0931e28ad34f6844a2f594094938752, type: 3}
       propertyPath: SSM
       value: 
-      objectReference: {fileID: 1975104675}
+      objectReference: {fileID: 0}
     - target: {fileID: 8097763609059589590, guid: e0931e28ad34f6844a2f594094938752, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -8400,7 +8437,7 @@ PrefabInstance:
     - target: {fileID: 4379044167333899234, guid: e0931e28ad34f6844a2f594094938752, type: 3}
       propertyPath: SSM
       value: 
-      objectReference: {fileID: 1975104675}
+      objectReference: {fileID: 0}
     - target: {fileID: 8097763609059589590, guid: e0931e28ad34f6844a2f594094938752, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -14195,7 +14232,7 @@ PrefabInstance:
     - target: {fileID: 4379044167333899234, guid: e0931e28ad34f6844a2f594094938752, type: 3}
       propertyPath: SSM
       value: 
-      objectReference: {fileID: 1975104675}
+      objectReference: {fileID: 0}
     - target: {fileID: 8097763609059589590, guid: e0931e28ad34f6844a2f594094938752, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
@@ -15639,7 +15676,7 @@ PrefabInstance:
     - target: {fileID: 4379044167333899234, guid: e0931e28ad34f6844a2f594094938752, type: 3}
       propertyPath: SSM
       value: 
-      objectReference: {fileID: 1975104675}
+      objectReference: {fileID: 0}
     - target: {fileID: 8097763609059589590, guid: e0931e28ad34f6844a2f594094938752, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
@@ -16019,7 +16056,7 @@ GameObject:
   - component: {fileID: 1975104674}
   - component: {fileID: 1975104675}
   m_Layer: 0
-  m_Name: StartScene Manager
+  m_Name: Start State Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16049,14 +16086,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1975104673}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 683019705446e804083498d39ad43344, type: 3}
+  m_Script: {fileID: 11500000, guid: 03e3215e016900349ae2adbec99ae2f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameMode: 0
   selectionTurn: 0
   cardSetNumber: 0
   cardPools: 0000000001000000
-  cardBlock: 1
+  cardBlock: 0
   gunnerDataBase01: {fileID: 11400000, guid: 38d91f7bc6c2aed41be889f59594baca, type: 2}
   gunnerDataBase02: {fileID: 11400000, guid: a99a6a64af1332641997f411d655e971, type: 2}
   gunnerDataBase03: {fileID: 11400000, guid: 83c701b951a58fc4eb3a9c6a33bada71, type: 2}
@@ -16072,13 +16109,15 @@ MonoBehaviour:
   - {fileID: 1101325631}
   - {fileID: 945992982}
   - {fileID: 207761908}
-  standbyView: {fileID: 0}
+  standbyView: {fileID: 479771595}
   infoUI: {fileID: 2105868855}
   progressText: {fileID: 1788731097}
   gunnerSelector: {fileID: 924303040}
   firstGunSelector: {fileID: 993250983}
   secondGunSelector: {fileID: 324555191}
   skillSelector: {fileID: 624875128}
+  mySelection: {fileID: 0}
+  theirSelection: {fileID: 0}
 --- !u!1 &1980866598
 GameObject:
   m_ObjectHideFlags: 0
@@ -17360,7 +17399,6 @@ GameObject:
   - component: {fileID: 1325233539330512995}
   - component: {fileID: 5867223581568161990}
   - component: {fileID: 6396797618247132751}
-  - component: {fileID: 7831628723086944465}
   - component: {fileID: 2150185494322120581}
   m_Layer: 0
   m_Name: NetworkRunner
@@ -17368,7 +17406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &5867223581568161990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17521,19 +17559,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5825ed947332c64da9921bbae97c512, type: 3}
---- !u!114 &7831628723086944465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5686762921068868379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec2744c64e036954fa81a3eb70872a3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerPrefab: {fileID: 2191857194838716475, guid: 5c408c390f449b041af44923715401fe, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

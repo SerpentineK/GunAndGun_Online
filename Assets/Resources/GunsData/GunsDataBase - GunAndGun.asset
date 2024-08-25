@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19a5467f6632b141a123c36354f5501, type: 3}
   m_Name: GunsDataBase - GunAndGun
   m_EditorClassIdentifier: 
-  gunsDataLists:
+  gunsDataList:
   - {fileID: 11400000, guid: 44efbb32ed2a70f4a9b2d68570578617, type: 2}
   - {fileID: 11400000, guid: 2d42bb6069f1c6d48b5763e2c4a4462b, type: 2}
-  - {fileID: 11400000, guid: 3b41f38a69edf354b87f693fe8697acc, type: 2}
-  - {fileID: 11400000, guid: 9fefa3be7b62bd14d8eff692c8bda155, type: 2}
-  - {fileID: 11400000, guid: 478d699b4b20d55439c179960cd2a477, type: 2}
   - {fileID: 11400000, guid: c05b17eac0aa9b14789a0d1b3f6c252a, type: 2}
+  - {fileID: 11400000, guid: 3b41f38a69edf354b87f693fe8697acc, type: 2}
+  - {fileID: 11400000, guid: 478d699b4b20d55439c179960cd2a477, type: 2}
+  - {fileID: 11400000, guid: 9fefa3be7b62bd14d8eff692c8bda155, type: 2}

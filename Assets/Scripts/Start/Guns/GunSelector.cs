@@ -53,7 +53,7 @@ public class GunSelector : MonoBehaviour
         // データベース群の一つ一つのリストをpossibleDataListに追加
         foreach (var item in databases)
         {
-            possibleDataList.AddRange(item.GetGunsDataLists());
+            possibleDataList.AddRange(item.GetGunsDataList());
         }
 
         // GamemodeがNORMALのとき(つまり、カードプールがBLOCKに限定されており使用される機銃がデータリストの全てであるとき)

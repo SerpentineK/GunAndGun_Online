@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19a5467f6632b141a123c36354f5501, type: 3}
   m_Name: GunsDataBase - UltraBommy
   m_EditorClassIdentifier: 
-  gunsDataLists:
-  - {fileID: 11400000, guid: ee6d32c9ce0de20439d7fa99be0716fd, type: 2}
+  gunsDataList:
   - {fileID: 11400000, guid: 84715c4fbf8956d4892546c17eae9e8a, type: 2}
   - {fileID: 11400000, guid: 08271ae2880e6b045acbfc1d6982c127, type: 2}
+  - {fileID: 11400000, guid: ee6d32c9ce0de20439d7fa99be0716fd, type: 2}

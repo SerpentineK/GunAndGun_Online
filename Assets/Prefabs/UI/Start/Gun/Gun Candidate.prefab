@@ -128,7 +128,7 @@ MonoBehaviour:
   data: {fileID: 0}
   target: {fileID: 0}
   gunIcon: {fileID: 8935727978314876663}
-  myCollider: {fileID: 0}
+  myCollider: {fileID: 5044884381107542466}
 --- !u!61 &5044884381107542466
 BoxCollider2D:
   m_ObjectHideFlags: 0

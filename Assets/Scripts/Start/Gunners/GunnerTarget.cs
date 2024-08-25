@@ -21,7 +21,7 @@ public class GunnerTarget : MonoBehaviour
     [SerializeField] private TMP_Text[] skillNameAreas = new TMP_Text[3];
 
     // SSM (StartStateManager)
-    [SerializeField] private StartSceneManager SSM;
+    [SerializeField] private StartStateManager SSM;
 
     // SSMに選択されたデータを返すボタン
     [SerializeField] private GunnerConfirmButton confirmationButton;

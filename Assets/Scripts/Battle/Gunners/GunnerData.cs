@@ -43,4 +43,23 @@ public class GunnerData : ScriptableObject
     public Vector3 GetPlayerScale() { return playerScale; }
     public Vector3 GetOpponentScale() { return opponentScale; }
     public Color GetIconLabelColor() {  return iconLabelColor; }
+
+    public SkillData SearchSkillByID(string ID)
+    {
+        SkillData result = null;
+
+        foreach (var skill in skillArray)
+        {
+            if (skill.GetSkillId() == ID)
+            {
+                result = skill;
+            }
+            else
+            {
+                continue;
+            }
+        }
+
+        return result;
+    }
 }

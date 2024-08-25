@@ -7,9 +7,11 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using Fusion;
 
-public class StartSceneManager : MonoBehaviour
+public class StartStateManager : MonoBehaviour
 {
     BasicControls controls;
+
+    public static StartStateManager instance;
 
     public GameManager.GAME_MODE gameMode;
     public GameManager.SELECTION_TURN selectionTurn;
@@ -56,6 +58,14 @@ public class StartSceneManager : MonoBehaviour
     public bool SecondGunToken { get; private set; } = false;
     public bool SkillToken { get; private set; } = false;
 
+    // 自分と相手の選択情報を相互伝達するためのオブジェクトを格納した変数。
+    public PlayerSelection mySelection;
+    public PlayerSelection theirSelection;
+
+    public void Awake()
+    {
+        instance = this;
+    }
 
     public void InitializeViews()
     {
@@ -136,21 +146,91 @@ public class StartSceneManager : MonoBehaviour
         }
     }
 
-    public void UpdateInfoText(int phaseNum)
+    public GunnerData SearchDatabasesForGunner(GunnerDataBase[] databaseArray, string ID)
     {
+        foreach (var database in databaseArray)
+        {
+            GunnerData result = database.SearchGunnerByID(ID);
 
-        string nextText = string.Format("PHASE-{0:00} {1}", phaseNum, phaseNames[phaseNum]);
-        progressText.SetText(nextText);
-        if (opponentGunner != null) { infoUI.opponentGunnerName = opponentGunner.GetGunnerName(); }
-        if (opponentGun01 != null) { infoUI.opponentFirstGunName = opponentGun01.GetGunName().Replace(" ", "\n"); }
-        if (opponentGun02 != null) { infoUI.opponentSecondGunName = opponentGun02.GetGunName().Replace(" ", "\n"); }
-        if (playerGunner != null) { infoUI.playerGunnerName = playerGunner.GetGunnerName(); }
-        if (playerGun01 != null) { infoUI.playerFirstGunName = playerGun01.GetGunName().Replace(" ", "\n"); }
-        if (playerGun02 != null) { infoUI.playerSecondGunName = playerGun02.GetGunName().Replace(" ", "\n"); }
-        infoUI.UpdateSelectionText();
+            if(result == null)
+            {
+                continue;
+            }
+            else
+            {
+                return result;
+            }
+        }
+
+        return null;
     }
 
-    public void UpdateSelectionData(int phaseNum)
+    public GunsData SearchDatabasesForGun(GunsDataBase[] databaseArray, string ID) 
+    {
+        foreach (var database in databaseArray)
+        {
+            GunsData result = database.SearchGunByID(ID);
+
+            if (result == null)
+            {
+                continue;
+            }
+            else
+            {
+                return result;
+            }
+        }
+
+        return null;
+    }
+
+    public SkillData SearchGunnerForSkill(GunnerData gunnerData, string ID) 
+    {
+        if (gunnerData == null) { return null; }
+        SkillData result = gunnerData.SearchSkillByID(ID);
+        return result;
+    }
+
+    public void UpdateMySelectionData()
+    {
+        mySelection.SelectedGunnerData = playerGunner;
+        mySelection.SelectedGun01Data = playerGun01;
+        mySelection.SelectedGun02Data = playerGun02;
+        mySelection.SelectedSkillData = playerSkill;
+    }
+
+    public void UpdateTheirSelectionData()
+    {
+        GunnerDataBase[] gunnerDataBaseArray = { gunnerDataBase01, gunnerDataBase02, gunnerDataBase03, gunnerDataBase04 };
+        GunsDataBase[] gunsDataBaseArray = { gunsDataBase01, gunsDataBase02, gunsDataBase03, gunsDataBase04 };
+
+        opponentGunner = SearchDatabasesForGunner(gunnerDataBaseArray, theirSelection.GunnerID);
+        opponentGun01 = SearchDatabasesForGun(gunsDataBaseArray, theirSelection.Gun01ID);
+        opponentGun02 = SearchDatabasesForGun(gunsDataBaseArray, theirSelection.Gun02ID);
+        opponentSkill = SearchGunnerForSkill(opponentGunner, theirSelection.SkillID);
+    }
+
+    public void UpdateInfoText(int phaseNum)
+    {
+        string nextText = string.Format("PHASE-{0:00} {1}", phaseNum, phaseNames[phaseNum]);
+        progressText.SetText(nextText);
+
+        if (phaseNum > 1) 
+        { 
+            UpdateMySelectionData();
+            // UpdateTheirSelectionData();
+
+            if (opponentGunner != null) { infoUI.opponentGunnerName = opponentGunner.GetGunnerName(); }
+            if (opponentGun01 != null) { infoUI.opponentFirstGunName = opponentGun01.GetGunName().Replace(" ", "\n"); }
+            if (opponentGun02 != null) { infoUI.opponentSecondGunName = opponentGun02.GetGunName().Replace(" ", "\n"); }
+            if (playerGunner != null) { infoUI.playerGunnerName = playerGunner.GetGunnerName(); }
+            if (playerGun01 != null) { infoUI.playerFirstGunName = playerGun01.GetGunName().Replace(" ", "\n"); }
+            if (playerGun02 != null) { infoUI.playerSecondGunName = playerGun02.GetGunName().Replace(" ", "\n"); }
+            infoUI.UpdateSelectionText();
+        }
+    }
+
+    public void OrganizeSelectors(int phaseNum)
     {
         if (phaseNum == 1)
         {
@@ -234,7 +314,7 @@ public class StartSceneManager : MonoBehaviour
             if (item.activeSelf) { item.SetActive(false); }
         }
         nextView.SetActive(true);
-        UpdateSelectionData(nextPhaseNum);
+        OrganizeSelectors(nextPhaseNum);
         UpdateInfoText(nextPhaseNum);
         UpdateControls(nextPhaseNum);
     }

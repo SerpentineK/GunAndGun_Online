@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19a5467f6632b141a123c36354f5501, type: 3}
   m_Name: GunsDataBase - OverHeat
   m_EditorClassIdentifier: 
-  gunsDataLists:
-  - {fileID: 11400000, guid: 6adb0ad596e5300438566de2a5894a08, type: 2}
+  gunsDataList:
   - {fileID: 11400000, guid: 8526661b187f07f4e9173db30345cdc6, type: 2}
+  - {fileID: 11400000, guid: 6adb0ad596e5300438566de2a5894a08, type: 2}
   - {fileID: 11400000, guid: 4187fee09cede2d4d943657f6a249bd6, type: 2}

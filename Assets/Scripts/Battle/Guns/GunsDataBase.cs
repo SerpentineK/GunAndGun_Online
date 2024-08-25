@@ -5,7 +5,26 @@ using UnityEngine;
 
 public class GunsDataBase : ScriptableObject
 {
-    [SerializeField] private List<GunsData> gunsDataLists = new List<GunsData>();
+    [SerializeField] private List<GunsData> gunsDataList = new List<GunsData>();
 
-    public List<GunsData> GetGunsDataLists() { return gunsDataLists; }
+    public List<GunsData> GetGunsDataList() { return gunsDataList; }
+
+    public GunsData SearchGunByID(string ID)
+    {
+        GunsData result = null;
+
+        foreach (var data in gunsDataList)
+        {
+            if (data.GetGunId() == ID)
+            {
+                result = data;
+            }
+            else 
+            { 
+                continue; 
+            }
+        }
+
+        return result;
+    }
 }

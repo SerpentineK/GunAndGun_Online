@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class StartState : MonoBehaviour, IState
 {
     [SerializeField] private GameManager GM;
-    [SerializeField] private StartSceneManager SSM;
+    [SerializeField] private StartStateManager SSM;
 
     // ゲームモード(1セット、2セット、アンリミテッド1セット、アンリミテッド2セット)と
     // カードプール(2ブロック4種類)の決定は対戦部屋を建てる段階でやりたい。
