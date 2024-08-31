@@ -73,13 +73,23 @@ public class PlayerSelection : NetworkBehaviour
     [Networked] public string Gun02ID { get; private set; }
     [Networked] public string SkillID { get; private set; }
 
-    // 選択の手番が回ってきているか否かのbool値。
-    public bool IsSelectionTurn;
+    // 特定の項目について選択を終えているかについてのbool値。
+    public bool isFinished = false;
 
     // Spawnedでローカル環境がStateAuthorityをこのオブジェクトについて持っていればSSMのmySelectionに、持っていなければtheirSelectionに入れる。
+    // ついでにOnline判定もSpawnedでStartStateにぶち込む。
     public override void Spawned()
     {
-        if (Object.HasStateAuthority) { StartStateManager.instance.mySelection = this; }
-        else { StartStateManager.instance.theirSelection = this; }
+        if (Object.HasStateAuthority) 
+        { 
+            StartStateManager.instance.mySelection = this;
+            StartState.isOnline = true;
+        }
+        else 
+        { 
+            StartStateManager.instance.theirSelection = this; 
+        }
+
+        
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -32,16 +33,17 @@ public class StartState : MonoBehaviour, IState
 
     public enum SUB_STATE
     {
-        INITIAL,
-        WAITING,
-        GUNNER_SELECTION,
-        GUN01_SELECTION,
-        GUN02_SELECTION,
-        SKILL_SELECTION
+        INITIAL,            // 最初、表示が組みあがる前の待機時間
+        WAITING,            // 相手の選択待機
+        GUNNER_SELECTION,   // 銃士選択
+        GUN01_SELECTION,    // 右手機銃選択
+        GUN02_SELECTION,    // 左手機銃選択
+        SKILL_SELECTION     // 技能選択
     }
 
     private SelectionPattern selectionPattern;
 
+    // SINGLEモード先手のパターン
     private readonly SUB_STATE[] pattern_Single01 = 
     {
         SUB_STATE.INITIAL,
@@ -54,6 +56,7 @@ public class StartState : MonoBehaviour, IState
         SUB_STATE.SKILL_SELECTION
     };
 
+    // SINGLEモード後手のパターン
     private readonly SUB_STATE[] pattern_Single02 =
     {
         SUB_STATE.INITIAL,
@@ -66,6 +69,7 @@ public class StartState : MonoBehaviour, IState
         SUB_STATE.SKILL_SELECTION
     };
 
+    // DOUBLEモードのパターン
     private readonly SUB_STATE[] pattern_Double =
     {
         SUB_STATE.INITIAL,
@@ -78,9 +82,13 @@ public class StartState : MonoBehaviour, IState
         SUB_STATE.SKILL_SELECTION
     };
 
-    private SUB_STATE[] myPattern;
+    private List<SUB_STATE> myPattern;
 
-    IEnumerator<SUB_STATE> enumerator;
+    // IEnumeratorのMoveNext()とCurrentで各パターンの進行を管理する。
+    private IEnumerator<SUB_STATE> enumerator = null;
+
+    // Onlineか否かを判別し、OnlineでなければInStateの処理を回避し続ける。
+    public static bool isOnline = false;
 
     public void DeterminePattern()
     {
@@ -90,15 +98,15 @@ public class StartState : MonoBehaviour, IState
                 switch (SSM.selectionTurn)
                 {
                     case GameManager.SELECTION_TURN.FIRST:
-                        myPattern = pattern_Single01;
+                        myPattern = pattern_Single01.ToList();
                         break;
                     case GameManager.SELECTION_TURN.SECOND:
-                        myPattern = pattern_Single02;
+                        myPattern = pattern_Single02.ToList();
                         break;
                 }
                 break;
             case GameManager.CARD_SETS.DOUBLE:
-                myPattern = pattern_Double;
+                myPattern = pattern_Double.ToList();
                 break;
         }
     }
@@ -108,7 +116,7 @@ public class StartState : MonoBehaviour, IState
         // ローディング画面をいずれ作るので、それを表示するフェーズ
         phase = 0;
         DeterminePattern();
-        enumerator = myPattern.GetEnumerator() as IEnumerator<SUB_STATE>;
+        enumerator = myPattern.GetEnumerator();
     }
     public void ExitState()
     {
@@ -117,39 +125,45 @@ public class StartState : MonoBehaviour, IState
 
     public void InState()
     {
-        if (enumerator.Current == SUB_STATE.INITIAL)
+        // Onlineか否かを判別し、OnlineでなければInStateの処理を回避し続ける。
+        if (!isOnline)
+        {
+            return;
+        }
+
+        if (enumerator?.Current == SUB_STATE.INITIAL)
         {
             SSM.InitializeViews();
             enumerator.MoveNext();
             SSM.ChangeToView(enumerator.Current);
         }
-        else if (enumerator.Current == SUB_STATE.GUNNER_SELECTION) 
+        else if (enumerator?.Current == SUB_STATE.GUNNER_SELECTION) 
         {
-            if (SSM.GunnerToken) 
+            if (SSM.mySelection.isFinished) 
             {
                 enumerator.MoveNext();
                 SSM.ChangeToView(enumerator.Current);
             }
         }
-        else if (enumerator.Current == SUB_STATE.GUN01_SELECTION)
+        else if (enumerator?.Current == SUB_STATE.GUN01_SELECTION)
         {
-            if (SSM.FirstGunToken)
+            if (SSM.mySelection.isFinished)
             {
                 enumerator.MoveNext();
                 SSM.ChangeToView(enumerator.Current);
             }
         }
-        else if (enumerator.Current == SUB_STATE.GUN02_SELECTION)
+        else if (enumerator?.Current == SUB_STATE.GUN02_SELECTION)
         {
-            if (SSM.SecondGunToken)
+            if (SSM.mySelection.isFinished)
             {
                 enumerator.MoveNext();
                 SSM.ChangeToView(enumerator.Current);
             }
         }
-        else if (enumerator.Current == SUB_STATE.WAITING) 
+        else if (enumerator?.Current == SUB_STATE.WAITING) 
         {
-            if (SSM.mySelection.IsSelectionTurn)
+            if (SSM.theirSelection.isFinished)
             {
                 enumerator.MoveNext();
                 SSM.ChangeToView(enumerator.Current);

@@ -58,11 +58,6 @@ public class StartStateManager : MonoBehaviour
     private readonly GameManager.CARD_POOL[] block01 = { GameManager.CARD_POOL.GunAndGun, GameManager.CARD_POOL.OverHeat };
     private readonly GameManager.CARD_POOL[] block02 = { GameManager.CARD_POOL.WShout, GameManager.CARD_POOL.UltraBommy };
 
-    public bool GunnerToken { get; private set; } = false;
-    public bool FirstGunToken { get; private set; } = false;
-    public bool SecondGunToken { get; private set; } = false;
-    public bool SkillToken { get; private set; } = false;
-
     // 自分と相手の選択情報を相互伝達するためのオブジェクトを格納した変数。
     public PlayerSelection mySelection;
     public PlayerSelection theirSelection;
@@ -354,14 +349,7 @@ public class StartStateManager : MonoBehaviour
         UpdateInfoText(substate);
         UpdateControls(substate);
 
-        if (substate == StartState.SUB_STATE.WAITING)
-        {
-            mySelection.IsSelectionTurn = false;
-        }
-        else
-        {
-            mySelection.IsSelectionTurn = true;
-        }
+        mySelection.isFinished = false;
     }
 
     public void ForceUpdateLayoutGroup(HorizontalLayoutGroup layoutGroup)
@@ -389,7 +377,7 @@ public class StartStateManager : MonoBehaviour
             if (clickedObject.TryGetComponent(out GunnerConfirmButton clickedButton))
             {
                 playerGunner = clickedButton.confirmedData;
-                GunnerToken = true;
+                mySelection.isFinished = true;
             }
             else if (clickedObject.TryGetComponent(out GunnerSelectable clickedGunner))
             {
@@ -429,7 +417,7 @@ public class StartStateManager : MonoBehaviour
             if (clickedObject.TryGetComponent(out GunConfirmButton clickedButton))
             {
                 playerGun01 = clickedButton.confirmedData;
-                FirstGunToken = true;
+                mySelection.isFinished = true;
             }
             else if (clickedObject.TryGetComponent(out GunCandidate clickedGun))
             {
@@ -459,7 +447,7 @@ public class StartStateManager : MonoBehaviour
             if (clickedObject.TryGetComponent(out GunConfirmButton clickedButton))
             {
                 playerGun02 = clickedButton.confirmedData;
-                SecondGunToken = true;
+                mySelection.isFinished = true;
             }
             else if (clickedObject.TryGetComponent(out GunCandidate clickedGun))
             {
@@ -490,7 +478,7 @@ public class StartStateManager : MonoBehaviour
             if (clickedObject.TryGetComponent(out SkillConfirmButton clickedButton))
             {
                 playerSkill = clickedButton.data;
-                SkillToken = true;
+                mySelection.isFinished = true;
             }
             else if (clickedObject.TryGetComponent(out SpriteRenderer clickedSprite))
             {
