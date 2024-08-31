@@ -32,6 +32,7 @@ public class StartState : MonoBehaviour, IState
 
     public enum SUB_STATE
     {
+        INITIAL,
         WAITING,
         GUNNER_SELECTION,
         GUN01_SELECTION,
@@ -41,22 +42,64 @@ public class StartState : MonoBehaviour, IState
 
     private SelectionPattern selectionPattern;
 
-    public void DetermineSelectionPattern()
+    private readonly SUB_STATE[] pattern_Single01 = 
     {
-        if (SSM.cardSetNumber == GameManager.CARD_SETS.SINGLE)
+        SUB_STATE.INITIAL,
+        SUB_STATE.GUNNER_SELECTION,
+        SUB_STATE.WAITING,
+        SUB_STATE.GUN01_SELECTION,
+        SUB_STATE.WAITING,
+        SUB_STATE.WAITING,
+        SUB_STATE.GUN02_SELECTION,
+        SUB_STATE.SKILL_SELECTION
+    };
+
+    private readonly SUB_STATE[] pattern_Single02 =
+    {
+        SUB_STATE.INITIAL,
+        SUB_STATE.WAITING,
+        SUB_STATE.GUNNER_SELECTION,
+        SUB_STATE.WAITING,
+        SUB_STATE.GUN01_SELECTION,
+        SUB_STATE.GUN02_SELECTION,
+        SUB_STATE.WAITING,
+        SUB_STATE.SKILL_SELECTION
+    };
+
+    private readonly SUB_STATE[] pattern_Double =
+    {
+        SUB_STATE.INITIAL,
+        SUB_STATE.GUNNER_SELECTION,
+        SUB_STATE.WAITING,
+        SUB_STATE.GUN01_SELECTION,
+        SUB_STATE.WAITING,
+        SUB_STATE.GUN02_SELECTION,
+        SUB_STATE.WAITING,
+        SUB_STATE.SKILL_SELECTION
+    };
+
+    private SUB_STATE[] myPattern;
+
+    IEnumerator<SUB_STATE> enumerator;
+
+    public void DeterminePattern()
+    {
+        switch (SSM.cardSetNumber)
         {
-            if (SSM.selectionTurn == GameManager.SELECTION_TURN.FIRST)
-            {
-                selectionPattern = SelectionPattern.SINGLE_FIRST;
-            }
-            else if (SSM.selectionTurn == GameManager.SELECTION_TURN.SECOND)
-            {
-                selectionPattern = SelectionPattern.SINGLE_SECOND;
-            }
-        }
-        else if (SSM.cardSetNumber == GameManager.CARD_SETS.DOUBLE)
-        {
-            selectionPattern = SelectionPattern.DOUBLE;
+            case GameManager.CARD_SETS.SINGLE:
+                switch (SSM.selectionTurn)
+                {
+                    case GameManager.SELECTION_TURN.FIRST:
+                        myPattern = pattern_Single01;
+                        break;
+                    case GameManager.SELECTION_TURN.SECOND:
+                        myPattern = pattern_Single02;
+                        break;
+                }
+                break;
+            case GameManager.CARD_SETS.DOUBLE:
+                myPattern = pattern_Double;
+                break;
         }
     }
 
@@ -64,7 +107,8 @@ public class StartState : MonoBehaviour, IState
     {
         // ローディング画面をいずれ作るので、それを表示するフェーズ
         phase = 0;
-        DetermineSelectionPattern();
+        DeterminePattern();
+        enumerator = myPattern.GetEnumerator() as IEnumerator<SUB_STATE>;
     }
     public void ExitState()
     {
@@ -72,6 +116,48 @@ public class StartState : MonoBehaviour, IState
     }
 
     public void InState()
+    {
+        if (enumerator.Current == SUB_STATE.INITIAL)
+        {
+            SSM.InitializeViews();
+            enumerator.MoveNext();
+            SSM.ChangeToView(enumerator.Current);
+        }
+        else if (enumerator.Current == SUB_STATE.GUNNER_SELECTION) 
+        {
+            if (SSM.GunnerToken) 
+            {
+                enumerator.MoveNext();
+                SSM.ChangeToView(enumerator.Current);
+            }
+        }
+        else if (enumerator.Current == SUB_STATE.GUN01_SELECTION)
+        {
+            if (SSM.FirstGunToken)
+            {
+                enumerator.MoveNext();
+                SSM.ChangeToView(enumerator.Current);
+            }
+        }
+        else if (enumerator.Current == SUB_STATE.GUN02_SELECTION)
+        {
+            if (SSM.SecondGunToken)
+            {
+                enumerator.MoveNext();
+                SSM.ChangeToView(enumerator.Current);
+            }
+        }
+        else if (enumerator.Current == SUB_STATE.WAITING) 
+        {
+            if (SSM.mySelection.IsSelectionTurn)
+            {
+                enumerator.MoveNext();
+                SSM.ChangeToView(enumerator.Current);
+            }
+        }
+    }
+
+    /* public void InState()
     {
         if (phase == 0) 
         {
@@ -110,7 +196,7 @@ public class StartState : MonoBehaviour, IState
                 
             }
         }
-    }
+    } */
 
 
 }

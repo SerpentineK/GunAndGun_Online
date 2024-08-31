@@ -40,7 +40,12 @@ public class StartStateManager : MonoBehaviour
 
     [SerializeField] private GameObject viewParent;
     [SerializeField] private GameObject[] viewArray;
+    [SerializeField] private GameObject initialView;
     [SerializeField] private StandbyView standbyView;
+    [SerializeField] private GameObject gunnerView;
+    [SerializeField] private GameObject gun01View;
+    [SerializeField] private GameObject gun02View;
+    [SerializeField] private GameObject skillView;
     [SerializeField] private SelectionInfoUI infoUI;
     [SerializeField] private TMP_Text progressText;
     [SerializeField] private GunnerSelector gunnerSelector;
@@ -210,12 +215,29 @@ public class StartStateManager : MonoBehaviour
         opponentSkill = SearchGunnerForSkill(opponentGunner, theirSelection.SkillID);
     }
 
-    public void UpdateInfoText(int phaseNum)
+    public void UpdateInfoText(StartState.SUB_STATE substate)
     {
-        string nextText = string.Format("PHASE-{0:00} {1}", phaseNum, phaseNames[phaseNum]);
+        string nextText = null;
+
+        switch (substate)
+        {
+            case StartState.SUB_STATE.GUNNER_SELECTION:
+                nextText = "PHASE-01 eŽm‘I‘ð";
+                break;
+            case StartState.SUB_STATE.GUN01_SELECTION:
+                nextText = "PHASE-02 ‘æˆê‹@e‘I‘ð";
+                break;
+            case StartState.SUB_STATE.GUN02_SELECTION:
+                nextText = "PHASE-03 ‘æ“ñ‹@e‘I‘ð";
+                break;
+            case StartState.SUB_STATE.SKILL_SELECTION:
+                nextText = "PHASE-04 ‹Z”\‘I‘ð";
+                break;
+        }
+
         progressText.SetText(nextText);
 
-        if (phaseNum > 1) 
+        if (substate != StartState.SUB_STATE.INITIAL) 
         { 
             UpdateMySelectionData();
             // UpdateTheirSelectionData();
@@ -230,9 +252,9 @@ public class StartStateManager : MonoBehaviour
         }
     }
 
-    public void OrganizeSelectors(int phaseNum)
+    public void OrganizeSelectors(StartState.SUB_STATE substate)
     {
-        if (phaseNum == 1)
+        if (substate == StartState.SUB_STATE.GUNNER_SELECTION)
         {
             SetGunnerPool();
             if (cardSetNumber == GameManager.CARD_SETS.SINGLE) 
@@ -241,7 +263,7 @@ public class StartStateManager : MonoBehaviour
             }
             gunnerSelector.OrganizeGunners();
         }
-        else if (phaseNum == 2)
+        else if (substate == StartState.SUB_STATE.GUN01_SELECTION)
         {
             SetGunPool(firstGunSelector);
             List<GunsData> selectedList = new();
@@ -252,7 +274,7 @@ public class StartStateManager : MonoBehaviour
             firstGunSelector.inavailableGunsDataList = selectedList;
             firstGunSelector.OrganizeGuns();
         }
-        else if (phaseNum == 3)
+        else if (substate == StartState.SUB_STATE.GUN02_SELECTION)
         {
             SetGunPool(secondGunSelector);
             List<GunsData> selectedList = new();
@@ -265,30 +287,30 @@ public class StartStateManager : MonoBehaviour
             secondGunSelector.inavailableGunsDataList = selectedList;
             secondGunSelector.OrganizeGuns();
         }
-        else if (phaseNum == 4)
+        else if (substate == StartState.SUB_STATE.SKILL_SELECTION)
         {
             skillSelector.selectedGunnerData = playerGunner;
             skillSelector.OrganizeSkills();
         }
     }
 
-    public void UpdateControls(int phaseNum)
+    public void UpdateControls(StartState.SUB_STATE substate)
     {
-        if (phaseNum == 1)
+        if (substate == StartState.SUB_STATE.GUNNER_SELECTION)
         {
             controls.startup.selectCandidate.performed += ClickInGunnerSelection;
         }
-        else if(phaseNum == 2)
+        else if(substate == StartState.SUB_STATE.GUN01_SELECTION)
         {
             controls.startup.selectCandidate.performed -= ClickInGunnerSelection;
             controls.startup.selectCandidate.performed += ClickInFirstGunSelection;
         }
-        else if (phaseNum == 3)
+        else if (substate == StartState.SUB_STATE.GUN02_SELECTION)
         {
             controls.startup.selectCandidate.performed -= ClickInFirstGunSelection;
             controls.startup.selectCandidate.performed += ClickInSecondGunSelection;
         }
-        else if (phaseNum == 4)
+        else if (substate == StartState.SUB_STATE.SKILL_SELECTION)
         {
             controls.startup.selectCandidate.performed -= ClickInSecondGunSelection;
             controls.startup.selectCandidate.performed += ClickInSkillSelection;
@@ -306,17 +328,40 @@ public class StartStateManager : MonoBehaviour
         standbyView.UpdateStandbyInfo();
     }
 
-    public void ChangeToView(int nextPhaseNum)
+    public GameObject AssociateSubstateToView(StartState.SUB_STATE substate) 
     {
-        GameObject nextView = viewArray[nextPhaseNum];
+        switch (substate)
+        { 
+            case StartState.SUB_STATE.INITIAL: return initialView;
+            case StartState.SUB_STATE.WAITING: return standbyView.gameObject;
+            case StartState.SUB_STATE.GUNNER_SELECTION: return gunnerView;
+            case StartState.SUB_STATE.GUN01_SELECTION: return gun01View;
+            case StartState.SUB_STATE.GUN02_SELECTION: return gun02View;
+            case StartState.SUB_STATE.SKILL_SELECTION: return skillView;
+        }
+        return null;
+    }
+
+    public void ChangeToView(StartState.SUB_STATE substate)
+    {
+        GameObject nextView = AssociateSubstateToView(substate);
         foreach (var item in viewArray)
         {
             if (item.activeSelf) { item.SetActive(false); }
         }
         nextView.SetActive(true);
-        OrganizeSelectors(nextPhaseNum);
-        UpdateInfoText(nextPhaseNum);
-        UpdateControls(nextPhaseNum);
+        OrganizeSelectors(substate);
+        UpdateInfoText(substate);
+        UpdateControls(substate);
+
+        if (substate == StartState.SUB_STATE.WAITING)
+        {
+            mySelection.IsSelectionTurn = false;
+        }
+        else
+        {
+            mySelection.IsSelectionTurn = true;
+        }
     }
 
     public void ForceUpdateLayoutGroup(HorizontalLayoutGroup layoutGroup)

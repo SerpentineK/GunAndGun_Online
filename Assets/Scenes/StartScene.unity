@@ -16109,7 +16109,12 @@ MonoBehaviour:
   - {fileID: 1101325631}
   - {fileID: 945992982}
   - {fileID: 207761908}
+  initialView: {fileID: 1461229077}
   standbyView: {fileID: 479771595}
+  gunnerView: {fileID: 455032739}
+  gun01View: {fileID: 1101325631}
+  gun02View: {fileID: 945992982}
+  skillView: {fileID: 207761908}
   infoUI: {fileID: 2105868855}
   progressText: {fileID: 1788731097}
   gunnerSelector: {fileID: 924303040}

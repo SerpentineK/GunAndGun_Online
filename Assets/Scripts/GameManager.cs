@@ -42,7 +42,8 @@ public class GameManager : NetworkBehaviour
         SIMULTANEOUS
     }
 
-    public GAME_MODE gameMode = GAME_MODE.NORMAL;
-    public CARD_SETS cardSets = CARD_SETS.SINGLE;
-    public List<CARD_POOL> cardPools;
+    public static GAME_MODE gameMode = GAME_MODE.NORMAL;
+    public static CARD_SETS cardSets = CARD_SETS.SINGLE;
+    public static List<CARD_POOL> cardPools;
+    public static SELECTION_TURN selectionTurn;
 }
