@@ -9,66 +9,38 @@ public class MenuStateManager : MonoBehaviour
 {
     public static MenuStateManager instance;
 
-    // セッションIDとニックネームを入力するためのウィンドウ
-    [SerializeField] private GameObject inputWindow;
-    [SerializeField] private TMP_InputField field_sessionID;
-    [SerializeField] private TMP_InputField field_nickname;
-
-    // 各種ボタン
-    [SerializeField] private Button battleButton;
-    [SerializeField] private Button bossButton;
-    [SerializeField] private Button tutorialButton;
-
-    // NetworkRunnerのプレハブ
-    [SerializeField] private GameObject RunnerPrefab;
-
     // NetworkRunnerの格納用変数
-    private NetworkRunner runner;
+    public NetworkRunner runner;
+
+    // 各種設定
+    public GameManager.GAME_MODE gameMode;
+    public GameManager.SELECTION_TURN selectionTurn;
+    public GameManager.CARD_SETS cardSetNumber;
+    public GameManager.CARD_POOL[] cardPools;
+    public GameManager.CARD_BLOCK cardBlock;
+
+    // 各種データベース
+    [SerializeField] private GunnerDataBase gunnerDataBase01;
+    [SerializeField] private GunnerDataBase gunnerDataBase02;
+    [SerializeField] private GunnerDataBase gunnerDataBase03;
+    [SerializeField] private GunnerDataBase gunnerDataBase04;
+
+    [SerializeField] private GunsDataBase gunsDataBase01;
+    [SerializeField] private GunsDataBase gunsDataBase02;
+    [SerializeField] private GunsDataBase gunsDataBase03;
+    [SerializeField] private GunsDataBase gunsDataBase04;
+
+    // 各メニューのGameObject
+    [SerializeField] InitialMenu initialMenu;
+    [SerializeField] BattleStandbyMenu battleStandbyMenu;
 
     public void Awake()
     {
         instance = this;
     }
 
-    public void ToggleButtons(bool result)
+    public void EnableInitial()
     {
-        battleButton.enabled = result;
-        bossButton.enabled = result;
-        tutorialButton.enabled = result;
-    }
-
-    public void OnButtonPressed_Battle()
-    {
-        if (!inputWindow.activeSelf) { inputWindow.SetActive(true); }
-        ToggleButtons(false);
-    }
-
-    public void OnButtonPressed_Boss()
-    {
-
-    }
-
-    public void OnButtonPressed_Tutorial()
-    {
-
-    }
-
-    public void OnButtonPressed_Entry()
-    {
-        string sessionID = field_sessionID.text;
-        string nickname = field_nickname.text;
-        runner = Instantiate(RunnerPrefab).GetComponent<NetworkRunner>();
-        runner.StartGame(new StartGameArgs
-        {
-            SessionName = sessionID,
-            PlayerCount = 2,
-            IsOpen = true,
-        });
-    }
-
-    public void OnButtonPressed_Exit() 
-    {
-        if (inputWindow.activeSelf) { inputWindow.SetActive(false); }
-        ToggleButtons(true);
+        if (!initialMenu.gameObject.activeSelf) { initialMenu.gameObject.SetActive(true); }
     }
 }
