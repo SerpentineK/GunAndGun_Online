@@ -18,17 +18,8 @@ public class SkillTarget : MonoBehaviour
     public void InputSkillData()
     {
         skillNameArea.SetText(data.GetSkillName());
-        int cost = data.GetSkillCost();
-        string costText;
-        if (cost > 0)
-        {
-            costText = string.Format("{0:00}", cost);
-        }
-        else
-        {
-            costText = "X";
-        }
-        costArea.SetText(costText);
+        data.UpdateCostValue();
+        costArea.SetText(data.skillCostValue.MyStringValue);
         effectArea.SetText(data.GetSkillEffectText());
         flavorTextArea.SetText(data.GetSkillFlavorText());
         Sprite sprite = data.GetSkillGraphics();

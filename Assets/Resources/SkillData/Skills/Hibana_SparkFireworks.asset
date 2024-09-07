@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPool: 0
   skillId: 02
-  skillCost: 0
+  skillCost: X
   skillName: "\u9583\u5149\u82B1\u706B"
-  skillEffectText: "\u76F8\u624B\u306B X-3 HIT\u3002X\u306F\u81EA\u5206\u306E\u30DC\u30EB\u30C6\u30FC\u30B8\u306E\u679A\u6570\u306B\u7B49\u3057\u3044\u3002"
+  skillEffectText: "\u76F8\u624B\u306B X-3 HIT\u3002"
   skillFlavorText: "\u300C\u3044\u304F\u3088\u300D"
   skillGraphics: {fileID: 21300000, guid: 9a0fa6e6cdd06924bb4b9be92e742fe6, type: 3}
+  effectHub: {fileID: 0}

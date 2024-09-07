@@ -32,7 +32,8 @@ public class Skill : MonoBehaviour
 
     public void InputSkillData()
     {
-        cost = data.GetSkillCost();
+        data.UpdateCostValue();
+        cost = data.skillCostValue.MyIntValue;
         skillCostArea.SetText(string.Format("{0:00}",cost));
         skillNameArea.SetText(data.GetSkillName());
         spriteRenderer.sprite = data.GetSkillGraphics();
