@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
+// ゲーム本体にオーバーレイ表示されるメニュー画面
 public class OverlayMenu : MonoBehaviour
 {
     [SerializeField] private GameObject activateButton;
@@ -17,16 +18,7 @@ public class OverlayMenu : MonoBehaviour
     [SerializeField] private GameObject creditsMenu;
 
     // returnボタン実装用の変数
-    // 現在表示されているメニューの深度と種別、そして現在表示されているMenuGameObjectを表す
-    enum MenuType 
-    {
-        None,
-        Settings,
-        Rules,
-        Dictionary,
-        Credits
-    }
-
+    // 現在表示されているメニューの深度と現在表示されているMenuGameObjectを表す
     private int depth;
     private GameObject currentMenu;
 
@@ -35,18 +27,34 @@ public class OverlayMenu : MonoBehaviour
         if (myObject.activeSelf != state) { myObject.SetActive(state); }
     }
 
+    // 読み込み時にメニュー本体をDeactivate、メニュー表示用ボタンだけActivateする
     public void Awake()
     {
         ToggleGameObject(menuOutline, false);
         ToggleGameObject(activateButton, true);
     }
 
+    // メニュー表示用ボタンが押された時の処理
     public void OnButtonPressed_Activate()
     {
+        // メニュー本体をActivate、表示ボタンと「戻る」ボタンをDeactivate
         ToggleGameObject(menuOutline, true);
         ToggleGameObject(activateButton, false);
         ToggleGameObject(returnButton, false);
-        InitialMenu.instance.ToggleButtons(false);
+
+        // メニューに含まれないSelectableについてInteractableをfalseに、それ以外はtrueに設定
+        foreach (var selectable in Selectable.allSelectablesArray)
+        {
+            if (selectable.gameObject.layer != 7)
+            {
+                selectable.interactable = false;
+            }
+            else
+            {
+                selectable.interactable = true;
+            }
+        }
+
         depth = 0;
         ChangeMenu(topMenu);
     }
@@ -55,7 +63,19 @@ public class OverlayMenu : MonoBehaviour
     {
         ToggleGameObject(menuOutline, false);
         ToggleGameObject(activateButton, true);
-        InitialMenu.instance.ToggleButtons(true);
+
+        // メニューに含まれないSelectableについてInteractableをtrueに、それ以外はfalseに設定
+        foreach (var selectable in Selectable.allSelectablesArray)
+        {
+            if (selectable.gameObject.layer != 7)
+            {
+                selectable.interactable = false;
+            }
+            else
+            {
+                selectable.interactable = true;
+            }
+        }
     }
 
     public void OnButtonPressed_Settings()

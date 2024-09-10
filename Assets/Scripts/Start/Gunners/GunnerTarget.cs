@@ -34,16 +34,8 @@ public class GunnerTarget : MonoBehaviour
         gunnerImageArea.sprite = data.GetGunnerImage();
         gunnerNameArea.SetText(data.GetGunnerName());
         agilityArea.SetText(string.Format("{0:00}", data.GetGunnerAgility()));
-        string displayedGunnerHand;
-        if (data.GetGunnerHand() != 0)
-        {
-            displayedGunnerHand = string.Format("{0:00}", data.GetGunnerHand());
-        }
-        else
-        {
-            displayedGunnerHand = "X";
-        }
-        handArea.SetText(displayedGunnerHand);
+        data.UpdateHandValue();
+        handArea.SetText(data.gunnerHandValue.MyStringValue);
         passiveAbilityArea.SetText(data.GetGunnerAbility());
         flavorTextArea.SetText(data.GetGunnerFlavorText());
         SkillData[] skills = data.GetSkillArray();

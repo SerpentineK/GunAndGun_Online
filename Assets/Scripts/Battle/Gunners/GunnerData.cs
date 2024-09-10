@@ -16,7 +16,7 @@ public class GunnerData : ScriptableObject
     [TextArea(3, 10)]
     [SerializeField] private string gunnerFlavorText;
     [SerializeField] private int gunnerAgility;
-    [SerializeField] private int gunnerHand;
+    [SerializeField] private string gunnerHand;
     [SerializeField] private Sprite gunnerImage;
     [SerializeField] private SkillData[] skillArray = new SkillData[3];
     [SerializeField] private Vector3 iconVector;
@@ -24,9 +24,19 @@ public class GunnerData : ScriptableObject
     [SerializeField] private Color iconLabelColor;
     [SerializeField] private Vector3 playerScale;
     [SerializeField] private Vector3 opponentScale;
+    [SerializeField] private Sprite gunnerThumbnail;
+    [SerializeField] private Sprite gunnerDetailsImage;
 
     // 紐づいているEffectHub
     public EffectHub effectHub;
+
+    // 整数値intと「X」を同時に扱える「ExtendedValue型」の手札値（アハトの手札値がXなので）
+    public ExtendedValue gunnerHandValue = new();
+
+    public void UpdateHandValue()
+    {
+        gunnerHandValue.MyStringValue = gunnerHand;
+    }
 
     public GameManager.CARD_POOL GetCardPool() { return cardPool; }
     public string GetGunnerId() {  return gunnerId; }
@@ -35,7 +45,6 @@ public class GunnerData : ScriptableObject
     public string GetGunnerAbility() {  return gunnerAbility.Replace("\\n", "\n"); }
     public string GetGunnerFlavorText() {  return gunnerFlavorText.Replace("\\n", "\n"); }
     public int GetGunnerAgility() {  return gunnerAgility; }
-    public int GetGunnerHand() {  return gunnerHand; }
     public Sprite GetGunnerImage() {  return gunnerImage; }
     public SkillData[] GetSkillArray() {  return skillArray; }
     public Vector3 GetIconVector() {  return iconVector; }
@@ -62,4 +71,7 @@ public class GunnerData : ScriptableObject
 
         return result;
     }
+
+    public Sprite GetGunnerThumbnail() { return gunnerThumbnail; }
+    public Sprite GetGunnerDetails() { return gunnerDetailsImage; }
 }

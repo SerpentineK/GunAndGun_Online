@@ -29,7 +29,8 @@ public class Gunner : MonoBehaviour
         if (isPlayer) { gunnerImageArea.transform.localScale = data.GetPlayerScale(); }
         else { gunnerImageArea.transform.localScale = data.GetOpponentScale(); }
         agility = data.GetGunnerAgility();
-        hand = data.GetGunnerHand();
+        data.UpdateHandValue();
+        hand = data.gunnerHandValue.MyIntValue;
         passiveEffectText = data.GetGunnerAbility();
         flavorText = data.GetGunnerFlavorText();
         // selectable.mask.sprite = data.GetGunnerImage();

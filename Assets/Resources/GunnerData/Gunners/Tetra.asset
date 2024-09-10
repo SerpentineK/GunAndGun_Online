@@ -30,4 +30,6 @@ MonoBehaviour:
   iconLabelColor: {r: 1, g: 1, b: 1, a: 1}
   playerScale: {x: 30, y: 30, z: 30}
   opponentScale: {x: 20, y: 20, z: 20}
+  gunnerThumbnail: {fileID: 21300000, guid: 1ba9f01972990ac4f9289d34534cc933, type: 3}
+  gunnerDetailsImage: {fileID: 21300000, guid: b838ac0a607e0da46ad831ef63a5c1f7, type: 3}
   effectHub: {fileID: 11400000, guid: 17654bd7fa5f0fe4c8cad703bc95468f, type: 2}

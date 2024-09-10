@@ -20,7 +20,7 @@ MonoBehaviour:
     [\u672D] \u306F4\u3068\u306A\u308B\u3002"
   gunnerFlavorText: "\u6CBB\u5B89\u7DAD\u6301\u90E8\u968A\u3010\u8056\u6B4C\u968A\u3011\u306E\u901A\u4FE1\u62C5\u5F53\u306E\u5C11\u5E74\u3002\\n\u8907\u6570\u304B\u3064\u5E83\u7BC4\u56F2\u3092\u5BFE\u8C61\u3068\u3057\u305F\u53CC\u65B9\u5411\u901A\u4FE1\u306E\u4E2D\u7D99\u3092\u62C5\u3046\u3002"
   gunnerAgility: 3
-  gunnerHand: 0
+  gunnerHand: X
   gunnerImage: {fileID: 21300000, guid: f9602e4bb0a931246a59311010f65dfe, type: 3}
   skillArray:
   - {fileID: 11400000, guid: 533591b589afb2a4ab21d5d2cae4226c, type: 2}
@@ -31,4 +31,6 @@ MonoBehaviour:
   iconLabelColor: {r: 0, g: 0, b: 0, a: 1}
   playerScale: {x: 35, y: 35, z: 35}
   opponentScale: {x: 20, y: 20, z: 20}
+  gunnerThumbnail: {fileID: 21300000, guid: 69cf632c125474048aa1bbf1c99f35c1, type: 3}
+  gunnerDetailsImage: {fileID: 21300000, guid: f5aefe21229ba814cb3e479b598be769, type: 3}
   effectHub: {fileID: 11400000, guid: 564c583341e71af41a6464716234bfaa, type: 2}
