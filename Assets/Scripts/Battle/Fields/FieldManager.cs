@@ -113,9 +113,12 @@ public class FieldManager : MonoBehaviour
     public void CreateFullDeck(GunsData gunData)
     {
         List<CardData> cardDataList = gunData.GetDeckDatabase().GetCardDataLists();
+        
         // 現状、EffectHub側に対応するカードのデータは存在するがカードからEffectHubを検索することはできない。
         // そこで、一度この機銃のEffectHubをすべて読み込んでからそれを対応させる方法をとる。
+
         List<EffectHub> hubDataList = gunData.GetDeckDatabase().GetEffectHubDatabase().GetEffectHubList();
+
         foreach (var cardData in cardDataList)
         {
             EffectHub effectHub = null;

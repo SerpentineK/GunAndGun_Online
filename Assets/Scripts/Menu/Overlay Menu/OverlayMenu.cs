@@ -28,7 +28,6 @@ public class OverlayMenu : MonoBehaviour
     }
 
     private int depth;
-    private MenuType type;
     private GameObject currentMenu;
 
     public static void ToggleGameObject(GameObject myObject, bool state)
@@ -49,7 +48,6 @@ public class OverlayMenu : MonoBehaviour
         ToggleGameObject(returnButton, false);
         InitialMenu.instance.ToggleButtons(false);
         depth = 0;
-        type = MenuType.None;
         ChangeMenu(topMenu);
     }
 
@@ -63,28 +61,24 @@ public class OverlayMenu : MonoBehaviour
     public void OnButtonPressed_Settings()
     {
         depth = 1;
-        type = MenuType.Settings;
         ChangeMenu(settingsMenu);
     }
 
     public void OnButtonPressed_Rules()
     {
         depth = 1;
-        type = MenuType.Rules;
         ChangeMenu(rulesMenu);
     }
 
     public void OnButtonPressed_Dictionary()
     {
         depth = 1;
-        type = MenuType.Dictionary;
         ChangeMenu(dictionaryMenu);
     }
 
     public void OnButtonPressed_Credits()
     {
         depth = 1;
-        type = MenuType.Credits;
         ChangeMenu(creditsMenu);
     }
 
@@ -119,6 +113,7 @@ public class OverlayMenu : MonoBehaviour
             case 1:
                 ChangeMenu(topMenu);
                 return;
+            /*
             case 2:
                 switch (type)
                 {
@@ -138,6 +133,7 @@ public class OverlayMenu : MonoBehaviour
                         return;
                 }
                 return;
+            */
         }
     }
 }

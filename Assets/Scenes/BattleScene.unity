@@ -847,7 +847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 389161961}
-  reaction: {fileID: 0}
+  reaction: {fileID: 77209470}
   mechanism: {fileID: 868025558}
   discard: {fileID: 2109629940}
   voltage: {fileID: 7910117161186165688}
@@ -6604,9 +6604,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunnerDataBase: {fileID: 0}
   gunsDataBase: {fileID: 0}
-  gameMode: 0
-  cardSets: 0
-  cardPools: 
 --- !u!114 &1142804296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7657,7 +7654,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1289068630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7820,7 +7817,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1354405819
 MonoBehaviour:
   m_ObjectHideFlags: 0

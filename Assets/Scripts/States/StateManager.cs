@@ -20,7 +20,7 @@ public class StateManager : MonoBehaviour
     void Start()
     {
         SetStates();
-        SwitchStates(startS);
+        SwitchStates(playS);
     }
 
     void SetStates()
