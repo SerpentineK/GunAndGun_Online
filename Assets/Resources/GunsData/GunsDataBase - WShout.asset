@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f19a5467f6632b141a123c36354f5501, type: 3}
-  m_Name: GunsDataBase - WShout
+  m_Name: GunsDatabase - WShout
   m_EditorClassIdentifier: 
   gunsDataList:
   - {fileID: 11400000, guid: ac798972dbdf2b74cae021020a9e9b99, type: 2}
@@ -19,3 +19,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8fc389305f4671046b981db2ab9d7854, type: 2}
   - {fileID: 11400000, guid: 021374b10e48fcd4894ef5285823b36e, type: 2}
   - {fileID: 11400000, guid: 7de590b33b03f784e9f4e2563b257308, type: 2}
+  logo: {fileID: 21300000, guid: 5be26821ac14c4b4ab3229a9f7e36f74, type: 3}

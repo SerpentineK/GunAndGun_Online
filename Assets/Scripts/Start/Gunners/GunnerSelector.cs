@@ -15,7 +15,7 @@ public class GunnerSelector : MonoBehaviour
     public GunnerSelectable[] gunnerSelectables;
 
     // 使用する銃士のデータベースリスト
-    public List<GunnerDataBase> databases;
+    public List<GunnerDatabase> databases;
 
     // 使用する可能性のある銃士のデータリスト
     public List<GunnerData> possibleDataList;

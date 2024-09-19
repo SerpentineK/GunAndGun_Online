@@ -25,7 +25,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cd737142f73dce44782d28d0867b47a1, type: 2}
   - {fileID: 11400000, guid: 68276d62cf817244bb6ade4186264dea, type: 2}
   - {fileID: 11400000, guid: 99f23b05e45dfcb42b29bf5bceca1b24, type: 2}
-  iconVector: {x: 100, y: -600, z: 0}
+  iconVector: {x: 0, y: -800, z: 0}
   iconScale: {x: 205, y: 205, z: 205}
   iconLabelColor: {r: 1, g: 1, b: 1, a: 1}
   playerScale: {x: 38, y: 38, z: 38}

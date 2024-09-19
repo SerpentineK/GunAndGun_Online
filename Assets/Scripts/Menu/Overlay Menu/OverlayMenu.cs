@@ -1,3 +1,4 @@
+using DictionaryMenu;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -22,9 +23,37 @@ public class OverlayMenu : MonoBehaviour
     private int depth;
     private GameObject currentMenu;
 
+    // 特定のGameObjectをactivateしたりdeactivateしたりする際いちいちactiveSelf確認するのが面倒だったから関数化した
     public static void ToggleGameObject(GameObject myObject, bool state)
     {
         if (myObject.activeSelf != state) { myObject.SetActive(state); }
+    }
+
+    // 同じく、子オブジェクト全削除をいちいち書くのが面倒だったから関数化
+    public static void DestroyAllChildren(Transform transform)
+    {
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
+    // 同じく、layoutgroup更新用関数
+    public static void ForceHorizontalLayout(LayoutGroup layoutGroup)
+    {
+        layoutGroup.CalculateLayoutInputHorizontal();
+        layoutGroup.CalculateLayoutInputVertical();
+        layoutGroup.SetLayoutHorizontal();
+        layoutGroup.SetLayoutVertical();
+        Canvas.ForceUpdateCanvases();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(layoutGroup.GetComponent<RectTransform>());
+    }
+
+    // 一度Awake()を呼び出すためにactivateし、その後すぐにdeactivateする関数
+    public static void TeaseGameObject(GameObject myObject)
+    {
+        ToggleGameObject(myObject, true);
+        ToggleGameObject(myObject, false);
     }
 
     // 読み込み時にメニュー本体をDeactivate、メニュー表示用ボタンだけActivateする
@@ -42,19 +71,6 @@ public class OverlayMenu : MonoBehaviour
         ToggleGameObject(activateButton, false);
         ToggleGameObject(returnButton, false);
 
-        // メニューに含まれないSelectableについてInteractableをfalseに、それ以外はtrueに設定
-        foreach (var selectable in Selectable.allSelectablesArray)
-        {
-            if (selectable.gameObject.layer != 7)
-            {
-                selectable.interactable = false;
-            }
-            else
-            {
-                selectable.interactable = true;
-            }
-        }
-
         depth = 0;
         ChangeMenu(topMenu);
     }
@@ -63,19 +79,6 @@ public class OverlayMenu : MonoBehaviour
     {
         ToggleGameObject(menuOutline, false);
         ToggleGameObject(activateButton, true);
-
-        // メニューに含まれないSelectableについてInteractableをtrueに、それ以外はfalseに設定
-        foreach (var selectable in Selectable.allSelectablesArray)
-        {
-            if (selectable.gameObject.layer != 7)
-            {
-                selectable.interactable = false;
-            }
-            else
-            {
-                selectable.interactable = true;
-            }
-        }
     }
 
     public void OnButtonPressed_Settings()
@@ -94,6 +97,7 @@ public class OverlayMenu : MonoBehaviour
     {
         depth = 1;
         ChangeMenu(dictionaryMenu);
+        dictionaryMenu.GetComponent<DictionaryManager>().InitializeDictionaries();
     }
 
     public void OnButtonPressed_Credits()

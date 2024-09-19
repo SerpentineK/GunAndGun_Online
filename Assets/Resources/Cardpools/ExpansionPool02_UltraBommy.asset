@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54094b7cbcb7fa246be00d6c133f9305, type: 3}
+  m_Name: ExpansionPool02_UltraBommy
+  m_EditorClassIdentifier: 
+  cardpoolName: ULTRA BOMMY
+  cardpoolNameENG: ULTRA BOMMY
+  cardpoolLogo: {fileID: 21300000, guid: d9d906a29ce26f9409a984f7b0f5f2e0, type: 3}
+  gunnerDatabase: {fileID: 11400000, guid: 8b7bcd18d52411941b8f395669cfda98, type: 2}
+  gunsDatabase: {fileID: 11400000, guid: 729064fd6f24a3e4d970d6a80edd2f69, type: 2}
+  bosses:
+  - {fileID: 11400000, guid: f1a250f55e6feda45af8b2506e10cf25, type: 2}
+  core: {fileID: 11400000, guid: 83e4207e6cfa9334a9a6e173eb5a4666, type: 2}

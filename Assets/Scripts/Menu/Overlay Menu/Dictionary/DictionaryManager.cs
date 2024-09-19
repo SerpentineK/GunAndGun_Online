@@ -1,29 +1,103 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
+using static OverlayMenu;
 
 
 namespace DictionaryMenu
 {
     public class DictionaryManager : MonoBehaviour
     {
-        [Header("databases")]
-        [SerializeField] private GunnerDataBase[] gunnerDatabaseArray;
-        [SerializeField] private GunsDataBase[] gunsDatabaseArray;
+        [Header("Databases")]
+        [SerializeField] private CardpoolDatabase[] _cardpools;
 
-        public static GunnerDataBase[] GunnerDataBases { get; private set; }
-        public static GunsDataBase[] GunsDataBases { get; private set; }
+        public static CardpoolDatabase[] Cardpools { get; private set; }
 
         [Header("Dictionaries")]
         [SerializeField] private GunnerDictionary gunnerDictionary;
+        [SerializeField] private GunDictionary gunDictionary;
+        [SerializeField] private BossDictionary bossDictionary;
+
+        [Header("Initial Category Button")]
+        [SerializeField] private Button topCategoryButton;
+
+        private IDictionaryMenu currentDictionary = null;
+        private GameObject currentHighlight = null;
+
+        private bool initialized = false;
 
         public void Awake()
         {
-            GunnerDataBases = gunnerDatabaseArray;
-            GunsDataBases = gunsDatabaseArray;
-            GunnerDictionary.instance = gunnerDictionary;
-            gunnerDictionary.ActivateIcons();
+            Cardpools = _cardpools;
         }
 
+        public void InitializeDictionaries()
+        {
+            if (!initialized)
+            {
+                TeaseGameObject(gunnerDictionary.gameObject);
+                TeaseGameObject(gunDictionary.gameObject);
+                TeaseGameObject(bossDictionary.gameObject);
+                gunnerDictionary.Initialize();
+                gunDictionary.Initialize();
+                topCategoryButton.onClick.Invoke();
+                initialized = true;
+            }
+        }
+
+        public void ChangeDictionary(IDictionaryMenu nextDictionary)
+        {
+            if (currentDictionary == null)
+            {
+                nextDictionary.EnterDictMenu();
+                currentDictionary = nextDictionary;
+            }
+            else if (nextDictionary == null) 
+            {
+                return;
+            }
+            else if (currentDictionary != nextDictionary)
+            {
+                currentDictionary.ExitDictMenu();
+                nextDictionary.EnterDictMenu();
+                currentDictionary = nextDictionary;
+            }
+        }
+
+        public void ChangeToGunner()
+        {
+            ChangeDictionary(gunnerDictionary);
+        }
+
+        public void ChangeToGun()
+        {
+            ChangeDictionary(gunDictionary);
+        }
+
+        public void ChangeToBoss()
+        {
+            ChangeDictionary(bossDictionary);
+        }
+
+        public void ChangeHighlight(GameObject nextHighlight)
+        {
+            if (currentHighlight == null)
+            {
+                ToggleGameObject(nextHighlight, true);
+                currentHighlight = nextHighlight;
+            }
+            else if (nextHighlight == null)
+            {
+                return;
+            }
+            else if (currentHighlight != nextHighlight)
+            {
+                ToggleGameObject(currentHighlight, false);
+                ToggleGameObject(nextHighlight, true);
+                currentHighlight = nextHighlight;
+            }
+        }
     }
 }

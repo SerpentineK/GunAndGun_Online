@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPool: 0
   gunId: 04
-  gunImage: {fileID: 21300000, guid: 1dbc0fbb5d6d7484186a174706f2045b, type: 3}
+  gunImage: {fileID: 21300000, guid: 58007c5e722635441b7a8cffcc8108d2, type: 3}
   gunName: "\u591A\u6BB5\u7114\u5F0F \u30AB\u30B5\u30CD"
+  gunLabel: {fileID: 21300000, guid: 4bb7cf00a0cfbb146bbac884a46a89e1, type: 3}
   gunAbility: "[ RECOIL:X ]\\n\u5C04\u6483\u6642\u3001\u81EA\u5206\u306BXHIT\u4E0E\u3048\u308B\u3002"
   gunFlavorText: "\u30B7\u30E7\u30C3\u30C8\u30AC\u30F3\u578B\u306E\u9069\u7528\u5916\u306E\u9283\u3002\\n\u6226\u95D8\u306E\u4E2D\u3067\u707C\u71B1\u3059\u308B\u7832\u8EAB\u306F\u3001\u4F7F\u7528\u8005\u306E\u8EAB\u3092\u3082\u7126\u304C\u3059\u3002"
   maximumBulletCapacity: 3
@@ -36,3 +37,5 @@ MonoBehaviour:
   iconBoundsWidth: 400
   gunImageScale: {x: 25, y: 25, z: 25}
   deckDatabase: {fileID: 11400000, guid: ee44096ccc161e24a9531ab4f54c158e, type: 2}
+  gunDetails: {fileID: 21300000, guid: 1328cfc2045d25344b2ea5b6b6894834, type: 3}
+  effectHub: {fileID: 0}

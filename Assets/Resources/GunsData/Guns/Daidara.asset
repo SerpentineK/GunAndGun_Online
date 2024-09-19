@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPool: 2
   gunId: WS-03
-  gunImage: {fileID: 21300000, guid: 86c63b66bd52c7346b5b397e1a0bc5b9, type: 3}
+  gunImage: {fileID: 21300000, guid: a01e7723193f57647a41fcb331b89db6, type: 3}
   gunName: "\u591A\u9023\u51F6\u88C5 \u30C0\u30A4\u30C0\u30E9"
+  gunLabel: {fileID: 21300000, guid: a2aaf7ea69d142647b53ecef5968376f, type: 3}
   gunAbility: "\u3053\u306E\u6A5F\u9283\u306B\u30AB\u30FC\u30C9\u3092\u88CF\u5411\u304D\u3067\u88C5\u586B\u3067\u304D\u306A\u3044\u3002\\n[
     STAGGER ]\\n\u76F8\u624B\u306E\u6A5F\u9283\u30921\u3064\u9078\u3076\u3002\\n\u76F8\u624B\u306F\u6B21\u306E\u30BF\u30FC\u30F3\u3001\u305D\u306E\u6A5F\u9283\u3067\u5C04\u6483\u3067\u304D\u306A\u3044\u3002"
   gunFlavorText: "\u30ED\u30B1\u30C3\u30C8\u30E9\u30F3\u30C1\u30E3\u30FC\u578B\u306E\u9069\u7528\u5916\u306E\u9283\u3002\\n\u53D6\u308A\u56DE\u3057\u306F\u60AA\u3044\u304C\u3001\u898F\u683C\u5916\u306E\u706B\u529B\u306F\u3042\u305F\u308A\u4E00\u9762\u3092\u7126\u571F\u3078\u3068\u5909\u3048\u308B\u3002"
@@ -35,4 +36,5 @@ MonoBehaviour:
   iconBoundsWidth: 500
   gunImageScale: {x: 30, y: 30, z: 30}
   deckDatabase: {fileID: 11400000, guid: 967b3478b9cdeb148b3cb5684b49036c, type: 2}
+  gunDetails: {fileID: 21300000, guid: 74584365b28ba6d479f307dc80e5ec10, type: 3}
   effectHub: {fileID: 0}

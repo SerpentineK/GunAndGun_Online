@@ -27,11 +27,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 85ed010cc979b344e8b6191d0b8194ac, type: 2}
   - {fileID: 11400000, guid: 612556ed60c2c034780337025b3f477c, type: 2}
   - {fileID: 11400000, guid: ba4e7346b636d1a40b4d2ecb99bf631c, type: 2}
-  iconVector: {x: -200, y: -500, z: 0}
+  iconVector: {x: -200, y: -550, z: 0}
   iconScale: {x: 250, y: 250, z: 250}
   iconLabelColor: {r: 1, g: 1, b: 1, a: 1}
   playerScale: {x: 30, y: 30, z: 30}
   opponentScale: {x: 23, y: 23, z: 23}
   gunnerThumbnail: {fileID: 21300000, guid: ec4e32d087069a24f8bfa970f0a49be7, type: 3}
-  gunnerDetailsImage: {fileID: 21300000, guid: ec4e32d087069a24f8bfa970f0a49be7, type: 3}
+  gunnerDetailsImage: {fileID: 21300000, guid: fa7e2ac5bf4fe22469b9e2aed2f32cef, type: 3}
   effectHub: {fileID: 11400000, guid: 926fb71f9af3bbe46b42cb024961fc94, type: 2}

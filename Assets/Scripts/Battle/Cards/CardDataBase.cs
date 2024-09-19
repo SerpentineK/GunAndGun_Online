@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class CardDataBase : ScriptableObject
+public class CardDatabase : ScriptableObject
 {
     [SerializeField] private GunsData gunAttached;
     [SerializeField] private List<CardData> cardDataLists = new List<CardData>();

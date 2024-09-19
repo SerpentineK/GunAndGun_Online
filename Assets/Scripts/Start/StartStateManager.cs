@@ -19,15 +19,15 @@ public class StartStateManager : MonoBehaviour
     public GameManager.CARD_POOL[] cardPools;
     public GameManager.CARD_BLOCK cardBlock;
 
-    [SerializeField] private GunnerDataBase gunnerDataBase01;
-    [SerializeField] private GunnerDataBase gunnerDataBase02;
-    [SerializeField] private GunnerDataBase gunnerDataBase03;
-    [SerializeField] private GunnerDataBase gunnerDataBase04;
+    [SerializeField] private GunnerDatabase gunnerDataBase01;
+    [SerializeField] private GunnerDatabase gunnerDataBase02;
+    [SerializeField] private GunnerDatabase gunnerDataBase03;
+    [SerializeField] private GunnerDatabase gunnerDataBase04;
 
-    [SerializeField] private GunsDataBase gunsDataBase01;
-    [SerializeField] private GunsDataBase gunsDataBase02;
-    [SerializeField] private GunsDataBase gunsDataBase03;
-    [SerializeField] private GunsDataBase gunsDataBase04;
+    [SerializeField] private GunsDatabase gunsDataBase01;
+    [SerializeField] private GunsDatabase gunsDataBase02;
+    [SerializeField] private GunsDatabase gunsDataBase03;
+    [SerializeField] private GunsDatabase gunsDataBase04;
 
     public static GunnerData opponentGunner = null;
     public static GunsData opponentGun01 = null;
@@ -116,7 +116,7 @@ public class StartStateManager : MonoBehaviour
 
     public void SetGunnerPool()
     {
-        var gunnerDict = new Dictionary<GameManager.CARD_POOL, GunnerDataBase>()
+        var gunnerDict = new Dictionary<GameManager.CARD_POOL, GunnerDatabase>()
         {
             {GameManager.CARD_POOL.GunAndGun, gunnerDataBase01},
             {GameManager.CARD_POOL.OverHeat, gunnerDataBase02},
@@ -132,7 +132,7 @@ public class StartStateManager : MonoBehaviour
 
     public void SetGunPool(GunSelector gunSelector)
     {
-        var gunsDict = new Dictionary<GameManager.CARD_POOL, GunsDataBase>()
+        var gunsDict = new Dictionary<GameManager.CARD_POOL, GunsDatabase>()
         {
             {GameManager.CARD_POOL.GunAndGun, gunsDataBase01},
             {GameManager.CARD_POOL.OverHeat, gunsDataBase02},
@@ -146,7 +146,7 @@ public class StartStateManager : MonoBehaviour
         }
     }
 
-    public GunnerData SearchDatabasesForGunner(GunnerDataBase[] databaseArray, string ID)
+    public GunnerData SearchDatabasesForGunner(GunnerDatabase[] databaseArray, string ID)
     {
         foreach (var database in databaseArray)
         {
@@ -165,7 +165,7 @@ public class StartStateManager : MonoBehaviour
         return null;
     }
 
-    public GunsData SearchDatabasesForGun(GunsDataBase[] databaseArray, string ID) 
+    public GunsData SearchDatabasesForGun(GunsDatabase[] databaseArray, string ID) 
     {
         foreach (var database in databaseArray)
         {
@@ -201,8 +201,8 @@ public class StartStateManager : MonoBehaviour
 
     public void UpdateTheirSelectionData()
     {
-        GunnerDataBase[] gunnerDataBaseArray = { gunnerDataBase01, gunnerDataBase02, gunnerDataBase03, gunnerDataBase04 };
-        GunsDataBase[] gunsDataBaseArray = { gunsDataBase01, gunsDataBase02, gunsDataBase03, gunsDataBase04 };
+        GunnerDatabase[] gunnerDataBaseArray = { gunnerDataBase01, gunnerDataBase02, gunnerDataBase03, gunnerDataBase04 };
+        GunsDatabase[] gunsDataBaseArray = { gunsDataBase01, gunsDataBase02, gunsDataBase03, gunsDataBase04 };
 
         opponentGunner = SearchDatabasesForGunner(gunnerDataBaseArray, theirSelection.GunnerID);
         opponentGun01 = SearchDatabasesForGun(gunsDataBaseArray, theirSelection.Gun01ID);

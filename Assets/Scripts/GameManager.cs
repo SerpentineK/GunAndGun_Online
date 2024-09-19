@@ -5,8 +5,8 @@ using Fusion;
 
 public class GameManager : NetworkBehaviour
 {
-    [SerializeField] private GunnerDataBase gunnerDataBase;
-    [SerializeField] private GunsDataBase gunsDataBase;
+    [SerializeField] private GunnerDatabase gunnerDataBase;
+    [SerializeField] private GunsDatabase gunsDataBase;
 
     public enum GAME_MODE
     {

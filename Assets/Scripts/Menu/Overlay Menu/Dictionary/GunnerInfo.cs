@@ -36,5 +36,10 @@ namespace DictionaryMenu
             details.SetDetails(currentData);
             ToggleGameObject(details.gameObject, true);
         }
+
+        public void ExitDetails()
+        {
+            ToggleGameObject(details.gameObject, false);
+        }
     }
 }

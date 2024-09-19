@@ -2,48 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static OverlayMenu;
 
 namespace DictionaryMenu
 {
-    public class GunnerDictionary : MonoBehaviour
+    public class GunnerDictionary : MonoBehaviour, IDictionaryMenu
     {
-        public static GunnerDictionary instance;
-
         [Header("Prefabs")]
         [SerializeField] private GameObject gunnerIconPrefab;
         [SerializeField] private GameObject gunnerIconParentPrefab;
 
         [Header("Locations")]
-        [SerializeField] private GameObject iconLocation;
-        [SerializeField] private GunnerInfo infoDisplay;
+        [SerializeField] private Transform iconLocation;
+        [SerializeField] private GunnerDetails detailsDisplay;
 
-        public void ActivateIcons()
+        public static GunnerDetails DetailsDisplay { get; private set; }
+        public Button TopIcon { get; private set; }
+
+        public void Awake()
         {
-            int iconCount = 0;
-            Transform iconParent = null;
-            foreach (var database in DictionaryManager.GunnerDataBases)
+            DetailsDisplay = detailsDisplay;
+        }
+
+        public void Initialize()
+        {
+            bool first = true;
+            foreach (var cardpool in DictionaryManager.Cardpools)
             {
-                foreach (var data in database.GetGunnerDataList())
+                foreach (var data in cardpool.GunnerDatabase.GetGunnerDataList())
                 {
-                    iconCount++;
-                    if (iconCount % 4 == 1)
-                    {
-                        iconParent = Instantiate(gunnerIconParentPrefab, iconLocation.transform).transform;
-                    }
-                    GunnerIcon icon = Instantiate(gunnerIconPrefab, iconParent).GetComponent<GunnerIcon>();
+                    GunnerIcon icon = Instantiate(gunnerIconPrefab, iconLocation).GetComponent<GunnerIcon>();
                     icon.SetIconContent(data);
-                    if (iconCount == 1)
+                    if (first)
                     {
-                        icon.SendGunnerInfo();
+                        TopIcon = icon.GetComponent<Button>();
+                        first = false;
                     }
                     icon.gameObject.layer = 7;
                 }
             }
+            TopIcon.onClick.Invoke();
         }
-
-        public void DisplayData(GunnerData data)
+        public void EnterDictMenu()
         {
-            infoDisplay.SetInfoContent(data);
+            ToggleGameObject(gameObject, true);
+        }
+        public void ExitDictMenu()
+        {
+            ToggleGameObject(gameObject, false);
         }
     }
 }

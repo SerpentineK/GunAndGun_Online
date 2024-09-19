@@ -14,7 +14,7 @@ public class GunSelector : MonoBehaviour
     public GunCandidate[] gunCandidates;
 
     // 使用する機銃のデータベースリスト
-    public List<GunsDataBase> databases;
+    public List<GunsDatabase> databases;
 
     // 使用する可能性のある機銃のデータリスト
     public List<GunsData> possibleDataList;

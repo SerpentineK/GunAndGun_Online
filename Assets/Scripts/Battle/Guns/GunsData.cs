@@ -17,6 +17,7 @@ public class GunsData : ScriptableObject
     [SerializeField] private string gunId;
     [SerializeField] private Sprite gunImage;
     [SerializeField] private string gunName;
+    [SerializeField] private Sprite gunLabel;
     [TextArea(3, 10)]
     [SerializeField] private string gunAbility;
     [TextArea(3, 10)]
@@ -32,7 +33,8 @@ public class GunsData : ScriptableObject
     [SerializeField] private float iconHeight;
     [SerializeField] private float iconBoundsWidth;
     [SerializeField] private Vector3 gunImageScale;
-    [SerializeField] private CardDataBase deckDatabase;
+    [SerializeField] private CardDatabase deckDatabase;
+    [SerializeField] private Sprite gunDetails;
 
     // •R‚Ã‚¢‚Ä‚¢‚éEffectHub
     public EffectHub effectHub;
@@ -44,6 +46,7 @@ public class GunsData : ScriptableObject
     public string GetGunId() {  return gunId; }
     public Sprite GetGunImage() {  return gunImage; }
     public string GetGunName() {  return gunName; }
+    public Sprite GetGunLabel() { return gunLabel; }
     public string GetGunAbility() {  return gunAbility.Replace("\\n","\n"); }
     public string GetGunFlavorText() { return gunFlavorText.Replace("\\n", "\n"); }
     public int GetMaximumBulletCapacity() {  return maximumBulletCapacity; }
@@ -67,6 +70,8 @@ public class GunsData : ScriptableObject
     public float GetIconHeight() {  return iconHeight; }
     public float GetIconBounds() { return iconBoundsWidth; }
     public Vector3 GetImageScale() { return gunImageScale; }
-    public CardDataBase GetDeckDatabase() { return deckDatabase; }
+    public CardDatabase GetDeckDatabase() { return deckDatabase; }
+
+    public Sprite GunDetails { get { return gunDetails; } }
 
 }

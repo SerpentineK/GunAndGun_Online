@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 
-public class GunnerDataBase : ScriptableObject
+public class GunnerDatabase : ScriptableObject
 {
     [SerializeField] private List<GunnerData> gunnerDataList = new List<GunnerData>();
 

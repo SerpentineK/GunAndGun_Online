@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPool: 0
   gunId: 06
-  gunImage: {fileID: 21300000, guid: 3683b4b0f95785f49adad855fb6044ad, type: 3}
+  gunImage: {fileID: 21300000, guid: 7e06762044725024eb0edf70bbe3f765, type: 3}
   gunName: "\u6838\u71B1\u5F0F\u53CD\u7269\u8CEA\u7C92\u5B50\u7832 \u30A6\u30EF\u30F3"
+  gunLabel: {fileID: 21300000, guid: 8d1df987ffab6924592098a3542153d9, type: 3}
   gunAbility: "[ ANNIHILATION ]\\n\u3053\u306E\u6A5F\u9283\u306E\u5C04\u6483\u306B\u3088\u308AHIT\u3092\u4E0E\u3048\u305F\u6642\u3001\u76F8\u624B\u306E\u30C7\u30C3\u30AD\u30921\u3064\u9078\u3073\u540C\u3058\u679A\u6570\u5206\u6368\u3066\u672D\u306B\u7F6E\u304F\u3002"
   gunFlavorText: "\u672A\u8A73\u306E\u9069\u7528\u5916\u306E\u9283\u3002\\n\u7403\u4F53\u306E\u6838\u304C\u5149\u3092\u6E80\u305F\u3059\u6642\u3001\u8F5F\u97F3\u304C\u5927\u6C17\u3092\u9707\u308F\u3057\u3001\u3084\u304C\u3066\u9759\u5BC2\u304C\u8A2A\u308C\u308B\u3002"
   maximumBulletCapacity: 3
@@ -36,3 +37,5 @@ MonoBehaviour:
   iconBoundsWidth: 500
   gunImageScale: {x: 30, y: 30, z: 30}
   deckDatabase: {fileID: 11400000, guid: dc11b4392770b1f4aa2cb4c66efb78fd, type: 2}
+  gunDetails: {fileID: 21300000, guid: 9d23ae390b8f5044b9248611d8f28cdd, type: 3}
+  effectHub: {fileID: 0}
