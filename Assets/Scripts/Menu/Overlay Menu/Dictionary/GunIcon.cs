@@ -19,7 +19,6 @@ namespace DictionaryMenu
         
         private RectTransform myRect;
         private Button myButton;
-        private bool iconStatus = true;
 
         private static readonly float minWidth = 150;
         private static readonly float maxWidth = 350;

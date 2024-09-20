@@ -22,3 +22,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1f8d6213a4bfb5c479a823d8bd6de0a7, type: 2}
   - {fileID: 11400000, guid: 74acd3b5f89662a4aaaf684a011e37bd, type: 2}
   effectHubDatabaseAttached: {fileID: 11400000, guid: b361dbb7a77250547a56a5c36a53b63e, type: 2}
+  deckDetails: {fileID: 21300000, guid: a998c7751cfa56f41ae132e488431141, type: 3}

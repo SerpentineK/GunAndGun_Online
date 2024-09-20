@@ -20,7 +20,7 @@ public class DeckCards_ToCSV : EditorWindow
 
     private int popupIndex;
     private int[] cardIntArray;
-    string[] simplifiedArray;
+    private string[] simplifiedArray;
     private StreamWriter sw;
 
     [MenuItem("Tools/Create Deck Card CSV")]

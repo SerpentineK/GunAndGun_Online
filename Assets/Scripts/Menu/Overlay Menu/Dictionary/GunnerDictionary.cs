@@ -10,7 +10,6 @@ namespace DictionaryMenu
     {
         [Header("Prefabs")]
         [SerializeField] private GameObject gunnerIconPrefab;
-        [SerializeField] private GameObject gunnerIconParentPrefab;
 
         [Header("Locations")]
         [SerializeField] private Transform iconLocation;
@@ -27,6 +26,10 @@ namespace DictionaryMenu
         public void Initialize()
         {
             bool first = true;
+            if (iconLocation.childCount != 0) 
+            {
+                DestroyAllChildren(iconLocation);
+            }
             foreach (var cardpool in DictionaryManager.Cardpools)
             {
                 foreach (var data in cardpool.GunnerDatabase.GetGunnerDataList())

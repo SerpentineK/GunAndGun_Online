@@ -14,7 +14,7 @@ namespace DictionaryMenu
         [SerializeField] private Image imageComponent;
         [SerializeField] private TMP_Text nameComponent;
 
-        private readonly Vector3 defaultPos = new(-100, 0, 0);
+        private readonly Vector3 defaultPos = new(-125, 0, 0);
         private readonly Vector3 defaultScale = new(0.15f, 0.15f, 0.15f);
 
         public void SetIconContent(GunnerData data)
@@ -31,6 +31,7 @@ namespace DictionaryMenu
             imageRect.anchoredPosition = imagePosData;
 
             nameComponent.SetText(data.GetGunnerName());
+            name = data.GetGunnerName();
         }
 
         public void SendGunnerInfo()

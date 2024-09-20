@@ -33,3 +33,6 @@ MonoBehaviour:
   bossLevelBorders: 000000000800000010000000
   bossDeck: {fileID: 11400000, guid: e120138e6cc63a9429acc24e18bbb178, type: 2}
   bossStages: {fileID: 11400000, guid: aef77c41e1dde89498068c56a4e76af1, type: 2}
+  bossDetails: {fileID: 21300000, guid: 76f556adf5856574086b9459946bd7a4, type: 3}
+  bossStageDetails: {fileID: 21300000, guid: 3de8a0236a2fa7743a40a130a8956eed, type: 3}
+  bossDeckDetails: {fileID: 21300000, guid: 65842e0ccb956964a86a2e3607bb6b21, type: 3}

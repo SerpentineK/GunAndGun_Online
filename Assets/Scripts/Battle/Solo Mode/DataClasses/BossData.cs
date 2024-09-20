@@ -20,7 +20,10 @@ public class BossData : ScriptableObject
     [SerializeField] private int[] bossLevelBorders;
     [SerializeField] private BossCardDatabase bossDeck;
     [SerializeField] private BossStageDatabase bossStages;
-    
+    [SerializeField] private Sprite bossDetails;
+    [SerializeField] private Sprite bossStageDetails;
+    [SerializeField] private Sprite bossDeckDetails;
+
     public string GetBossId() {  return bossId; }
     public string GetBossName() {  return bossName; }
     public string GetBossTitle() {  return bossTitle; }
@@ -34,4 +37,8 @@ public class BossData : ScriptableObject
     public int[] GetBossLevelBorders() { return bossLevelBorders; }
     public BossCardDatabase GetBossDeck() {  return bossDeck; }
     public BossStageDatabase GetBossStages() {  return bossStages; }
+
+    public Sprite GetBossDetails() { return bossDetails; }
+    public Sprite GetBossStageDetails() { return bossStageDetails; }
+    public Sprite GetBossDeckDetails() {  return bossDeckDetails; }
 }

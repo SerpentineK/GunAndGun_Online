@@ -42,6 +42,7 @@ namespace DictionaryMenu
                 TeaseGameObject(bossDictionary.gameObject);
                 gunnerDictionary.Initialize();
                 gunDictionary.Initialize();
+                bossDictionary.Initialize();
                 topCategoryButton.onClick.Invoke();
                 initialized = true;
             }
