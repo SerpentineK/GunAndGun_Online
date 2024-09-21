@@ -36,6 +36,7 @@ namespace DictionaryMenu
         private readonly Vector2 rearMarginSize = new(625f, 750f);
 
         private GunShowcase currentShowcase = null;
+        private GunPoolSwitcher currentSwitcher = null;
 
         public void Awake()
         {
@@ -45,6 +46,7 @@ namespace DictionaryMenu
 
         public void Initialize()
         {
+            bool first = true;
             if (showcaseParent.childCount != 0)
             {
                 DestroyAllChildren(showcaseParent);
@@ -75,6 +77,12 @@ namespace DictionaryMenu
 
                 showcase.SetGunShowcase(cardpool.GunsDatabase);
                 switcher.SetSwitcher(cardpool, showcase);
+
+                if (first)
+                {
+                    currentSwitcher = switcher;
+                    first = false;
+                }
             }
 
             GameObject rearMargin = Instantiate(marginObjectPrefab, showcaseParent);
@@ -151,14 +159,30 @@ namespace DictionaryMenu
         public void EnterDictMenu()
         {
             ToggleGameObject(gameObject, true);
-            if (currentShowcase != null) { SwitchShowcase(currentShowcase); }
+            currentSwitcher.GetComponent<Button>().onClick.Invoke();
             HideDetails();
         }
 
         public void ExitDictMenu()
         {
-            HideDetails();
             ToggleGameObject(gameObject,false);
+        }
+
+        public void SignifySwitcherSelection(GunPoolSwitcher nextSwitcher)
+        {
+            GunPoolSwitcher[] switchers = switcherParent.GetComponentsInChildren<GunPoolSwitcher>();
+            foreach (var switcher in switchers)
+            {
+                if (switcher != nextSwitcher)
+                {
+                    switcher.ToggleSelectionDisplay(false);
+                }
+                else
+                {
+                    switcher.ToggleSelectionDisplay(true);
+                    currentSwitcher = switcher;
+                }
+            }
         }
     }
 }

@@ -54,6 +54,7 @@ namespace DictionaryMenu
         public void EnterDictMenu()
         {
             ToggleGameObject(gameObject, true);
+            TopIcon.onClick.Invoke();
         }
         public void ExitDictMenu()
         {

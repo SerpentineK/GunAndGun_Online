@@ -108,6 +108,8 @@ public class OverlayMenu : MonoBehaviour
 
     public void ChangeMenu(GameObject nextMenu)
     {
+        if(currentMenu == nextMenu) { return; }
+        
         ToggleGameObject(topMenu, false);
         ToggleGameObject(settingsMenu, false);
         ToggleGameObject(rulesMenu, false);

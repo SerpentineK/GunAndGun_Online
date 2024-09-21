@@ -11,20 +11,24 @@ public class InitialMenu : MonoBehaviour
     public static InitialMenu instance;
 
     // セッションIDとニックネームを入力するためのウィンドウ
+    [Header("Input Window")]
     [SerializeField] private GameObject inputWindow;
     [SerializeField] private TMP_InputField field_sessionID;
     [SerializeField] private TMP_InputField field_nickname;
 
     // 各種ボタン
+    [Header("Buttons")]
     [SerializeField] private Button battleButton;
     [SerializeField] private Button bossButton;
     [SerializeField] private Button tutorialButton;
 
     // 左右の銃士イメージ
+    [Header("Gunner Figures")]
     [SerializeField] private SpriteRenderer rightGunnerFigure;
     [SerializeField] private SpriteRenderer leftGunnerFigure;
 
     // NetworkRunnerのプレハブ
+    [Header("Networking")]
     [SerializeField] private GameObject RunnerPrefab;
 
     // NetworkRunnerの親オブジェクトのTransform
@@ -35,12 +39,10 @@ public class InitialMenu : MonoBehaviour
         instance = this;
     }
 
-    public void SetGunnerFigures(GunnerData rightGunnerData, GunnerData leftGunnerData)
+    public void SetGunnerFigures(GunnerData rightData, GunnerData leftData)
     {
-        Sprite rightSprite = rightGunnerData.GetGunnerImage();
-        Sprite leftSprite = leftGunnerData.GetGunnerImage();
-        rightGunnerFigure.sprite = rightSprite;
-        leftGunnerFigure.sprite = leftSprite;
+        rightGunnerFigure.sprite = rightData.GetGunnerImage();
+        leftGunnerFigure.sprite = leftData.GetGunnerImage();
     }
 
     public void ToggleButtons(bool result)
@@ -70,13 +72,15 @@ public class InitialMenu : MonoBehaviour
     {
         string sessionID = field_sessionID.text;
         string nickname = field_nickname.text;
-        MenuStateManager.instance.runner = Instantiate(RunnerPrefab, RunnerParentTransform).GetComponent<NetworkRunner>();
-        MenuStateManager.instance.runner.StartGame(new StartGameArgs
-        {
-            SessionName = sessionID,
-            PlayerCount = 2,
-            IsOpen = true,
-        });
+        if ((sessionID.Length > 0)&&(nickname.Length > 0)) {
+            MenuStateManager.instance.runner = Instantiate(RunnerPrefab, RunnerParentTransform).GetComponent<NetworkRunner>();
+            MenuStateManager.instance.runner.StartGame(new StartGameArgs
+            {
+                SessionName = sessionID,
+                PlayerCount = 2,
+                IsOpen = true,
+            });
+        }
     }
 
     public void OnButtonPressed_InputExit()

@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subIndex: {fileID: 0}
   highlight: {fileID: 3194315647183992364}
+  label: {fileID: 7743176168793948311}
 --- !u!1 &3194315647183992364
 GameObject:
   m_ObjectHideFlags: 0

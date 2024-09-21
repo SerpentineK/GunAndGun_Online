@@ -10,9 +10,11 @@ public class MenuStateManager : MonoBehaviour
     public static MenuStateManager instance;
 
     // NetworkRunnerの格納用変数
+    [Header("Runner")]
     public NetworkRunner runner;
 
     // 各種設定
+    [Header("Settings")]
     public GameManager.GAME_MODE gameMode;
     public GameManager.SELECTION_TURN selectionTurn;
     public GameManager.CARD_SETS cardSetNumber;
@@ -20,27 +22,40 @@ public class MenuStateManager : MonoBehaviour
     public GameManager.CARD_BLOCK cardBlock;
 
     // 各種データベース
-    [SerializeField] private GunnerDatabase gunnerDataBase01;
-    [SerializeField] private GunnerDatabase gunnerDataBase02;
-    [SerializeField] private GunnerDatabase gunnerDataBase03;
-    [SerializeField] private GunnerDatabase gunnerDataBase04;
-
-    [SerializeField] private GunsDatabase gunsDataBase01;
-    [SerializeField] private GunsDatabase gunsDataBase02;
-    [SerializeField] private GunsDatabase gunsDataBase03;
-    [SerializeField] private GunsDatabase gunsDataBase04;
+    [Header("Databases")]
+    [SerializeField] private CardpoolDatabase[] cardpoolDatabases;
 
     // 各メニューのGameObject
-    [SerializeField] InitialMenu initialMenu;
-    [SerializeField] BattleStandbyMenu battleStandbyMenu;
+    [Header("Menu Objects")]
+    [SerializeField] private InitialMenu initialMenu;
+    [SerializeField] private BattleStandbyMenu battleStandbyMenu;
+
+    public CardpoolDatabase[] CardpoolDatabases { get { return cardpoolDatabases; } }
 
     public void Awake()
     {
         instance = this;
     }
+    public static void ToggleGameObject(GameObject myObject, bool state)
+    {
+        if (myObject.activeSelf != state) { myObject.SetActive(state); }
+    }
 
     public void EnableInitial()
     {
-        if (!initialMenu.gameObject.activeSelf) { initialMenu.gameObject.SetActive(true); }
+        ToggleGameObject(initialMenu.gameObject, true);
+
+        List<GunnerData> gunners = new();
+
+        foreach (var cardpool in CardpoolDatabases)
+        {
+            gunners.AddRange(cardpool.GunnerDatabase.GetGunnerDataList());
+        }
+
+        GunnerData rightGunnerData = gunners[Random.Range(0, gunners.Count)];
+        gunners.Remove(rightGunnerData);
+        GunnerData leftGunnerData = gunners[Random.Range(0, gunners.Count)];
+
+        initialMenu.SetGunnerFigures(rightGunnerData, leftGunnerData);
     }
 }

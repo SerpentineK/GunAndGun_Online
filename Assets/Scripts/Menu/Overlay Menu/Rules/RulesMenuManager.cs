@@ -64,11 +64,30 @@ namespace RulesMenu
                     if (nextButton != button)
                     {
                         ToggleGameObject(button.Highlight, false);
+                        button.Label.fontStyle = FontStyles.Normal;
                     }
                     else
                     {
                         ToggleGameObject(button.Highlight, true);
+                        button.Label.fontStyle = FontStyles.Underline;
                     }
+                }
+            }
+        }
+        public static void HighlightIndex(IndexButton nextButton)
+        {
+            foreach (GameObject index in indexArray)
+            {
+                IndexButton button = index.GetComponent<IndexButton>();
+                if (nextButton != button)
+                {
+                    ToggleGameObject(button.Highlight, false);
+                    button.Label.fontStyle = FontStyles.Normal;
+                }
+                else
+                {
+                    ToggleGameObject(button.Highlight, true);
+                    button.Label.fontStyle = FontStyles.Underline;
                 }
             }
         }
@@ -87,21 +106,6 @@ namespace RulesMenu
             myRect.localPosition = new Vector2(0, 0);
         }
 
-        public static void HighlightIndex(IndexButton nextButton)
-        {
-            foreach (GameObject index in indexArray)
-            {
-                IndexButton button = index.GetComponent<IndexButton>();
-                if (nextButton != button)
-                {
-                    ToggleGameObject(button.Highlight, false);
-                }
-                else
-                {
-                    ToggleGameObject(button.Highlight, true);
-                }
-            }
-        }
 
     }
 }

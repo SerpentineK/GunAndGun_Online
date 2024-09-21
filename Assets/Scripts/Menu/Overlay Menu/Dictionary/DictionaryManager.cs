@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static OverlayMenu;
@@ -25,6 +26,7 @@ namespace DictionaryMenu
 
         private IDictionaryMenu currentDictionary = null;
         private GameObject currentHighlight = null;
+        private TMP_Text currentLabel = null;
 
         private bool initialized = false;
 
@@ -98,6 +100,25 @@ namespace DictionaryMenu
                 ToggleGameObject(currentHighlight, false);
                 ToggleGameObject(nextHighlight, true);
                 currentHighlight = nextHighlight;
+            }
+        }
+
+        public void ChangeUnderline(TMP_Text nextLabel)
+        {
+            if (currentLabel == null)
+            {
+                nextLabel.fontStyle = FontStyles.Underline;
+                currentLabel = nextLabel;
+            }
+            else if (nextLabel == null)
+            {
+                return;
+            }
+            else if (currentLabel != nextLabel)
+            {
+                currentLabel.fontStyle = FontStyles.Normal;
+                nextLabel.fontStyle = FontStyles.Underline;
+                currentLabel = nextLabel;
             }
         }
     }

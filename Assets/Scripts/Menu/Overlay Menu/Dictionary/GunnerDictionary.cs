@@ -16,11 +16,13 @@ namespace DictionaryMenu
         [SerializeField] private GunnerDetails detailsDisplay;
 
         public static GunnerDetails DetailsDisplay { get; private set; }
+        public static Transform IconLocation { get; private set; }
         public Button TopIcon { get; private set; }
 
         public void Awake()
         {
             DetailsDisplay = detailsDisplay;
+            IconLocation = iconLocation;
         }
 
         public void Initialize()
@@ -36,9 +38,10 @@ namespace DictionaryMenu
                 {
                     GunnerIcon icon = Instantiate(gunnerIconPrefab, iconLocation).GetComponent<GunnerIcon>();
                     icon.SetIconContent(data);
+                    Button iconButton = icon.GetComponent<Button>();
                     if (first)
                     {
-                        TopIcon = icon.GetComponent<Button>();
+                        TopIcon = iconButton;
                         first = false;
                     }
                     icon.gameObject.layer = 7;
