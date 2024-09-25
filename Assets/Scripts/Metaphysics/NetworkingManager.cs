@@ -12,17 +12,19 @@ namespace Metaphysics
         // NetworkRunnerのプレハブ
         [SerializeField] private GameObject runnerPrefab;
 
-        // 各種データ
-        [SerializeField] private NetworkedData_Menu menuData;
+        // 各種データのプレハブ
+        [SerializeField] private NetworkObject menuDataPrefab;
 
         // runner格納用の変数
         private NetworkRunner runner;
 
+        // 各種データ格納用変数
+        private NetworkedData_Menu menuData;
+
         public void EnterSession(string sessionID, string nameInput)
         {
             // runnerを生成
-            runner = Instantiate(runnerPrefab, transform).GetComponent<NetworkRunner>();
-
+            runner = Instantiate(runnerPrefab).GetComponent<NetworkRunner>();
 
             // NetworkRunner.StartGame()を呼び出し、Sessionに接続
             // SessionNameが空白の場合はFusionでランダムな部屋に繋いでくれるらしい
@@ -33,6 +35,10 @@ namespace Metaphysics
                 SessionName = sessionID,
                 MatchmakingMode = Fusion.Photon.Realtime.MatchmakingMode.FillRoom
             });
+
+            // menuDataを生成
+            NetworkObject tempObject = runner.Spawn(menuDataPrefab);
+            menuData = tempObject.GetComponent<NetworkedData_Menu>();
 
             // ユーザーネームを設定
             if (nameInput.Length > 0)

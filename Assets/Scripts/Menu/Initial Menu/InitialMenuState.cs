@@ -61,10 +61,6 @@ public class InitialMenuState : MonoBehaviour, IState
     // BossCandidateを入れるためのArray（将来必要になる）
     private BossCandidate[] bossCandidateArray;
 
-    // LoadScene用の変数
-    private string nextSceneName = null;
-    private bool scenePreparation = false;
-
     public void EnterState()
     {
         // InitialMenu本体を表示
@@ -144,25 +140,11 @@ public class InitialMenuState : MonoBehaviour, IState
         bossEntryButton.interactable = false;
     }
 
-    public void InState()
-    {
-        if (scenePreparation)
-        {
-            scenePreparation = false;
-            StartCoroutine(LoadNextSceneAsync(nextSceneName));
-            StartCoroutine(UnloadPreviousSceneAsync(gameObject.scene.name));
-        }
-    }
+    public void InState(){ }
 
     public void ExitState() 
     {
         ToggleGameObject(gameObject, false);
-    }
-
-    public void PrepareForNextScene(string nextScene)
-    {
-        nextSceneName = nextScene;
-        scenePreparation = true;
     }
 
     public void SetGunnerFigures(GunnerData rightData, GunnerData leftData)
@@ -253,7 +235,8 @@ public class InitialMenuState : MonoBehaviour, IState
     }
     public void OnButtonPressed_TutorialEntry()
     {
-        PrepareForNextScene("TutorialScene");   
+        StartCoroutine(LoadNextSceneAsync("TutorialScene"));
+        StartCoroutine(UnloadPreviousSceneAsync(gameObject.scene.name));
     }
 
     public void OnButtonPressed_TutorialExit()
