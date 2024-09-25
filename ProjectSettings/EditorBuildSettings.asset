@@ -6,10 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Metaphysics.unity
+    guid: 57f4f78d6906fd44191434f30ef47196
+  - enabled: 1
+    path: Assets/Scenes/MenuScene.unity
+    guid: ec28d86f3c6d69546b29418182465407
+  - enabled: 1
     path: Assets/Scenes/StartScene.unity
     guid: 42672d6e4bc057148bc627fc847247a3
   - enabled: 1
     path: Assets/Scenes/BattleScene.unity
     guid: 24885bb79113904408c74730daede81d
+  - enabled: 1
+    path: Assets/Scenes/TutorialScene.unity
+    guid: 31607f1e2e0e5684eb39de609aed9565
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 309d95abf50e95a4f8b859c1393f1ede, type: 2}

@@ -20,7 +20,6 @@ public class StartState : MonoBehaviour, IState
     // 4: 技能の決定
     // 5: 戦闘画面への移行
 
-    private int phase;
 
     // カードセットの数によって銃士・機銃の選択順が異なるため、
     // 以下の変数によってカードセットの数と先手後手を判定する。
@@ -114,7 +113,6 @@ public class StartState : MonoBehaviour, IState
     public void EnterState()
     {
         // ローディング画面をいずれ作るので、それを表示するフェーズ
-        phase = 0;
         DeterminePattern();
         enumerator = myPattern.GetEnumerator();
     }

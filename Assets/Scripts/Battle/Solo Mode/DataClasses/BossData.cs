@@ -9,6 +9,7 @@ public class BossData : ScriptableObject
     [SerializeField] private string bossId;
     [SerializeField] private string bossName;
     [SerializeField] private string bossTitle;
+    [SerializeField] private Color bossThemeColor;
     [SerializeField] private Sprite bossGraphics;
     [SerializeField] private int bossHP;
     [SerializeField] private int bossReload;
@@ -27,6 +28,7 @@ public class BossData : ScriptableObject
     public string GetBossId() {  return bossId; }
     public string GetBossName() {  return bossName; }
     public string GetBossTitle() {  return bossTitle; }
+    public Color GetBossThemeColor() {  return bossThemeColor; }
     public Sprite GetBossGraphics() {  return bossGraphics; }
     public int GetBossHP() {  return bossHP; }
     public int GetBossReload() {  return bossReload; }

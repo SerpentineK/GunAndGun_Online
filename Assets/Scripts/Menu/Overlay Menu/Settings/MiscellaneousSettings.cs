@@ -3,20 +3,34 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using static PlayerSettings;
 
 namespace SettingsMenu
 {
-    public class MiscellaneousSettings : MonoBehaviour
+    public class MiscellaneousSettings : MonoBehaviour, ISettingsMenu
     {
-        public void OnValueChange_EffectsHandling(TMP_Dropdown dropdown)
+        [SerializeField] private TMP_Dropdown effectsHandling;
+        [SerializeField] private TMP_Dropdown infoDisplay;
+
+        public LocalSettings MyLocalSettings { get; set; }
+
+        public void ReflectLocal()
         {
-            specialEffectHandling = (SpecialEffectHandling)Enum.ToObject(typeof(SpecialEffectHandling), dropdown.value);
+            effectsHandling.value = (int)MyLocalSettings.specialEffectHandling;
+            infoDisplay.value = (int)MyLocalSettings.informationDisplay;
         }
 
-        public void OnValueChange_InfoDisplay(TMP_Dropdown dropdown)
+        public void OnValueChange_EffectsHandling()
         {
-            informationDisplay = (InformationDisplay)Enum.ToObject(typeof(InformationDisplay), dropdown.value);
+            MyLocalSettings.specialEffectHandling = 
+                (LocalSettings.SpecialEffectHandling)
+                Enum.ToObject(typeof(LocalSettings.SpecialEffectHandling), effectsHandling.value);
+        }
+
+        public void OnValueChange_InfoDisplay()
+        {
+            MyLocalSettings.informationDisplay = 
+                (LocalSettings.InformationDisplay)
+                Enum.ToObject(typeof(LocalSettings.InformationDisplay), infoDisplay.value);
         }
     }
 }

@@ -4,26 +4,55 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static PlayerSettings;
 
 namespace SettingsMenu
 {
-    public class ControlsSettings : MonoBehaviour
+    public class ControlsSettings : MonoBehaviour, ISettingsMenu
     {
+        [SerializeField] private TMP_Dropdown playMethod;
+        [SerializeField] private TMP_Dropdown confirmation;
+        [SerializeField] private TMP_Dropdown quickSelect;
 
-        public void OnValueChange_PlayMethod(TMP_Dropdown dropdown)
+        public LocalSettings MyLocalSettings { get; set; }
+
+        public void ReflectLocal()
         {
-            cardUsageMethod = (CardUsageMethod)Enum.ToObject(typeof(CardUsageMethod), dropdown.value);
+            playMethod.value = (int)MyLocalSettings.cardUsageMethod;
+
+            if (MyLocalSettings.singularCardConfirmation)
+            {
+                confirmation.value = 0;
+            }
+            else
+            {
+                confirmation.value = 1;
+            }
+            if (MyLocalSettings.selectionByNumberKey)
+            {
+                quickSelect.value = 0;
+            }
+            else
+            {
+                quickSelect.value = 1;
+            }
         }
 
-        public void OnValueChange_Confirmation(TMP_Dropdown dropdown)
+        public void OnValueChange_PlayMethod()
         {
-            singularCardConfirmation = (dropdown.value == 0);
+            MyLocalSettings.cardUsageMethod = 
+                (LocalSettings.CardUsageMethod)
+                Enum.ToObject(typeof(LocalSettings.CardUsageMethod), playMethod.value);
         }
 
-        public void OnValueChange_QuickSelect(TMP_Dropdown dropdown)
+        public void OnValueChange_Confirmation()
         {
-            selectionByNumberKey = (dropdown.value == 0);
+            MyLocalSettings.singularCardConfirmation = (confirmation.value == 0);
         }
+
+        public void OnValueChange_QuickSelect()
+        {
+            MyLocalSettings.selectionByNumberKey = (quickSelect.value == 0);
+        }
+
     }
 }

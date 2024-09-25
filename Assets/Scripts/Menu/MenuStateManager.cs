@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class MenuStateManager : MonoBehaviour
 {
-    public static MenuStateManager instance;
 
     // NetworkRunnerの格納用変数
     [Header("Runner")]
@@ -27,35 +26,16 @@ public class MenuStateManager : MonoBehaviour
 
     // 各メニューのGameObject
     [Header("Menu Objects")]
-    [SerializeField] private InitialMenu initialMenu;
-    [SerializeField] private BattleStandbyMenu battleStandbyMenu;
+    [SerializeField] private InitialMenuState initialMenu;
+    [SerializeField] private BattleStandbyState battleStandbyMenu;
+    [SerializeField] private BossStandbyState bossStandbyMenu;
 
-    public CardpoolDatabase[] CardpoolDatabases { get { return cardpoolDatabases; } }
+    public BossData selectedBoss = null;
 
-    public void Awake()
-    {
-        instance = this;
-    }
+    private GameObject[] menuObjects;
+
     public static void ToggleGameObject(GameObject myObject, bool state)
     {
         if (myObject.activeSelf != state) { myObject.SetActive(state); }
-    }
-
-    public void EnableInitial()
-    {
-        ToggleGameObject(initialMenu.gameObject, true);
-
-        List<GunnerData> gunners = new();
-
-        foreach (var cardpool in CardpoolDatabases)
-        {
-            gunners.AddRange(cardpool.GunnerDatabase.GetGunnerDataList());
-        }
-
-        GunnerData rightGunnerData = gunners[Random.Range(0, gunners.Count)];
-        gunners.Remove(rightGunnerData);
-        GunnerData leftGunnerData = gunners[Random.Range(0, gunners.Count)];
-
-        initialMenu.SetGunnerFigures(rightGunnerData, leftGunnerData);
     }
 }

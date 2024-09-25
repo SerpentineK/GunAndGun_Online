@@ -1,27 +1,40 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static PlayerSettings;
 
 namespace SettingsMenu
 {
-    public class GraphicsSettings : MonoBehaviour
+    public class GraphicsSettings : MonoBehaviour, ISettingsMenu
     {
-        public void OnValueChange_AspectRatio(TMP_Dropdown dropdown)
+        [SerializeField] private TMP_Dropdown aspect;
+        [SerializeField] private TMP_Dropdown framerate;
+        [SerializeField] private Toggle vsync;
+
+        public LocalSettings MyLocalSettings { get; set; }
+
+        public void ReflectLocal()
         {
-            AspectRatio = aspectRatioArray[dropdown.value];
+            aspect.value = Array.IndexOf(MyLocalSettings.aspectRatioArray, MyLocalSettings.AspectRatio);
+            framerate.value = Array.IndexOf(MyLocalSettings.maxFramerateArray, MyLocalSettings.MaxFramerate);
+            vsync.isOn = MyLocalSettings.vsyncEnabled;
         }
 
-        public void OnValueChange_Framerate(TMP_Dropdown dropdown)
+        public void OnValueChange_AspectRatio()
         {
-            MaxFramerate = maxFramerateArray[dropdown.value];
+            MyLocalSettings.AspectRatio = MyLocalSettings.aspectRatioArray[aspect.value];
         }
 
-        public void OnValueChange_VSync(Toggle toggle)
+        public void OnValueChange_Framerate()
         {
-            vsyncEnabled = toggle.isOn;
+            MyLocalSettings.MaxFramerate = MyLocalSettings.maxFramerateArray[framerate.value];
+        }
+
+        public void OnValueChange_VSync()
+        {
+            MyLocalSettings.vsyncEnabled = vsync.isOn;
         }
     }
 }

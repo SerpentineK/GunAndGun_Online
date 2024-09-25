@@ -39,7 +39,7 @@ namespace DictionaryMenu
             titleComponent.SetText(data.GetBossTitle());
             nameComponent.SetText(data.GetBossName());
 
-            name = data.GetBossTitle() + data.GetBossName();
+            name = data.GetBossTitle() + "_" + data.GetBossName();
         }
 
         public void SendBossDetails()

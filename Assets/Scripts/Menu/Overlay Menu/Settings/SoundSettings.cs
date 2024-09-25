@@ -4,11 +4,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static PlayerSettings;
 
 namespace SettingsMenu
 {
-    public class SoundSettings : MonoBehaviour
+    public class SoundSettings : MonoBehaviour, ISettingsMenu
     {
         [SerializeField] private Slider masterVolumeSlider;
         [SerializeField] private Slider bgmVolumeSlider;
@@ -18,6 +17,21 @@ namespace SettingsMenu
         [SerializeField] private TMP_InputField sfxVolumeInput;
         [SerializeField] private Toggle muteToggle;
 
+        public LocalSettings MyLocalSettings { get; set; }
+
+        public void ReflectLocal()
+        {
+            AdjustInputField(masterVolumeInput, MyLocalSettings.MasterVolume.ToString());
+            AdjustSlider(masterVolumeSlider, MyLocalSettings.MasterVolume);
+            
+            AdjustInputField(bgmVolumeInput, MyLocalSettings.BgmVolume.ToString());
+            AdjustSlider(bgmVolumeSlider, MyLocalSettings.BgmVolume);
+
+            AdjustInputField(sfxVolumeInput, MyLocalSettings.SfxVolume.ToString());
+            AdjustSlider(sfxVolumeSlider, MyLocalSettings.SfxVolume);
+
+            muteToggle.isOn = MyLocalSettings.muteAll;
+        }
 
         public void AdjustSlider(Slider slider, int value)
         {
@@ -33,14 +47,14 @@ namespace SettingsMenu
         {
             if (myObject.TryGetComponent<Slider>(out var sliderComponent))
             {
-                MasterVolume = (int)sliderComponent.value;
-                AdjustInputField(masterVolumeInput, MasterVolume.ToString());
+                MyLocalSettings.MasterVolume = (int)sliderComponent.value;
+                AdjustInputField(masterVolumeInput, MyLocalSettings.MasterVolume.ToString());
             }
             else if (myObject.TryGetComponent<TMP_InputField>(out var inputFieldComponent))
             {
-                MasterVolume = int.Parse(inputFieldComponent.text);
-                AdjustInputField(inputFieldComponent, MasterVolume.ToString());
-                AdjustSlider(masterVolumeSlider, MasterVolume);
+                MyLocalSettings.MasterVolume = int.Parse(inputFieldComponent.text);
+                AdjustInputField(inputFieldComponent, MyLocalSettings.MasterVolume.ToString());
+                AdjustSlider(masterVolumeSlider, MyLocalSettings.MasterVolume);
             }
         }
 
@@ -48,14 +62,14 @@ namespace SettingsMenu
         {
             if (myObject.TryGetComponent<Slider>(out var sliderComponent))
             {
-                BgmVolume = (int)sliderComponent.value;
-                AdjustInputField(bgmVolumeInput, BgmVolume.ToString());
+                MyLocalSettings.BgmVolume = (int)sliderComponent.value;
+                AdjustInputField(bgmVolumeInput, MyLocalSettings.BgmVolume.ToString());
             }
             else if (myObject.TryGetComponent<TMP_InputField>(out var inputFieldComponent))
             {
-                BgmVolume = int.Parse(inputFieldComponent.text);
-                AdjustInputField(inputFieldComponent, BgmVolume.ToString());
-                AdjustSlider(bgmVolumeSlider, BgmVolume);
+                MyLocalSettings.BgmVolume = int.Parse(inputFieldComponent.text);
+                AdjustInputField(inputFieldComponent, MyLocalSettings.BgmVolume.ToString());
+                AdjustSlider(bgmVolumeSlider, MyLocalSettings.BgmVolume);
             }
         }
 
@@ -63,14 +77,14 @@ namespace SettingsMenu
         {
             if (myObject.TryGetComponent<Slider>(out var sliderComponent))
             {
-                SfxVolume = (int)sliderComponent.value;
-                AdjustInputField(sfxVolumeInput, SfxVolume.ToString());
+                MyLocalSettings.SfxVolume = (int)sliderComponent.value;
+                AdjustInputField(sfxVolumeInput, MyLocalSettings.SfxVolume.ToString());
             }
             else if (myObject.TryGetComponent<TMP_InputField>(out var inputFieldComponent))
             {
-                SfxVolume = int.Parse(inputFieldComponent.text);
-                AdjustInputField(inputFieldComponent, SfxVolume.ToString());
-                AdjustSlider(sfxVolumeSlider, SfxVolume);
+                MyLocalSettings.SfxVolume = int.Parse(inputFieldComponent.text);
+                AdjustInputField(inputFieldComponent, MyLocalSettings.SfxVolume.ToString());
+                AdjustSlider(sfxVolumeSlider, MyLocalSettings.SfxVolume);
             }
         }
 
@@ -97,7 +111,7 @@ namespace SettingsMenu
                 sfxVolumeInput.interactable = true;
             }
 
-            muteAll = muteIsActivated;
+            MyLocalSettings.muteAll = muteIsActivated;
         }
     }
 }

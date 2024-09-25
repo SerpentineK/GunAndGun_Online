@@ -1,4 +1,5 @@
 using DictionaryMenu;
+using SettingsMenu;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -85,6 +86,7 @@ public class OverlayMenu : MonoBehaviour
     {
         depth = 1;
         ChangeMenu(settingsMenu);
+        settingsMenu.GetComponent<SettingsMenuManager>().InitializeSettingsMenus();
     }
 
     public void OnButtonPressed_Rules()
