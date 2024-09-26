@@ -21,20 +21,37 @@ namespace Metaphysics
         // 各種データ格納用変数
         private NetworkedData_Menu menuData;
 
-        public void EnterSession(string sessionID, string nameInput)
+        // ランダム生成の素体
+        private readonly string randomBase = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+        public void EnterSession(string sessionID, string nameInput, bool isRandom)
         {
             // runnerを生成
             runner = Instantiate(runnerPrefab).GetComponent<NetworkRunner>();
 
             // NetworkRunner.StartGame()を呼び出し、Sessionに接続
-            // SessionNameが空白の場合はFusionでランダムな部屋に繋いでくれるらしい
-            // (空いてる部屋がない場合はランダムなIDでの部屋生成までやってくれるっぽい)
-            runner.StartGame(new StartGameArgs
+
+            StartGameArgs customGameArgs;
+
+            if (isRandom)
             {
-                GameMode = GameMode.Shared,
-                SessionName = sessionID,
-                MatchmakingMode = Fusion.Photon.Realtime.MatchmakingMode.FillRoom
-            });
+                customGameArgs = new StartGameArgs 
+                { 
+                    GameMode = GameMode.Shared,
+                    MatchmakingMode = Fusion.Photon.Realtime.MatchmakingMode.RandomMatching
+                };
+            }
+            else
+            {
+                customGameArgs = new StartGameArgs
+                {
+                    GameMode = GameMode.Shared,
+                    SessionName = sessionID,
+                    MatchmakingMode = Fusion.Photon.Realtime.MatchmakingMode.FillRoom
+                };
+            }
+
+            runner.StartGame(customGameArgs);
 
             // menuDataを生成
             NetworkObject tempObject = runner.Spawn(menuDataPrefab);
