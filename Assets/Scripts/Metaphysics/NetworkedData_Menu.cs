@@ -8,5 +8,11 @@ namespace Metaphysics
     public class NetworkedData_Menu : NetworkBehaviour
     {
         [Networked] public string Username { get; set; }
+
+        public override void Spawned()
+        {
+            base.Spawned();
+            gameObject.name = Username + "_MenuData";
+        }
     }
 }

@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a6a498df94a74141be65d24cb2376de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runnerPrefab: {fileID: 418920250407856786, guid: 270955a7c64bb424bbcf32ab192f546c, type: 3}
+  runnerPrefab: {fileID: 2948205837164492190, guid: 270955a7c64bb424bbcf32ab192f546c, type: 3}
   menuDataPrefab: {fileID: 4862177291260178590, guid: 094c9ef75cf10cb4cafd4bce7cae1fbb, type: 3}
 --- !u!1 &2076510534
 GameObject:

@@ -10,7 +10,7 @@ namespace Metaphysics
     public class NetworkingManager : MonoBehaviour
     {
         // NetworkRunnerのプレハブ
-        [SerializeField] private GameObject runnerPrefab;
+        [SerializeField] private NetworkRunner runnerPrefab;
 
         // 各種データのプレハブ
         [SerializeField] private NetworkObject menuDataPrefab;
@@ -21,10 +21,10 @@ namespace Metaphysics
         // 各種データ格納用変数
         private NetworkedData_Menu menuData;
 
-        public void EnterSession(string sessionID, string nameInput, bool isRandom)
+        public async void EnterSession(string sessionID, string nameInput, bool isRandom)
         {
             // runnerを生成
-            runner = Instantiate(runnerPrefab).GetComponent<NetworkRunner>();
+            runner = Instantiate(runnerPrefab);
 
             // NetworkRunner.StartGame()を呼び出し、Sessionに接続
 
@@ -54,10 +54,11 @@ namespace Metaphysics
                 };
             }
 
-            runner.StartGame(customGameArgs);
+            var startTask = runner.StartGame(customGameArgs);
+            await startTask;
 
             // menuDataを生成
-            menuData = runner.Spawn(menuDataPrefab).GetComponent<NetworkedData_Menu>();
+            menuData = runner.Spawn(menuDataPrefab).gameObject.GetComponent<NetworkedData_Menu>();
 
             // ユーザーネームを設定
             if (nameInput.Length > 0)
