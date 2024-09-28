@@ -21,9 +21,6 @@ namespace Metaphysics
         // 各種データ格納用変数
         private NetworkedData_Menu menuData;
 
-        // ランダム生成の素体
-        private readonly string randomBase = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
         public void EnterSession(string sessionID, string nameInput, bool isRandom)
         {
             // runnerを生成
@@ -33,6 +30,7 @@ namespace Metaphysics
 
             StartGameArgs customGameArgs;
 
+            // 実際のSessionNameはFusionが生成してくれるGUIDに任せて、SessionIDはSessionPropertyに入れる
             if (isRandom)
             {
                 customGameArgs = new StartGameArgs 
@@ -43,10 +41,15 @@ namespace Metaphysics
             }
             else
             {
+                var customProps = new Dictionary<string, SessionProperty>
+                {
+                    ["Session ID"] = sessionID
+                };
+
                 customGameArgs = new StartGameArgs
                 {
                     GameMode = GameMode.Shared,
-                    SessionName = sessionID,
+                    SessionProperties = customProps,
                     MatchmakingMode = Fusion.Photon.Realtime.MatchmakingMode.FillRoom
                 };
             }
@@ -54,8 +57,7 @@ namespace Metaphysics
             runner.StartGame(customGameArgs);
 
             // menuDataを生成
-            NetworkObject tempObject = runner.Spawn(menuDataPrefab);
-            menuData = tempObject.GetComponent<NetworkedData_Menu>();
+            menuData = runner.Spawn(menuDataPrefab).GetComponent<NetworkedData_Menu>();
 
             // ユーザーネームを設定
             if (nameInput.Length > 0)

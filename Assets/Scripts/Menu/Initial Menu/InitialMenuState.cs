@@ -209,7 +209,8 @@ public class InitialMenuState : MonoBehaviour, IState
     {
         string sessionID = field_sessionID.text;
         string nickname = field_nickname.text;
-        networkingManager.EnterSession(sessionID, nickname);
+        bool isRandom = toggle_randomSession.isOn;
+        networkingManager.EnterSession(sessionID, nickname, isRandom);
         controller.SwitchStates(controller.battleStandbyS);
     }
 
