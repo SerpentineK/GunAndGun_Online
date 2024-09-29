@@ -1,6 +1,7 @@
 using Fusion;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 // ネットワーク関連の処理を司るマネージャークラス
@@ -16,15 +17,17 @@ namespace Metaphysics
         [SerializeField] private NetworkObject menuDataPrefab;
 
         // runner格納用の変数
-        private NetworkRunner runner;
+        public NetworkRunner MyRunner { get; private set; }
 
         // 各種データ格納用変数
-        private NetworkedData_Menu menuData;
+        public NetworkedData_Menu MenuData { get; private set; }
 
-        public async void EnterSession(string sessionID, string nameInput, bool isRandom)
+        
+
+        public async Task EnterSession(string sessionID, string nameInput, bool isRandom)
         {
             // runnerを生成
-            runner = Instantiate(runnerPrefab);
+            MyRunner = Instantiate(runnerPrefab);
 
             // NetworkRunner.StartGame()を呼び出し、Sessionに接続
 
@@ -54,22 +57,24 @@ namespace Metaphysics
                 };
             }
 
-            var startTask = runner.StartGame(customGameArgs);
+            var startTask = MyRunner.StartGame(customGameArgs);
             await startTask;
 
             // menuDataを生成
-            menuData = runner.Spawn(menuDataPrefab).gameObject.GetComponent<NetworkedData_Menu>();
+            MenuData = MyRunner.Spawn(menuDataPrefab).GetComponent<NetworkedData_Menu>();
+            MenuData.transform.parent = this.transform;
 
             // ユーザーネームを設定
             if (nameInput.Length > 0)
             {
-                menuData.Username = nameInput;
+                MenuData.RPC_SetUsername(nameInput);
             }
             else
             {
                 int randomNum = Random.Range(1, 10000);
-                menuData.Username = "Player" + string.Format("{0:0000}", randomNum);
+                MenuData.RPC_SetUsername("Player" + string.Format("{0:0000}", randomNum));
             }
         }
+
     }
 }

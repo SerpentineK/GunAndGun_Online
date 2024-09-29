@@ -26,9 +26,9 @@ public class MenuStateManager : MonoBehaviour
 
     // Šeƒƒjƒ…[‚ÌGameObject
     [Header("Menu Objects")]
-    [SerializeField] private InitialMenuState initialMenu;
-    [SerializeField] private BattleStandbyState battleStandbyMenu;
-    [SerializeField] private BossStandbyState bossStandbyMenu;
+    [SerializeField] private InitialMenu.InitialMenuState initialMenu;
+    [SerializeField] private BattleStandbyMenu.BattleStandbyState battleStandbyMenu;
+    [SerializeField] private BossStandbyMenu.BossStandbyState bossStandbyMenu;
 
     public BossData selectedBoss = null;
 

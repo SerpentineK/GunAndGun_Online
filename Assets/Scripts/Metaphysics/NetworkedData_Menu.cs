@@ -7,11 +7,13 @@ namespace Metaphysics
 {
     public class NetworkedData_Menu : NetworkBehaviour
     {
+
         [Networked] public string Username { get; set; }
 
-        public override void Spawned()
+        [Rpc(RpcSources.StateAuthority, RpcTargets.All)]
+        public void RPC_SetUsername(string username)
         {
-            base.Spawned();
+            Username = username;
             gameObject.name = Username + "_MenuData";
         }
     }

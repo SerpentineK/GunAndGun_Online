@@ -6,9 +6,9 @@ using static MenuStateManager;
 public class MenuStateController : MonoBehaviour
 {
     [Header("States")]
-    public InitialMenuState initialS_class;
-    public BattleStandbyState battleStandbyS_class;
-    public BossStandbyState bossStandbyS_class;
+    public InitialMenu.InitialMenuState initialS_class;
+    public BattleStandbyMenu.BattleStandbyState battleStandbyS_class;
+    public BossStandbyMenu.BossStandbyState bossStandbyS_class;
 
     [HideInInspector] public IState initialS, battleStandbyS, bossStandbyS;
 
