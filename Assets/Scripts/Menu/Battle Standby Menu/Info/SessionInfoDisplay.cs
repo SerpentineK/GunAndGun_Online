@@ -40,7 +40,7 @@ namespace BattleStandbyMenu
         {
             runner = _runner;
 
-            string myID = runner.SessionInfo.Properties["Session ID"];
+            string myID = runner.SessionInfo.Name;
             string myRegion = runner.SessionInfo.Region;
             display_ID.SetText(myID);
             display_Region.SetText(myRegion);

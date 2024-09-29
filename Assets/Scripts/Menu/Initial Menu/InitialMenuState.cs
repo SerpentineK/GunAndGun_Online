@@ -10,6 +10,7 @@ using static Unity.Collections.Unicode;
 using static MenuStateManager;
 using Metaphysics;
 using static AsyncSceneLoader;
+using BattleStandbyMenu;
 
 namespace InitialMenu
 {
@@ -24,19 +25,25 @@ namespace InitialMenu
         [SerializeField] private MenuStateController controller;
 
         // (オンライン対戦用) セッションIDとニックネームを入力するためのウィンドウ
-        [Header("Input Window")]
-        [SerializeField] private GameObject inputWindow;
-        [SerializeField] private Toggle toggle_randomSession;
-        [SerializeField] private TMP_Text toggle_footnotes;
-        [SerializeField] private TMP_InputField field_sessionID;
-        [SerializeField] private TMP_Text sessionID_footnotes;
-        [SerializeField] private TMP_InputField field_nickname;
+        [Header("Session Window")]
+        [SerializeField] private GameObject sessionWindow;
 
-        private readonly string toggle_InactiveNotes = "ランダム対戦がオフの場合\n指定したIDの対戦部屋に接続されます";
-        private readonly string toggle_ActiveNotes = "ランダム対戦がオンの場合\nランダムな対戦部屋に接続されます\n（セッションIDは不要です）";
+        [Header("Specify Session")]
+        [SerializeField] private GameObject specificSessionWindow;
+        [SerializeField] private TMP_InputField sessionID_SSW;
+        [SerializeField] private TMP_InputField username_SSW;
+        [SerializeField] private TMP_Dropdown publicity_SSW;
 
-        private readonly string sessionID_InactiveNotes = "ランダム対戦がオンになっているため\nIDを入力することはできません";
-        private readonly string sessionID_ActiveNotes = "IDが未入力の場合\nランダムなIDで対戦部屋を作成します";
+        [Header("Random Session")]
+        [SerializeField] private GameObject randomSessionWindow;
+        [SerializeField] private TMP_InputField username_RSW;
+        [SerializeField] private TMP_Dropdown matchingMode_RSW;
+        [SerializeField] private GameObject errorMessage_RSW;
+
+        [Header("Loading Display")]
+        [SerializeField] private GameObject LoadingCanvas;
+
+        private GameObject currentInputWindow = null;
 
         // (ボスバトル用) 対戦相手にするボスを選択するためのウィンドウ
         [Header("Boss Window")]
@@ -68,17 +75,14 @@ namespace InitialMenu
             // InitialMenu本体を表示
             ToggleGameObject(gameObject, true);
 
-            // InputWindow、BossWindow、TutorialWindowを非表示
-            ToggleGameObject(inputWindow, false);
+            // InputWindow、BossWindow、TutorialWindow、LoadingCanvasを非表示
+            ToggleGameObject(sessionWindow, false);
             ToggleGameObject(bossWindow, false);
             ToggleGameObject(tutorialWindow, false);
+            ToggleGameObject(LoadingCanvas, false);
 
             // InputWindowの値を初期化する
-            toggle_randomSession.isOn = false;
-            toggle_footnotes.SetText(toggle_InactiveNotes);
-            field_sessionID.SetTextWithoutNotify("");
-            sessionID_footnotes.SetText(sessionID_ActiveNotes);
-            field_nickname.SetTextWithoutNotify("");
+            BatchResetValues();
 
             // Metaphysicsシーンを取得
             Scene metaScene = SceneManager.GetSceneByName("Metaphysics");
@@ -155,6 +159,20 @@ namespace InitialMenu
             leftGunnerFigure.sprite = leftData.GetGunnerImage();
         }
 
+        private void BatchResetValues()
+        {
+            ToggleGameObject(specificSessionWindow, true);
+            ToggleGameObject(randomSessionWindow, false);
+            currentInputWindow = specificSessionWindow;
+
+            sessionID_SSW.SetTextWithoutNotify("");
+            username_SSW.SetTextWithoutNotify("");
+            publicity_SSW.value = 0;
+
+            username_RSW.SetTextWithoutNotify("");
+            matchingMode_RSW.value = 0;
+            ToggleGameObject(errorMessage_RSW, false);
+        }
 
         public void SelectBossCandidate(BossCandidate selected)
         {
@@ -173,9 +191,15 @@ namespace InitialMenu
             tutorialButton.interactable = result;
         }
 
-        public void OnButtonPressed_Battle()
+        public async void OnButtonPressed_Online()
         {
-            ToggleGameObject(inputWindow, true);
+            if (networkingManager.MyRegion == null)
+            {
+                ToggleGameObject(LoadingCanvas, true);
+                string[][] regionArray = await networkingManager.GetRegionCandidates();
+                ToggleGameObject(LoadingCanvas, false);
+            }
+            ToggleGameObject(sessionWindow, true);
             ToggleButtons(false);
         }
 
@@ -191,36 +215,51 @@ namespace InitialMenu
             ToggleButtons(false);
         }
 
-        public void OnToggle_RandomSession()
+        public void OnButtonPressed_WindowChange(GameObject nextWindow)
         {
-            field_sessionID.interactable = !toggle_randomSession.isOn;
-            if (!field_sessionID.interactable)
+            if (nextWindow != currentInputWindow)
             {
-                field_sessionID.SetTextWithoutNotify("");
-                toggle_footnotes.SetText(toggle_ActiveNotes);
-                sessionID_footnotes.SetText(sessionID_InactiveNotes);
-            }
-            else
-            {
-                toggle_footnotes.SetText(toggle_InactiveNotes);
-                sessionID_footnotes.SetText(sessionID_ActiveNotes);
+                if (currentInputWindow != null) { ToggleGameObject(currentInputWindow, false); }
+                if (nextWindow != null) { ToggleGameObject(nextWindow, true); }
+                currentInputWindow = nextWindow;
             }
         }
 
-        public async void OnButtonPressed_InputEntry()
+        public async void OnButtonPressed_EntrySSW()
         {
-            string sessionID = field_sessionID.text;
-            string nickname = field_nickname.text;
-            bool isRandom = toggle_randomSession.isOn;
-            await networkingManager.EnterSession(sessionID, nickname, isRandom);
-            controller.SwitchStates(controller.battleStandbyS);
+            string sessionID = sessionID_SSW.text;
+            string username = username_SSW.text;
+            bool isPublic = publicity_SSW.value == 0;
+            ToggleGameObject(LoadingCanvas, true);
+            var result = await networkingManager.ConnectToSession(sessionID, username, isPublic);
+            ToggleGameObject(LoadingCanvas, false);
+            if (result == NetworkingManager.ConnectionResult.CONNECTED)
+            {
+                controller.SwitchStates(controller.battleStandbyS);
+            }
+        }
+
+        public async void OnButtonPressed_EntryRSW()
+        {
+            string username = username_RSW.text;
+            bool createSession = matchingMode_RSW.value == 0;
+            ToggleGameObject(LoadingCanvas, true);
+            var result = await networkingManager.ConnectToRandomSession(username, createSession);
+            ToggleGameObject(LoadingCanvas, false);
+            if (result == NetworkingManager.ConnectionResult.CONNECTED)
+            {
+                controller.SwitchStates(controller.battleStandbyS);
+            }
+            else if (result == NetworkingManager.ConnectionResult.NOT_FOUND)
+            {
+                ToggleGameObject(errorMessage_RSW, true);
+            }
         }
 
         public void OnButtonPressed_InputExit()
         {
-            field_sessionID.SetTextWithoutNotify("");
-            field_nickname.SetTextWithoutNotify("");
-            ToggleGameObject(inputWindow, false);
+            BatchResetValues();
+            ToggleGameObject(sessionWindow, false);
             ToggleButtons(true);
         }
 

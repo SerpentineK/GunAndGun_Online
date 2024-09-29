@@ -24,7 +24,7 @@ namespace BattleStandbyMenu
         {
             if (speaker == sysName)
             {
-                speakerDisplay.color = Color.yellow;
+                speakerDisplay.color = Color.blue;
             }
             else
             {

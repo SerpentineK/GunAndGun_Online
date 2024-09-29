@@ -62,3 +62,6 @@ TagManager:
   - name: Interactable
     uniqueID: 1402142321
     locked: 0
+  - name: Loading Display
+    uniqueID: 1249505007
+    locked: 0

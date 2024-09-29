@@ -18,6 +18,7 @@ namespace BattleStandbyMenu
 
         [SerializeField] private ChatSystem chatSystem;
         [SerializeField] private SessionInfoDisplay infoDisplay;
+        [SerializeField] private MemberDisplay memberDisplay;
 
         public string Username { get; private set; }
 
@@ -51,7 +52,7 @@ namespace BattleStandbyMenu
             }
 
             // ユーザーネームとRunner取得
-            Username = networkingManager.MenuData.Username;
+            Username = networkingManager.LocalMenuData.Username;
             runner = networkingManager.MyRunner;
 
             // Infoシステム初期設定
@@ -59,6 +60,13 @@ namespace BattleStandbyMenu
 
             // Chatシステム初期設定
             chatSystem.Initialize(runner, Username);
+
+            // 入室通知
+            string entryMessage = "[" + Username + "] が入室しました。";
+            chatSystem.SendSystemMessage(entryMessage);
+
+            // MemberDisplay初期設定
+            memberDisplay.SetLocal(Username);
         }
 
         public void InState()
