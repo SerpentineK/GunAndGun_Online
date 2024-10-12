@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static UtilityTools;
 
 namespace BattleStandbyMenu
 {
@@ -41,7 +42,7 @@ namespace BattleStandbyMenu
             runner = _runner;
 
             string myID = runner.SessionInfo.Name;
-            string myRegion = runner.SessionInfo.Region;
+            string myRegion = PhotonRegionDictionary[runner.SessionInfo.Region];
             display_ID.SetText(myID);
             display_Region.SetText(myRegion);
 

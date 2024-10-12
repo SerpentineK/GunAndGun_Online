@@ -30,8 +30,24 @@ public static class UtilityTools
         return string.Join(string.Empty, array);
     }
 
-    public static Dictionary<string, string> photonRegionDictionary = new()
+    public static Dictionary<string, string> PhotonRegionDictionary = new()
     {
+        { "asia", "Asia" },
+        { "au", "Australia" },
+        { "cae", "Canada, East" },
+        { "cn", "Chinese Mainland" },
+        { "eu", "Europe" },
+        { "hk", "Hong Kong" },
+        { "in", "India" },
         { "jp", "Japan" },
+        { "sa", "South America" },
+        { "kr", "South Korea" },
+        { "tr", "Turkey" },
+        { "uae", "United Arab Emirates" },
+        { "us", "USA, East" },
+        { "usw", "USA, West" },
+        { "ussc", "USA, South Central" },
     };
+
+    
 }

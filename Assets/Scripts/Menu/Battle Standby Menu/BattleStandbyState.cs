@@ -20,8 +20,6 @@ namespace BattleStandbyMenu
         [SerializeField] private SessionInfoDisplay infoDisplay;
         [SerializeField] private MemberDisplay memberDisplay;
 
-        public string Username { get; private set; }
-
         private NetworkRunner runner;
 
         private bool inConnection = false;
@@ -52,21 +50,21 @@ namespace BattleStandbyMenu
             }
 
             // ユーザーネームとRunner取得
-            Username = networkingManager.LocalMenuData.Username;
+            string username = networkingManager.LocalMenuData.Username;
             runner = networkingManager.MyRunner;
 
             // Infoシステム初期設定
             infoDisplay.Initialize(runner);
 
             // Chatシステム初期設定
-            chatSystem.Initialize(runner, Username);
+            chatSystem.Initialize(runner, username);
 
             // 入室通知
-            string entryMessage = "[" + Username + "] が入室しました。";
+            string entryMessage = "[" + username + "] が入室しました。";
             chatSystem.SendSystemMessage(entryMessage);
 
             // MemberDisplay初期設定
-            memberDisplay.SetLocal(Username);
+            memberDisplay.SetLocal(username);
         }
 
         public void InState()
@@ -96,6 +94,33 @@ namespace BattleStandbyMenu
 
         public void ExitState()
         {
+
+        }
+
+        public void RegisterMenuData()
+        {
+            NetworkedData_Menu myData = networkingManager.LocalMenuData;
+            NetworkedData_Menu opponentData = networkingManager.RemoteMenuData;
+            
+            if (myData != null)
+            {
+                string myUsername = myData.Username;
+                memberDisplay.SetLocal(myUsername);
+            }
+            else
+            {
+                memberDisplay.SetLocal(null);
+            }
+
+            if (opponentData != null)
+            {
+                string opponentUsername = opponentData.Username;
+                memberDisplay.SetRemote(opponentUsername);
+            }
+            else
+            {
+                memberDisplay.SetRemote(null);
+            }
 
         }
     }

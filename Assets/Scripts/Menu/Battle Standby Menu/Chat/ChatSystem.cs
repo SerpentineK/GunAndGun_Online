@@ -24,8 +24,8 @@ namespace BattleStandbyMenu
 
         public void Initialize(NetworkRunner _runner, string _username)
         {
-            username = _username;
             runner = _runner;
+            username = _username;
         }
 
         public void SendChat()

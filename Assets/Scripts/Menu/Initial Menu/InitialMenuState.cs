@@ -191,14 +191,8 @@ namespace InitialMenu
             tutorialButton.interactable = result;
         }
 
-        public async void OnButtonPressed_Online()
+        public void OnButtonPressed_Online()
         {
-            if (networkingManager.MyRegion == null)
-            {
-                ToggleGameObject(LoadingCanvas, true);
-                string[][] regionArray = await networkingManager.GetRegionCandidates();
-                ToggleGameObject(LoadingCanvas, false);
-            }
             ToggleGameObject(sessionWindow, true);
             ToggleButtons(false);
         }

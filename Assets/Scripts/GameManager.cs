@@ -11,7 +11,8 @@ public class GameManager : NetworkBehaviour
     public enum GAME_MODE
     {
         NORMAL,
-        UNLIMITED
+        UNLIMITED,
+        FREE_FOR_ALL
     }
 
     public enum CARD_SETS

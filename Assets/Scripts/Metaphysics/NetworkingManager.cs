@@ -14,14 +14,15 @@ namespace Metaphysics
     public class NetworkingManager : MonoBehaviour
     {
         // NetworkRunnerのプレハブ
+        [Header("Runner Prefab")]
         [SerializeField] private NetworkRunner runnerPrefab;
 
         // 各種データのプレハブ
+        [Header("Data Prefabs")]
         [SerializeField] private NetworkObject menuDataPrefab;
 
         // runner格納用の変数
         public NetworkRunner MyRunner { get; private set; }
-
 
         // 各種データ格納用変数
         public NetworkedData_Menu LocalMenuData { get; set; }
@@ -43,8 +44,6 @@ namespace Metaphysics
         private readonly int randomIdLength = 6;
         private readonly int randomNameLength = 4;
 
-        // 接続に用いるRegion
-        public string MyRegion { get; set; }
 
         // [特定の対戦部屋へ接続]
         // 戻り値は次のstateに移行してよいかの判定に使う
@@ -54,7 +53,7 @@ namespace Metaphysics
             MyRunner = Instantiate(runnerPrefab);
 
             // SessionIDが未記入の場合、長さ10のランダム数列を作って代入
-            if(sessionID.Length == 0)
+            if (sessionID.Length == 0)
             {
                 sessionID = CreateRandomNumberString(randomIdLength);
             }
@@ -181,54 +180,6 @@ namespace Metaphysics
 
         }
 
-        public async Task<string[][]> GetRegionCandidates()
-        {
-            // runnerを生成
-            MyRunner = Instantiate(runnerPrefab);
-
-            // GetAvailableRegionsで使用可能なRegionを取得、ついでにpingで昇順にソートしておく
-            var regions = await NetworkRunner.GetAvailableRegions();
-            regions.Sort(ComparePing);
-
-            // 結果として出力する2次元配列を初期化
-            string[][] result = new string[regions.Count][];
-
-            foreach (var region in regions)
-            {
-                result[regions.IndexOf(region)] = new string[2];
-                result[regions.IndexOf(region)][0] = region.RegionCode;
-                result[regions.IndexOf(region)][1] = region.RegionPing.ToString();
-            }
-
-            await MyRunner.Shutdown();
-
-            return result;
-        }
-
-        // RegionInfoをpingで昇順にソートするメソッド
-        private int ComparePing(RegionInfo reg01, RegionInfo reg02)
-        {
-            return reg02.RegionPing - reg01.RegionPing;
-        }
-
-        private FusionAppSettings BuildCustomAppSetting(string region, string customAppID = null, string appVersion = "1.0.0")
-        {
-            var appSettings = PhotonAppSettings.Global.AppSettings.GetCopy(); ;
-
-            appSettings.UseNameServer = true;
-            appSettings.AppVersion = appVersion;
-
-            if (string.IsNullOrEmpty(customAppID) == false)
-            {
-                appSettings.AppIdFusion = customAppID;
-            }
-
-            if (string.IsNullOrEmpty(region) == false)
-            {
-                appSettings.FixedRegion = region.ToLower();
-            }
-
-            return appSettings;
-        }
+        
     }
 }

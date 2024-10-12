@@ -26,6 +26,7 @@ namespace Metaphysics
                     if (IsLocal)
                     {
                         networking.LocalMenuData = this;
+                        
                     }
                     else
                     {
